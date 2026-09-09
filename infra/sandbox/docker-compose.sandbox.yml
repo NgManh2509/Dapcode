@@ -1,0 +1,43 @@
+services:
+  server:
+    image: judge0/judge0:1.13.1
+    container_name: dapcode-judge0-server
+    volumes:
+      - ./judge0.conf:/judge0.conf:ro
+    ports:
+      - "2358:2358"
+    privileged: true
+    restart: unless-stopped
+    depends_on:
+      - db
+      - redis
+
+  workers:
+    image: judge0/judge0:1.13.1
+    container_name: dapcode-judge0-workers
+    command: ["./scripts/workers"]
+    volumes:
+      - ./judge0.conf:/judge0.conf:ro
+    privileged: true
+    restart: unless-stopped
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:13.0
+    container_name: dapcode-judge0-db
+    env_file: judge0.conf
+    volumes:
+      - judge0-postgres-data:/var/lib/postgresql/data/
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.2.4-alpine
+    container_name: dapcode-judge0-redis
+    command: ["redis-server", "--appendonly", "no", "--requirepass", "judge0redispassword"]
+    env_file: judge0.conf
+    restart: unless-stopped
+
+volumes:
+  judge0-postgres-data:
