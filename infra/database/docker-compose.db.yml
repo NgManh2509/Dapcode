@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: dapcode-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dapcode_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123123
+    volumes:
+      - dapcode-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  dapcode-postgres-data:

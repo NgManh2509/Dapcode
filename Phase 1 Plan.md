@@ -42,11 +42,10 @@
 - [x] Kiểm thử Sandbox chạy code Python 3 (0.02s) & C++ (0.002s) đạt trạng thái `Accepted`.
 - [x] Kiểm thử bẫy vòng lặp vô tận, Sandbox tự ngắt an toàn và trả về `Time Limit Exceeded`.
 
-#### Ngày 2: Khởi Tạo Dự Án Spring Boot 3 & Docker PostgreSQL
-- [ ] Tạo dự án Spring Boot 3.3+ (Java 21) trong thư mục `backend-core/`:
-  - Dependencies: `Spring Web`, `Spring Data JPA`, `PostgreSQL Driver`, `Flyway Migration`, `Lombok`, `Validation`, `Spring Security`.
-- [ ] Tạo file `infra/database/docker-compose.db.yml` chạy PostgreSQL chính cho ứng dụng (Port `5432`, DB name `dapcode_db`).
-- [ ] Cấu hình chuẩn `application.yml` kết nối DB và cấu hình profile (`dev`, `prod`).
+#### Ngày 2: Khởi Tạo Dự Án Spring Boot 3 & Docker PostgreSQL (Đã hoàn thành 100% ✅)
+- [x] Tạo dự án Spring Boot (Java 21) trong thư mục `backend-core/` với đầy đủ 7 dependencies cốt lõi.
+- [x] Tạo file `infra/database/docker-compose.db.yml` chạy PostgreSQL chính cho ứng dụng (Port `5432`, DB name `dapcode_db`).
+- [x] Cấu hình chuẩn `application.yaml` kết nối DB (HikariCP, JPA, Flyway) và khởi động ứng dụng thành công trên port `8080`.
 
 #### Ngày 3: Thiết Lập Cấu Trúc Mã Nguồn & Base Classes
 - [ ] Thiết lập kiến trúc phân tầng chuẩn:
