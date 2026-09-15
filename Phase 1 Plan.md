@@ -47,29 +47,17 @@
 - [x] Tạo file `infra/database/docker-compose.db.yml` chạy PostgreSQL chính cho ứng dụng (Port `5432`, DB name `dapcode_db`).
 - [x] Cấu hình chuẩn `application.yaml` kết nối DB (HikariCP, JPA, Flyway) và khởi động ứng dụng thành công trên port `8080`.
 
-#### Ngày 3: Thiết Lập Cấu Trúc Mã Nguồn & Base Classes
-- [ ] Thiết lập kiến trúc phân tầng chuẩn:
-  ```text
-  backend-core/src/main/java/com/dapcode/
-    ├── common/          # ApiResponse, ErrorCode, Constants
-    ├── config/          # Security, WebMvc, RestClient
-    ├── exception/       # GlobalExceptionHandler, CustomExceptions
-    └── modules/         # auth, user, problem, submission
-  ```
-- [ ] Xây dựng `GlobalExceptionHandler` và chuẩn hóa format response JSON:
-  ```json
-  { "success": true, "code": 200, "data": {}, "message": null }
-  ```
+#### Ngày 3: Thiết Lập Cấu Trúc Mã Nguồn & Base Classes (Đã hoàn thành 100% ✅)
+- [x] Thiết lập kiến trúc phân tầng chuẩn (`common`, `config`, `exception`, `test`).
+- [x] Xây dựng `ApiResponse<T>` generic và enum quản lý mã lỗi tập trung `ErrorCode`.
+- [x] Xây dựng `GlobalExceptionHandler` bắt `AppException`, lỗi validate và lỗi 500.
+- [x] Cấu hình `CorsConfig` (mở kết nối cho Frontend 5173/3000) và `SecurityConfig`.
+- [x] Viết `TestController` kiểm chứng thành công cả response chuẩn và xử lý lỗi tập trung.
 
-#### Ngày 4: Thiết Kế Database Schema Cho Sub-Tasks (Flyway Migration)
-- [ ] Viết script `V1__init_schema.sql` với các bảng:
-  * `users`: `id`, `username`, `email`, `password_hash`, `role`, `created_at`.
-  * `problems`: `id`, `slug`, `title`, `difficulty`, `description_markdown`, `time_limit_ms`, `memory_limit_kb`.
-  * `sub_tasks`: `id`, `problem_id`, `step_order` (1..4), `title`, `description`, `hint_direction`, `verification_type`.
-  * `test_cases`: `id`, `problem_id`, `sub_task_id`, `input_data`, `expected_output`, `is_hidden`.
-  * `submissions`: `id`, `user_id`, `problem_id`, `source_code`, `language_id`, `status`, `total_runtime_ms`, `max_memory_kb`.
-  * `submission_subtask_results`: `id`, `submission_id`, `sub_task_id`, `passed`, `feedback_message`.
-- [ ] Chạy migrate Flyway và verify schema trên PostgreSQL.
+#### Ngày 4: Thiết Kế Database Schema Cho Sub-Tasks (Flyway Migration) (Đã hoàn thành 100% ✅)
+- [x] Viết script `V1__init_schema.sql` với 6 bảng cốt lõi: `users`, `problems`, `sub_tasks`, `test_cases`, `submissions`, `submission_subtask_results`.
+- [x] Thiết lập ràng buộc khóa ngoại (Foreign Keys), Unique Constraints và các chỉ mục Index tối ưu truy vấn.
+- [x] Chạy migrate Flyway thành công và xác thực schema trên PostgreSQL qua DBeaver.
 
 #### Ngày 5: Xây Dựng JPA Entities & Repositories
 - [ ] Tạo các Entities: `User`, `Problem`, `SubTask`, `TestCase`, `Submission`, `SubmissionSubTaskResult`.
