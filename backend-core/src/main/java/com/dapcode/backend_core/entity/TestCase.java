@@ -53,5 +53,4 @@ public class TestCase {
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private Instant createdAt;
-
 }
