@@ -1,0 +1,302 @@
+[
+  {
+    "id": "caf70051-565a-51f2-a990-c40b3d5f51db",
+    "slug": "concatenation-of-array",
+    "title": "Concatenation of Array",
+    "difficulty": "Easy",
+    "category": "Arrays & Hashing",
+    "description_markdown": "Given an integer array `nums` of length `n`, you want to create an array `ans` of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` (**0-indexed**).\n\nSpecifically, `ans` is the **concatenation** of two `nums` arrays.\n\nReturn *the array *`ans`.\n\n \n\n**Example 1:**\n\n```\n\n**Input:** nums = [1,2,1]\n**Output:** [1,2,1,1,2,1]\n**Explanation:** The array ans is formed as follows:\n- ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]\n- ans = [1,2,1,1,2,1]\n```\n\n**Example 2:**\n\n```\n\n**Input:** nums = [1,3,2,1]\n**Output:** [1,3,2,1,1,3,2,1]\n**Explanation:** The array ans is formed as follows:\n- ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]\n- ans = [1,3,2,1,1,3,2,1]\n\n```\n\n \n\n**Constraints:**\n\n\t- `n == nums.length`\n\n\t- `1 <= n <= 1000`\n\n\t- `1 <= nums[i] <= 1000`",
+    "test_cases": [
+      {
+        "input": "nums = [7,7,7,7,7,7,7]",
+        "output": "[7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [5,6,7]",
+        "output": "[5, 6, 7, 5, 6, 7]",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [1,1,1,1,1,1,1,1,1,1]",
+        "output": "[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [7,7,7,7,7,7]",
+        "output": "[7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,2,1]",
+        "output": "[1, 2, 1, 1, 2, 1]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1000, 999, 998, 997, 996]",
+        "output": "[1000, 999, 998, 997, 996, 1000, 999, 998, 997, 996]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,1,1,1,1]",
+        "output": "[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [999, 1000]",
+        "output": "[999, 1000, 999, 1000]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,3,2,1]",
+        "output": "[1, 3, 2, 1, 1, 3, 2, 1]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [10,20,30,40,50]",
+        "output": "[10, 20, 30, 40, 50, 10, 20, 30, 40, 50]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [999,1000,999,1000]",
+        "output": "[999, 1000, 999, 1000, 999, 1000, 999, 1000]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [5,6,7,8,9]",
+        "output": "[5, 6, 7, 8, 9, 5, 6, 7, 8, 9]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [5]",
+        "output": "[5, 5]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1, 1, 1, 1]",
+        "output": "[1, 1, 1, 1, 1, 1, 1, 1]",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,2,3,4,5,6,7,8,9,10]",
+        "output": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "is_hidden": true
+      }
+    ]
+  },
+  {
+    "id": "f48bfa04-d264-5881-b299-3bfe8860f481",
+    "slug": "contains-duplicate",
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "category": "Arrays & Hashing",
+    "description_markdown": "Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.\n\n \n\n**Example 1:**\n\n**Input:** \nnums = [1,2,3,1]\n\n**Output:** \ntrue\n\n**Explanation:**\n\nThe element 1 occurs at the indices 0 and 3.\n\n**Example 2:**\n\n**Input:** \nnums = [1,2,3,4]\n\n**Output:** \nfalse\n\n**Explanation:**\n\nAll elements are distinct.\n\n**Example 3:**\n\n**Input:** \nnums = [1,1,1,3,3,4,3,2,4,2]\n\n**Output:** \ntrue\n\n \n\n**Constraints:**\n\n\t- `1 <= nums.length <= 105`\n\n\t- `-109 <= nums[i] <= 109`",
+    "test_cases": [
+      {
+        "input": "nums = [1]",
+        "output": "False",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [1,2,3,1]",
+        "output": "True",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [1,1,1,3,3,4,3,2,4,2]",
+        "output": "True",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [0,0,0,0,0,0,0,0,0,0]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,2,3,4]",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,2]",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [5,7,8,9,5]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [0]",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1000000000,-1000000000,1000000000,-1000000000]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [0,0,0,0,0,0]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [-1,0,1,2]",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [-1,0,1,2,3,-1]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [5,5,5,5,5,5,5,5,5,5]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [1,2,3,4,5,6,7,8,9,1]",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "nums = [5,7,8,9,10,1]",
+        "output": "False",
+        "is_hidden": true
+      }
+    ]
+  },
+  {
+    "id": "e1ad60f8-a098-56d7-8e18-915fe89f75f8",
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "category": "Arrays & Hashing",
+    "description_markdown": "Given two strings `s` and `t`, return `true` if `t` is an \nanagram\n of `s`, and `false` otherwise.\n\n \n\n**Example 1:**\n\n**Input:** \ns = \"anagram\", t = \"nagaram\"\n\n**Output:** \ntrue\n\n**Example 2:**\n\n**Input:** \ns = \"rat\", t = \"car\"\n\n**Output:** \nfalse\n\n \n\n**Constraints:**\n\n\t- `1 <= s.length, t.length <= 5 * 104`\n\n\t- `s` and `t` consist of lowercase English letters.\n\n \n\n**Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?",
+    "test_cases": [
+      {
+        "input": "s = \"abcdefghijklmnopqrstuvwxyz\", t = \"zyxwvutsrqponmlkjihgfedcba\"",
+        "output": "True",
+        "is_hidden": false
+      },
+      {
+        "input": "s = \"abcde\", t = \"edcba\"",
+        "output": "True",
+        "is_hidden": false
+      },
+      {
+        "input": "s = \"abc\", t = \"abcd\"",
+        "output": "False",
+        "is_hidden": false
+      },
+      {
+        "input": "s = \"apple\", t = \"pale\"",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"hello\", t = \"bello\"",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"aacc\", t = \"ccac\"",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"abc\", t = \"def\"",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"abc\", t = \"cba\"",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"abcd\", t = \"abce\"",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"anagram\", t = \"nagaram\"",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"rat\", t = \"car\"",
+        "output": "False",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"a\", t = \"a\"",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"ab\", t = \"ba\"",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"listen\", t = \"silent\"",
+        "output": "True",
+        "is_hidden": true
+      },
+      {
+        "input": "s = \"abcd\", t = \"dcba\"",
+        "output": "True",
+        "is_hidden": true
+      }
+    ]
+  },
+  {
+    "id": "4a1a798c-bbc7-5039-babd-b10059bf9b88",
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "category": "Arrays & Hashing",
+    "description_markdown": "You are given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.\n\nYou may assume that each input would have ***exactly* one solution**, and you may not use the *same* element twice.\n\nYou can return the answer in any order.\n\n \n\n**Example 1:**\n\n```\n\n**Input:** nums = [2,7,11,15], target = 9\n**Output:** [0,1]\n**Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1].\n\n```\n\n**Example 2:**\n\n```\n\n**Input:** nums = [3,2,4], target = 6\n**Output:** [1,2]\n\n```\n\n**Example 3:**\n\n```\n\n**Input:** nums = [3,3], target = 6\n**Output:** [0,1]\n\n```\n\n \n\n**Constraints:**\n\n\t- `2 <= nums.length <= 104`\n\n\t- `-109 <= nums[i] <= 109`\n\n\t- `-109 <= target <= 109`\n\n\t- **Only one valid answer exists.**\n\n \n\n**Follow-up: **Can you come up with an algorithm that is less than `O(n2)` time complexity?",
+    "test_cases": [
+      {
+        "input": "nums = [2,7,11,15], target = 9",
+        "output": "[0,1]",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [3,2,4], target = 6",
+        "output": "[1,2]",
+        "is_hidden": false
+      },
+      {
+        "input": "nums = [3,3], target = 6",
+        "output": "[0,1]",
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "id": "56be3549-9dad-584f-ade5-ad7e80f5b3a3",
+    "slug": "longest-common-prefix",
+    "title": "Longest Common Prefix",
+    "difficulty": "Easy",
+    "category": "Arrays & Hashing",
+    "description_markdown": "Write a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string `\"\"`.\n\n \n\n**Example 1:**\n\n```\n\n**Input:** strs = [\"flower\",\"flow\",\"flight\"]\n**Output:** \"fl\"\n\n```\n\n**Example 2:**\n\n```\n\n**Input:** strs = [\"dog\",\"racecar\",\"car\"]\n**Output:** \"\"\n**Explanation:** There is no common prefix among the input strings.\n\n```\n\n \n\n**Constraints:**\n\n\t- `1 <= strs.length <= 200`\n\n\t- `0 <= strs[i].length <= 200`\n\n\t- `strs[i]` consists of only lowercase English letters if it is non-empty.",
+    "test_cases": [
+      {
+        "input": "strs = [\"flower\",\"flow\",\"flight\"]",
+        "output": "\"fl\"",
+        "is_hidden": false
+      },
+      {
+        "input": "strs = [\"dog\",\"racecar\",\"car\"]",
+        "output": "\"\"",
+        "is_hidden": false
+      }
+    ]
+  }
+]

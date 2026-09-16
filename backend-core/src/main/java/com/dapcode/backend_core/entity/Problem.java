@@ -39,6 +39,9 @@ public class Problem {
     @Column(nullable = false, length = 20)
     private String difficulty;
 
+    @Column(length = 100)
+    private String category;
+
     @Column(name = "description_markdown", nullable = false, columnDefinition = "TEXT")
     private String descriptionMarkdown;
 
