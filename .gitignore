@@ -29,3 +29,5 @@ env/
 .pytest_cache/
 
 volumes/
+*testcases_cache.json
+*.rartemp

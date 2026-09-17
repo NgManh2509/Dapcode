@@ -16,6 +16,7 @@ DEFAULT_JSON_PATH = local_json if os.path.exists(local_json) else parent_json
 CACHE_TESTCASES_PATH = os.path.join(os.path.dirname(__file__), "testcases_cache.json")
 OUTPUT_JSON_PATH = os.path.join(os.path.dirname(__file__), "dapcode_problems.json")
 OUTPUT_SQL_PATH = os.path.join(os.path.dirname(__file__), "V3__seed_problems.sql")
+PREMIUM_FALLBACKS_PATH = os.path.join(os.path.dirname(__file__), "premium_fallbacks.json")
 
 HEADERS = {
     "Content-Type": "application/json",
@@ -76,37 +77,41 @@ def parse_example_testcases(raw_html):
     return examples
 
 def load_or_fetch_full_testcases(target_slugs, force_refresh=False):
-    if not force_refresh and os.path.exists(CACHE_TESTCASES_PATH):
-        print(f"Loading cached full test cases from {CACHE_TESTCASES_PATH}...")
-        with open(CACHE_TESTCASES_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    print("Fetching full test cases from HuggingFace LeetCodeDataset...")
     testcases_map = {}
+    if not force_refresh and os.path.exists(CACHE_TESTCASES_PATH):
+        try:
+            with open(CACHE_TESTCASES_PATH, "r", encoding="utf-8") as f:
+                testcases_map = json.load(f)
+        except Exception:
+            testcases_map = {}
+
+    missing_slugs = set(target_slugs) - set(testcases_map.keys())
+    if not missing_slugs:
+        print(f"Loaded {len(testcases_map)} full test cases from cache.")
+        return testcases_map
+
+    print(f"Fetching missing test cases for {len(missing_slugs)} problems from HuggingFace LeetCodeDataset...")
     req = urllib.request.Request(HF_DATASET_URL, headers={"User-Agent": "Mozilla/5.0"})
-    
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            line_count = 0
+        with urllib.request.urlopen(req, timeout=90) as resp:
             while True:
                 line = resp.readline()
                 if not line:
                     break
-                line_count += 1
                 try:
                     record = json.loads(line.decode("utf-8"))
                     task_id = record.get("task_id")
-                    if task_id in target_slugs:
+                    if task_id in missing_slugs:
                         io_list = record.get("input_output", [])
                         testcases_map[task_id] = [
                             {"input": str(item.get("input")), "output": str(item.get("output"))}
                             for item in io_list if item.get("input") is not None
                         ]
+                        missing_slugs.remove(task_id)
+                        if not missing_slugs:
+                            break
                 except Exception:
                     continue
-
-                if len(testcases_map) == len(target_slugs):
-                    break
 
         with open(CACHE_TESTCASES_PATH, "w", encoding="utf-8") as f:
             json.dump(testcases_map, f, ensure_ascii=False, indent=2)
@@ -199,6 +204,14 @@ def main():
     if not args.skip_full_tests:
         full_tests_map = load_or_fetch_full_testcases(set(slug_map.keys()))
 
+    premium_fallbacks = {}
+    if os.path.exists(PREMIUM_FALLBACKS_PATH):
+        try:
+            with open(PREMIUM_FALLBACKS_PATH, "r", encoding="utf-8") as f:
+                premium_fallbacks = json.load(f)
+        except Exception:
+            premium_fallbacks = {}
+
     processed_problems = []
     for idx, (slug, item) in enumerate(slug_map.items(), 1):
         print(f"[{idx}/{len(slug_map)}] Processing: {item.get('name')} ({slug})...")
@@ -221,6 +234,16 @@ def main():
         
         if not test_cases and raw_content:
             test_cases = parse_example_testcases(raw_content)
+
+        if (not desc_md or not desc_md.strip()) and slug in premium_fallbacks:
+            fb = premium_fallbacks[slug]
+            desc_md = fb.get("description_markdown", desc_md)
+            if not test_cases and fb.get("test_cases"):
+                test_cases = fb["test_cases"]
+            if not title or title == slug:
+                title = fb.get("title", title)
+            if not difficulty:
+                difficulty = fb.get("difficulty", difficulty)
 
         problem_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, f"dapcode.problem.{slug}"))
         processed_problems.append({

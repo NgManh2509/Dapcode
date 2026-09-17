@@ -36,10 +36,6 @@ public class TestCase {
     @JoinColumn(name = "problem_id", nullable = false)
     private Problem problem;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "sub_task_id")
-    private SubTask subTask;
-
     @Column(name = "input_data", nullable = false, columnDefinition = "TEXT")
     private String inputData;
 

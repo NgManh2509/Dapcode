@@ -1,38 +1,38 @@
 # 📋 Kế Hoạch Triển Khai Chi Tiết: Phase 1
-## Hạ Tầng Chấm Code, Core Domain & Sub-Task Evaluation Engine (Tuần 1 - Tuần 2)
+## Hạ Tầng Chấm Code, Core Domain & Submission Evaluation Engine (Tuần 1 - Tuần 2)
 
-> **Mục tiêu cốt lõi của Phase 1:** Xây dựng xong nền móng Backend (Spring Boot 3 + PostgreSQL), cụm Sandbox (Judge0 Docker), thiết kế Database chuyên biệt cho mô hình **Sub-Tasks**, và hoàn thiện toàn bộ luồng xử lý: **Client gửi Code $\rightarrow$ Backend điều phối Sandbox $\rightarrow$ Chấm điểm phân loại từng Sub-Task $\rightarrow$ Trả kết quả Realtime (SSE).**
+> **Mục tiêu cốt lõi của Phase 1:** Xây dựng xong nền móng Backend (Spring Boot 3 + PostgreSQL), cụm Sandbox (Judge0 Docker), quản lý bài toán và test suite (Public & Hidden), hoàn thiện toàn bộ luồng xử lý: **Client gửi Code $\rightarrow$ Backend điều phối Sandbox chấm toàn diện $\rightarrow$ Phân tích kết quả thực thi $\rightarrow$ Cập nhật tiến độ & Trả kết quả Realtime.** Khi gặp khó khăn, hệ thống sẵn sàng tích hợp **AI Socratic Tutor** để gợi mở tư duy (Nudge) hoặc cung cấp mã giả (Pseudocode) thay vì bắt buộc chia nhỏ Sub-Task cứng nhắc.
 
 ---
 
 ## 🏗 1. Kiến Trúc Kỹ Thuật Phase 1
 
 ```text
-[ Client (Postman / Web Test) ]
+[ Client (Postman / Web UI) ]
        │
-       │ (1) POST /api/v1/submissions
+       │ (1) POST /api/v1/submissions (code, lang, problem)
        ▼
 [ Spring Boot Core API - Port 8080 ]
   ├── 1. Security & Auth (JWT Validation)
-  ├── 2. Submission Manager (Lưu trạng thái PENDING vào Postgres)
-  ├── 3. Judge0 Client (Dispatch code & test cases sang Sandbox)
-  └── 4. Sub-Task Evaluator (Tổng hợp kết quả từng task & stream SSE)
+  ├── 2. Problem Manager (Tra cứu 250 bài Neetcode & Test Cases)
+  ├── 3. Judge0 Client (Dispatch batch test cases sang Sandbox)
+  ├── 4. Submission Evaluation Engine (Chấm điểm, đo runtime/memory, cộng XP/streak)
+  └── 5. AI Socratic Tutor Service (Gợi ý Socratic Nudge / Pseudocode)
        │                              │
        │ (Internal REST)              │ (JDBC)
        ▼                              ▼
 [ Judge0 Sandbox - Port 2358 ]   [ PostgreSQL (App DB) - Port 5432 ]
   ├── Server (Job Dispatcher)      ├── users & roles
-  ├── Redis (Queue)                ├── problems
-  ├── Workers (isolate sandbox)    ├── sub_tasks
-  └── Postgres (Judge0 internal)   ├── test_cases
-                                   └── submissions & subtask_results
+  ├── Redis (Queue)                ├── problems (250 bài + category)
+  ├── Workers (isolate sandbox)    ├── test_cases (3.351 test cases)
+  └── Postgres (Judge0 internal)   └── submissions (lịch sử nộp bài)
 ```
 
 ---
 
 ## 📅 2. Lộ Trình Triển Khai 14 Ngày (Task Breakdown)
 
-### 🔹 Sprint 1: Hạ Tầng Sandbox & Database Schema (Ngày 1 - 7)
+### 🔹 Sprint 1: Hạ Tầng Sandbox, Schema & Database Seeding (Ngày 1 - 7) — ĐÃ HOÀN THÀNH 100% ✅
 
 #### Ngày 1: Setup Workspace & Docker Sandbox (Đã hoàn thành 100% ✅)
 - [x] Khởi tạo cấu trúc Monorepo (`backend-core`, `ai-service`, `frontend`, `infra/sandbox`).
@@ -43,7 +43,7 @@
 - [x] Kiểm thử bẫy vòng lặp vô tận, Sandbox tự ngắt an toàn và trả về `Time Limit Exceeded`.
 
 #### Ngày 2: Khởi Tạo Dự Án Spring Boot 3 & Docker PostgreSQL (Đã hoàn thành 100% ✅)
-- [x] Tạo dự án Spring Boot (Java 21) trong thư mục `backend-core/` với đầy đủ 7 dependencies cốt lõi.
+- [x] Tạo dự án Spring Boot (Java 21) trong thư mục `backend-core/` với đầy đủ dependencies cốt lõi.
 - [x] Tạo file `infra/database/docker-compose.db.yml` chạy PostgreSQL chính cho ứng dụng (Port `5432`, DB name `dapcode_db`).
 - [x] Cấu hình chuẩn `application.yaml` kết nối DB (HikariCP, JPA, Flyway) và khởi động ứng dụng thành công trên port `8080`.
 
@@ -54,75 +54,74 @@
 - [x] Cấu hình `CorsConfig` (mở kết nối cho Frontend 5173/3000) và `SecurityConfig`.
 - [x] Viết `TestController` kiểm chứng thành công cả response chuẩn và xử lý lỗi tập trung.
 
-#### Ngày 4: Thiết Kế Database Schema Cho Sub-Tasks (Flyway Migration) (Đã hoàn thành 100% ✅)
-- [x] Viết script `V1__init_schema.sql` với 6 bảng cốt lõi: `users`, `problems`, `sub_tasks`, `test_cases`, `submissions`, `submission_subtask_results`.
+#### Ngày 4: Thiết Kế Database Schema (Flyway Migration) (Đã hoàn thành 100% ✅)
+- [x] Viết script `V1__init_schema.sql` với các bảng cốt lõi: `users`, `problems`, `test_cases`, `submissions`.
 - [x] Thiết lập ràng buộc khóa ngoại (Foreign Keys), Unique Constraints và các chỉ mục Index tối ưu truy vấn.
-- [x] Chạy migrate Flyway thành công và xác thực schema trên PostgreSQL qua DBeaver.
+- [x] Tối ưu hóa: Bỏ kiến trúc Sub-Tasks, loại bỏ các bảng phụ không cần thiết (`sub_tasks`, `submission_subtask_results`) qua migration `V4__drop_subtasks.sql`.
 
-#### Ngày 5: Xây Dựng JPA Entities & Repositories
-- [ ] Tạo các Entities: `User`, `Problem`, `SubTask`, `TestCase`, `Submission`, `SubmissionSubTaskResult`.
-- [ ] Thiết lập quan hệ mapping chuẩn (`@OneToMany`, `@ManyToOne`, FetchType.LAZY để tránh N+1 query).
-- [ ] Tạo các Spring Data JPA Repositories và viết test repository cơ bản.
+#### Ngày 5: Xây Dựng JPA Entities & Repositories (Đã hoàn thành 100% ✅)
+- [x] Tạo các Entities: `Users`, `Problem`, `TestCase`, `Submission`.
+- [x] Thiết lập quan hệ mapping chuẩn (`@OneToMany`, `@ManyToOne`, FetchType.LAZY để tránh N+1 query).
+- [x] Tạo các Spring Data JPA Repositories và viết test repository cơ bản (`Day5RepositoryTest` 3/3 passed).
 
-#### Ngày 6: Xây Dựng Judge0 Integration Client
-- [ ] Sử dụng `RestClient` (Spring 6 / Boot 3) để tạo `Judge0Client`:
+#### Ngày 6: Xây Dựng Judge0 Integration Client (Đã hoàn thành 100% ✅)
+- [x] Sử dụng `RestClient` (Spring 6 / Boot 3) để tạo `Judge0Client`:
   - `POST /submissions?wait=true`: Gửi code đơn lẻ chờ kết quả.
   - `POST /submissions/batch`: Gửi batch nhiều test cases cùng lúc để tối ưu network latency.
-  - Xử lý Base64 encoding/decoding cho `source_code`, `stdin`, `stdout`.
-- [ ] Map các trạng thái từ Judge0 ID sang Enum hệ thống (`AC`, `WA`, `TLE`, `MLE`, `CE`).
+  - Xử lý polling bất đồng bộ khi worker Judge0 xử lý batch.
+- [x] Map các trạng thái từ Judge0 ID sang Enum hệ thống (`ACCEPTED`, `WRONG_ANSWER`, `TIME_LIMIT_EXCEEDED`, `COMPILATION_ERROR`,...).
 
-#### Ngày 7: Viết Unit Test Cho Judge0 Client & Khép Lại Sprint 1
-- [ ] Viết Unit Test / Mock test cho `Judge0Client`.
-- [ ] Chạy thử nghiệm thực tế: Spring Boot gửi 1 đoạn code mẫu sang Judge0 container và nhận kết quả chính xác.
+#### Ngày 7: Viết Unit & Integration Test Cho Judge0 Client (Đã hoàn thành 100% ✅)
+- [x] Viết Unit Test / Integration Test cho `Judge0Client`.
+- [x] Chạy thử nghiệm thực tế: Spring Boot gửi batch code mẫu sang Judge0 container và nhận kết quả chính xác (`Judge0ClientIntegrationTest` 3/3 passed).
+- [x] **Bonus**: Xây dựng pipeline seeding dữ liệu 250 bài Neetcode + 3.351 test cases qua `seedingData/seed_problems.py` và nạp thành công vào PostgreSQL.
 
 ---
 
 ### 🔹 Sprint 2: Evaluation Engine, APIs & Realtime Execution (Ngày 8 - 14)
 
-#### Ngày 8 - 9: Xây Dựng Sub-Task Evaluation Engine (Cốt Lõi Sản Phẩm)
-- [ ] Xây dựng `SubTaskEvaluationService`:
-  - Khi học viên nộp bài: Lấy danh sách toàn bộ `sub_tasks` và `test_cases` tương ứng của bài toán.
-  - Gom nhóm test cases theo từng `sub_task_id` và gửi batch sang Judge0.
+#### Ngày 8 - 9: Xây Dựng Full-Problem Evaluation Engine (Cốt Lõi Sản Phẩm)
+- [ ] Xây dựng `SubmissionEvaluationService`:
+  - Khi học viên nộp bài: Lấy danh sách toàn bộ `test_cases` tương ứng của bài toán (`problem_id`).
+  - Đóng gói batch test cases và gửi sang cụm Judge0 Sandbox qua `Judge0Client.executeBatch(...)`.
   - **Đánh giá logic:**
-    * *Task 1 (Edge Cases):* Phải pass 100% test case biên. Nếu fail $\rightarrow$ Đánh dấu Task 1 failed, ghi chú bẫy biên.
-    * *Task 2 (Data Setup / Structure):* Kiểm tra các test case logic trung gian.
-    * *Task 3 (Core Logic):* Kiểm tra các public test cases chuẩn.
-    * *Task 4 (Final Submit):* Chạy toàn bộ hidden test cases & stress test.
-- [ ] Lưu chi tiết kết quả từng task vào bảng `submission_subtask_results`.
+    * So khớp output của Judge0 với `expected_output`.
+    * Phân loại lỗi chính xác: `ACCEPTED`, `WRONG_ANSWER`, `TIME_LIMIT_EXCEEDED`, `MEMORY_LIMIT_EXCEEDED`, `RUNTIME_ERROR`.
+    * Tính toán tổng thời gian chạy (`totalRuntimeMs`) và bộ nhớ tiêu thụ đỉnh (`maxMemoryKb`).
+    * Nếu pass 100% test cases: Đánh dấu bài nộp thành công, tự động cộng XP và cập nhật `streak` cho học viên.
+- [ ] Viết bài test tích hợp `EvaluationServiceIntegrationTest` kiểm thử toàn diện các kịch bản nộp bài.
 
 #### Ngày 10: Xây Dựng Problem REST APIs
-- [ ] `GET /api/v1/problems`: Danh sách bài tập (hỗ trợ phân trang, filter độ khó).
-- [ ] `GET /api/v1/problems/{slug}`: Chi tiết bài toán kèm danh sách `sub_tasks` và các test case công khai (ẩn test case private).
-- [ ] Viết DTOs và Mappers (ModelMapper / MapStruct / Java Records).
+- [ ] `GET /api/v1/problems`: Danh sách 250 bài tập:
+  - Hỗ trợ phân trang (`page`, `size`, `sort`).
+  - Hỗ trợ bộ lọc: Theo chủ đề `category` (Arrays & Hashing, Two Pointers,...), độ khó `difficulty` (Easy, Medium, Hard), tìm kiếm `search` theo tên/slug.
+- [ ] `GET /api/v1/problems/{slug}`: Chi tiết bài toán:
+  - Tiêu đề, độ khó, `category`, `description_markdown`.
+  - Danh sách các test cases công khai (`isHidden = false`) để người học debug (bảo mật ẩn các test cases ẩn).
+- [ ] Xây dựng DTOs và Mappers (`ProblemResponse`, `ProblemDetailResponse`, `TestCaseResponse`).
 
 #### Ngày 11: Xây Dựng Authentication & User APIs
-- [ ] Cấu hình Spring Security 6 & JWT Filter.
-- [ ] `POST /api/v1/auth/register`: Đăng ký tài khoản (mã hóa BCrypt).
-- [ ] `POST /api/v1/auth/login`: Đăng nhập, trả về JWT Access Token.
-- [ ] `GET /api/v1/users/me`: Lấy thông tin user hiện tại.
+- [ ] Cấu hình Spring Security 6 & JWT Filter:
+  - `POST /api/v1/auth/register`: Đăng ký tài khoản (mã hóa mật khẩu BCrypt).
+  - `POST /api/v1/auth/login`: Đăng nhập, sinh mã JWT Access Token & Refresh Token.
+  - `GET /api/v1/users/me`: Lấy thông tin cá nhân, cấp độ, XP và chuỗi streak học tập.
 
-#### Ngày 12: Xây Dựng Submission APIs & Realtime Stream (SSE)
-- [ ] `POST /api/v1/submissions`: Endpoint nhận source code, kiểm tra auth, đẩy job vào xử lý Async.
-- [ ] `GET /api/v1/submissions/{id}`: Polling kết quả nộp bài.
+#### Ngày 12: Xây Dựng Submission APIs & Realtime Execution Stream (SSE)
+- [ ] `POST /api/v1/submissions`: Endpoint tiếp nhận bài giải của học viên (kiểm tra JWT, đẩy vào luồng chấm Async).
+- [ ] `GET /api/v1/submissions/{id}`: Polling tra cứu trạng thái và kết quả bài nộp.
 - [ ] `GET /api/v1/submissions/{id}/stream`: Sử dụng **SSE (`SseEmitter`)** để stream kết quả realtime:
-  - Event `SUBTASK_PROGRESS`: Bắn thông báo ngay khi 1 sub-task hoàn thành (Task 1: Passed ✅).
-  - Event `SUBMISSION_COMPLETE`: Toàn bộ quá trình chấm hoàn tất.
+  - Event `TEST_PROGRESS`: Thông báo tiến độ khi các test case đang được chấm.
+  - Event `SUBMISSION_COMPLETE`: Trả về kết quả chung cuộc (Passed/Failed, XP earned, chi tiết lỗi).
 
-#### Ngày 13: Seed Dữ Liệu 2 Bài Toán Mẫu (Proof of Concept)
-- [ ] Viết script Flyway `V2__seed_sample_problems.sql` nạp 2 bài toán chuẩn:
-  1. **Two Sum** (Array / Hash Table):
-     - Sub-task 1: Xử lý dữ liệu biên (mảng 2 phần tử, không tìm thấy).
-     - Sub-task 2: Xử lý số âm, số 0.
-     - Sub-task 3: Mảng $10^4$ phần tử (chặn giải thuật $O(N^2)$ brute-force).
-  2. **Valid Parentheses** (Stack):
-     - Sub-task 1: Chuỗi rỗng, độ dài lẻ.
-     - Sub-task 2: Đóng mở đơn giản cùng loại (`()`, `[]`, `{}`).
-     - Sub-task 3: Lồng nhau phức tạp (`{[()]}`).
+#### Ngày 13: Xây Dựng AI Socratic Tutor Service (Cầu Nối AI Trợ Giúp)
+- [ ] Thiết kế endpoint `POST /api/v1/ai/hint`:
+  - **Tier 1 (Socratic Nudge):** Khi học viên bấm bí, AI phân tích code hiện tại và câu test case bị sai để đặt câu hỏi gợi mở tư duy (không đưa code lời giải).
+  - **Tier 2 (Pseudocode):** Khi học viên yêu cầu trợ giúp sâu hơn, AI cung cấp khung thuật toán dạng mã giả (Pseudocode) định hướng giải quyết.
 
 #### Ngày 14: End-to-End Integration Test & Nghiệm Thu Phase 1
-- [ ] Viết bài test tích hợp (Integration Test) kiểm thử toàn bộ luồng:
-  - User đăng ký $\rightarrow$ Đăng nhập lấy JWT $\rightarrow$ Xem bài Two Sum $\rightarrow$ Nộp code giải $\rightarrow$ Nhận kết quả từng Sub-task qua SSE.
-- [ ] Đóng gói và viết tài liệu hướng dẫn chạy toàn bộ hệ thống Phase 1.
+- [ ] Viết bài test tích hợp (E2E Integration Test) kiểm thử toàn bộ luồng hoạt động:
+  - Đăng ký $\rightarrow$ Đăng nhập lấy JWT $\rightarrow$ Xem bài Two Sum $\rightarrow$ Nộp code giải $\rightarrow$ Nhận kết quả chấm qua SSE $\rightarrow$ Kiểm tra cộng XP.
+- [ ] Đóng gói và viết tài liệu hướng dẫn vận hành toàn bộ hệ thống Phase 1.
 
 ---
 
@@ -130,8 +129,9 @@
 
 | Tiêu chí | Điều kiện đạt |
 | :--- | :--- |
-| **Sandbox Isolation** | Cụm Judge0 (Server, Worker, Redis, DB) chạy ổn định trên Docker Desktop, chặn code vô hạn bằng Timeout. |
-| **Database Integrity** | Schema quản lý trọn vẹn quan hệ giữa Bài toán $\rightarrow$ Sub-tasks $\rightarrow$ Test cases. |
-| **Sub-task Evaluation** | Chấm và phân loại chính xác từng Sub-task (Ví dụ: Code pass Task 1 & 2 nhưng fail Task 3). |
+| **Sandbox Isolation** | Cụm Judge0 (Server, Worker, Redis, DB) chạy ổn định trên Docker Desktop, ngắt code vô hạn bằng Timeout. |
+| **Database Integrity** | Schema quản lý trọn vẹn quan hệ giữa Users $\rightarrow$ Problems (250 bài Neetcode) $\rightarrow$ Test cases $\rightarrow$ Submissions. |
+| **Full Problem Evaluation** | Chấm chính xác toàn bộ test suite, phân loại rõ ràng Accepted, Wrong Answer, TLE, Runtime Error. |
 | **Throughput & Speed** | Thời gian chấm và trả kết quả trọn bộ test cases trung bình $\le 1.5$ giây. |
-| **Realtime Updates** | Kết quả từng task được stream về client qua SSE mượt mà, không bị nghẽn thread. |
+| **Realtime Updates** | Kết quả thực thi được stream về client qua SSE mượt mà, không gây tắc nghẽn thread. |
+| **AI Socratic Integration** | Sẵn sàng endpoint sinh gợi ý phân tầng (Nudge / Pseudocode) cho học viên khi gặp bế tắc. |
