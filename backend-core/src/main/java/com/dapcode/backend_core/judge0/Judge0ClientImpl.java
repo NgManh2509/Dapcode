@@ -60,7 +60,7 @@ public class Judge0ClientImpl implements Judge0Client {
 
         String getUri = "/submissions/batch?tokens=" + tokens + "&base64_encoded=false";
 
-        for (int attempt = 0; attempt < 10; attempt++) {
+        for (int attempt = 0; attempt < 40; attempt++) {
             try {
                 Thread.sleep(300);
             } catch (InterruptedException e) {
