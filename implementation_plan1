@@ -1,0 +1,115 @@
+# Kế Hoạch Triển Khai Ngày 10: Problem & Submission REST APIs
+
+## 📌 Tổng Quan & Tiến Độ
+
+- **Ngày 8 - 9 (Hoàn thành 100% ✅):** Đã xây dựng hoàn chỉnh **Submission & Evaluation Engine** (`SubmissionService`), kết nối thành công cụm Docker Judge0 Sandbox với PostgreSQL, kiểm thử tự động 7/7 test cases xanh hoàn toàn (Accepted, Wrong Answer, Time Limit Exceeded, cộng XP và streak).
+- **Mục tiêu Ngày 10:** Mở các REST API để giao diện Frontend (hoặc Postman) có thể:
+  1. Duyệt danh sách 250 bài tập NeetCode có **phân trang (pagination)** và **bộ lọc động (category, difficulty, search keyword)**.
+  2. Xem chi tiết từng bài toán (Markdown đề bài, giới hạn tài nguyên) và lấy danh sách **test cases công khai (`isHidden = false`)** để người học thử chạy code.
+  3. Gửi bài giải qua API `POST /api/v1/submissions` để kích hoạt engine chấm bài.
+
+---
+
+## 🏗 Kiến Trúc Kỹ Thuật Ngày 10
+
+```text
+[ Client (Frontend / Postman) ]
+       │
+       ├── (1) GET /api/v1/problems?page=0&size=20&category=...&difficulty=...&search=...
+       ├── (2) GET /api/v1/problems/{slug}
+       └── (3) POST /api/v1/submissions (body: { problemSlug, languageId, sourceCode })
+       │
+       ▼
+[ REST Controller Layer ]
+  ├── ProblemController
+  └── SubmissionController
+       │
+       ▼
+[ Service Layer ]
+  ├── ProblemService (Query + Filter + Map to DTOs)
+  └── SubmissionService (Engine chấm đã hoàn thành ở Ngày 8-9)
+       │
+       ▼
+[ Repository & DB Layer ]
+  ├── ProblemRepository (Spring Data JPA Specification / Dynamic Query)
+  └── TestCaseRepository (findByProblemIdAndIsHiddenFalse)
+```
+
+---
+
+## 🎯 Chi Tiết Từng Khối Triển Khai
+
+### 1. DTO Layer (`com.dapcode.backend_core.dto`)
+
+#### 📁 `com.dapcode.backend_core.dto.problem`
+- `ProblemSummaryResponse`:
+  - Dùng cho màn hình danh sách: `id`, `slug`, `title`, `difficulty`, `category`.
+  - Không nạp `descriptionMarkdown` để response cực nhẹ và tải nhanh.
+- `PublicTestCaseDto`:
+  - `id`, `inputData`, `expectedOutput`.
+- `ProblemDetailResponse`:
+  - Dùng cho workspace giải bài: `id`, `slug`, `title`, `difficulty`, `category`, `descriptionMarkdown`, `timeLimitMs`, `memoryLimitKb`.
+  - `List<PublicTestCaseDto> publicTestCases`: Chỉ trả về các test cases mẫu (`isHidden == false`), bảo mật tuyệt đối các test ẩn.
+
+#### 📁 `com.dapcode.backend_core.dto.common`
+- `PageResponse<T>`:
+  - Chuẩn hóa dữ liệu phân trang trả về cho Frontend:
+    - `content`: `List<T>`
+    - `page`: Trang hiện tại (0-indexed)
+    - `size`: Số phần tử trên 1 trang
+    - `totalElements`: Tổng số bài tập
+    - `totalPages`: Tổng số trang
+    - `isFirst`, `isLast`: Cờ tiện ích cho UI phân trang
+
+---
+
+### 2. Repository Layer (`ProblemRepository`)
+
+Hiện tại `ProblemRepository` chỉ có `findBySlug` và `findByDifficulty`. Ta sẽ bổ sung:
+- Hỗ trợ `JpaSpecificationExecutor<Problem>` hoặc `@Query` JPQL linh hoạt với `Pageable`:
+  - Lọc theo `category` (nếu có truyền).
+  - Lọc theo `difficulty` (nếu có truyền: Easy, Medium, Hard).
+  - Lọc theo từ khóa `search` (tìm tương đối trong cả `title` và `slug`, không phân biệt hoa thường).
+
+---
+
+### 3. Service Layer (`ProblemService`)
+
+Tạo interface `ProblemService` và class cài đặt `ProblemServiceImpl`:
+- `PageResponse<ProblemSummaryResponse> getProblems(String category, String difficulty, String search, Pageable pageable)`:
+  - Áp dụng các điều kiện lọc động.
+  - Phân trang chuẩn với Spring Data JPA `Pageable`.
+  - Map từ `Problem` entity sang `ProblemSummaryResponse`.
+- `ProblemDetailResponse getProblemBySlug(String slug)`:
+  - Tìm `Problem` theo slug; nếu không thấy ném `AppException(ErrorCode.PROBLEM_NOT_FOUND)`.
+  - Lấy các test cases công khai qua `testCaseRepository.findByProblemIdAndIsHiddenFalse(problem.getId())`.
+  - Map sang `ProblemDetailResponse`.
+
+---
+
+### 4. Controller Layer (`ProblemController` & `SubmissionController`)
+
+Tạo 2 Controller chuẩn RESTful trả về generic `ApiResponse<T>`:
+- `ProblemController` (`/api/v1/problems`):
+  - `GET /api/v1/problems`: Tiếp nhận params `category`, `difficulty`, `search`, `page` (default 0), `size` (default 20), `sort` (default `id,asc`).
+  - `GET /api/v1/problems/{slug}`: Trả về chi tiết đề bài và test mẫu.
+- `SubmissionController` (`/api/v1/submissions`):
+  - `POST /api/v1/submissions`: Nhận `@Valid SubmitCodeRequest`, gọi `submissionService.submitAndEvaluate(request)`, trả về `SubmissionResponse`.
+
+---
+
+## 🧪 Kế Hoạch Kiểm Thử (Verification Plan)
+
+### Automated Integration Test (`ProblemApiIntegrationTest`)
+Viết bài test tích hợp `MockMvc` kiểm thử các endpoint:
+1. `GET /api/v1/problems`:
+   - Kiểm tra lấy danh sách có phân trang (default 20 bài).
+   - Kiểm tra lọc `difficulty=Easy`.
+   - Kiểm tra lọc `category=Arrays & Hashing`.
+   - Kiểm tra tìm kiếm `search=two-sum` hoặc `search=Concatenation`.
+2. `GET /api/v1/problems/concatenation-of-array`:
+   - Đảm bảo trả về đúng tiêu đề, mô tả markdown.
+   - Đảm bảo `publicTestCases` chỉ chứa các test `isHidden == false` (không lọt test ẩn).
+   - Test trường hợp slug không tồn tại $\rightarrow$ Trả về mã lỗi `404 NOT_FOUND`.
+3. `POST /api/v1/submissions`:
+   - Gửi request nộp bài qua API và kiểm tra HTTP 200 kèm kết quả chấm.
