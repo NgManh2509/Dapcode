@@ -1,0 +1,82 @@
+[
+    {
+        "category": "Array & Hashing",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/array-data-structure-guide/",
+            "https://www.geeksforgeeks.org/dsa/stack-vs-heap-memory-allocation/",
+            "https://www.geeksforgeeks.org/dsa/stack-vs-heap-memory-allocation/",
+            "https://www.geeksforgeeks.org/dsa/difference-between-static-arrays-and-dynamic-arrays/",
+            "https://www.programiz.com/dsa/stack"
+        ]
+    },
+    {
+        "category": "Linked List",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/singly-linked-list-tutorial/",
+            "https://www.geeksforgeeks.org/dsa/doubly-linked-list-meaning-in-dsa/",
+            "https://www.geeksforgeeks.org/dsa/queue-linked-list-implementation/"
+        ]
+    },
+    {
+        "category": "Recursion (Đệ quy)",
+        "link": [
+            "https://www.programiz.com/c-programming/examples/factorial-recursion",
+            "https://www.geeksforgeeks.org/dsa/fibonacci-heap-set-1-introduction/"
+        ]
+    },
+    {
+        "category": "Sorting (Sắp xếp)",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/insertion-sort-algorithm/",
+            "https://www.geeksforgeeks.org/dsa/merge-sort/",
+            "https://www.geeksforgeeks.org/dsa/quick-sort-algorithm/",
+            "https://www.programiz.com/dsa/bucket-sort"
+        ]
+    },
+    {
+        "category": "Binary search",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/linear-search/",
+            "https://www.geeksforgeeks.org/dsa/binary-search/"
+        ]
+    },
+    {
+        "category": "Trees",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+            "https://www.tutorialspoint.com/data_structures_algorithms/binary_search_tree.htm",
+            "https://www.geeksforgeeks.org/dsa/deletion-in-binary-search-tree/",
+            "https://www.geeksforgeeks.org/dsa/tree-traversals-inorder-preorder-and-postorder/",
+            "https://www.geeksforgeeks.org/dsa/level-order-tree-traversal/",
+            "https://www.programiz.com/dsa/avl-tree"
+        ]
+    },
+    {
+        "category": "Backtracking",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/backtracking-algorithms/",
+            "https://www.geeksforgeeks.org/dsa/n-queen-problem-backtracking-3/"
+        ]
+    },
+    {
+        "category": "Heap / Priority Queue",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+            "https://www.geeksforgeeks.org/dsa/queue-data-structure/"
+        ]
+    },
+    {
+        "category": "1-D Dynamic Programming",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+            "https://www.geeksforgeeks.org/dsa/tabulation-vs-memoization/",
+            "https://www.geeksforgeeks.org/dsa/coin-change-dp-7/"
+        ]
+    },
+    {
+        "category": "2-D Dynamic Programming",
+        "link": [
+            "https://www.geeksforgeeks.org/dsa/longest-common-subsequence-dp-4/"
+        ]
+    }
+]
