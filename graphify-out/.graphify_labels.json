@@ -6,7 +6,7 @@
   "4": "CorsConfig.java",
   "5": "Users",
   "6": "Judge0Status",
-  "7": "seed_problems.py",
+  "7": "seed_theory.py",
   "8": "SubmissionServiceImpl.java",
   "9": "mvnw",
   "10": "BackendCoreApplication.java",
@@ -15,5 +15,7 @@
   "13": "🚀 Kế Hoạch Triển Khai: Nền Tảng Học DSA Task-Driven & AI Socratic Tutor",
   "14": "🐳 Judge0 Code Execution Sandbox",
   "15": "rules/graphify.md",
-  "16": "workflows/graphify.md"
+  "16": "workflows/graphify.md",
+  "18": "Hướng Dẫn Khởi Động & Chạy Spring Boot (backend-core)",
+  "19": "Hướng Dẫn Seeding Dữ Liệu Lý Thuyết (Theory) - Dapcode"
 }

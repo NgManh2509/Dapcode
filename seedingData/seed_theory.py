@@ -10,6 +10,12 @@ import urllib.parse
 import urllib.request
 import uuid
 
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 GEMINI_MODEL = "gemini-3.1-flash-lite"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -77,16 +83,42 @@ def clean_html_to_text(raw_html):
         elif clean_lines and clean_lines[-1] != "":
             clean_lines.append("")
 
-    return "\n".join(clean_lines).strip()[:30000]
+    return "\n".join(clean_lines).strip()[:70000]
+
+def parse_json_safely(raw_text):
+    if not raw_text:
+        return None
+    text = raw_text.strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*```$", "", text)
+    text = text.strip()
+
+    start = text.find("{")
+    if start != -1:
+        text = text[start:]
+
+    try:
+        decoder = json.JSONDecoder()
+        obj, _ = decoder.raw_decode(text)
+        return obj
+    except Exception:
+        pass
+
+    try:
+        return json.loads(text)
+    except Exception as e:
+        print(f"  [JSON PARSE ERROR] {e}")
+        return None
 
 def call_gemini_flash(api_key, category, source_url, article_text, model=GEMINI_MODEL):
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
 
     system_instruction = (
-        "Bạn là một chuyên gia khoa học máy tính và giảng viên thuật toán tại Dapcode. "
-        "Nhiệm vụ của bạn là bóc tách và viết lại bài học lý thuyết Cấu trúc dữ liệu & Giải thuật "
-        "từ nội dung thô của bài viết được cung cấp thành một bài giảng tiếng Việt hoàn chỉnh, "
-        "súc tích, học thuật và chuẩn xác."
+        "Bạn là giảng viên cao cấp về Cấu trúc Dữ liệu & Giải thuật tại Dapcode. "
+        "Nhiệm vụ của bạn là bóc tách và biên soạn bài học lý thuyết từ nội dung bài viết thô được cung cấp "
+        "thành một bài giảng tiếng Việt toàn diện, sâu sắc, giàu tính sư phạm, chuẩn học thuật và phục vụ phỏng vấn kỹ thuật Big Tech. "
+        "Tuyệt đối không tóm tắt sơ sài, hãy phân tích cặn kẽ và giải thích rõ bản chất."
     )
 
     prompt = f"""
@@ -99,20 +131,44 @@ Nội dung bài viết thô:
 ---
 
 YÊU CẦU ĐẦU RA:
-Trả về DUY NHẤT một đối tượng JSON hợp lệ theo schema sau:
+Trả về DUY NHẤT một đối tượng JSON hợp lệ theo schema:
 {{
-  "title": "Tiêu đề tiếng Việt kèm thuật ngữ tiếng Anh trong ngoặc (Ví dụ: Ngăn xếp (Stack))",
+  "title": "Tiêu đề tiếng Việt kèm thuật ngữ tiếng Anh trong ngoặc (Ví dụ: Ngăn xếp (Stack Data Structure))",
   "slug": "url-slug-chuan-khong-dau (Ví dụ: ngan-xep-stack)",
-  "summary": "Tóm tắt 1-2 câu ngắn gọn về bản chất và bài toán ứng dụng điển hình",
-  "content_markdown": "Nội dung bài học chuẩn Markdown"
+  "summary": "Đoạn tóm tắt súc tích 2-3 câu nêu bật bản chất, đặc tính cốt lõi và bài toán ứng dụng quan trọng nhất",
+  "content_markdown": "Bài giảng chi tiết, đầy đủ và sâu sắc chuẩn Markdown"
 }}
 
-Yêu cầu các đề mục trong `content_markdown`:
-1. ## 1. Đặt vấn đề & Khái niệm
-2. ## 2. Các thao tác cơ bản (Core Operations)
-3. ## 3. Đánh giá độ phức tạp (Big-O Complexity) - có bảng Markdown Thao tác | Average | Worst | Space
-4. ## 4. Cài đặt mẫu (Implementation) - code mẫu chuẩn C++, Java hoặc Python có chú thích
-5. ## 5. Những lỗi thường gặp & Ứng dụng phỏng vấn (Pitfalls & Applications)
+QUY ĐỊNH CẤU TRÚC CHI TIẾT TRONG `content_markdown`:
+1. ## 1. Đặt vấn đề & Bản chất khái niệm
+   - Nêu rõ bài toán thực tế trong khoa học máy tính dẫn tới sự ra đời của cấu trúc/thuật toán này (Vì sao các giải pháp trước đó không tối ưu?).
+   - Định nghĩa chính xác, mô hình tư duy trực quan (hình tượng hóa thực tế).
+   - Cơ chế tổ chức trong bộ nhớ (Memory Layout: Cấp phát liên tục hay phân tán, Stack vs Heap, Overhead của con trỏ, tính cục bộ bộ nhớ đệm Cache Locality).
+   - Vẽ sơ đồ trực quan hóa dữ liệu bằng khối văn bản ASCII hoặc bảng minh họa.
+
+2. ## 2. Chi tiết các thao tác cốt lõi (Core Operations)
+   - Liệt kê đầy đủ tất cả thao tác (Ví dụ: Khởi tạo, Chèn, Xóa, Tìm kiếm, Duyệt, Truy cập...).
+   - Với mỗi thao tác: Nêu rõ điều kiện biên (tiền điều kiện/hậu điều kiện), giải thuật từng bước (Step-by-step logic).
+   - **Mô phỏng từng bước (Dry Run Trace)**: Cung cấp một ví dụ mảng/dữ liệu cụ thể và lần theo từng bước biến đổi trạng thái qua các bước thao tác.
+
+3. ## 3. Đánh giá độ phức tạp giải thuật (Big-O Complexity Analysis)
+   - Bảng Markdown chi tiết: Thao tác | Thời gian tốt nhất (Best) | Thời gian trung bình (Average) | Thời gian xấu nhất (Worst) | Không gian bộ nhớ (Space).
+   - Phân tích cặn kẽ TẠI SAO lại có độ phức tạp đó (chứng minh toán học, số phép so sánh, cơ chế nhân đôi mảng amortized cost nếu có).
+
+4. ## 4. Cài đặt mã nguồn hoàn chỉnh (Implementation)
+   - Cung cấp mã nguồn hoàn chỉnh, chuẩn mực, clean code và CÓ CHÚ THÍCH TIẾNG VIỆT CHI TIẾT cho CẢ 3 NGÔN NGỮ:
+     * ### C++
+     * ### Java
+     * ### Python
+   - Không viết code rút gọn hoặc code giả, phải là code hoàn chỉnh, có xử lý lỗi.
+
+5. ## 5. Các trường hợp biên & Lỗi thường gặp (Edge Cases & Common Pitfalls)
+   - Danh sách các bẫy logic thường gặp (Off-by-one error, Index Out of Bounds, Null Pointer, Tràn bộ nhớ Overflow/Underflow, Rò rỉ bộ nhớ Memory Leak...).
+   - Cách phòng tránh và kiểm tra điều kiện an toàn khi lập trình.
+
+6. ## 6. Ứng dụng thực tế & Câu hỏi phỏng vấn Big Tech (Interview Mastery)
+   - Ứng dụng thực tế trong hệ điều hành, cơ sở dữ liệu, trình duyệt hoặc mạng máy tính.
+   - 2-3 dạng bài toán kinh điển trên LeetCode/Dapcode áp dụng cấu trúc/thuật toán này (nêu tên bài và gợi ý hướng tư duy tối ưu).
 """
 
     payload = {
@@ -137,10 +193,10 @@ Yêu cầu các đề mục trong `content_markdown`:
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             res_json = json.loads(resp.read().decode("utf-8"))
             raw_text = res_json["candidates"][0]["content"]["parts"][0]["text"]
-            return json.loads(raw_text)
+            return parse_json_safely(raw_text)
     except urllib.error.HTTPError as e:
         err_msg = e.read().decode('utf-8', errors='replace')
         print(f"  [ERROR] Gemini API HTTP {e.code}: {err_msg}")
@@ -198,6 +254,7 @@ def main():
     parser.add_argument("--api-key", default=None, help="Gemini API Key")
     parser.add_argument("--delay", type=float, default=1.5, help="Delay between API calls in seconds")
     parser.add_argument("--dry-run", action="store_true", help="Scrape without calling Gemini API")
+    parser.add_argument("--force", action="store_true", help="Bypass cache and force re-generating articles with deep prompt")
     parser.add_argument("--copy-to-migrations", action="store_true", help="Copy generated SQL to backend-core migrations")
     args = parser.parse_args()
 
@@ -238,7 +295,7 @@ def main():
     print(f"Found {len(all_tasks)} unique theory articles to process (Model: {GEMINI_MODEL}).")
 
     cache = {}
-    if os.path.exists(CACHE_FILE):
+    if os.path.exists(CACHE_FILE) and not args.force:
         try:
             with open(CACHE_FILE, "r", encoding="utf-8") as f:
                 cache = json.load(f)
@@ -255,7 +312,7 @@ def main():
         order_index = task["order_index"]
         print(f"\n[{idx}/{len(all_tasks)}] [{category}] {url}")
 
-        if url in cache and not args.dry_run:
+        if url in cache and not args.dry_run and not args.force:
             cached_data = cache[url]
             slug = cached_data.get("slug")
             if slug in used_slugs:

@@ -212,6 +212,19 @@
       "source_location": "L16"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "label": "TheoryController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": "theorycontroller",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L18"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler",
       "label": "GlobalExceptionHandler",
       "_callable": true,
@@ -236,6 +249,19 @@
       "norm_label": "problemservice",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
       "source_location": "L9"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "label": "TheoryService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": "theoryservice",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L8"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_common_pageresponse_pageresponse",
@@ -326,6 +352,32 @@
       "file_type": "code",
       "norm_label": "testcaseresult",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/TestCaseResult.java",
+      "source_location": "L10"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "label": "TheoryDetailResponse",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theorydetailresponse",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L10"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "label": "TheorySummaryResponse",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theorysummaryresponse",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
       "source_location": "L10"
     },
     {
@@ -420,19 +472,6 @@
       "source_location": "L21"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository",
-      "label": "SubmissionRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "submissionrepository",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L10"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status",
       "label": "Judge0Status",
       "_callable": true,
@@ -457,6 +496,19 @@
       "norm_label": "errorcode",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
       "source_location": "L6"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "label": "Theories",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "theories",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception",
@@ -485,6 +537,19 @@
       "source_location": "L15"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository",
+      "label": "SubmissionRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "submissionrepository",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L10"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository",
       "label": "TestCaseRepository",
       "_callable": true,
@@ -496,6 +561,19 @@
       "norm_label": "testcaserepository",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
       "source_location": "L10"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "label": "TheoryRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "theoryrepository",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L13"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl",
@@ -535,6 +613,19 @@
       "norm_label": "submissionserviceimpl",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L30"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "label": "TheoryServiceImpl",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "theoryserviceimpl",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client_executebatch",
@@ -1131,6 +1222,42 @@
       "source_location": "L23"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_getcategories",
+      "label": ".getCategories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": ".getcategories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L30"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "label": ".getTheories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": ".gettheories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L24"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "label": ".getTheoryBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": ".gettheorybyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L36"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler_handlingappexceptopm",
       "label": ".handlingAppExceptopm()",
       "_callable": true,
@@ -1224,6 +1351,42 @@
       "file_type": "code",
       "norm_label": ".getproblems()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
+      "source_location": "L11"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_getcategories",
+      "label": ".getCategories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": ".getcategories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheories",
+      "label": ".getTheories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": ".gettheories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L9"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheorybyslug",
+      "label": ".getTheoryBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": ".gettheorybyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
       "source_location": "L11"
     },
     {
@@ -1405,42 +1568,6 @@
       "source_location": "L23"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findproblemswithfilters",
-      "label": ".findProblemsWithFilters()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": ".findproblemswithfilters()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
-      "source_location": "L22"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridandproblemidorderbycreatedatdesc",
-      "label": ".findByUserIdAndProblemIdOrderByCreatedAtDesc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": ".findbyuseridandproblemidorderbycreatedatdesc()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L13"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridorderbycreatedatdesc",
-      "label": ".findByUserIdOrderByCreatedAtDesc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": ".findbyuseridorderbycreatedatdesc()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L11"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getjudge0status",
       "label": ".getJudge0Status()",
       "_callable": true,
@@ -1494,7 +1621,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "escape_sql()",
       "source_file": "seedingData/seed_problems.py",
@@ -1506,7 +1633,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "extract_slug()",
       "source_file": "seedingData/seed_problems.py",
@@ -1518,7 +1645,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "fetch_problem_metadata()",
       "source_file": "seedingData/seed_problems.py",
@@ -1530,7 +1657,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "generate_sql_migration()",
       "source_file": "seedingData/seed_problems.py",
@@ -1542,7 +1669,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "html_to_markdown()",
       "source_file": "seedingData/seed_problems.py",
@@ -1554,7 +1681,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "load_or_fetch_full_testcases()",
       "source_file": "seedingData/seed_problems.py",
@@ -1566,7 +1693,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "seedingData/seed_problems.py",
@@ -1578,11 +1705,95 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "parse_example_testcases()",
       "source_file": "seedingData/seed_problems.py",
       "source_location": "L62"
+    },
+    {
+      "id": "seedingdata_seed_theory_call_gemini_flash",
+      "label": "call_gemini_flash()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "call_gemini_flash()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L114"
+    },
+    {
+      "id": "seedingdata_seed_theory_clean_html_to_text",
+      "label": "clean_html_to_text()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "clean_html_to_text()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L56"
+    },
+    {
+      "id": "seedingdata_seed_theory_fetch_html_content",
+      "label": "fetch_html_content()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "fetch_html_content()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "seedingdata_seed_theory_generate_sql_migration",
+      "label": "generate_sql_migration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "generate_sql_migration()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L208"
+    },
+    {
+      "id": "seedingdata_seed_theory_load_env",
+      "label": "load_env()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "load_env()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "seedingdata_seed_theory_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L250"
+    },
+    {
+      "id": "seedingdata_seed_theory_parse_json_safely",
+      "label": "parse_json_safely()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "parse_json_safely()",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L88"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_errorcode",
@@ -1594,7 +1805,7 @@
       "file_type": "code",
       "norm_label": ".errorcode()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception_appexception",
@@ -1645,6 +1856,42 @@
       "source_location": "L16"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findproblemswithfilters",
+      "label": ".findProblemsWithFilters()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".findproblemswithfilters()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L22"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridandproblemidorderbycreatedatdesc",
+      "label": ".findByUserIdAndProblemIdOrderByCreatedAtDesc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".findbyuseridandproblemidorderbycreatedatdesc()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridorderbycreatedatdesc",
+      "label": ".findByUserIdOrderByCreatedAtDesc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".findbyuseridorderbycreatedatdesc()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L11"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemid",
       "label": ".findByProblemId()",
       "_callable": true,
@@ -1667,6 +1914,54 @@
       "norm_label": ".findbyproblemidandishiddenfalse()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
       "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_existsbyslug",
+      "label": ".existsBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".existsbyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L16"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findbyslugandispublishedtrue",
+      "label": ".findBySlugAndIsPublishedTrue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".findbyslugandispublishedtrue()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L14"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_finddistinctcategories",
+      "label": ".findDistinctCategories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".finddistinctcategories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L26"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
+      "label": ".findPublishedTheories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".findpublishedtheories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L18"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl_getproblembyslug",
@@ -1749,6 +2044,42 @@
       "norm_label": ".submitandevaluate()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L127"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_getcategories",
+      "label": ".getCategories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".getcategories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L57"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
+      "label": ".getTheories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".gettheories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L24"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "label": ".getTheoryBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": ".gettheorybyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L42"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client",
@@ -2252,13 +2583,13 @@
     },
     {
       "id": "infra_sandbox_readme",
-      "label": "README.md",
+      "label": "sandbox/README.md",
       "_origin": "ast",
       "community": 14,
       "community_name": "\ud83d\udc33 Judge0 Code Execution Sandbox",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "readme.md",
+      "norm_label": "sandbox/readme.md",
       "source_file": "infra/sandbox/README.md",
       "source_location": "L1"
     },
@@ -2367,14 +2698,303 @@
       "source_location": "L6"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse",
-      "label": "ApiResponse.java",
+      "id": "backend_core_readme",
+      "label": "backend-core/README.md",
       "_origin": "ast",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "file_type": "code",
-      "norm_label": "apiresponse.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ApiResponse.java",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "backend-core/readme.md",
+      "source_file": "backend-core/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_readme_1_y\u00eau_c\u1ea7u_m\u00f4i_tr\u01b0\u1eddng",
+      "label": "1. Y\u00eau c\u1ea7u m\u00f4i tr\u01b0\u1eddng",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. yeu cau moi truong",
+      "source_file": "backend-core/README.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "backend_core_readme_2_b\u01b0\u1edbc_1_kh\u1edfi_\u0111\u1ed9ng_c\u01a1_s\u1edf_d\u1eef_li\u1ec7u_postgresql",
+      "label": "2. B\u01b0\u1edbc 1: Kh\u1edfi \u0111\u1ed9ng C\u01a1 s\u1edf d\u1eef li\u1ec7u PostgreSQL",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. buoc 1: khoi \u0111ong co so du lieu postgresql",
+      "source_file": "backend-core/README.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "backend_core_readme_3_b\u01b0\u1edbc_2_ch\u1ea1y_spring_boot_backend",
+      "label": "3. B\u01b0\u1edbc 2: Ch\u1ea1y Spring Boot Backend",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. buoc 2: chay spring boot backend",
+      "source_file": "backend-core/README.md",
+      "source_location": "L39"
+    },
+    {
+      "id": "backend_core_readme_4_c\u01a1_ch\u1ebf_t\u1ef1_\u0111\u1ed9ng_ch\u1ea1y_migration_flyway",
+      "label": "4. C\u01a1 ch\u1ebf t\u1ef1 \u0111\u1ed9ng ch\u1ea1y Migration (Flyway)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. co che tu \u0111ong chay migration (flyway)",
+      "source_file": "backend-core/README.md",
+      "source_location": "L68"
+    },
+    {
+      "id": "backend_core_readme_5_ki\u1ec3m_tra_d\u1eef_li\u1ec7u_sau_khi_ch\u1ea1y",
+      "label": "5. Ki\u1ec3m tra d\u1eef li\u1ec7u sau khi ch\u1ea1y",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. kiem tra du lieu sau khi chay",
+      "source_file": "backend-core/README.md",
+      "source_location": "L92"
+    },
+    {
+      "id": "backend_core_readme_6_c\u00e1c_l\u1ec7nh_h\u1eefu_\u00edch_kh\u00e1c",
+      "label": "6. C\u00e1c l\u1ec7nh h\u1eefu \u00edch kh\u00e1c",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. cac lenh huu ich khac",
+      "source_file": "backend-core/README.md",
+      "source_location": "L111"
+    },
+    {
+      "id": "backend_core_readme_c\u00e1ch_1_kh\u1edfi_\u0111\u1ed9ng_server_tr\u1ef1c_ti\u1ebfp_dev_server",
+      "label": "\ud83d\udd39 C\u00e1ch 1: Kh\u1edfi \u0111\u1ed9ng Server tr\u1ef1c ti\u1ebfp (Dev Server)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 cach 1: khoi \u0111ong server truc tiep (dev server)",
+      "source_file": "backend-core/README.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "backend_core_readme_c\u00e1ch_2_ch\u1ea1y_test_\u0111\u1ec3_n\u1ea1p_migration_nhanh_kh\u00f4ng_gi\u1eef_server",
+      "label": "\ud83d\udd39 C\u00e1ch 2: Ch\u1ea1y Test \u0111\u1ec3 n\u1ea1p Migration nhanh (Kh\u00f4ng gi\u1eef server)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 cach 2: chay test \u0111e nap migration nhanh (khong giu server)",
+      "source_file": "backend-core/README.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "backend_core_readme_d\u1ea5u_hi\u1ec7u_th\u00e0nh_c\u00f4ng_tr\u00ean_terminal_log",
+      "label": "D\u1ea5u hi\u1ec7u th\u00e0nh c\u00f4ng tr\u00ean Terminal Log:",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dau hieu thanh cong tren terminal log:",
+      "source_file": "backend-core/README.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "label": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "huong dan khoi \u0111ong & chay spring boot (backend-core)",
+      "source_file": "backend-core/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_readme_ki\u1ec3m_tra_c\u00e1c_api_\u0111ang_ho\u1ea1t_\u0111\u1ed9ng",
+      "label": "\ud83d\udd39 Ki\u1ec3m tra c\u00e1c API \u0111ang ho\u1ea1t \u0111\u1ed9ng:",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 kiem tra cac api \u0111ang hoat \u0111ong:",
+      "source_file": "backend-core/README.md",
+      "source_location": "L104"
+    },
+    {
+      "id": "backend_core_readme_ki\u1ec3m_tra_qua_sql_dbeaver_datagrip_psql",
+      "label": "\ud83d\udd39 Ki\u1ec3m tra qua SQL (DBeaver / DataGrip / psql):",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Kh\u1edfi \u0110\u1ed9ng & Ch\u1ea1y Spring Boot (backend-core)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 kiem tra qua sql (dbeaver / datagrip / psql):",
+      "source_file": "backend-core/README.md",
+      "source_location": "L94"
+    },
+    {
+      "id": "seedingdata_readme",
+      "label": "seedingData/README.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "seedingdata/readme.md",
+      "source_file": "seedingData/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "seedingdata_readme_1_chu\u1ea9n_b\u1ecb_m\u00f4i_tr\u01b0\u1eddng",
+      "label": "1. Chu\u1ea9n b\u1ecb m\u00f4i tr\u01b0\u1eddng",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. chuan bi moi truong",
+      "source_file": "seedingData/README.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "seedingdata_readme_2_c\u00e1c_l\u1ec7nh_ch\u1ea1y_ch\u00ednh",
+      "label": "2. C\u00e1c l\u1ec7nh ch\u1ea1y ch\u00ednh",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. cac lenh chay chinh",
+      "source_file": "seedingData/README.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "seedingdata_readme_3_b\u1ea3ng_tham_s\u1ed1_cli_arguments",
+      "label": "3. B\u1ea3ng tham s\u1ed1 (CLI Arguments)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. bang tham so (cli arguments)",
+      "source_file": "seedingData/README.md",
+      "source_location": "L51"
+    },
+    {
+      "id": "seedingdata_readme_4_c\u00e1c_file_\u0111\u01b0\u1ee3c_t\u1ea1o_ra_sau_khi_ch\u1ea1y",
+      "label": "4. C\u00e1c file \u0111\u01b0\u1ee3c t\u1ea1o ra sau khi ch\u1ea1y",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. cac file \u0111uoc tao ra sau khi chay",
+      "source_file": "seedingData/README.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "seedingdata_readme_5_kh\u1eafc_ph\u1ee5c_s\u1ef1_c\u1ed1_th\u01b0\u1eddng_g\u1eb7p",
+      "label": "5. Kh\u1eafc ph\u1ee5c s\u1ef1 c\u1ed1 th\u01b0\u1eddng g\u1eb7p",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. khac phuc su co thuong gap",
+      "source_file": "seedingData/README.md",
+      "source_location": "L80"
+    },
+    {
+      "id": "seedingdata_readme_6_n\u1ea1p_d\u1eef_li\u1ec7u_v\u00e0o_java_spring_boot_qua_flyway",
+      "label": "6. N\u1ea1p d\u1eef li\u1ec7u v\u00e0o Java Spring Boot qua Flyway",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. nap du lieu vao java spring boot qua flyway",
+      "source_file": "seedingData/README.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "seedingdata_readme_c\u00e1ch_1_ch\u1ea1y_th\u1eed_nghi\u1ec7m_1_2_b\u00e0i_tr\u01b0\u1edbc_khuy\u00ean_d\u00f9ng",
+      "label": "\ud83d\udd39 C\u00e1ch 1: Ch\u1ea1y th\u1eed nghi\u1ec7m 1\u20132 b\u00e0i tr\u01b0\u1edbc (Khuy\u00ean d\u00f9ng)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 cach 1: chay thu nghiem 1\u20132 bai truoc (khuyen dung)",
+      "source_file": "seedingData/README.md",
+      "source_location": "L24"
+    },
+    {
+      "id": "seedingdata_readme_c\u00e1ch_2_ch\u1ea1y_to\u00e0n_b\u1ed9_danh_s\u00e1ch",
+      "label": "\ud83d\udd39 C\u00e1ch 2: Ch\u1ea1y to\u00e0n b\u1ed9 danh s\u00e1ch",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 cach 2: chay toan bo danh sach",
+      "source_file": "seedingData/README.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "seedingdata_readme_c\u00e1ch_3_ch\u1ea1y_v\u00e0_t\u1ef1_\u0111\u1ed9ng_copy_file_sql_sang_backend",
+      "label": "\ud83d\udd39 C\u00e1ch 3: Ch\u1ea1y v\u00e0 t\u1ef1 \u0111\u1ed9ng copy file SQL sang Backend",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 cach 3: chay va tu \u0111ong copy file sql sang backend",
+      "source_file": "seedingData/README.md",
+      "source_location": "L36"
+    },
+    {
+      "id": "seedingdata_readme_c\u00e1ch_4_ch\u1ea1y_ki\u1ec3m_tra_c\u00e0o_web_kh\u00f4ng_g\u1ecdi_gemini_api",
+      "label": "\ud83d\udd39 C\u00e1ch 4: Ch\u1ea1y ki\u1ec3m tra c\u00e0o web (Kh\u00f4ng g\u1ecdi Gemini API)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd39 cach 4: chay kiem tra cao web (khong goi gemini api)",
+      "source_file": "seedingData/README.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "label": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "H\u01b0\u1edbng D\u1eabn Seeding D\u1eef Li\u1ec7u L\u00fd Thuy\u1ebft (Theory) - Dapcode",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "huong dan seeding du lieu ly thuyet (theory) - dapcode",
+      "source_file": "seedingData/README.md",
       "source_location": "L1"
     },
     {
@@ -2400,6 +3020,17 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "label": "TheoryController.java",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "file_type": "code",
+      "norm_label": "theorycontroller.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler",
       "label": "GlobalExceptionHandler.java",
       "_origin": "ast",
@@ -2409,28 +3040,6 @@
       "norm_label": "globalexceptionhandler.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/exception/GlobalExceptionHandler.java",
       "source_location": "L1"
-    },
-    {
-      "id": "com_fasterxml_jackson_annotation_jsoninclude",
-      "label": "com.fasterxml.jackson.annotation.JsonInclude",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "file_type": "code",
-      "norm_label": "com.fasterxml.jackson.annotation.jsoninclude",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "lombok_experimental_fielddefaults",
-      "label": "lombok.experimental.FieldDefaults",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "file_type": "code",
-      "norm_label": "lombok.experimental.fielddefaults",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "lombok_requiredargsconstructor",
@@ -2543,6 +3152,17 @@
       "source_location": ""
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse",
+      "label": "ApiResponse.java",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "apiresponse.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ApiResponse.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_common_pageresponse",
       "label": "PageResponse.java",
       "_origin": "ast",
@@ -2609,6 +3229,28 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "label": "TheoryDetailResponse.java",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theorydetailresponse.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "label": "TheorySummaryResponse.java",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theorysummaryresponse.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest",
       "label": "Judge0SubmissionRequest.java",
       "_origin": "ast",
@@ -2617,17 +3259,6 @@
       "file_type": "code",
       "norm_label": "judge0submissionrequest.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository",
-      "label": "TestCaseRepository.java",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "lombok.AllArgsConstructor",
-      "file_type": "code",
-      "norm_label": "testcaserepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
       "source_location": "L1"
     },
     {
@@ -2651,6 +3282,28 @@
       "norm_label": "submissionservice.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionService.java",
       "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice",
+      "label": "TheoryService.java",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theoryservice.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "com_fasterxml_jackson_annotation_jsoninclude",
+      "label": "com.fasterxml.jackson.annotation.JsonInclude",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "com.fasterxml.jackson.annotation.jsoninclude",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "lombok_allargsconstructor",
@@ -2682,6 +3335,17 @@
       "community_name": "lombok.AllArgsConstructor",
       "file_type": "code",
       "norm_label": "lombok.data",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "lombok_experimental_fielddefaults",
+      "label": "lombok.experimental.FieldDefaults",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "lombok.experimental.fielddefaults",
       "source_file": "",
       "source_location": ""
     },
@@ -2852,6 +3516,17 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "label": "Theories.java",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Users",
+      "file_type": "code",
+      "norm_label": "theories.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_users",
       "label": "Users.java",
       "_origin": "ast",
@@ -2860,39 +3535,6 @@
       "file_type": "code",
       "norm_label": "users.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Users.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository",
-      "label": "ProblemRepository.java",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "problemrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository",
-      "label": "SubmissionRepository.java",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "submissionrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
-      "label": "UserRepository.java",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "userrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/UserRepository.java",
       "source_location": "L1"
     },
     {
@@ -2936,39 +3578,6 @@
       "community_name": "Users",
       "file_type": "code",
       "norm_label": "lombok.setter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_data_domain_page",
-      "label": "org.springframework.data.domain.Page",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.domain.page",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_data_jpa_repository_jparepository",
-      "label": "org.springframework.data.jpa.repository.JpaRepository",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.jpa.repository.jparepository",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_data_jpa_repository_query",
-      "label": "org.springframework.data.jpa.repository.Query",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Users",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.jpa.repository.query",
       "source_file": "",
       "source_location": ""
     },
@@ -3154,10 +3763,21 @@
       "label": "seed_problems.py",
       "_origin": "ast",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "file_type": "code",
       "norm_label": "seed_problems.py",
       "source_file": "seedingData/seed_problems.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "seedingdata_seed_theory",
+      "label": "seed_theory.py",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "file_type": "code",
+      "norm_label": "seed_theory.py",
+      "source_file": "seedingData/seed_theory.py",
       "source_location": "L1"
     },
     {
@@ -3192,6 +3812,17 @@
       "norm_label": "problem_not_found",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
       "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_theory_not_found",
+      "label": "THEORY_NOT_FOUND",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "theory_not_found",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L14"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthenticated",
@@ -3249,6 +3880,61 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository",
+      "label": "ProblemRepository.java",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "problemrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository",
+      "label": "SubmissionRepository.java",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "submissionrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository",
+      "label": "TestCaseRepository.java",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "testcaserepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "label": "TheoryRepository.java",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "theoryrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
+      "label": "UserRepository.java",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "userrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/UserRepository.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl",
       "label": "ProblemServiceImpl.java",
       "_origin": "ast",
@@ -3289,6 +3975,61 @@
       "community_name": "SubmissionServiceImpl.java",
       "file_type": "code",
       "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "label": "TheoryServiceImpl.java",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "theoryserviceimpl.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_domain_page",
+      "label": "org.springframework.data.domain.Page",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.domain.page",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_jpa_repository_jparepository",
+      "label": "org.springframework.data.jpa.repository.JpaRepository",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.jpa.repository.jparepository",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_jpa_repository_query",
+      "label": "org.springframework.data.jpa.repository.Query",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.jpa.repository.query",
       "source_file": "",
       "source_location": ""
     },
@@ -3584,6 +4325,54 @@
       "type": "external"
     },
     {
+      "id": "get",
+      "label": "get",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "org.junit.jupiter.api.Test",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "get",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "jsonpath",
+      "label": "jsonpath",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "org.junit.jupiter.api.Test",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "jsonpath",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "mockmvcbuilders",
+      "label": "mockmvcbuilders",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "org.junit.jupiter.api.Test",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "mockmvcbuilders",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "post",
+      "label": "post",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "org.junit.jupiter.api.Test",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "post",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "springapplication",
       "label": "springapplication",
       "_origin": "semantic",
@@ -3596,26 +4385,74 @@
       "type": "external"
     },
     {
-      "id": "accesslevel",
-      "label": "accesslevel",
+      "id": "pageabledefault",
+      "label": "pageabledefault",
       "_origin": "semantic",
       "community": 2,
       "community_name": "ApiResponse",
       "external": true,
       "file_type": "concept",
-      "norm_label": "accesslevel",
+      "norm_label": "pageabledefault",
       "source_file": "",
       "type": "external"
     },
     {
-      "id": "list",
-      "label": "list",
+      "id": "pathvariable",
+      "label": "pathvariable",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "pathvariable",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "requestbody",
+      "label": "requestbody",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "requestbody",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "requestparam",
+      "label": "requestparam",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "requestparam",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "valid",
+      "label": "valid",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "ApiResponse",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "valid",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "accesslevel",
+      "label": "accesslevel",
       "_origin": "semantic",
       "community": 3,
       "community_name": "lombok.AllArgsConstructor",
       "external": true,
       "file_type": "concept",
-      "norm_label": "list",
+      "norm_label": "accesslevel",
       "source_file": "",
       "type": "external"
     },
@@ -3836,30 +4673,6 @@
       "type": "external"
     },
     {
-      "id": "optional",
-      "label": "optional",
-      "_origin": "semantic",
-      "community": 5,
-      "community_name": "Users",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "optional",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "param",
-      "label": "param",
-      "_origin": "semantic",
-      "community": 5,
-      "community_name": "Users",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "param",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "updatetimestamp",
       "label": "updatetimestamp",
       "_origin": "semantic",
@@ -3876,7 +4689,7 @@
       "label": "argparse",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "argparse",
@@ -3888,7 +4701,7 @@
       "label": "html",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "html",
@@ -3900,7 +4713,7 @@
       "label": "json",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "json",
@@ -3912,7 +4725,7 @@
       "label": "os",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "os",
@@ -3924,10 +4737,22 @@
       "label": "re",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "re",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "sys",
+      "label": "sys",
+      "_origin": "semantic",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "sys",
       "source_file": "",
       "type": "external"
     },
@@ -3936,10 +4761,22 @@
       "label": "time",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "time",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "urllib_error",
+      "label": "urllib_error",
+      "_origin": "semantic",
+      "community": 7,
+      "community_name": "seed_theory.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "urllib_error",
       "source_file": "",
       "type": "external"
     },
@@ -3948,7 +4785,7 @@
       "label": "urllib_parse",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "urllib_parse",
@@ -3960,7 +4797,7 @@
       "label": "urllib_request",
       "_origin": "semantic",
       "community": 7,
-      "community_name": "seed_problems.py",
+      "community_name": "seed_theory.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "urllib_request",
@@ -3980,101 +4817,38 @@
       "type": "external"
     },
     {
-      "id": "get",
-      "label": "get",
-      "community": 1,
-      "community_name": "org.junit.jupiter.api.Test",
+      "id": "list",
+      "label": "list",
+      "_origin": "semantic",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
       "external": true,
       "file_type": "concept",
-      "norm_label": "get",
+      "norm_label": "list",
       "source_file": "",
       "type": "external"
     },
     {
-      "id": "jsonpath",
-      "label": "jsonpath",
-      "community": 1,
-      "community_name": "org.junit.jupiter.api.Test",
+      "id": "optional",
+      "label": "optional",
+      "_origin": "semantic",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
       "external": true,
       "file_type": "concept",
-      "norm_label": "jsonpath",
+      "norm_label": "optional",
       "source_file": "",
       "type": "external"
     },
     {
-      "id": "mockmvcbuilders",
-      "label": "mockmvcbuilders",
-      "community": 1,
-      "community_name": "org.junit.jupiter.api.Test",
+      "id": "param",
+      "label": "param",
+      "_origin": "semantic",
+      "community": 8,
+      "community_name": "SubmissionServiceImpl.java",
       "external": true,
       "file_type": "concept",
-      "norm_label": "mockmvcbuilders",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "post",
-      "label": "post",
-      "community": 1,
-      "community_name": "org.junit.jupiter.api.Test",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "post",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "pageabledefault",
-      "label": "pageabledefault",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "pageabledefault",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "pathvariable",
-      "label": "pathvariable",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "pathvariable",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "requestbody",
-      "label": "requestbody",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "requestbody",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "requestparam",
-      "label": "requestparam",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "requestparam",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "valid",
-      "label": "valid",
-      "community": 2,
-      "community_name": "ApiResponse",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "valid",
+      "norm_label": "param",
       "source_file": "",
       "type": "external"
     }
@@ -4345,6 +5119,78 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "lombok_requiredargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "org_springframework_web_bind_annotation_requestmapping",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "org_springframework_web_bind_annotation_restcontroller",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_getcategories",
+      "target": "org_springframework_web_bind_annotation_getmapping",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "target": "org_springframework_web_bind_annotation_getmapping",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "target": "org_springframework_web_bind_annotation_getmapping",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_common_pageresponse_pageresponse",
       "target": "lombok_allargsconstructor",
       "relation": "references",
@@ -4677,6 +5523,102 @@
       "confidence_score": 1.0,
       "context": "attribute",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/TestCaseResult.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "target": "lombok_allargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "target": "lombok_builder",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "target": "lombok_data",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "target": "lombok_noargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "target": "lombok_allargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "target": "lombok_builder",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "target": "lombok_data",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "target": "lombok_noargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
       "source_location": "L10",
       "weight": 1.0
     },
@@ -4930,6 +5872,90 @@
       "context": "attribute",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "jakarta_persistence_entity",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "jakarta_persistence_table",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "lombok_allargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "lombok_builder",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "lombok_getter",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "lombok_noargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "target": "lombok_setter",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5281,6 +6307,30 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_finddistinctcategories",
+      "target": "org_springframework_data_jpa_repository_query",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
+      "target": "org_springframework_data_jpa_repository_query",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl",
       "target": "lombok_requiredargsconstructor",
       "relation": "references",
@@ -5386,6 +6436,78 @@
       "context": "attribute",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "lombok_requiredargsconstructor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "org_springframework_stereotype_service",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "org_springframework_transaction_annotation_transactional",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_getcategories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_java_override",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_java_override",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_java_override",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -5893,6 +7015,42 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_getcategories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_success",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_success",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_success",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler_handlingappexceptopm",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_error",
       "relation": "calls",
@@ -6037,6 +7195,18 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
       "source": "seedingdata_seed_problems_generate_sql_migration",
       "target": "seedingdata_seed_problems_escape_sql",
       "relation": "calls",
@@ -6121,6 +7291,78 @@
       "weight": 1.0
     },
     {
+      "source": "seedingdata_seed_theory_call_gemini_flash",
+      "target": "seedingdata_seed_theory_parse_json_safely",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory_main",
+      "target": "seedingdata_seed_theory_load_env",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory_main",
+      "target": "seedingdata_seed_theory_fetch_html_content",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory_main",
+      "target": "seedingdata_seed_theory_clean_html_to_text",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L340",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory_main",
+      "target": "seedingdata_seed_theory_call_gemini_flash",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L347",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory_main",
+      "target": "seedingdata_seed_theory_generate_sql_migration",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L384",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
       "target": "org_springframework_http_httpstatus",
       "relation": "references",
@@ -6129,7 +7371,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -6154,6 +7396,18 @@
       "context": "field",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/SubmissionController.java",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -6301,6 +7555,18 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_test_java_com_dapcode_backend_core_controller_problemapiintegrationtest_problemapiintegrationtest",
       "target": "org_springframework_web_context_webapplicationcontext",
       "relation": "references",
@@ -6442,6 +7708,30 @@
       "context": "generic_arg",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/SubmissionController.java",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -6673,6 +7963,42 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findbyslugandispublishedtrue",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_users_users",
       "relation": "references",
@@ -6766,6 +8092,30 @@
       "context": "generic_arg",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -7321,6 +8671,138 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "lombok_requiredargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "list",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "org_springframework_web_bind_annotation_getmapping",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "pathvariable",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "org_springframework_web_bind_annotation_requestmapping",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "requestparam",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "org_springframework_web_bind_annotation_restcontroller",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_common_pageresponse",
       "target": "list",
       "relation": "imports",
@@ -7725,6 +9207,126 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/TestCaseResult.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "target": "uuid",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "target": "lombok_allargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "target": "lombok_builder",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "target": "lombok_data",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "target": "lombok_noargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "target": "uuid",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "target": "lombok_allargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "target": "lombok_builder",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "target": "lombok_data",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "target": "lombok_noargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
       "source_location": "L8",
       "weight": 1.0
     },
@@ -8313,6 +9915,186 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "jakarta_persistence_entity",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "generatedvalue",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "generationtype",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "id",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "jakarta_persistence_table",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "lombok_allargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "lombok_builder",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "lombok_getter",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "lombok_noargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "lombok_setter",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "instant",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "uuid",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "creationtimestamp",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "updatetimestamp",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "column",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
       "source_location": "L9",
       "weight": 1.0
     },
@@ -9073,6 +10855,90 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "list",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "optional",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "uuid",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "org_springframework_data_jpa_repository_jparepository",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "param",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "org_springframework_data_jpa_repository_query",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
       "target": "optional",
       "relation": "imports",
@@ -9649,6 +11515,162 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice",
+      "target": "list",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "lombok_requiredargsconstructor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "list",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "org_springframework_stereotype_service",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "org_springframework_transaction_annotation_transactional",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_test_java_com_dapcode_backend_core_backendcoreapplicationtests",
       "target": "org_junit_jupiter_api_test",
       "relation": "imports",
@@ -10213,6 +12235,138 @@
       "weight": 1.0
     },
     {
+      "source": "seedingdata_seed_theory",
+      "target": "argparse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "urllib_request",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "uuid",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "html",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "json",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "os",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "re",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "sys",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "time",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "urllib_error",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "urllib_parse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_error",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
       "relation": "references",
@@ -10233,7 +12387,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -10429,6 +12583,42 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_getcategories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler_handlingappexceptopm",
       "target": "org_springframework_http_responseentity",
       "relation": "references",
@@ -10621,6 +12811,30 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthenticated",
       "relation": "case_of",
@@ -10662,6 +12876,17 @@
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
       "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_theory_not_found",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -10874,6 +13099,138 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_readme",
+      "target": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_3_b\u01b0\u1edbc_2_ch\u1ea1y_spring_boot_backend",
+      "target": "backend_core_readme_c\u00e1ch_1_kh\u1edfi_\u0111\u1ed9ng_server_tr\u1ef1c_ti\u1ebfp_dev_server",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_3_b\u01b0\u1edbc_2_ch\u1ea1y_spring_boot_backend",
+      "target": "backend_core_readme_c\u00e1ch_2_ch\u1ea1y_test_\u0111\u1ec3_n\u1ea1p_migration_nhanh_kh\u00f4ng_gi\u1eef_server",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_4_c\u01a1_ch\u1ebf_t\u1ef1_\u0111\u1ed9ng_ch\u1ea1y_migration_flyway",
+      "target": "backend_core_readme_d\u1ea5u_hi\u1ec7u_th\u00e0nh_c\u00f4ng_tr\u00ean_terminal_log",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_5_ki\u1ec3m_tra_d\u1eef_li\u1ec7u_sau_khi_ch\u1ea1y",
+      "target": "backend_core_readme_ki\u1ec3m_tra_c\u00e1c_api_\u0111ang_ho\u1ea1t_\u0111\u1ed9ng",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_5_ki\u1ec3m_tra_d\u1eef_li\u1ec7u_sau_khi_ch\u1ea1y",
+      "target": "backend_core_readme_ki\u1ec3m_tra_qua_sql_dbeaver_datagrip_psql",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "target": "backend_core_readme_6_c\u00e1c_l\u1ec7nh_h\u1eefu_\u00edch_kh\u00e1c",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "target": "backend_core_readme_2_b\u01b0\u1edbc_1_kh\u1edfi_\u0111\u1ed9ng_c\u01a1_s\u1edf_d\u1eef_li\u1ec7u_postgresql",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "target": "backend_core_readme_3_b\u01b0\u1edbc_2_ch\u1ea1y_spring_boot_backend",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "target": "backend_core_readme_4_c\u01a1_ch\u1ebf_t\u1ef1_\u0111\u1ed9ng_ch\u1ea1y_migration_flyway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "target": "backend_core_readme_1_y\u00eau_c\u1ea7u_m\u00f4i_tr\u01b0\u1eddng",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_readme_h\u01b0\u1edbng_d\u1eabn_kh\u1edfi_\u0111\u1ed9ng_ch\u1ea1y_spring_boot_backend_core",
+      "target": "backend_core_readme_5_ki\u1ec3m_tra_d\u1eef_li\u1ec7u_sau_khi_ch\u1ea1y",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/README.md",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_backendcoreapplication",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_backendcoreapplication_backendcoreapplication",
       "relation": "contains",
@@ -10948,6 +13305,17 @@
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/SubmissionController.java",
       "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -11028,6 +13396,28 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorydetailresponse_theorydetailresponse",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_theory_theorysummaryresponse_theorysummaryresponse",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem_problem",
       "relation": "contains",
@@ -11058,6 +13448,17 @@
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -11215,6 +13616,17 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository",
       "relation": "contains",
@@ -11278,6 +13690,28 @@
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -11633,6 +14067,127 @@
       "weight": 1.0
     },
     {
+      "source": "seedingdata_readme",
+      "target": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_2_c\u00e1c_l\u1ec7nh_ch\u1ea1y_ch\u00ednh",
+      "target": "seedingdata_readme_c\u00e1ch_1_ch\u1ea1y_th\u1eed_nghi\u1ec7m_1_2_b\u00e0i_tr\u01b0\u1edbc_khuy\u00ean_d\u00f9ng",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_2_c\u00e1c_l\u1ec7nh_ch\u1ea1y_ch\u00ednh",
+      "target": "seedingdata_readme_c\u00e1ch_2_ch\u1ea1y_to\u00e0n_b\u1ed9_danh_s\u00e1ch",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_2_c\u00e1c_l\u1ec7nh_ch\u1ea1y_ch\u00ednh",
+      "target": "seedingdata_readme_c\u00e1ch_3_ch\u1ea1y_v\u00e0_t\u1ef1_\u0111\u1ed9ng_copy_file_sql_sang_backend",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_2_c\u00e1c_l\u1ec7nh_ch\u1ea1y_ch\u00ednh",
+      "target": "seedingdata_readme_c\u00e1ch_4_ch\u1ea1y_ki\u1ec3m_tra_c\u00e0o_web_kh\u00f4ng_g\u1ecdi_gemini_api",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "target": "seedingdata_readme_2_c\u00e1c_l\u1ec7nh_ch\u1ea1y_ch\u00ednh",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "target": "seedingdata_readme_3_b\u1ea3ng_tham_s\u1ed1_cli_arguments",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "target": "seedingdata_readme_4_c\u00e1c_file_\u0111\u01b0\u1ee3c_t\u1ea1o_ra_sau_khi_ch\u1ea1y",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "target": "seedingdata_readme_1_chu\u1ea9n_b\u1ecb_m\u00f4i_tr\u01b0\u1eddng",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "target": "seedingdata_readme_5_kh\u1eafc_ph\u1ee5c_s\u1ef1_c\u1ed1_th\u01b0\u1eddng_g\u1eb7p",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_readme_h\u01b0\u1edbng_d\u1eabn_seeding_d\u1eef_li\u1ec7u_l\u00fd_thuy\u1ebft_theory_dapcode",
+      "target": "seedingdata_readme_6_n\u1ea1p_d\u1eef_li\u1ec7u_v\u00e0o_java_spring_boot_qua_flyway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/README.md",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
       "source": "seedingdata_seed_problems",
       "target": "seedingdata_seed_problems_fetch_problem_metadata",
       "relation": "contains",
@@ -11718,6 +14273,83 @@
       "confidence_score": 1.0,
       "source_file": "seedingData/seed_problems.py",
       "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_call_gemini_flash",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_generate_sql_migration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L250",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_load_env",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_fetch_html_content",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_clean_html_to_text",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "seedingdata_seed_theory",
+      "target": "seedingdata_seed_theory_parse_json_safely",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "seedingData/seed_theory.py",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -11842,6 +14474,17 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "relation": "implements",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
       "relation": "imports",
@@ -11908,6 +14551,17 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_submissionresponse_submissionresponse",
       "relation": "imports",
@@ -11963,6 +14617,17 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "target": "org_springframework_data_jpa_repository_jparepository",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository",
       "target": "org_springframework_data_jpa_repository_jparepository",
       "relation": "inherits",
@@ -12014,7 +14679,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -12070,6 +14735,39 @@
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/SubmissionController.java",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_getcategories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -12370,6 +15068,50 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findbyslugandispublishedtrue",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_existsbyslug",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_finddistinctcategories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository_findbyemail",
       "relation": "method",
@@ -12521,6 +15263,72 @@
       "confidence_score": 1.0,
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheorybyslug",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_getcategories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_getcategories",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -12725,6 +15533,42 @@
       "weight": 1.0
     },
     {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_getcategories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_getcategories",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheories",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_controller_theorycontroller_theorycontroller_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryservice_theoryservice_gettheorybyslug",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executesingle",
       "target": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getlanguageid",
       "relation": "calls",
@@ -12818,6 +15662,42 @@
       "context": "call",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_getcategories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_finddistinctcategories",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "target": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findbyslugandispublishedtrue",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -13074,5 +15954,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ad70347f1daa77caead8f72c49d90cd4205c2285"
+  "built_at_commit": "50da3fcc64645d39106e89d9af0e8813be72f5bb"
 }

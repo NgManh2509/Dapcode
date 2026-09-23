@@ -52,7 +52,8 @@ python seed_theory.py --dry-run --limit 3
 
 | Tham số | Mặc định | Ý nghĩa |
 | :--- | :--- | :--- |
-| `--limit N` | `None` (chạy hết) | Giới hạn số bài cần xử lý (ví dụ: `--limit 5`). |
+| `--force` | `False` | **Ghi đè cache**, ép buộc cào và biên soạn lại bài học theo prompt chuyên sâu mới. |
+| `--limit N` | `None` (chạy hết) | Giới hạn số bài cần xử lý (ví dụ: `--limit 2`). |
 | `--copy-to-migrations` | `False` | Tự động copy file `V6__seed_theories.sql` sang `backend-core`. |
 | `--dry-run` | `False` | Chỉ tải và làm sạch HTML, không gọi Gemini API và không ghi file. |
 | `--delay S` | `1.5` | Thời gian nghỉ (giây) giữa các lần gọi API để tránh vượt quá Rate Limit. |

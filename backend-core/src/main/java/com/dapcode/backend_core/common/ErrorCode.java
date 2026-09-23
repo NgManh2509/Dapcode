@@ -10,7 +10,8 @@ public enum ErrorCode {
     UNAUTHENTICATED(1002, "Chưa xác thực danh tính", HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(1003, "Bạn không có quyền thực hiện thao tác này", HttpStatus.FORBIDDEN),
     USER_NOT_FOUND(1004, "Không tìm thấy người dùng", HttpStatus.NOT_FOUND),
-    PROBLEM_NOT_FOUND(1005, "Không tìm thấy bài tập", HttpStatus.NOT_FOUND);
+    PROBLEM_NOT_FOUND(1005, "Không tìm thấy bài tập", HttpStatus.NOT_FOUND),
+    THEORY_NOT_FOUND(1006, "Không tìm thấy bài học lý thuyết", HttpStatus.NOT_FOUND);
 
     private final int code;
     private final String message;

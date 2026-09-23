@@ -1,17 +1,17 @@
-# Graph Report - Dapcode  (2026-09-21)
+# Graph Report - Dapcode  (2026-09-23)
 
 ## Corpus Check
-- 52 files · ~299,733 words
+- 68 files · ~387,948 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 9 file(s) not represented in the graph (top: (none) 6, .properties 1, .cmd 1)
 
 ## Summary
-- 314 nodes · 765 edges · 17 communities (14 shown, 3 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 32 edges (avg confidence: 0.85)
+- 378 nodes · 945 edges · 19 communities (16 shown, 3 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ad70347f`
+- Built from commit: `50da3fcc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,7 +23,7 @@
 - CorsConfig.java
 - Users
 - Judge0Status
-- seed_problems.py
+- seed_theory.py
 - SubmissionServiceImpl.java
 - mvnw
 - BackendCoreApplication.java
@@ -33,13 +33,15 @@
 - 🐳 Judge0 Code Execution Sandbox
 - rules/graphify.md
 - workflows/graphify.md
+- Hướng Dẫn Khởi Động & Chạy Spring Boot (backend-core)
+- Hướng Dẫn Seeding Dữ Liệu Lý Thuyết (Theory) - Dapcode
 
 ## God Nodes (most connected - your core abstractions)
-1. `Judge0Status` - 21 edges
-2. `Users` - 20 edges
-3. `Problem` - 19 edges
-4. `ApiResponse` - 18 edges
-5. `ErrorCode` - 17 edges
+1. `ApiResponse` - 22 edges
+2. `Judge0Status` - 21 edges
+3. `Users` - 20 edges
+4. `ErrorCode` - 19 edges
+5. `Problem` - 19 edges
 6. `TestCase` - 17 edges
 7. `Submission` - 16 edges
 8. `Judge0SubmissionRequest` - 15 edges
@@ -61,7 +63,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (17 total, 3 thin omitted)
+## Communities (19 total, 3 thin omitted)
 
 ### Community 0 - "Judge0SubmissionRequest"
 Cohesion: 0.08
@@ -73,31 +75,31 @@ Nodes (20): assertequals, assertnotnull, asserttrue, autowired, UserRepository, 
 
 ### Community 2 - "ApiResponse"
 Cohesion: 0.11
-Nodes (23): accesslevel, ApiResponse, ProblemController, SubmissionController, GlobalExceptionHandler, ProblemService, com.fasterxml.jackson.annotation.JsonInclude, lombok.experimental.FieldDefaults (+15 more)
+Nodes (22): ApiResponse, ProblemController, SubmissionController, TheoryController, GlobalExceptionHandler, ProblemService, TheoryService, lombok.RequiredArgsConstructor (+14 more)
 
 ### Community 3 - "lombok.AllArgsConstructor"
-Cohesion: 0.26
-Nodes (15): PageResponse, ProblemDetailResponse, PublicTestCaseDto, ProblemSummaryResponse, SubmissionResponse, SubmitCodeRequest, TestCaseResult, list (+7 more)
+Cohesion: 0.20
+Nodes (19): accesslevel, PageResponse, ProblemDetailResponse, PublicTestCaseDto, ProblemSummaryResponse, SubmissionResponse, SubmitCodeRequest, TestCaseResult (+11 more)
 
 ### Community 4 - "CorsConfig.java"
 Cohesion: 0.14
 Nodes (17): abstracthttpconfigurer, CorsConfig, SecurityConfig, Judge0Config, corsconfiguration, duration, org.springframework.context.annotation.Bean, org.springframework.context.annotation.Configuration (+9 more)
 
 ### Community 5 - "Users"
-Cohesion: 0.16
-Nodes (25): Problem, Submission, TestCase, Users, SubmissionRepository, column, creationtimestamp, fetchtype (+17 more)
+Cohesion: 0.31
+Nodes (19): Problem, Submission, TestCase, Users, column, creationtimestamp, fetchtype, generatedvalue (+11 more)
 
 ### Community 6 - "Judge0Status"
 Cohesion: 0.11
 Nodes (15): Judge0Status, ACCEPTED, COMPILATION_ERROR, EXEC_FORMAT_ERROR, IN_QUEUE, INTERNAL_ERROR, PROCESSING, RUNTIME_ERROR_NZEC (+7 more)
 
-### Community 7 - "seed_problems.py"
-Cohesion: 0.17
-Nodes (16): argparse, html, json, os, re, escape_sql(), extract_slug(), fetch_problem_metadata() (+8 more)
+### Community 7 - "seed_theory.py"
+Cohesion: 0.13
+Nodes (25): argparse, html, json, os, re, escape_sql(), extract_slug(), fetch_problem_metadata() (+17 more)
 
 ### Community 8 - "SubmissionServiceImpl.java"
-Cohesion: 0.11
-Nodes (19): arraylist, ErrorCode, INVALID_REQUEST, PROBLEM_NOT_FOUND, UNAUTHENTICATED, UNAUTHORIZED, UNCATEGORIZED_EXCEPTION, USER_NOT_FOUND (+11 more)
+Cohesion: 0.07
+Nodes (31): arraylist, ErrorCode, INVALID_REQUEST, PROBLEM_NOT_FOUND, THEORY_NOT_FOUND, UNAUTHENTICATED, UNAUTHORIZED, UNCATEGORIZED_EXCEPTION (+23 more)
 
 ### Community 9 - "mvnw"
 Cohesion: 0.38
@@ -119,25 +121,33 @@ Nodes (4): 🛠 1. Techstack Chuẩn Hóa, 📅 2. Kế Hoạch Triển Khai Chi
 Cohesion: 0.40
 Nodes (4): ⏹ Dừng cụm Sandbox, 🐳 Judge0 Code Execution Sandbox, 🚀 Khởi động Sandbox, 🔍 Kiểm tra trạng thái
 
+### Community 18 - "Hướng Dẫn Khởi Động & Chạy Spring Boot (backend-core)"
+Cohesion: 0.15
+Nodes (12): 1. Yêu cầu môi trường, 2. Bước 1: Khởi động Cơ sở dữ liệu PostgreSQL, 3. Bước 2: Chạy Spring Boot Backend, 4. Cơ chế tự động chạy Migration (Flyway), 5. Kiểm tra dữ liệu sau khi chạy, 6. Các lệnh hữu ích khác, 🔹 Cách 1: Khởi động Server trực tiếp (Dev Server), 🔹 Cách 2: Chạy Test để nạp Migration nhanh (Không giữ server) (+4 more)
+
+### Community 19 - "Hướng Dẫn Seeding Dữ Liệu Lý Thuyết (Theory) - Dapcode"
+Cohesion: 0.17
+Nodes (11): 1. Chuẩn bị môi trường, 2. Các lệnh chạy chính, 3. Bảng tham số (CLI Arguments), 4. Các file được tạo ra sau khi chạy, 5. Khắc phục sự cố thường gặp, 6. Nạp dữ liệu vào Java Spring Boot qua Flyway, 🔹 Cách 1: Chạy thử nghiệm 1–2 bài trước (Khuyên dùng), 🔹 Cách 2: Chạy toàn bộ danh sách (+3 more)
+
 ## Knowledge Gaps
-- **40 isolated node(s):** `com.dapcode:backend-core`, `UNCATEGORIZED_EXCEPTION`, `INVALID_REQUEST`, `UNAUTHENTICATED`, `UNAUTHORIZED` (+35 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 91 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **58 isolated node(s):** `com.dapcode:backend-core`, `UNCATEGORIZED_EXCEPTION`, `INVALID_REQUEST`, `UNAUTHENTICATED`, `UNAUTHORIZED` (+53 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 103 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Judge0Status` connect `Judge0Status` to `SubmissionServiceImpl.java`, `Users`?**
-  _High betweenness centrality (0.098) - this node is a cross-community bridge._
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Why does `Users` connect `Users` to `SubmissionServiceImpl.java`, `org.junit.jupiter.api.Test`, `lombok.AllArgsConstructor`?**
-  _High betweenness centrality (0.090) - this node is a cross-community bridge._
-- **Why does `🔹 Sprint 1: Hạ Tầng Sandbox, Schema & Database Seeding (Ngày 1 - 7) — ĐÃ HOÀN THÀNH 100% ✅` connect `Judge0SubmissionRequest` to `Users`, `🔹 Sprint 2: Evaluation Engine, APIs & Realtime Execution (Ngày 8 - 14)`, `CorsConfig.java`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+- **Why does `ErrorCode` connect `SubmissionServiceImpl.java` to `ApiResponse`, `Users`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **What connects `com.dapcode:backend-core`, `UNCATEGORIZED_EXCEPTION`, `INVALID_REQUEST` to the rest of the system?**
-  _40 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Judge0SubmissionRequest` be split into smaller, more focused modules?**
   _Cohesion score 0.08266129032258064 - nodes in this community are weakly interconnected._
 - **Should `org.junit.jupiter.api.Test` be split into smaller, more focused modules?**
   _Cohesion score 0.09898989898989899 - nodes in this community are weakly interconnected._
 - **Should `ApiResponse` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11498257839721254 - nodes in this community are weakly interconnected._
