@@ -6,10 +6,10 @@
     "semantic_hash": "ab50dd89da7da2346b28003352eeeeeb"
   },
   "backend-core/pom.xml": {
-    "mtime": 1788958767.8880394,
-    "seen": 1789991262.6578724,
-    "ast_hash": "77c4adbc5d000fcb1c0be033c8607bcc",
-    "semantic_hash": "77c4adbc5d000fcb1c0be033c8607bcc"
+    "mtime": 1790318821.2765737,
+    "seen": 1790353788.9438574,
+    "ast_hash": "ae328ff0657843eae0cf3684deacd38c",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/BackendCoreApplication.java": {
     "mtime": 1788958767.8880394,
@@ -36,10 +36,10 @@
     "semantic_hash": "485ccc1e98c0d00e750a0b77c80f5e28"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/SecurityConfig.java": {
-    "mtime": 1789459527.9753952,
-    "seen": 1789991262.6578774,
-    "ast_hash": "27812047501413c4e8e5692de6d43a33",
-    "semantic_hash": "27812047501413c4e8e5692de6d43a33"
+    "mtime": 1790318774.6024606,
+    "seen": 1790353788.9441905,
+    "ast_hash": "deb840ee9d1d4be9468ed9744751d4f9",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/dto/common/PageResponse.java": {
     "mtime": 1789989547.4498832,
@@ -96,10 +96,10 @@
     "semantic_hash": "a49f08ec395160bc5b94eb2a60ad70db"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/entity/Users.java": {
-    "mtime": 1789483703.372509,
-    "seen": 1789991262.6578858,
-    "ast_hash": "f00d56b8f42a106ecf917ec390d2e1a3",
-    "semantic_hash": "f00d56b8f42a106ecf917ec390d2e1a3"
+    "mtime": 1790311469.92977,
+    "seen": 1790353788.9452982,
+    "ast_hash": "1fa46ab454e63aaaf3451ba82fc3c029",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java": {
     "mtime": 1789457605.7527437,
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/resources/application.yaml": {
-    "mtime": 1789546632.8125794,
-    "seen": 1789992223.5857944,
-    "ast_hash": "dd3cf2c5f4f5052e354f20210b2905a8",
+    "mtime": 1790354015.1912005,
+    "seen": 1790354242.920886,
+    "ast_hash": "ca40a9c663df49d49d23ed2127ccf704",
     "semantic_hash": ""
   },
   "infra/database/docker-compose.db.yml": {
@@ -381,6 +381,60 @@
     "mtime": 1790150476.229855,
     "seen": 1790153132.5043037,
     "ast_hash": "d70803f0977382d515d5fef8f5494131",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/JwtAuthenticationFilter.java": {
+    "mtime": 1790318307.5379882,
+    "seen": 1790353788.944187,
+    "ast_hash": "57898c7b27986955157b760c599adfd5",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java": {
+    "mtime": 1790313839.4750836,
+    "seen": 1790353788.9441888,
+    "ast_hash": "160a80ddd819cd099be55339e5aed136",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/AuthController.java": {
+    "mtime": 1790353512.630241,
+    "seen": 1790353788.9441915,
+    "ast_hash": "e35d75514b9115cdc930b9d4da3c790a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/UserController.java": {
+    "mtime": 1790353725.3961039,
+    "seen": 1790353788.944412,
+    "ast_hash": "167ed212823d04a61fca8c8b21164b3f",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/auth/AuthResponse.java": {
+    "mtime": 1790319112.233135,
+    "seen": 1790353788.9444127,
+    "ast_hash": "6458a6c95ae0a611fcc3124c3198f3a1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/auth/LoginGoogleRequest.java": {
+    "mtime": 1790318924.9152415,
+    "seen": 1790353788.944414,
+    "ast_hash": "17cca307e0ebe467c4c9dba59ea9e297",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/auth/UserSummaryDto.java": {
+    "mtime": 1790319058.1885498,
+    "seen": 1790353788.9444156,
+    "ast_hash": "913010b10a692b64ceacc2564e6c61cd",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthService.java": {
+    "mtime": 1790319219.4651964,
+    "seen": 1790353788.9464083,
+    "ast_hash": "30f8abc2acce20e222813f3704958258",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthServiceImpl.java": {
+    "mtime": 1790353412.0218608,
+    "seen": 1790353788.94641,
+    "ast_hash": "d73d373cffcbba65644017949effe247",
     "semantic_hash": ""
   }
 }

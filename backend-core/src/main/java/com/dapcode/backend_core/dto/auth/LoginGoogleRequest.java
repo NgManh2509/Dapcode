@@ -1,0 +1,17 @@
+package com.dapcode.backend_core.dto.auth;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class LoginGoogleRequest {
+
+    @NotBlank(message = "idToken empty")
+    private String idToken;
+}
