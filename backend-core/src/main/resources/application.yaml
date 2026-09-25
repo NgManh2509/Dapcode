@@ -2,6 +2,17 @@ server:
   port: 8080
 
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - email
+              - profile
+              - openid
   application:
     name: backend-core
   
@@ -27,4 +38,9 @@ judge0:
   base-url: http://localhost:2358
   connection-timeout-ms: 5000
   read-timeout-ms: 10000
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration-ms: 86400000 
+
 

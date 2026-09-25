@@ -36,8 +36,14 @@ public class Users {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
-    @Column(name = "password_hash", nullable = false)
+    @Column(name = "password_hash")
     private String passwordHash;
+
+    @Column(name = "avatar_url", length = 500)
+    private String avatarUrl;
+
+    @Column(name = "google_id", length = 100)
+    private String googleId;
 
     @Builder.Default
     @Column(nullable = false, length = 20)
