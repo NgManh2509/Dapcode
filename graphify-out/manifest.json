@@ -24,9 +24,9 @@
     "semantic_hash": "a253a57235aba5eda1f5a9fec8f5214f"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java": {
-    "mtime": 1790147656.540554,
-    "seen": 1790153132.5011053,
-    "ast_hash": "1e6692ada563a9d8226af0939b23e413",
+    "mtime": 1790355013.710804,
+    "seen": 1790355434.5263429,
+    "ast_hash": "913cb6d7e60e84e95ea0f6226afcd67c",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/CorsConfig.java": {
@@ -174,16 +174,16 @@
     "semantic_hash": "15b22c3697874632c1754cb2956d2ec4"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionService.java": {
-    "mtime": 1789715889.609174,
-    "seen": 1789991262.6578953,
-    "ast_hash": "9343b03fb62a4a4ba0825009c49cd30c",
-    "semantic_hash": "9343b03fb62a4a4ba0825009c49cd30c"
+    "mtime": 1790355121.2714968,
+    "seen": 1790355434.5292227,
+    "ast_hash": "dea37eb821c3143d0f9e5ec611fdf757",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java": {
-    "mtime": 1789719336.1894915,
-    "seen": 1789991262.6578963,
-    "ast_hash": "425a70ee2c30b91927090caa323354db",
-    "semantic_hash": "425a70ee2c30b91927090caa323354db"
+    "mtime": 1790355296.1062355,
+    "seen": 1790355434.5292237,
+    "ast_hash": "4f7cac2ac53687f0e263b93b8e384ec1",
+    "semantic_hash": ""
   },
   "backend-core/src/test/java/com/dapcode/backend_core/BackendCoreApplicationTests.java": {
     "mtime": 1788958767.8880394,
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/controller/SubmissionController.java": {
-    "mtime": 1789991687.3620322,
-    "seen": 1789992223.5835588,
-    "ast_hash": "8df84e98ef5c2efbb15a4ffaf97bd982",
+    "mtime": 1790355417.051764,
+    "seen": 1790355434.5268042,
+    "ast_hash": "8841efa90a51d2dc1438659fa9bbd0e7",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java": {
@@ -435,6 +435,12 @@
     "mtime": 1790353412.0218608,
     "seen": 1790353788.94641,
     "ast_hash": "d73d373cffcbba65644017949effe247",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/SubmissionDetailResponse.java": {
+    "mtime": 1790355070.1805556,
+    "seen": 1790355434.5273595,
+    "ast_hash": "26d0412642c1c53b97934ca699ddc059",
     "semantic_hash": ""
   }
 }

@@ -436,17 +436,5 @@
     "seen": 1790353788.94641,
     "ast_hash": "d73d373cffcbba65644017949effe247",
     "semantic_hash": ""
-  },
-  "backend-core/src/test/java/com/dapcode/backend_core/config/JwtTokenProviderTest.java": {
-    "mtime": 1790354165.7002819,
-    "seen": 1790354242.9198902,
-    "ast_hash": "2faf99f0b4c42d82aec38cd9239ae6db",
-    "semantic_hash": ""
-  },
-  "backend-core/src/test/java/com/dapcode/backend_core/controller/AuthApiIntegrationTest.java": {
-    "mtime": 1790354156.4201381,
-    "seen": 1790354242.9198923,
-    "ast_hash": "de02c75d1b32cdddd066c8901b50f83f",
-    "semantic_hash": ""
   }
 }

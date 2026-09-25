@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dapcode.backend_core.common.ErrorCode;
+import com.dapcode.backend_core.dto.submission.SubmissionDetailResponse;
 import com.dapcode.backend_core.dto.submission.SubmissionResponse;
 import com.dapcode.backend_core.dto.submission.SubmitCodeRequest;
 import com.dapcode.backend_core.dto.submission.TestCaseResult;
@@ -192,6 +193,28 @@ public class SubmissionServiceImpl implements SubmissionService {
                 .currentStreak(user != null ? user.getStreakCount() : 0)
                 .testCaseResults(summary.testCaseResults())
                 .build();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public SubmissionDetailResponse getSubmissionById(UUID id, Users currUser) {
+        Submission submission = submissionRepository.findById(id)
+                .orElseThrow(() -> new AppException(ErrorCode.SUBMISSION_NOT_FOUND));
+
+        if (currUser != null && !currUser.getId().equals(submission.getUser().getId())
+                && !"ROLE_ADMIN".equals(currUser.getRole())) {
+            throw new AppException(ErrorCode.UNAUTHENTICATED);
+        }
+
+        return SubmissionDetailResponse.builder().id(submission.getId())
+                .problemSlug(submission.getProblem().getSlug())
+                .problemTitle(submission.getProblem().getTitle())
+                .status(submission.getStatus())
+                .sourceCode(submission.getSourceCode())
+                .languageId(submission.getLanguageId())
+                .totalRuntimeMs(submission.getTotalRuntimeMs())
+                .maxMemoryKb(submission.getMaxMemoryKb())
+                .createdAt(submission.getCreatedAt()).build();
     }
 
 }
