@@ -28,6 +28,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/v1/problems/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/theories/**").permitAll()
                         .requestMatchers("/error").permitAll()
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .requestMatchers("/api/v1/users/me").authenticated()
                         .requestMatchers(HttpMethod.POST, "/api/v1/submissions/**").authenticated()
                         .anyRequest().authenticated())
