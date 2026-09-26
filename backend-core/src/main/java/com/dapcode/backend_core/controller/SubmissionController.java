@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.dapcode.backend_core.common.ApiResponse;
 import com.dapcode.backend_core.dto.submission.SubmissionDetailResponse;
@@ -14,6 +15,7 @@ import com.dapcode.backend_core.dto.submission.SubmissionResponse;
 import com.dapcode.backend_core.dto.submission.SubmitCodeRequest;
 import com.dapcode.backend_core.entity.Users;
 import com.dapcode.backend_core.service.submission.SubmissionService;
+import org.springframework.http.MediaType;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -43,6 +45,12 @@ public class SubmissionController {
             @AuthenticationPrincipal Users currUser) {
         SubmissionDetailResponse res = submissionService.getSubmissionById(id, currUser);
         return ApiResponse.success(res);
+    }
+
+    @GetMapping(value = "/{id}/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public SseEmitter streamSubmissionProgress(@PathVariable UUID id, @AuthenticationPrincipal Users currUser) {
+        return submissionService.subscribeStream(id, currUser);
+
     }
 
 }

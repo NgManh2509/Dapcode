@@ -6,9 +6,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.dapcode.backend_core.common.ErrorCode;
 import com.dapcode.backend_core.dto.submission.SubmissionDetailResponse;
+import com.dapcode.backend_core.dto.submission.SubmissionProgressEvent;
 import com.dapcode.backend_core.dto.submission.SubmissionResponse;
 import com.dapcode.backend_core.dto.submission.SubmitCodeRequest;
 import com.dapcode.backend_core.dto.submission.TestCaseResult;
@@ -42,6 +44,8 @@ public class SubmissionServiceImpl implements SubmissionService {
 
     private final Judge0Client judge0Client;
 
+    private final SubmissionStreamManager streamManager;
+
     private record EvaluationSummary(
             String finalStatus,
             double totalRuntimeMs,
@@ -69,7 +73,8 @@ public class SubmissionServiceImpl implements SubmissionService {
                 .equals(expected.trim().replace("\r\n", "\n"));
     }
 
-    private EvaluationSummary evalutateResults(List<TestCase> testCases, List<Judge0Response> judge0Responses) {
+    private EvaluationSummary evalutateResults(List<TestCase> testCases, List<Judge0Response> judge0Responses,
+            UUID submissionId) {
         List<TestCaseResult> testCaseResults = new ArrayList<>();
 
         int passedCount = 0;
@@ -119,6 +124,17 @@ public class SubmissionServiceImpl implements SubmissionService {
                     .errMes(res != null ? (res.getStderr() != null ? res.getStderr() : res.getCompile_output()) : null)
                     .build();
             testCaseResults.add(tcResult);
+
+            SubmissionProgressEvent progressEvent = SubmissionProgressEvent.builder().submissionId(submissionId)
+                    .currentTest(i + 1)
+                    .totalTests(testCases.size())
+                    .status(caseStatus)
+                    .runtimeMs(timeMs)
+                    .memoryKb(memKb)
+                    .message("Test case " + (i + 1) + "/" + testCases.size() + ": " + caseStatus)
+                    .build();
+
+            streamManager.sendProgress(submissionId, progressEvent);
         }
 
         return new EvaluationSummary(finalStatus, totalRuntimeMs, maxMemoryKb, passedCount, testCaseResults);
@@ -159,7 +175,7 @@ public class SubmissionServiceImpl implements SubmissionService {
 
         List<Judge0Response> judge0Responses = judge0Client.executeBatch(judge0SubmissionRequests);
 
-        EvaluationSummary summary = evalutateResults(testCases, judge0Responses);
+        EvaluationSummary summary = evalutateResults(testCases, judge0Responses, submission.getId());
 
         submission.setStatus(summary.finalStatus());
 
@@ -182,7 +198,7 @@ public class SubmissionServiceImpl implements SubmissionService {
             userRepository.save(user);
         }
 
-        return SubmissionResponse.builder()
+        SubmissionResponse response = SubmissionResponse.builder()
                 .submissionId(submission.getId())
                 .slug(prob.getSlug())
                 .status(summary.finalStatus())
@@ -193,6 +209,40 @@ public class SubmissionServiceImpl implements SubmissionService {
                 .currentStreak(user != null ? user.getStreakCount() : 0)
                 .testCaseResults(summary.testCaseResults())
                 .build();
+
+        streamManager.sendCompleted(submission.getId(), response);
+
+        return response;
+    }
+
+    @Override
+    public SseEmitter subscribeStream(UUID submissionId, Users currUser) {
+        Submission submission = submissionRepository.findById(submissionId)
+                .orElseThrow(() -> new AppException(ErrorCode.SUBMISSION_NOT_FOUND));
+
+        if (currUser != null && !currUser.getId().equals(submission.getUser().getId())
+                && !"ROLE_ADMIN".equals(currUser.getRole())) {
+            throw new AppException(ErrorCode.UNAUTHENTICATED);
+        }
+
+        SseEmitter emitter = streamManager.createEmitter(submissionId);
+
+        if (!"PENDING".equals(submission.getStatus())) {
+            SubmissionDetailResponse detail = SubmissionDetailResponse.builder()
+                    .id(submission.getId())
+                    .problemSlug(submission.getProblem().getSlug())
+                    .problemTitle(submission.getProblem().getTitle())
+                    .status(submission.getStatus())
+                    .sourceCode(submission.getSourceCode())
+                    .languageId(submission.getLanguageId())
+                    .totalRuntimeMs(submission.getTotalRuntimeMs())
+                    .maxMemoryKb(submission.getMaxMemoryKb())
+                    .createdAt(submission.getCreatedAt())
+                    .build();
+            streamManager.sendCompleted(submissionId, detail);
+        }
+        return emitter;
+
     }
 
     @Override
