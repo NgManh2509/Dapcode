@@ -38,3 +38,7 @@ ENV/
 .coverage
 htmlcov/
 *.log
+
+# ChromaDB & Local Data
+data/
+*.sqlite3
