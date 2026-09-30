@@ -31,3 +31,5 @@ env/
 volumes/
 *testcases_cache.json
 *.rartemp
+
+graphify-out/cache/
