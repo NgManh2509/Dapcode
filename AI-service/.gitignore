@@ -39,6 +39,5 @@ ENV/
 htmlcov/
 *.log
 
-# ChromaDB & Local Data
 data/
 *.sqlite3
