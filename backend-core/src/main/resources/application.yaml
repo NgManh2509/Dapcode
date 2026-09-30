@@ -43,4 +43,10 @@ jwt:
   secret: ${JWT_SECRET:K7vQ8zP2mR4wX9yL1tN5bC0fG3jH6kE8sA1dF4gJ7hL=}
   expiration-ms: 86400000 
 
+ai-service:
+  base-url: ${AI_SERVICE_BASE_URL:http://localhost:8000}
+  connection-timeout-ms: 5000
+  read-timeout-ms: 45000
+
+
 
