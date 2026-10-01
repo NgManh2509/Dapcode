@@ -36,9 +36,9 @@
     "semantic_hash": "485ccc1e98c0d00e750a0b77c80f5e28"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/SecurityConfig.java": {
-    "mtime": 1790439054.585035,
-    "seen": 1790779087.2499487,
-    "ast_hash": "76b40e376ebe830ecc243d7fb80594af",
+    "mtime": 1790872561.7420077,
+    "seen": 1790872788.8961782,
+    "ast_hash": "ae95e70547ffbab3329d8c6c72587660",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/dto/common/PageResponse.java": {
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/resources/application.yaml": {
-    "mtime": 1790755063.9099493,
-    "seen": 1790779087.2559285,
-    "ast_hash": "30d7f66151b7607e35367a0bc0de3dc2",
+    "mtime": 1790872032.0212874,
+    "seen": 1790872230.9082606,
+    "ast_hash": "e3bfb66ba20891a8e16d3460d84faa43",
     "semantic_hash": ""
   },
   "infra/database/docker-compose.db.yml": {
@@ -1545,6 +1545,348 @@
     "mtime": 1790646182.9449873,
     "seen": 1790779087.2557533,
     "ast_hash": "f8dfc0919407528279841521c0360c13",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/eslint.config.js": {
+    "mtime": 1790779860.6714635,
+    "seen": 1790846285.220276,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/package.json": {
+    "mtime": 1790841863.0190172,
+    "seen": 1790846285.2202785,
+    "ast_hash": "0d362d191280776f316e8e11b24b4856",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/App.jsx": {
+    "mtime": 1790872155.849124,
+    "seen": 1790872230.8863516,
+    "ast_hash": "58697e19912937076a52ee0d590ab221",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/ai.js": {
+    "mtime": 1790842428.5127494,
+    "seen": 1790846285.2202811,
+    "ast_hash": "bd455d69979bf8880342703bb381cd27",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/client.js": {
+    "mtime": 1790842391.368726,
+    "seen": 1790846285.2202823,
+    "ast_hash": "f0496b70147c669559618398a8ba5ec6",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/problems.js": {
+    "mtime": 1790843656.1437533,
+    "seen": 1790846285.220283,
+    "ast_hash": "0f1f0f7887762c1b1ee7d009f6f8251e",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/submissions.js": {
+    "mtime": 1790842420.1966422,
+    "seen": 1790846285.2202845,
+    "ast_hash": "a811a87fdac9731d0c13168867a274c3",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/theories.js": {
+    "mtime": 1790844011.0493698,
+    "seen": 1790846285.2202852,
+    "ast_hash": "d8a10e646ed5d2d9486a350445ac3d6c",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/AiTutorDrawer.jsx": {
+    "mtime": 1790845066.6757605,
+    "seen": 1790846285.2202861,
+    "ast_hash": "a28ac5fbc887d10d0e2dadbb581cc78e",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/AuthModal.jsx": {
+    "mtime": 1790872756.8426104,
+    "seen": 1790872788.8927763,
+    "ast_hash": "f6e0256b687d7b17ca49f0c0d8e632c6",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/CategoryAccordion.jsx": {
+    "mtime": 1790845214.7554436,
+    "seen": 1790846285.2202888,
+    "ast_hash": "07d7b31fb21ff9d401f354209da62a27",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/CodeEditor.jsx": {
+    "mtime": 1790844987.072515,
+    "seen": 1790846285.2202895,
+    "ast_hash": "e64f9fa4ede1d64f318ff5761790901d",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/ConsoleDrawer.jsx": {
+    "mtime": 1790845013.6437888,
+    "seen": 1790846285.2202904,
+    "ast_hash": "9b44ec18dff3c4872ce23ef7a5bb6299",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/DifficultyBadge.jsx": {
+    "mtime": 1790845415.0037863,
+    "seen": 1790846285.2202911,
+    "ast_hash": "54a8ce9e9760579de030862c314003f7",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/MarkdownRenderer.jsx": {
+    "mtime": 1790845042.0080187,
+    "seen": 1790846285.220292,
+    "ast_hash": "ce21e84f1976c68ae9e0bbb6e01fdd5a",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/Navbar.jsx": {
+    "mtime": 1790844933.3205569,
+    "seen": 1790846285.220293,
+    "ast_hash": "3b339fd05c2b91c052cad8dcc4ef6a5a",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/ProgressSidebar.jsx": {
+    "mtime": 1790845236.7296765,
+    "seen": 1790846285.2202945,
+    "ast_hash": "4d89aef4cb2738f3a8bc07347499b2bb",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/RoadmapGraph.jsx": {
+    "mtime": 1790845775.3107057,
+    "seen": 1790846285.2202954,
+    "ast_hash": "4183b60699761c2d44b3394fbbaf8d33",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/RoadmapTopicDrawer.jsx": {
+    "mtime": 1790845192.9981709,
+    "seen": 1790846285.2202964,
+    "ast_hash": "e2570f873617d3a097176d0b781cca06",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/SearchModal.jsx": {
+    "mtime": 1790845339.8006706,
+    "seen": 1790846285.220297,
+    "ast_hash": "5fe07119647b951a9ff00f5596d89bc9",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/StreakModal.jsx": {
+    "mtime": 1790845379.601576,
+    "seen": 1790846285.2202985,
+    "ast_hash": "921a03f7e7118ac7fcc4267a652bf0ab",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/context/ThemeContext.jsx": {
+    "mtime": 1790844855.5912063,
+    "seen": 1790846285.2202995,
+    "ast_hash": "4e80211840b10ee19155c553ec8f0947",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/data/mockProblems.js": {
+    "mtime": 1790843760.3509822,
+    "seen": 1790846285.2203002,
+    "ast_hash": "5d4e528381390ff9df32b3bd19713692",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/data/roadmapData.js": {
+    "mtime": 1790846815.8484104,
+    "seen": 1790846867.5007818,
+    "ast_hash": "78e996c4264eb07356169c9bc68d01db",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/data/starterTemplates.js": {
+    "mtime": 1790843665.0426636,
+    "seen": 1790846285.220302,
+    "ast_hash": "9b1a01aa76df7658d24592f13df02887",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/main.jsx": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2203028,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/ProblemsPage.jsx": {
+    "mtime": 1790845144.6494324,
+    "seen": 1790846285.2203035,
+    "ast_hash": "0f6b98d7f05457ad4ec53d014ed51240",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/TheoriesPage.jsx": {
+    "mtime": 1790845298.8561757,
+    "seen": 1790846285.2203045,
+    "ast_hash": "b778c98899fe8435617cdeb2fe9c3d91",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/TheoryDetailPage.jsx": {
+    "mtime": 1790845322.64647,
+    "seen": 1790846285.2203057,
+    "ast_hash": "926af8b2e80cee14961123d3d015d495",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/WorkspacePage.jsx": {
+    "mtime": 1790845114.481719,
+    "seen": 1790846285.2203066,
+    "ast_hash": "9e68bbf42594c5f7da27e277cebc79b9",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/vite.config.js": {
+    "mtime": 1790842380.4432642,
+    "seen": 1790846285.2203078,
+    "ast_hash": "c88059ef8bd9197ff3dd3f6227f9cd39",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1790779567.9337988,
+    "seen": 1790846285.2262573,
+    "ast_hash": "d5ab6ed19e5a015de89521b2014fe3d0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/brandkit/SKILL.md": {
+    "mtime": 1790779261.0940638,
+    "seen": 1790846285.226336,
+    "ast_hash": "7491f8fb77b0ebf517b758d096ac4ab4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend-v1/SKILL.md": {
+    "mtime": 1790779261.1015728,
+    "seen": 1790846285.2263381,
+    "ast_hash": "05b271f9985412ac9c081a0511bb6cbe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend/SKILL.md": {
+    "mtime": 1790779261.1028848,
+    "seen": 1790846285.2263393,
+    "ast_hash": "648c8bf98f84fbe7f14bf2da035c57fe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/full-output-enforcement/SKILL.md": {
+    "mtime": 1790779261.0995932,
+    "seen": 1790846285.2263405,
+    "ast_hash": "2072dc2c1357dc9cd6384d1f441e05c3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gpt-taste/SKILL.md": {
+    "mtime": 1790779261.095569,
+    "seen": 1790846285.2263422,
+    "ast_hash": "e2a7560cbfce7a853dd8f65eca12c103",
+    "semantic_hash": ""
+  },
+  ".agents/skills/high-end-visual-design/SKILL.md": {
+    "mtime": 1790779261.1005735,
+    "seen": 1790846285.2263436,
+    "ast_hash": "64f7c1069a5a3d18797950d8fac7b63a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/image-to-code/SKILL.md": {
+    "mtime": 1790779261.0965745,
+    "seen": 1790846285.226345,
+    "ast_hash": "b18a810930da9c6b558b15c85bc74007",
+    "semantic_hash": ""
+  },
+  ".agents/skills/imagegen-frontend-mobile/SKILL.md": {
+    "mtime": 1790779261.097575,
+    "seen": 1790846285.2263465,
+    "ast_hash": "6253c18387ca5d561a945ffe14e70d54",
+    "semantic_hash": ""
+  },
+  ".agents/skills/imagegen-frontend-web/SKILL.md": {
+    "mtime": 1790779261.09859,
+    "seen": 1790846285.2263477,
+    "ast_hash": "728f55ab7e44330e78aac4ca8331d83a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/industrial-brutalist-ui/SKILL.md": {
+    "mtime": 1790779261.0940638,
+    "seen": 1790846285.2263496,
+    "ast_hash": "da7f92d7e3b8b526ecbd71009fe973ca",
+    "semantic_hash": ""
+  },
+  ".agents/skills/minimalist-ui/SKILL.md": {
+    "mtime": 1790779261.0995932,
+    "seen": 1790846285.2263508,
+    "ast_hash": "32f8681f79a681d00a4b72ddce4415b1",
+    "semantic_hash": ""
+  },
+  ".agents/skills/redesign-existing-projects/SKILL.md": {
+    "mtime": 1790779261.1005735,
+    "seen": 1790846285.2263522,
+    "ast_hash": "c8d729e3e807df37dcd5e6262c9b8843",
+    "semantic_hash": ""
+  },
+  ".agents/skills/stitch-design-taste/DESIGN.md": {
+    "mtime": 1790779261.1015728,
+    "seen": 1790846285.2263534,
+    "ast_hash": "7f8c91aeecc8983b687965c2fc23438c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/stitch-design-taste/SKILL.md": {
+    "mtime": 1790779261.1015728,
+    "seen": 1790846285.2263546,
+    "ast_hash": "fcbb4f37d67a66a53013b484dcfc9f25",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/README.md": {
+    "mtime": 1790779860.6956568,
+    "seen": 1790846285.2378292,
+    "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/index.html": {
+    "mtime": 1790872122.5930336,
+    "seen": 1790872230.9080238,
+    "ast_hash": "5c597d7e50a6d5c53ea563d155eea5a3",
+    "semantic_hash": ""
+  },
+  "frontend_implementation_plan.md": {
+    "mtime": 1790779175.9702947,
+    "seen": 1790846285.238187,
+    "ast_hash": "01c8230ad7de821db187b734b5da6b14",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/public/favicon.svg": {
+    "mtime": 1790779759.877452,
+    "seen": 1790846285.2384439,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/public/icons.svg": {
+    "mtime": 1790779759.87845,
+    "seen": 1790846285.2384458,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/assets/hero.png": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2384472,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/assets/react.svg": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2384484,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/assets/vite.svg": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2384498,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/auth.js": {
+    "mtime": 1790872131.0364356,
+    "seen": 1790872230.8864436,
+    "ast_hash": "10d5b527c31edc00ac6bb873f7b2ef49",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/AuthCallbackPage.jsx": {
+    "mtime": 1790872620.7544909,
+    "seen": 1790872788.8946695,
+    "ast_hash": "9af35bbc6492eea6443062c573c7055a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java": {
+    "mtime": 1790872547.6135304,
+    "seen": 1790872788.896102,
+    "ast_hash": "113c9d1cd3405af56f29777a25558176",
     "semantic_hash": ""
   }
 }
