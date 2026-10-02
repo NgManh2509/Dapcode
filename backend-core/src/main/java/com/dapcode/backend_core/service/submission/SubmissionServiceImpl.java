@@ -46,6 +46,8 @@ public class SubmissionServiceImpl implements SubmissionService {
 
     private final SubmissionStreamManager streamManager;
 
+    private final CodeHarnessService codeHarnessService;
+
     private record EvaluationSummary(
             String finalStatus,
             double totalRuntimeMs,
@@ -69,9 +71,23 @@ public class SubmissionServiceImpl implements SubmissionService {
         if (actual == null || expected == null) {
             return false;
         }
-        return actual.trim().replace("\r\n", "\n")
-                .equals(expected.trim().replace("\r\n", "\n"));
+        String a = actual.trim().replace("\r\n", "\n");
+        String e = expected.trim().replace("\r\n", "\n");
+        if (a.equals(e)) {
+            return true;
+        }
+        String aNorm = a.replaceAll("\\s+", "").toLowerCase();
+        String eNorm = e.replaceAll("\\s+", "").toLowerCase();
+        if (aNorm.equals(eNorm)) {
+            return true;
+        }
+        if (("[]".equals(aNorm) && "none".equals(eNorm)) || ("none".equals(aNorm) && "[]".equals(eNorm))) {
+            return true;
+        }
+        return false;
     }
+
+
 
     private EvaluationSummary evalutateResults(List<TestCase> testCases, List<Judge0Response> judge0Responses,
             UUID submissionId) {
@@ -96,7 +112,7 @@ public class SubmissionServiceImpl implements SubmissionService {
             String caseStatus = "INTERNAL_ERROR";
             if (res != null) {
                 Judge0Status jStatus = res.getJudge0Status();
-                if (jStatus == Judge0Status.ACCEPTED) {
+                if (jStatus == Judge0Status.ACCEPTED || jStatus == Judge0Status.WRONG_ANSWER) {
                     if (isOutputMatched(res.getStdout(), tc.getExpectedOutput())) {
                         caseStatus = "ACCEPTED";
                         passedCount++;
@@ -107,6 +123,7 @@ public class SubmissionServiceImpl implements SubmissionService {
                     caseStatus = jStatus.name();
                 }
             }
+
 
             if (!"ACCEPTED".equals(caseStatus) && "ACCEPTED".equals(finalStatus)) {
                 finalStatus = caseStatus;
@@ -162,16 +179,22 @@ public class SubmissionServiceImpl implements SubmissionService {
                 .build();
         submission = submissionRepository.save(submission);
 
+        String preparedCode = codeHarnessService.prepareSourceCode(
+                prob.getSlug(),
+                request.getLanguageId(),
+                request.getSourceCode());
+
         List<Judge0SubmissionRequest> judge0SubmissionRequests = testCases.stream()
                 .map(tc -> Judge0SubmissionRequest.builder()
                         .language_id(request.getLanguageId())
-                        .source_code(request.getSourceCode())
+                        .source_code(preparedCode)
                         .stdin(tc.getInputData())
                         .expected_output(tc.getExpectedOutput())
                         .cpu_time_limit(prob.getTimeLimitMs() / 1000.0)
                         .memory_limit(prob.getMemoryLimitKb())
                         .build())
                 .toList();
+
 
         List<Judge0Response> judge0Responses = judge0Client.executeBatch(judge0SubmissionRequests);
 

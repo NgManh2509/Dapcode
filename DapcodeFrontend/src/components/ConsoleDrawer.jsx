@@ -243,29 +243,122 @@ export default function ConsoleDrawer({
                   );
                 })()}
 
-                {/* Test case breakdown if available */}
-                {result.testCaseResults && result.testCaseResults.length > 0 && (
-                  <div>
-                    <div className="text-[11px] font-sans font-semibold text-slate-600 dark:text-zinc-400 mb-2">
-                      Chi tiết từng Test Case ({result.passedTestCases || 0} / {result.testCaseResults.length} Passed):
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                      {result.testCaseResults.map((tc, i) => (
-                        <div
-                          key={i}
-                          className={`flex items-center justify-between px-2.5 py-1.5 rounded-md border text-[11px] ${
-                            tc.passed
-                              ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/5 dark:text-emerald-400'
-                              : 'border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-500/20 dark:bg-rose-500/5 dark:text-rose-400'
-                          }`}
-                        >
-                          <span>Case {i + 1}</span>
-                          <span className="font-semibold">{tc.passed ? 'PASS' : 'FAIL'}</span>
+                {(() => {
+                  const casesToDisplay = (result.testCaseResults && result.testCaseResults.length > 0)
+                    ? result.testCaseResults
+                    : (publicTestCases && publicTestCases.length > 0)
+                      ? publicTestCases.map((ptc, idx) => ({
+                          testCaseId: ptc.id || idx,
+                          status: result.status === 'ACCEPTED' ? 'ACCEPTED' : (result.status || 'PENDING'),
+                          inputData: ptc.inputData,
+                          expectedOutput: ptc.expectedOutput,
+                          actualOutput: result.status === 'ACCEPTED' ? ptc.expectedOutput : 'N/A',
+                          isHidden: false,
+                        }))
+                      : [];
+
+                  if (casesToDisplay.length === 0) {
+                    return (
+                      <div className="rounded-xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-[#121319] p-4 text-center font-sans text-xs text-slate-600 dark:text-zinc-400">
+                        Đã kiểm thử hoàn tất với kết quả: <strong className="font-mono">{result.status || 'ACCEPTED'}</strong>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="text-[11px] font-sans font-semibold text-slate-700 dark:text-zinc-300">
+                          Chi tiết từng Test Case ({result.passedTestCases ?? casesToDisplay.filter(c => c.status === 'ACCEPTED' || c.passed).length} / {casesToDisplay.length} Passed):
                         </div>
-                      ))}
+                      </div>
+
+                      <div className="space-y-2.5">
+                        {casesToDisplay.map((tc, i) => {
+                          const isPassed = tc.status === 'ACCEPTED' || tc.passed === true;
+                          const isHidden = tc.isHidden ?? tc.hidden ?? false;
+                          const cleanActual = tc.actualOutput ? tc.actualOutput.trim() : (isPassed ? (tc.expectedOutput || 'Passed') : 'N/A');
+
+                          return (
+                            <div
+                              key={i}
+                              className={`rounded-xl border p-3 font-mono text-xs transition-colors ${
+                                isPassed
+                                  ? 'border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-[#121319]'
+                                  : 'border-rose-200 dark:border-rose-900/40 bg-rose-50/30 dark:bg-rose-950/10'
+                              }`}
+                            >
+                              <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200/80 dark:border-zinc-800/80">
+                                <div className="flex items-center space-x-2">
+                                  <span className="font-semibold text-slate-800 dark:text-zinc-200">
+                                    Case {i + 1} {isHidden ? '(Ẩn)' : ''}
+                                  </span>
+                                  <span
+                                    className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
+                                      isPassed
+                                        ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30'
+                                        : 'bg-rose-100 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400 border border-rose-300 dark:border-rose-500/30'
+                                    }`}
+                                  >
+                                    {isPassed ? 'PASS' : (tc.status || 'FAIL')}
+                                  </span>
+                                </div>
+                                {tc.runtimeMs !== undefined && (
+                                  <span className="text-[11px] text-slate-400 dark:text-zinc-500 font-sans">
+                                    {Math.round(tc.runtimeMs)} ms
+                                  </span>
+                                )}
+                              </div>
+
+                              <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+                                <div>
+                                  <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">
+                                    Input :
+                                  </div>
+                                  <div className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#181920] p-2 text-slate-800 dark:text-zinc-200 break-words whitespace-pre-wrap">
+                                    {tc.inputData || (isHidden ? '(Test case ẩn)' : 'N/A')}
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">
+                                    Output :
+                                  </div>
+                                  <div className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#181920] p-2 text-slate-800 dark:text-zinc-200 break-words whitespace-pre-wrap">
+                                    {tc.expectedOutput || (isHidden ? '(Test case ẩn)' : 'N/A')}
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">
+                                    Kết quả :
+                                  </div>
+                                  <div
+                                    className={`rounded-lg border p-2 break-words whitespace-pre-wrap ${
+                                      isPassed
+                                        ? 'border-emerald-200 dark:border-emerald-500/30 bg-emerald-50/60 dark:bg-emerald-950/20 text-emerald-700 dark:text-emerald-300 font-semibold'
+                                        : 'border-rose-200 dark:border-rose-500/30 bg-rose-50/60 dark:bg-rose-950/20 text-rose-700 dark:text-rose-300 font-semibold'
+                                    }`}
+                                  >
+                                    {cleanActual}
+                                  </div>
+                                </div>
+                              </div>
+
+                              {tc.errMes && (
+                                <div className="mt-2 text-[11px] font-mono text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30 p-2 rounded border border-rose-200 dark:border-rose-900/50 whitespace-pre-wrap">
+                                  {tc.errMes}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  );
+                })()}
+
+
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-10 text-slate-400 dark:text-zinc-500 font-sans">

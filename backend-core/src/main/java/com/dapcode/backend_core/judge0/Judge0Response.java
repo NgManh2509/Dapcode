@@ -1,5 +1,8 @@
 package com.dapcode.backend_core.judge0;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
 import lombok.Data;
 
 @Data
@@ -19,8 +22,32 @@ public class Judge0Response {
         private String description;
     }
 
+    private static String decodeBase64Safe(String val) {
+        if (val == null || val.isBlank()) {
+            return val;
+        }
+        try {
+            byte[] decoded = Base64.getDecoder().decode(val.trim());
+            return new String(decoded, StandardCharsets.UTF_8);
+        } catch (IllegalArgumentException e) {
+            return val;
+        }
+    }
+
+    public String getStdout() {
+        return decodeBase64Safe(stdout);
+    }
+
+    public String getStderr() {
+        return decodeBase64Safe(stderr);
+    }
+
+    public String getCompile_output() {
+        return decodeBase64Safe(compile_output);
+    }
+
     public String getCompileOutput() {
-        return compile_output;
+        return decodeBase64Safe(compile_output);
     }
 
     public Judge0Status getJudge0Status() {

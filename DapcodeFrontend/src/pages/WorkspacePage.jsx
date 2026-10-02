@@ -10,7 +10,7 @@ import AuthModal from '../components/AuthModal';
 import StreakModal from '../components/StreakModal';
 import { getProblemBySlug, getProblems } from '../api/problems';
 import { submitCode, subscribeSubmissionStream } from '../api/submissions';
-import { DEFAULT_STARTER_CODE } from '../data/starterTemplates';
+import { DEFAULT_STARTER_CODE, getStarterCode } from '../data/starterTemplates';
 import { useTheme } from '../context/ThemeContext';
 import { 
   Code2,
@@ -44,7 +44,8 @@ export default function WorkspacePage() {
 
   // Editor State
   const [language, setLanguage] = useState('python');
-  const [code, setCode] = useState(DEFAULT_STARTER_CODE.python);
+  const [code, setCode] = useState(() => getStarterCode(slug, 'python'));
+
 
   // Modals state
   const [isAiTutorOpen, setIsAiTutorOpen] = useState(false);
@@ -118,6 +119,7 @@ export default function WorkspacePage() {
         const data = res?.data || res;
         if (data && data.slug) {
           setProblem(data);
+          setCode(getStarterCode(slug, language));
         } else {
           setFetchError('Không tìm thấy dữ liệu bài toán từ backend.');
         }
@@ -132,15 +134,17 @@ export default function WorkspacePage() {
       });
   }, [slug]);
 
+
   // Handle language switch and starter code
   const handleLanguageChange = (newLang) => {
     setLanguage(newLang);
-    setCode(DEFAULT_STARTER_CODE[newLang] || '');
+    setCode(getStarterCode(slug, newLang));
   };
 
   const handleResetCode = () => {
-    setCode(DEFAULT_STARTER_CODE[language] || '');
+    setCode(getStarterCode(slug, language));
   };
+
 
   const [authPromptMessage, setAuthPromptMessage] = useState('');
 
@@ -182,6 +186,14 @@ export default function WorkspacePage() {
       });
 
       const submissionData = res?.data || res;
+      setSubmissionState({
+        isRunning: false,
+        isSubmitting: false,
+        progress: null,
+        result: submissionData,
+        error: null,
+      });
+
       if (submissionData?.submissionId) {
         subscribeSubmissionStream(submissionData.submissionId, {
           onProgress: (prog) => {
@@ -191,43 +203,32 @@ export default function WorkspacePage() {
             }));
           },
           onComplete: (completedRes) => {
+            const mergedResult = {
+              ...submissionData,
+              ...completedRes,
+              testCaseResults: (submissionData?.testCaseResults && submissionData.testCaseResults.length > 0)
+                ? submissionData.testCaseResults
+                : (completedRes?.testCaseResults || []),
+            };
             setSubmissionState({
               isRunning: false,
               isSubmitting: false,
               progress: null,
-              result: completedRes,
+              result: mergedResult,
               error: null,
             });
           },
-          onError: (err) => {
-            setSubmissionState((prev) => {
-              if (prev.result || submissionData?.status) {
-                return {
-                  ...prev,
-                  isRunning: false,
-                  isSubmitting: false,
-                  progress: null,
-                  result: prev.result || submissionData,
-                  error: null,
-                };
-              }
-              return {
-                isRunning: false,
-                isSubmitting: false,
-                progress: null,
-                result: null,
-                error: typeof err === 'string' ? err : 'Kiểm thử thất bại hoặc mất kết nối tới Sandbox.',
-              };
-            });
+
+          onError: () => {
+            setSubmissionState((prev) => ({
+              ...prev,
+              isRunning: false,
+              isSubmitting: false,
+              progress: null,
+              result: prev.result || submissionData,
+              error: null,
+            }));
           },
-        });
-      } else {
-        setSubmissionState({
-          isRunning: false,
-          isSubmitting: false,
-          progress: null,
-          result: submissionData,
-          error: null,
         });
       }
     } catch (err) {
@@ -265,6 +266,24 @@ export default function WorkspacePage() {
       });
 
       const submissionData = res?.data || res;
+      setSubmissionState({
+        isRunning: false,
+        isSubmitting: false,
+        progress: null,
+        result: submissionData,
+        error: null,
+      });
+
+      if (submissionData?.status?.toUpperCase() === 'ACCEPTED') {
+        try {
+          const completed = new Set(JSON.parse(localStorage.getItem('dapcode_completed') || '[]'));
+          completed.add(problem.slug);
+          localStorage.setItem('dapcode_completed', JSON.stringify(Array.from(completed)));
+        } catch (e) {
+          console.error(e);
+        }
+      }
+
       if (submissionData?.submissionId) {
         subscribeSubmissionStream(submissionData.submissionId, {
           onProgress: (prog) => {
@@ -274,62 +293,32 @@ export default function WorkspacePage() {
             }));
           },
           onComplete: (completedRes) => {
+            const mergedResult = {
+              ...submissionData,
+              ...completedRes,
+              testCaseResults: (submissionData?.testCaseResults && submissionData.testCaseResults.length > 0)
+                ? submissionData.testCaseResults
+                : (completedRes?.testCaseResults || []),
+            };
             setSubmissionState({
               isRunning: false,
               isSubmitting: false,
               progress: null,
-              result: completedRes,
+              result: mergedResult,
               error: null,
             });
-            if (completedRes?.status?.toUpperCase() === 'ACCEPTED') {
-              try {
-                const completed = new Set(JSON.parse(localStorage.getItem('dapcode_completed') || '[]'));
-                completed.add(problem.slug);
-                localStorage.setItem('dapcode_completed', JSON.stringify(Array.from(completed)));
-              } catch (e) {
-                console.error(e);
-              }
-            }
           },
-          onError: (err) => {
-            setSubmissionState((prev) => {
-              if (prev.result || submissionData?.status) {
-                const finalRes = prev.result || submissionData;
-                if (finalRes?.status?.toUpperCase() === 'ACCEPTED') {
-                  try {
-                    const completed = new Set(JSON.parse(localStorage.getItem('dapcode_completed') || '[]'));
-                    completed.add(problem.slug);
-                    localStorage.setItem('dapcode_completed', JSON.stringify(Array.from(completed)));
-                  } catch (e) {
-                    console.error(e);
-                  }
-                }
-                return {
-                  ...prev,
-                  isRunning: false,
-                  isSubmitting: false,
-                  progress: null,
-                  result: finalRes,
-                  error: null,
-                };
-              }
-              return {
-                isRunning: false,
-                isSubmitting: false,
-                progress: null,
-                result: null,
-                error: typeof err === 'string' ? err : 'Chấm bài thất bại hoặc mất kết nối tới Sandbox.',
-              };
-            });
+
+          onError: () => {
+            setSubmissionState((prev) => ({
+              ...prev,
+              isRunning: false,
+              isSubmitting: false,
+              progress: null,
+              result: prev.result || submissionData,
+              error: null,
+            }));
           },
-        });
-      } else {
-        setSubmissionState({
-          isRunning: false,
-          isSubmitting: false,
-          progress: null,
-          result: submissionData,
-          error: null,
         });
       }
     } catch (err) {

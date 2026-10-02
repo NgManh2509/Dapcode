@@ -25,7 +25,7 @@ public class Judge0ClientImpl implements Judge0Client {
         log.info("Sending submission to Judge0: languageId={}", request.getLanguageId());
 
         return judge0RestClient.post()
-                .uri("/submissions?wait=true&base64_encoded=false")
+                .uri("/submissions?wait=true&base64_encoded=true")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(request)
                 .retrieve()
@@ -58,7 +58,7 @@ public class Judge0ClientImpl implements Judge0Client {
                 .map(res -> res.get("token"))
                 .collect(Collectors.joining(","));
 
-        String getUri = "/submissions/batch?tokens=" + tokens + "&base64_encoded=false";
+        String getUri = "/submissions/batch?tokens=" + tokens + "&base64_encoded=true";
 
         for (int attempt = 0; attempt < 40; attempt++) {
             try {
@@ -68,30 +68,39 @@ public class Judge0ClientImpl implements Judge0Client {
                 break;
             }
 
-            BatchResponse batchResult = judge0RestClient.get()
-                    .uri(getUri)
-                    .retrieve()
-                    .body(BatchResponse.class);
+            try {
+                BatchResponse batchResult = judge0RestClient.get()
+                        .uri(getUri)
+                        .retrieve()
+                        .body(BatchResponse.class);
 
-            if (batchResult != null && batchResult.submissions() != null && !batchResult.submissions().isEmpty()) {
-                boolean allFinished = batchResult.submissions().stream()
-                        .allMatch(sub -> sub.getStatus() != null
-                                && sub.getStatus().getId() != Judge0Status.IN_QUEUE.getId()
-                                && sub.getStatus().getId() != Judge0Status.PROCESSING.getId());
+                if (batchResult != null && batchResult.submissions() != null && !batchResult.submissions().isEmpty()) {
+                    boolean allFinished = batchResult.submissions().stream()
+                            .allMatch(sub -> sub.getStatus() != null
+                                    && sub.getStatus().getId() != Judge0Status.IN_QUEUE.getId()
+                                    && sub.getStatus().getId() != Judge0Status.PROCESSING.getId());
 
-                if (allFinished) {
-                    return batchResult.submissions();
+                    if (allFinished) {
+                        return batchResult.submissions();
+                    }
                 }
+            } catch (Exception e) {
+                log.warn("Error polling Judge0 batch attempt {}: {}", attempt, e.getMessage());
             }
         }
 
         // Trường hợp hết thời gian poll, gọi lần cuối trả về kết quả hiện tại
-        BatchResponse finalResult = judge0RestClient.get()
-                .uri(getUri)
-                .retrieve()
-                .body(BatchResponse.class);
+        try {
+            BatchResponse finalResult = judge0RestClient.get()
+                    .uri(getUri)
+                    .retrieve()
+                    .body(BatchResponse.class);
 
-        return finalResult != null ? finalResult.submissions() : Collections.emptyList();
+            return finalResult != null ? finalResult.submissions() : Collections.emptyList();
+        } catch (Exception e) {
+            log.error("Failed to retrieve final Judge0 batch result: {}", e.getMessage());
+            return Collections.emptyList();
+        }
     }
 
     private record BatchResponse(List<Judge0Response> submissions) {

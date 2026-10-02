@@ -1,0 +1,427 @@
+{
+  "communities": {
+    "0": [
+      "arraylist",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client_executebatch",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_batchresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_java_override",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executebatch",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executesingle",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getcompileoutput",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_status",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getcputimelimit",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getexpectedoutput",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getlanguageid",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getmemorylimit",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getsourcecode",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemid",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemidandishiddenfalse",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_evaluationsummary",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_java_override",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_evalutateresults",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_findproblembyslug",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_finduserbyid",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_isoutputmatched",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_submitandevaluate",
+      "collections",
+      "collectors",
+      "lombok_extern_slf4j_slf4j",
+      "lombok_requiredargsconstructor",
+      "map",
+      "mediatype",
+      "org_springframework_stereotype_component",
+      "org_springframework_stereotype_service",
+      "org_springframework_transaction_annotation_transactional",
+      "parameterizedtypereference"
+    ],
+    "1": [
+      "assertequals",
+      "assertnotnull",
+      "asserttrue",
+      "autowired",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_users_users",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client_executesingle",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository_existsbyemail",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository_existsbyusername",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository_findbyemail",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository_findbyusername",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionservice_submissionservice",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionservice_submissionservice_submitandevaluate",
+      "backend_core_src_test_java_com_dapcode_backend_core_backendcoreapplicationtests",
+      "backend_core_src_test_java_com_dapcode_backend_core_backendcoreapplicationtests_backendcoreapplicationtests",
+      "backend_core_src_test_java_com_dapcode_backend_core_backendcoreapplicationtests_backendcoreapplicationtests_contextloads",
+      "backend_core_src_test_java_com_dapcode_backend_core_judge0_judge0clientintegrationtest",
+      "backend_core_src_test_java_com_dapcode_backend_core_judge0_judge0clientintegrationtest_judge0clientintegrationtest",
+      "backend_core_src_test_java_com_dapcode_backend_core_judge0_judge0clientintegrationtest_judge0clientintegrationtest_testexecutebatch",
+      "backend_core_src_test_java_com_dapcode_backend_core_judge0_judge0clientintegrationtest_judge0clientintegrationtest_testexecutesinglepythonsuccess",
+      "backend_core_src_test_java_com_dapcode_backend_core_judge0_judge0clientintegrationtest_judge0clientintegrationtest_testexecutesingleruntimeerror",
+      "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest",
+      "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest_submissionevaluationintegrationtest",
+      "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest_submissionevaluationintegrationtest_setup",
+      "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest_submissionevaluationintegrationtest_testsubmitcorrectpythoncode",
+      "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest_submissionevaluationintegrationtest_testsubmittimelimitexceeded",
+      "backend_core_src_test_java_com_dapcode_backend_core_service_submissionevaluationintegrationtest_submissionevaluationintegrationtest_testsubmitwronganswerpythoncode",
+      "org_junit_jupiter_api_beforeeach",
+      "org_junit_jupiter_api_displayname",
+      "org_junit_jupiter_api_test",
+      "org_springframework_boot_test_context_springboottest"
+    ],
+    "2": [
+      "accesslevel",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_error",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse_success",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_errorcode",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_invalid_request",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_problem_not_found",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthenticated",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthorized",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_uncategorized_exception",
+      "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_user_not_found",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception_appexception",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler_handlingappexceptopm",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler_handlinggenericexception",
+      "backend_core_src_main_java_com_dapcode_backend_core_exception_globalexceptionhandler_globalexceptionhandler_handlingvalidation",
+      "com_fasterxml_jackson_annotation_jsoninclude",
+      "lombok_experimental_fielddefaults",
+      "org_springframework_http_httpstatus",
+      "org_springframework_http_responseentity",
+      "org_springframework_web_bind_annotation_exceptionhandler",
+      "org_springframework_web_bind_annotation_restcontrolleradvice",
+      "org_springframework_web_bind_methodargumentnotvalidexception"
+    ],
+    "3": [
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_common_pageresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_common_pageresponse_pageresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemdetailresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemdetailresponse_problemdetailresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemdetailresponse_publictestcasedto",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemsummaryresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemsummaryresponse_problemsummaryresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_submissionresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_submissionresponse_submissionresponse",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_submitcoderequest",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_submitcoderequest_submitcoderequest",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_testcaseresult",
+      "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_testcaseresult_testcaseresult",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionservice",
+      "list",
+      "lombok_allargsconstructor",
+      "lombok_builder",
+      "lombok_data",
+      "lombok_noargsconstructor",
+      "notblank",
+      "notnull",
+      "uuid"
+    ],
+    "4": [
+      "abstracthttpconfigurer",
+      "backend_core_src_main_java_com_dapcode_backend_core_config_corsconfig",
+      "backend_core_src_main_java_com_dapcode_backend_core_config_corsconfig_corsconfig",
+      "backend_core_src_main_java_com_dapcode_backend_core_config_corsconfig_corsconfig_corsfilter",
+      "backend_core_src_main_java_com_dapcode_backend_core_config_securityconfig",
+      "backend_core_src_main_java_com_dapcode_backend_core_config_securityconfig_securityconfig",
+      "backend_core_src_main_java_com_dapcode_backend_core_config_securityconfig_securityconfig_securityfilterchain",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0config",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0config_judge0config",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0config_judge0config_judge0restclient",
+      "corsconfiguration",
+      "duration",
+      "org_springframework_context_annotation_bean",
+      "org_springframework_context_annotation_configuration",
+      "org_springframework_security_config_annotation_web_builders_httpsecurity",
+      "org_springframework_security_config_annotation_web_configuration_enablewebsecurity",
+      "org_springframework_security_web_securityfilterchain",
+      "org_springframework_web_client_restclient",
+      "org_springframework_web_filter_corsfilter",
+      "simpleclienthttprequestfactory",
+      "urlbasedcorsconfigurationsource",
+      "value"
+    ],
+    "5": [
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_problem",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_problem_problem",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_submission",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_submission_submission",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase_testcase",
+      "backend_core_src_main_java_com_dapcode_backend_core_entity_users",
+      "column",
+      "creationtimestamp",
+      "fetchtype",
+      "generatedvalue",
+      "generationtype",
+      "id",
+      "instant",
+      "jakarta_persistence_entity",
+      "jakarta_persistence_table",
+      "joincolumn",
+      "lombok_getter",
+      "lombok_setter",
+      "manytoone",
+      "updatetimestamp"
+    ],
+    "6": [
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getjudge0status",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_accepted",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_compilation_error",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_exec_format_error",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_fromid",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_in_queue",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_internal_error",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_isaccepted",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_judge0status",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_processing",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_runtime_error_nzec",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_runtime_error_other",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_runtime_error_sigabrt",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_runtime_error_sigfpe",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_runtime_error_sigsegv",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_runtime_error_sigxfsz",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_time_limit_exceeded",
+      "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status_wrong_answer"
+    ],
+    "7": [
+      "argparse",
+      "html",
+      "json",
+      "os",
+      "re",
+      "seedingdata_seed_problems",
+      "seedingdata_seed_problems_escape_sql",
+      "seedingdata_seed_problems_extract_slug",
+      "seedingdata_seed_problems_fetch_problem_metadata",
+      "seedingdata_seed_problems_generate_sql_migration",
+      "seedingdata_seed_problems_html_to_markdown",
+      "seedingdata_seed_problems_load_or_fetch_full_testcases",
+      "seedingdata_seed_problems_main",
+      "seedingdata_seed_problems_parse_example_testcases",
+      "time",
+      "urllib_parse",
+      "urllib_request"
+    ],
+    "8": [
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_existsbyslug",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findbydifficulty",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findbyslug",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findproblemswithfilters",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridandproblemidorderbycreatedatdesc",
+      "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridorderbycreatedatdesc",
+      "optional",
+      "org_springframework_data_domain_page",
+      "org_springframework_data_domain_pageable",
+      "org_springframework_data_jpa_repository_jparepository",
+      "org_springframework_data_jpa_repository_query",
+      "param"
+    ],
+    "9": [
+      "backend_core_mvnw",
+      "backend_core_mvnw__entry",
+      "backend_core_mvnw_clean",
+      "backend_core_mvnw_die",
+      "backend_core_mvnw_exec_maven",
+      "backend_core_mvnw_hash_string",
+      "backend_core_mvnw_native_path",
+      "backend_core_mvnw_set_java_home",
+      "backend_core_mvnw_trim",
+      "backend_core_mvnw_verbose"
+    ],
+    "10": [
+      "backend_core_src_main_java_com_dapcode_backend_core_backendcoreapplication",
+      "backend_core_src_main_java_com_dapcode_backend_core_backendcoreapplication_backendcoreapplication",
+      "backend_core_src_main_java_com_dapcode_backend_core_backendcoreapplication_backendcoreapplication_main",
+      "org_springframework_boot_autoconfigure_springbootapplication",
+      "springapplication"
+    ],
+    "11": [
+      "pkg_com_dapcode_backend_core"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07862679955703211,
+    "1": 0.1350806451612903,
+    "2": 0.12169312169312169,
+    "3": 0.2826086956521739,
+    "4": 0.1471861471861472,
+    "5": 0.30952380952380953,
+    "6": 0.10526315789473684,
+    "7": 0.16911764705882354,
+    "8": 0.16666666666666666,
+    "9": 0.37777777777777777,
+    "10": 0.5,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status",
+      "label": "Judge0Status",
+      "degree": 21
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_users_users",
+      "label": "Users",
+      "degree": 17
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem_problem",
+      "label": "Problem",
+      "degree": 17
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
+      "label": "ErrorCode",
+      "degree": 16
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest",
+      "label": "Judge0SubmissionRequest",
+      "degree": 15
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl",
+      "label": "SubmissionServiceImpl",
+      "degree": 15
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_submission_submission",
+      "label": "Submission",
+      "degree": 15
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase_testcase",
+      "label": "TestCase",
+      "degree": 15
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_apiresponse_apiresponse",
+      "label": "ApiResponse",
+      "degree": 13
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response",
+      "label": "Judge0Response",
+      "degree": 12
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AppException",
+      "target": "ErrorCode",
+      "source_files": [
+        "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java",
+        "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Judge0ClientIntegrationTest",
+      "target": "Judge0Client",
+      "source_files": [
+        "backend-core/src/test/java/com/dapcode/backend_core/judge0/Judge0ClientIntegrationTest.java",
+        "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "BatchResponse",
+      "target": "Judge0Response",
+      "source_files": [
+        "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
+        "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `BatchResponse` unexpectedly reaches hub `Judge0Response`"
+    },
+    {
+      "source": "TestCaseRepository",
+      "target": "TestCase",
+      "source_files": [
+        "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
+        "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "EvaluationSummary",
+      "target": "TestCaseResult",
+      "source_files": [
+        "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
+        "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/TestCaseResult.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Judge0Status` connect `Judge0Status` to `SubmissionServiceImpl.java`, `Submission.java`?",
+      "why": "High betweenness centrality (0.133) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ErrorCode` connect `ErrorCode` to `SubmissionServiceImpl.java`, `Submission.java`?",
+      "why": "High betweenness centrality (0.081) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Judge0SubmissionRequest` connect `SubmissionServiceImpl.java` to `Users`, `lombok.AllArgsConstructor`?",
+      "why": "High betweenness centrality (0.062) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `com.dapcode:backend-core`, `INVALID_REQUEST`, `PROBLEM_NOT_FOUND` to the rest of the system?",
+      "why": "21 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `SubmissionServiceImpl.java` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07862679955703211 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Users` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1350806451612903 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ErrorCode` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12169312169312169 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
