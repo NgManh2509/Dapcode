@@ -184,6 +184,22 @@ int main() {
 """, method);
         }
 
+        if ("concatenation-of-array".equals(cleanSlug)) {
+            String method = matchMethod(code, "getConcatenation", "conArr", "solve");
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    vector<int> nums = parseVectorInt(line);
+    Solution sol;
+    printResult(sol.%s(nums));
+    return 0;
+}
+""", method);
+        }
+
         if ("contains-duplicate".equals(cleanSlug)) {
             String method = matchMethod(code, "containsDuplicate", "ContainsDuplicate", "solve");
             return String.format("""
@@ -290,6 +306,93 @@ int main() {
         }
 
         String autoMethod = findFirstMethodName(code);
+        String params = extractParams(code);
+
+        if (params.contains("vector<int>") && (params.contains("target") || params.contains("int k"))) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    vector<int> nums = parseVectorInt(line);
+    int target = parseIntAfter(line, "target");
+    if (target == 0 && line.find("k") != string::npos) target = parseIntAfter(line, "k");
+    Solution sol;
+    printResult(sol.%s(nums, target));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (params.contains("vector<int>") && !params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    vector<int> nums = parseVectorInt(line);
+    Solution sol;
+    printResult(sol.%s(nums));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (params.contains("string") && params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    string s = parseStringAfter(line, "s");
+    string t = parseStringAfter(line, "t");
+    Solution sol;
+    printResult(sol.%s(s, t));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (params.contains("string") && !params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    string s = parseStringAfter(line, "s");
+    if (s.empty()) {
+        size_t q1 = line.find('"');
+        if (q1 != string::npos) {
+            size_t q2 = line.find('"', q1 + 1);
+            if (q2 != string::npos) s = line.substr(q1 + 1, q2 - q1 - 1);
+        }
+    }
+    Solution sol;
+    printResult(sol.%s(s));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (params.contains("int") && !params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    int n = parseIntAfter(line, "n");
+    Solution sol;
+    printResult(sol.%s(n));
+    return 0;
+}
+""", autoMethod);
+        }
+
         return String.format("""
 int main() {
     ios_base::sync_with_stdio(false);
@@ -318,6 +421,13 @@ int main() {
         int[] nums = parseArray(line);
         int target = parseIntAfter(line, "target");
         int[] res = new Solution().%s(nums, target);
+        System.out.print(Arrays.toString(res));
+""", method);
+            case "concatenation-of-array" -> String.format("""
+        String line = reader.readLine();
+        if (line == null) return;
+        int[] nums = parseArray(line);
+        int[] res = new Solution().%s(nums);
         System.out.print(Arrays.toString(res));
 """, method);
             case "contains-duplicate" -> String.format("""
@@ -379,6 +489,10 @@ public class Main {
                 return m.group(1);
             }
         }
+        String auto = findFirstMethodName(code);
+        if (auto != null && !"main".equals(auto)) {
+            return auto;
+        }
         return candidates.length > 0 ? candidates[0] : "solve";
     }
 
@@ -389,5 +503,14 @@ public class Main {
             return m.group(1);
         }
         return "solve";
+    }
+
+    private String extractParams(String code) {
+        Pattern pattern = Pattern.compile("(?:vector<[^>]+>|int|bool|string|void)\\s+[a-zA-Z0-9_]+\\s*\\(([^)]*)\\)");
+        Matcher m = pattern.matcher(code);
+        if (m.find()) {
+            return m.group(1).trim();
+        }
+        return "";
     }
 }

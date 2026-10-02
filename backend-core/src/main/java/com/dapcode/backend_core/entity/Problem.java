@@ -53,6 +53,9 @@ public class Problem {
     @Column(name = "memory_limit_kb", nullable = false)
     private int memoryLimitKb = 262144; // 256MB
 
+    @Column(name = "starter_code", columnDefinition = "TEXT")
+    private String starterCode;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private Instant createdAt;

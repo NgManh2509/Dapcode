@@ -22,6 +22,31 @@ public:
 };
 
 export const PROBLEM_STARTER_TEMPLATES = {
+  'concatenation-of-array': {
+    python: `class Solution:
+    def getConcatenation(self, nums: list[int]) -> list[int]:
+        pass
+`,
+    cpp: `#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int>& nums) {
+        return {};
+    }
+};
+`,
+    java: `import java.util.*;
+
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        return new int[]{};
+    }
+}
+`,
+  },
   'two-sum': {
     python: `class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:

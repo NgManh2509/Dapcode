@@ -8,6 +8,7 @@ import AiTutorDrawer from '../components/AiTutorDrawer';
 import SearchModal from '../components/SearchModal';
 import AuthModal from '../components/AuthModal';
 import StreakModal from '../components/StreakModal';
+import DapcodeLogo from '../components/DapcodeLogo';
 import { getProblemBySlug, getProblems } from '../api/problems';
 import { submitCode, subscribeSubmissionStream } from '../api/submissions';
 import { DEFAULT_STARTER_CODE, getStarterCode } from '../data/starterTemplates';
@@ -119,7 +120,8 @@ export default function WorkspacePage() {
         const data = res?.data || res;
         if (data && data.slug) {
           setProblem(data);
-          setCode(getStarterCode(slug, language));
+          const initialCode = data.starterCode?.[language] || getStarterCode(slug, language);
+          setCode(initialCode);
         } else {
           setFetchError('Không tìm thấy dữ liệu bài toán từ backend.');
         }
@@ -138,11 +140,13 @@ export default function WorkspacePage() {
   // Handle language switch and starter code
   const handleLanguageChange = (newLang) => {
     setLanguage(newLang);
-    setCode(getStarterCode(slug, newLang));
+    const newCode = problem?.starterCode?.[newLang] || getStarterCode(slug, newLang);
+    setCode(newCode);
   };
 
   const handleResetCode = () => {
-    setCode(getStarterCode(slug, language));
+    const resetCode = problem?.starterCode?.[language] || getStarterCode(slug, language);
+    setCode(resetCode);
   };
 
 
@@ -372,10 +376,11 @@ export default function WorkspacePage() {
             className="flex items-center space-x-2 text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             title="Quay lại Roadmap"
           >
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 shadow-sm">
-              <Code2 className="h-4 w-4 text-white" />
-            </div>
+            <DapcodeLogo size="sm" />
             <span className="font-bold text-sm tracking-tight hidden md:inline">Dapcode</span>
+            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 border border-amber-500/30 dark:bg-amber-400/10 dark:text-amber-400 dark:border-amber-400/20 font-mono hidden sm:inline">
+              v1.0
+            </span>
           </Link>
 
           <div className="h-4 w-px bg-slate-200 dark:bg-zinc-800 hidden sm:block" />

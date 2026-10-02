@@ -48,10 +48,10 @@
     "semantic_hash": "92e4906d383b10f4e7aefc5ac606050e"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/dto/problem/ProblemDetailResponse.java": {
-    "mtime": 1789989484.1763742,
-    "seen": 1789991262.6578794,
-    "ast_hash": "8ef71368e8df8b32d966069a1591b6bf",
-    "semantic_hash": "8ef71368e8df8b32d966069a1591b6bf"
+    "mtime": 1790955300.991542,
+    "seen": 1790955471.7489438,
+    "ast_hash": "c33cb4fc86b14c535092dbc2b60927d4",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/dto/problem/ProblemSummaryResponse.java": {
     "mtime": 1789989386.6160293,
@@ -78,10 +78,10 @@
     "semantic_hash": "8480a642522e9ff1cb69e22e778f461b"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java": {
-    "mtime": 1789576423.019213,
-    "seen": 1789991262.6578834,
-    "ast_hash": "fa859cf3213ef21830d5a4a5c3e7719d",
-    "semantic_hash": "fa859cf3213ef21830d5a4a5c3e7719d"
+    "mtime": 1790955286.1113462,
+    "seen": 1790955471.7497451,
+    "ast_hash": "bf5d565d5c9687af8f104d35622185c8",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java": {
     "mtime": 1789490964.4850864,
@@ -132,9 +132,9 @@
     "semantic_hash": "aa583009af392df518d0748d65d125a7"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java": {
-    "mtime": 1790931162.028079,
-    "seen": 1790933110.4493039,
-    "ast_hash": "a9dfe182a673f522a0bde3cec5d11887",
+    "mtime": 1790955948.619933,
+    "seen": 1790956132.8337853,
+    "ast_hash": "90634cdc6d97312377097f6cc63cba43",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Status.java": {
@@ -206,8 +206,8 @@
   "seedingData/dapcode_problems.json": {
     "mtime": 1789634249.2453947,
     "seen": 1789991262.657899,
-    "ast_hash": "97d05b91a1b05b7e634793ecdda6fb9b",
-    "semantic_hash": "97d05b91a1b05b7e634793ecdda6fb9b"
+    "ast_hash": "",
+    "semantic_hash": ""
   },
   "seedingData/neetcode_250_complete.json": {
     "mtime": 1789573794.7523146,
@@ -246,9 +246,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java": {
-    "mtime": 1789991530.8642273,
-    "seen": 1789992223.5851471,
-    "ast_hash": "d373d4fbd56ac8c6c112cd7738bcfca3",
+    "mtime": 1790955554.896663,
+    "seen": 1790955600.468402,
+    "ast_hash": "885ded66180dadc7e0967a29c9b1acf8",
     "semantic_hash": ""
   },
   "backend-core/src/test/java/com/dapcode/backend_core/controller/ProblemApiIntegrationTest.java": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "AI-service/app/main.py": {
-    "mtime": 1790733948.5228212,
-    "seen": 1790779087.2491295,
-    "ast_hash": "f2c555f4a0a281283b0c0a9b34c25b5b",
+    "mtime": 1790953725.418925,
+    "seen": 1790953826.860906,
+    "ast_hash": "5c59896f7592afae5d37ed85a1d18f24",
     "semantic_hash": ""
   },
   "AI-service/app/rag/ingest.py": {
@@ -1620,9 +1620,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/ConsoleDrawer.jsx": {
-    "mtime": 1790933242.724904,
-    "seen": 1790933297.7089272,
-    "ast_hash": "f97dbefdc43aadf52cb10ccbd07af4b5",
+    "mtime": 1790955965.2379727,
+    "seen": 1790956132.8271146,
+    "ast_hash": "8100faca6716e8bd6acddf266720e50b",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/DifficultyBadge.jsx": {
@@ -1692,9 +1692,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/data/starterTemplates.js": {
-    "mtime": 1790932518.088246,
-    "seen": 1790933110.4455662,
-    "ast_hash": "8ff00beb8ac96dd12c6ab0ef9527fa26",
+    "mtime": 1790954564.7865403,
+    "seen": 1790954594.6069267,
+    "ast_hash": "73430b57563fcde460d3f96a96f0f236",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/main.jsx": {
@@ -1722,9 +1722,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/WorkspacePage.jsx": {
-    "mtime": 1790932566.462361,
-    "seen": 1790933110.4458306,
-    "ast_hash": "c25c6483fd46a9166f2c99bee1c30fdc",
+    "mtime": 1790955392.271793,
+    "seen": 1790955471.745163,
+    "ast_hash": "01f34a52e80bc188314d4c5067c49bc5",
     "semantic_hash": ""
   },
   "DapcodeFrontend/vite.config.js": {
@@ -1896,15 +1896,33 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessServiceImpl.java": {
-    "mtime": 1790932870.8578494,
-    "seen": 1790933110.450441,
-    "ast_hash": "330fbcfa727b7dfc7fe16626d45785cb",
+    "mtime": 1790955441.502717,
+    "seen": 1790955471.7529445,
+    "ast_hash": "b1e9e44d6b97af1d1bef4f5b69697246",
     "semantic_hash": ""
   },
   "backend-core/src/test/java/com/dapcode/backend_core/service/submission/SubmissionHarnessIntegrationTest.java": {
     "mtime": 1790932819.7968628,
     "seen": 1790933110.4510634,
     "ast_hash": "c9006515ceddd45845b5bcb6a3fdea11",
+    "semantic_hash": ""
+  },
+  "seedingData/fetch_and_seed_starter_codes.py": {
+    "mtime": 1790955255.0219276,
+    "seen": 1790955471.7546768,
+    "ast_hash": "4a0a7a61e2caf4568edb70b47baba694",
+    "semantic_hash": ""
+  },
+  "seedingData/starter_codes_cache.json": {
+    "mtime": 1790955304.614668,
+    "seen": 1790955471.7555194,
+    "ast_hash": "cbf502cd3d30ecffffc31ee5a9ce4ae8",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/JacksonConfig.java": {
+    "mtime": 1790955564.9652255,
+    "seen": 1790955600.464717,
+    "ast_hash": "40de7c0c1c7956dd09fa1128702c7442",
     "semantic_hash": ""
   }
 }

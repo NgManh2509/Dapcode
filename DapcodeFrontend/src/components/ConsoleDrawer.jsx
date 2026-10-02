@@ -277,7 +277,15 @@ export default function ConsoleDrawer({
                         {casesToDisplay.map((tc, i) => {
                           const isPassed = tc.status === 'ACCEPTED' || tc.passed === true;
                           const isHidden = tc.isHidden ?? tc.hidden ?? false;
-                          const cleanActual = tc.actualOutput ? tc.actualOutput.trim() : (isPassed ? (tc.expectedOutput || 'Passed') : 'N/A');
+                          let cleanActual = tc.actualOutput ? tc.actualOutput.trim() : (isPassed ? (tc.expectedOutput || 'Passed') : 'N/A');
+                          if (cleanActual && cleanActual.length >= 16 && /^[A-Za-z0-9+/=\s]+$/.test(cleanActual) && !cleanActual.startsWith('[') && !cleanActual.startsWith('{')) {
+                            try {
+                              const decoded = atob(cleanActual.replace(/\s+/g, ''));
+                              if (decoded && /^[\x20-\x7E\r\n\t]+$/.test(decoded)) {
+                                cleanActual = decoded;
+                              }
+                            } catch {}
+                          }
 
                           return (
                             <div

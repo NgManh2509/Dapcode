@@ -1,12 +1,19 @@
-from sys import prefix
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1.endpoints.hint import router as hint_router
+from app.rag.vector_store import get_neetcode_collection
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    get_neetcode_collection()
+    yield
 
 app = FastAPI(
     title="Dapcode AI Socratic Tutor Service",
     description="Microservice cung cấp gợi ý định hướng tư duy DSA bằng RAG + Groq",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 app.add_middleware(

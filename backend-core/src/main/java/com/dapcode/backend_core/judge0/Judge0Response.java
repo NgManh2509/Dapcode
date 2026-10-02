@@ -27,10 +27,16 @@ public class Judge0Response {
             return val;
         }
         try {
-            byte[] decoded = Base64.getDecoder().decode(val.trim());
+            String clean = val.replaceAll("\\s+", "");
+            byte[] decoded = Base64.getDecoder().decode(clean);
             return new String(decoded, StandardCharsets.UTF_8);
         } catch (IllegalArgumentException e) {
-            return val;
+            try {
+                byte[] decoded = Base64.getMimeDecoder().decode(val);
+                return new String(decoded, StandardCharsets.UTF_8);
+            } catch (Exception ex) {
+                return val;
+            }
         }
     }
 

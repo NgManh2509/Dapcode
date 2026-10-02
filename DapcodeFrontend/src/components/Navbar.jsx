@@ -16,6 +16,7 @@ import {
 import SearchModal from './SearchModal';
 import AuthModal from './AuthModal';
 import StreakModal from './StreakModal';
+import DapcodeLogo from './DapcodeLogo';
 import { useTheme } from '../context/ThemeContext';
 
 export default function Navbar() {
@@ -70,15 +71,13 @@ export default function Navbar() {
               to="/roadmap" 
               className="group flex items-center space-x-2.5 transition-transform active:scale-95"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 shadow-md shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all">
-                <Code2 className="h-5 w-5 text-white" />
-              </div>
+              <DapcodeLogo size="md" />
               <div className="flex items-baseline space-x-1.5">
                 <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                   Dapcode
                 </span>
-                <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-600 border border-indigo-200 dark:bg-indigo-500/10 dark:text-indigo-400 dark:border-indigo-500/20">
-                  150
+                <span className="text-[11px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 border border-amber-500/30 dark:bg-amber-400/10 dark:text-amber-400 dark:border-amber-400/20 font-mono">
+                  v1.0
                 </span>
               </div>
             </Link>

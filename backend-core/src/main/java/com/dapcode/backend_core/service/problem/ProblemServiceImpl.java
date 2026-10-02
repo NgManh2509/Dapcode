@@ -1,6 +1,9 @@
 package com.dapcode.backend_core.service.problem;
 
 import java.util.List;
+import java.util.Map;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -26,6 +29,7 @@ public class ProblemServiceImpl implements ProblemService {
 
     private final ProblemRepository problemRepository;
     private final TestCaseRepository testCaseRepository;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
     public PageResponse<ProblemSummaryResponse> getProblems(
@@ -77,6 +81,17 @@ public class ProblemServiceImpl implements ProblemService {
                         .build())
                 .toList();
 
+        Map<String, String> starterCodeMap = null;
+        if (problem.getStarterCode() != null && !problem.getStarterCode().isBlank()) {
+            try {
+                starterCodeMap = objectMapper.readValue(
+                        problem.getStarterCode(),
+                        new TypeReference<Map<String, String>>() {}
+                );
+            } catch (Exception ignored) {
+            }
+        }
+
         return ProblemDetailResponse.builder()
                 .id(problem.getId())
                 .slug(problem.getSlug())
@@ -86,6 +101,7 @@ public class ProblemServiceImpl implements ProblemService {
                 .descriptionMarkdown(problem.getDescriptionMarkdown())
                 .timeLimitMs(problem.getTimeLimitMs())
                 .memoryLimitKb(problem.getMemoryLimitKb())
+                .starterCode(starterCodeMap)
                 .publicTestCases(testCaseDtos)
                 .build();
     }

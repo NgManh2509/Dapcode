@@ -1,6 +1,7 @@
 package com.dapcode.backend_core.dto.problem;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,6 +21,7 @@ public class ProblemDetailResponse {
     private String descriptionMarkdown;
     private int timeLimitMs;
     private int memoryLimitKb;
+    private Map<String, String> starterCode;
 
     private List<PublicTestCaseDto> publicTestCases;
 
