@@ -6,16 +6,16 @@
     "semantic_hash": "ab50dd89da7da2346b28003352eeeeeb"
   },
   "backend-core/pom.xml": {
-    "mtime": 1790438968.2885666,
-    "seen": 1790779087.249429,
-    "ast_hash": "96033cb68ad53f5e17b653665f5c0774",
+    "mtime": 1791041029.3786404,
+    "seen": 1791041226.5882752,
+    "ast_hash": "24b9dfacf3d1fcd6e2739b6cb4d2597e",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/BackendCoreApplication.java": {
-    "mtime": 1788958767.8880394,
-    "seen": 1789991262.657874,
-    "ast_hash": "55849dac3ff66a8bdd15a7563fe6b973",
-    "semantic_hash": "55849dac3ff66a8bdd15a7563fe6b973"
+    "mtime": 1791041179.7472987,
+    "seen": 1791041226.5882778,
+    "ast_hash": "253063614a68412d95bc3b00a48dd4a8",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/common/ApiResponse.java": {
     "mtime": 1789457116.008495,
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/resources/application.yaml": {
-    "mtime": 1790872032.0212874,
-    "seen": 1790872230.9082606,
-    "ast_hash": "e3bfb66ba20891a8e16d3460d84faa43",
+    "mtime": 1791040261.3759313,
+    "seen": 1791040325.1846519,
+    "ast_hash": "30d7f66151b7607e35367a0bc0de3dc2",
     "semantic_hash": ""
   },
   "infra/database/docker-compose.db.yml": {
@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/Navbar.jsx": {
-    "mtime": 1790956504.7312362,
-    "seen": 1790956587.2462463,
-    "ast_hash": "39d5dd02fad79b5f5cecee358bd822a1",
+    "mtime": 1791041532.990899,
+    "seen": 1791041629.5071023,
+    "ast_hash": "50e24bcef0764ca59ca86b7c92d07ce7",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/ProgressSidebar.jsx": {
@@ -1722,9 +1722,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/WorkspacePage.jsx": {
-    "mtime": 1790956540.0472074,
-    "seen": 1790956587.2472672,
-    "ast_hash": "97f072f4c25a8d70882def2b3a5b5393",
+    "mtime": 1791041579.6020312,
+    "seen": 1791041629.5083015,
+    "ast_hash": "d07f3e84de40c76920a04184ea3c618a",
     "semantic_hash": ""
   },
   "DapcodeFrontend/vite.config.js": {
@@ -1878,9 +1878,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/AuthCallbackPage.jsx": {
-    "mtime": 1790872620.7544909,
-    "seen": 1790872788.8946695,
-    "ast_hash": "9af35bbc6492eea6443062c573c7055a",
+    "mtime": 1791041594.9454644,
+    "seen": 1791041629.5080445,
+    "ast_hash": "877032a686cdf655cdae7b6203531792",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java": {
@@ -1935,6 +1935,24 @@
     "mtime": 1790956437.5801706,
     "seen": 1790956587.2711616,
     "ast_hash": "369bb0d7ad5c2c1bd9d176016f9771f6",
+    "semantic_hash": ""
+  },
+  "HOW_TO_RUN.md": {
+    "mtime": 1791040731.2857733,
+    "seen": 1791040774.2512174,
+    "ast_hash": "1a5b13a6193adf6aa492d1bd5a5daca8",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791040695.3063548,
+    "seen": 1791040774.251356,
+    "ast_hash": "9e39e910bf04191c16a79b4253b75e80",
+    "semantic_hash": ""
+  },
+  "README.vi.md": {
+    "mtime": 1791040711.1902392,
+    "seen": 1791040774.2513576,
+    "ast_hash": "70ae55cabfee7c9b40ce20cb0559b421",
     "semantic_hash": ""
   }
 }

@@ -19,8 +19,12 @@ export default function AuthCallbackPage() {
           localStorage.setItem('dapcode_token', jwtToken);
           try {
             const userRes = await getCurrentUser();
-            const userData = userRes?.data || userRes;
+            let userData = userRes?.data || userRes;
+            if (userData && userData.data && typeof userData.data === 'object') {
+              userData = userData.data;
+            }
             if (userData) {
+              if (!userData.name && userData.username) userData.name = userData.username;
               localStorage.setItem('dapcode_user', JSON.stringify(userData));
             }
           } catch (e) {
@@ -55,12 +59,14 @@ export default function AuthCallbackPage() {
 
         // Send idToken to Spring Boot Backend
         const res = await loginWithGoogle(idToken);
-        const data = res?.data || res;
+        const data = (res && res.data && res.data.token) ? res.data : (res?.data || res);
 
         if (data && data.token) {
           localStorage.setItem('dapcode_token', data.token);
           if (data.user) {
-            localStorage.setItem('dapcode_user', JSON.stringify(data.user));
+            const userObj = { ...data.user };
+            if (!userObj.name && userObj.username) userObj.name = userObj.username;
+            localStorage.setItem('dapcode_user', JSON.stringify(userObj));
           }
           setStatus('success');
           

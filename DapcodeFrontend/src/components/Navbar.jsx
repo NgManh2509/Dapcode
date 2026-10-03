@@ -61,6 +61,10 @@ export default function Navbar() {
     { label: 'Theories', path: '/theories', icon: BookOpen },
   ];
 
+  const displayName = user?.username || user?.name || user?.email?.split('@')[0] || 'User';
+  const displayStreak = user?.streakCount ?? user?.streak ?? 1;
+  const initialLetter = displayName.charAt(0).toUpperCase();
+
   return (
     <>
       <header className="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-zinc-800/80 bg-white/95 dark:bg-[#0f0f11]/90 backdrop-blur-md transition-colors shadow-xs">
@@ -134,7 +138,7 @@ export default function Navbar() {
               title="Xem chuỗi streak luyện tập"
             >
               <Flame className="h-4 w-4 text-amber-500 fill-amber-500/30" />
-              <span>{user?.streak || 1}</span>
+              <span>{displayStreak}</span>
             </button>
 
             {/* Quick Search Button (⌘K) */}
@@ -152,10 +156,29 @@ export default function Navbar() {
             {user ? (
               <div className="flex items-center space-x-2 pl-1">
                 <div className="flex items-center space-x-2 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 py-1 px-2.5 rounded-lg text-xs">
-                  <div className="h-5 w-5 rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white">
-                    {user.name?.charAt(0) || 'U'}
+                  {user.avatarUrl ? (
+                    <img
+                      src={user.avatarUrl}
+                      alt={displayName}
+                      referrerPolicy="no-referrer"
+                      className="h-5 w-5 rounded-full object-cover ring-1 ring-slate-200 dark:ring-zinc-700"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.nextElementSibling;
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  <div
+                    className={`h-5 w-5 rounded-full bg-indigo-600 items-center justify-center text-[10px] font-bold text-white ${
+                      user.avatarUrl ? 'hidden' : 'flex'
+                    }`}
+                  >
+                    {initialLetter}
                   </div>
-                  <span className="font-medium text-slate-800 dark:text-zinc-200 hidden sm:inline">{user.name}</span>
+                  <span className="font-medium text-slate-800 dark:text-zinc-200 hidden sm:inline max-w-[130px] truncate">
+                    {displayName}
+                  </span>
                 </div>
                 <button
                   type="button"
@@ -193,7 +216,7 @@ export default function Navbar() {
       <StreakModal
         isOpen={isStreakOpen}
         onClose={() => setIsStreakOpen(false)}
-        streakCount={user?.streak || 1}
+        streakCount={displayStreak}
       />
     </>
   );

@@ -483,15 +483,33 @@ export default function WorkspacePage() {
             title="Xem chuỗi streak"
           >
             <Flame className="h-3.5 w-3.5 text-amber-500 fill-amber-500/30" />
-            <span>{user?.streak || 1}</span>
+            <span>{user?.streakCount ?? user?.streak ?? 1}</span>
           </button>
 
-          {/* User Sign In */}
+          {/* User Sign In / Profile */}
           {user ? (
             <div className="flex items-center space-x-1.5 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 py-1 px-2 rounded-lg text-xs">
-              <div className="h-5 w-5 rounded-full bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white">
-                {user.name?.charAt(0) || 'U'}
+              {user.avatarUrl ? (
+                <img
+                  src={user.avatarUrl}
+                  alt={user.username || user.name || 'User'}
+                  referrerPolicy="no-referrer"
+                  className="h-5 w-5 rounded-full object-cover ring-1 ring-slate-200 dark:ring-zinc-700"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+              ) : null}
+              <div 
+                className={`h-5 w-5 rounded-full bg-indigo-600 items-center justify-center text-[10px] font-bold text-white ${user.avatarUrl ? 'hidden' : 'flex'}`}
+              >
+                {(user.username || user.name || user.email || 'U').charAt(0).toUpperCase()}
               </div>
+              <span className="font-medium text-slate-800 dark:text-zinc-200 hidden md:inline max-w-[100px] truncate">
+                {user.username || user.name || user.email?.split('@')[0]}
+              </span>
             </div>
           ) : (
             <button
@@ -626,7 +644,7 @@ export default function WorkspacePage() {
       <StreakModal
         isOpen={isStreakOpen}
         onClose={() => setIsStreakOpen(false)}
-        streakCount={user?.streak || 1}
+        streakCount={user?.streakCount ?? user?.streak ?? 1}
       />
     </div>
   );
