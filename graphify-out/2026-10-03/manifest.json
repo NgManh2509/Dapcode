@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/Navbar.jsx": {
-    "mtime": 1790956504.7312362,
-    "seen": 1790956587.2462463,
-    "ast_hash": "39d5dd02fad79b5f5cecee358bd822a1",
+    "mtime": 1791041532.990899,
+    "seen": 1791041629.5071023,
+    "ast_hash": "50e24bcef0764ca59ca86b7c92d07ce7",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/ProgressSidebar.jsx": {
@@ -1722,9 +1722,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/WorkspacePage.jsx": {
-    "mtime": 1790956540.0472074,
-    "seen": 1790956587.2472672,
-    "ast_hash": "97f072f4c25a8d70882def2b3a5b5393",
+    "mtime": 1791041579.6020312,
+    "seen": 1791041629.5083015,
+    "ast_hash": "d07f3e84de40c76920a04184ea3c618a",
     "semantic_hash": ""
   },
   "DapcodeFrontend/vite.config.js": {
@@ -1878,9 +1878,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/AuthCallbackPage.jsx": {
-    "mtime": 1790872620.7544909,
-    "seen": 1790872788.8946695,
-    "ast_hash": "9af35bbc6492eea6443062c573c7055a",
+    "mtime": 1791041594.9454644,
+    "seen": 1791041629.5080445,
+    "ast_hash": "877032a686cdf655cdae7b6203531792",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java": {

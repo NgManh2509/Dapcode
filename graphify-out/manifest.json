@@ -269,18 +269,6 @@
     "ast_hash": "a831cf3669f1e6ab85d8a80ebe655f99",
     "semantic_hash": ""
   },
-  "Implement Plan.md": {
-    "mtime": 1788954597.9588017,
-    "seen": 1789992223.5857928,
-    "ast_hash": "857ee0fd58137f47006eff51305927fb",
-    "semantic_hash": ""
-  },
-  "Phase 1 Plan.md": {
-    "mtime": 1789635268.1183963,
-    "seen": 1789992223.5857937,
-    "ast_hash": "8b2ebedfc0c1f2317600bcbfe5804cc1",
-    "semantic_hash": ""
-  },
   "backend-core/src/main/resources/application.yaml": {
     "mtime": 1791040261.3759313,
     "seen": 1791040325.1846519,
@@ -1541,12 +1529,6 @@
     "ast_hash": "fdf100a04429db71d1a2bbf6a03bbd3a",
     "semantic_hash": ""
   },
-  "ai_service_implementation_plan.md": {
-    "mtime": 1790646182.9449873,
-    "seen": 1790779087.2557533,
-    "ast_hash": "f8dfc0919407528279841521c0360c13",
-    "semantic_hash": ""
-  },
   "DapcodeFrontend/eslint.config.js": {
     "mtime": 1790779860.6714635,
     "seen": 1790846285.220276,
@@ -1823,22 +1805,10 @@
     "ast_hash": "fcbb4f37d67a66a53013b484dcfc9f25",
     "semantic_hash": ""
   },
-  "DapcodeFrontend/README.md": {
-    "mtime": 1790779860.6956568,
-    "seen": 1790846285.2378292,
-    "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
-    "semantic_hash": ""
-  },
   "DapcodeFrontend/index.html": {
     "mtime": 1790956558.394356,
     "seen": 1790956587.2695355,
     "ast_hash": "892f52415772f0f1fa892d3b10e014ee",
-    "semantic_hash": ""
-  },
-  "frontend_implementation_plan.md": {
-    "mtime": 1790779175.9702947,
-    "seen": 1790846285.238187,
-    "ast_hash": "01c8230ad7de821db187b734b5da6b14",
     "semantic_hash": ""
   },
   "DapcodeFrontend/public/favicon.svg": {

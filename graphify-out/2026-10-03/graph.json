@@ -23219,6 +23219,18 @@
       "source_location": "L42"
     },
     {
+      "id": "dotenv",
+      "label": "dotenv",
+      "_origin": "semantic",
+      "community": 10,
+      "community_name": "BackendCoreApplication.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "dotenv",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "springapplication",
       "label": "springapplication",
       "_origin": "semantic",
@@ -24499,17 +24511,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "value",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "dotenv",
-      "label": "dotenv",
-      "community": 10,
-      "community_name": "BackendCoreApplication.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "dotenv",
       "source_file": "",
       "type": "external"
     }
@@ -28460,7 +28461,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/AuthCallbackPage.jsx",
-      "source_location": "L57",
+      "source_location": "L61",
       "weight": 1.0
     },
     {

@@ -1,7 +1,7 @@
 # Graph Report - Dapcode  (2026-10-03)
 
 ## Corpus Check
-- 323 files · ~583,350 words
+- 323 files · ~583,520 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 14 file(s) not represented in the graph (top: (none) 7, .example 2, .css 2)
 
@@ -1054,11 +1054,11 @@ Nodes (3): Expanding the ESLint configuration, React Compiler, React + Vite
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Users` connect `lombok.AllArgsConstructor` to `org.junit.jupiter.api.Test`, `UserRepository`, `lombok.RequiredArgsConstructor`, `SubmissionServiceImpl.java`, `SubmissionEvaluationIntegrationTest.java`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `Judge0Status` connect `Judge0Status` to `Judge0Response`, `SubmissionServiceImpl.java`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `AiController` connect `lombok.RequiredArgsConstructor` to `lombok.AllArgsConstructor`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
   _977 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Judge0Status` be split into smaller, more focused modules?**
