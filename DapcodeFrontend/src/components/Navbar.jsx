@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Code2, 
-  Flame, 
   Sparkles, 
   BookOpen, 
   Map, 
@@ -11,7 +9,8 @@ import {
   User, 
   LogOut,
   Sun,
-  Moon 
+  Moon,
+  Flame
 } from 'lucide-react';
 import SearchModal from './SearchModal';
 import AuthModal from './AuthModal';
@@ -67,7 +66,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-zinc-800/80 bg-white/95 dark:bg-[#0f0f11]/90 backdrop-blur-md transition-colors shadow-xs">
+      <header className="sticky top-0 z-40 w-full border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FDFBF7]/90 dark:bg-[#141312]/90 backdrop-blur-md transition-colors">
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
           {/* Brand & Left Navigation */}
           <div className="flex items-center space-x-8">
@@ -75,12 +74,12 @@ export default function Navbar() {
               to="/roadmap" 
               className="group flex items-center space-x-2.5 transition-transform active:scale-95"
             >
-              <DapcodeLogo size="md" />
+              <DapcodeLogo size="sm" />
               <div className="flex items-baseline space-x-1.5">
-                <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <span className="text-base font-semibold tracking-tight text-[#1C1917] dark:text-[#F5F2EB]">
                   Dapcode
                 </span>
-                <span className="text-[11px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 border border-amber-500/30 dark:bg-amber-400/10 dark:text-amber-400 dark:border-amber-400/20 font-mono">
+                <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 border border-stone-200 dark:bg-stone-800 dark:text-stone-400 dark:border-stone-700 font-mono">
                   v1.0
                 </span>
               </div>
@@ -94,13 +93,13 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     to={item.path}
-                    className={`flex items-center space-x-2 px-3.5 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                    className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                       isActive
-                        ? 'text-indigo-600 bg-indigo-50 dark:text-white dark:bg-zinc-800/70 font-semibold shadow-xs'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-zinc-400 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/40'
+                        ? 'text-[#1C1917] bg-[#FAF8F3] dark:text-[#F5F2EB] dark:bg-[#24221F] font-semibold border border-[#E8E4DC] dark:border-[#332F2B]'
+                        : 'text-stone-600 hover:text-stone-900 hover:bg-[#FAF8F3] dark:text-stone-400 dark:hover:text-stone-200 dark:hover:bg-[#24221F]'
                     }`}
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-3.5 w-3.5" />
                     <span>{item.label}</span>
                   </Link>
                 );
@@ -109,59 +108,59 @@ export default function Navbar() {
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center space-x-2.5 sm:space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-2.5">
             {/* Theme Toggle Button (Light / Dark) */}
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-1.5 rounded-lg border border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:border-indigo-400 transition-all cursor-pointer shadow-xs"
+              className="p-1.5 rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
               title={isDark ? 'Chuyển sang nền sáng' : 'Chuyển sang nền tối'}
             >
               {isDark ? (
-                <Sun className="h-4 w-4 text-amber-400 animate-spin-once" />
+                <Sun className="h-4 w-4 text-stone-300" />
               ) : (
-                <Moon className="h-4 w-4 text-indigo-600" />
+                <Moon className="h-4 w-4 text-stone-700" />
               )}
             </button>
 
             {/* AI Tutor Feature Badge */}
-            <div className="hidden sm:flex items-center space-x-1.5 rounded-full bg-indigo-50 border border-indigo-200 dark:bg-indigo-950/40 dark:border-indigo-500/30 px-3 py-1 text-xs text-indigo-600 dark:text-indigo-300">
-              <Sparkles className="h-3.5 w-3.5 text-indigo-500 dark:text-indigo-400 animate-pulse" />
-              <span className="font-medium">Socratic AI Active</span>
+            <div className="hidden sm:flex items-center space-x-1.5 rounded-lg bg-[#FAF8F3] border border-[#E8E4DC] dark:bg-[#24221F] dark:border-[#332F2B] px-2.5 py-1 text-xs text-stone-700 dark:text-stone-300">
+              <Sparkles className="h-3.5 w-3.5 text-stone-500 dark:text-stone-400" />
+              <span className="font-medium text-[11px]">Socratic AI</span>
             </div>
 
             {/* Daily Streak Trigger */}
             <button
               type="button"
               onClick={() => setIsStreakOpen(true)}
-              className="flex items-center space-x-1.5 rounded-md bg-amber-50 dark:bg-zinc-900 border border-amber-200 dark:border-zinc-800 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:text-amber-400 hover:border-amber-400 transition-all shadow-xs active:scale-95 cursor-pointer"
+              className="flex items-center space-x-1.5 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2.5 py-1 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
               title="Xem chuỗi streak luyện tập"
             >
-              <Flame className="h-4 w-4 text-amber-500 fill-amber-500/30" />
-              <span>{displayStreak}</span>
+              <Flame className="h-3.5 w-3.5 text-[#B45309] dark:text-[#FBBF24]" />
+              <span className="font-mono text-[11px]">{displayStreak}</span>
             </button>
 
             {/* Quick Search Button (⌘K) */}
             <button
               type="button"
               onClick={() => setIsSearchOpen(true)}
-              className="hidden lg:flex items-center space-x-2 rounded-md bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 px-3 py-1.5 text-xs text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:border-slate-300 dark:hover:border-zinc-700 transition-colors cursor-pointer"
+              className="hidden lg:flex items-center space-x-2 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-3 py-1.5 text-xs text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
             >
               <Search className="h-3.5 w-3.5" />
-              <span>Tìm kiếm bài tập...</span>
-              <kbd className="rounded bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 px-1.5 py-0.5 text-[10px] text-slate-500 dark:text-zinc-400 font-mono">⌘K</kbd>
+              <span className="text-[11px]">Tìm kiếm...</span>
+              <kbd className="rounded bg-white dark:bg-[#1C1A18] border border-[#E8E4DC] dark:border-[#332F2B] px-1 py-0.2 text-[10px] text-stone-500 dark:text-stone-400 font-mono">⌘K</kbd>
             </button>
 
             {/* User Profile / Sign In */}
             {user ? (
-              <div className="flex items-center space-x-2 pl-1">
-                <div className="flex items-center space-x-2 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 py-1 px-2.5 rounded-lg text-xs">
+              <div className="flex items-center space-x-1.5 pl-1">
+                <div className="flex items-center space-x-2 bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] py-1 px-2.5 rounded-lg text-xs">
                   {user.avatarUrl ? (
                     <img
                       src={user.avatarUrl}
                       alt={displayName}
                       referrerPolicy="no-referrer"
-                      className="h-5 w-5 rounded-full object-cover ring-1 ring-slate-200 dark:ring-zinc-700"
+                      className="h-5 w-5 rounded-full object-cover border border-[#E8E4DC] dark:border-[#332F2B]"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                         const fallback = e.currentTarget.nextElementSibling;
@@ -170,13 +169,13 @@ export default function Navbar() {
                     />
                   ) : null}
                   <div
-                    className={`h-5 w-5 rounded-full bg-indigo-600 items-center justify-center text-[10px] font-bold text-white ${
+                    className={`h-5 w-5 rounded-full bg-[#1C1917] dark:bg-[#F5F2EB] items-center justify-center text-[10px] font-medium text-white dark:text-[#1C1917] ${
                       user.avatarUrl ? 'hidden' : 'flex'
                     }`}
                   >
                     {initialLetter}
                   </div>
-                  <span className="font-medium text-slate-800 dark:text-zinc-200 hidden sm:inline max-w-[130px] truncate">
+                  <span className="font-medium text-[#1C1917] dark:text-[#F5F2EB] hidden sm:inline max-w-[120px] truncate text-[11px]">
                     {displayName}
                   </span>
                 </div>
@@ -184,18 +183,18 @@ export default function Navbar() {
                   type="button"
                   onClick={handleLogout}
                   title="Đăng xuất"
-                  className="p-1.5 text-slate-500 hover:text-rose-600 hover:bg-slate-100 dark:text-zinc-400 dark:hover:text-rose-400 dark:hover:bg-zinc-800 rounded-md transition-colors cursor-pointer"
+                  className="p-1.5 text-stone-500 hover:text-[#B91C1C] hover:bg-[#FAF8F3] dark:text-stone-400 dark:hover:text-[#F87171] dark:hover:bg-[#24221F] rounded-lg transition-colors cursor-pointer"
                 >
-                  <LogOut className="h-4 w-4" />
+                  <LogOut className="h-3.5 w-3.5" />
                 </button>
               </div>
             ) : (
               <button
                 type="button"
                 onClick={() => setIsAuthOpen(true)}
-                className="flex items-center space-x-2 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-zinc-800 dark:hover:bg-zinc-700 border border-slate-800 dark:border-zinc-700/60 px-3.5 py-1.5 text-xs font-semibold text-white transition-all active:scale-95 shadow-xs cursor-pointer"
+                className="flex items-center space-x-1.5 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-3.5 py-1.5 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
               >
-                <User className="h-3.5 w-3.5 text-slate-300 dark:text-zinc-400" />
+                <User className="h-3.5 w-3.5" />
                 <span>Sign In</span>
               </button>
             )}

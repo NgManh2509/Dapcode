@@ -11,10 +11,9 @@ import StreakModal from '../components/StreakModal';
 import DapcodeLogo from '../components/DapcodeLogo';
 import { getProblemBySlug, getProblems } from '../api/problems';
 import { submitCode, subscribeSubmissionStream } from '../api/submissions';
-import { DEFAULT_STARTER_CODE, getStarterCode } from '../data/starterTemplates';
+import { getStarterCode } from '../data/starterTemplates';
 import { useTheme } from '../context/ThemeContext';
 import { 
-  Code2,
   ChevronLeft, 
   ChevronRight, 
   FileText, 
@@ -34,7 +33,7 @@ import {
 export default function WorkspacePage() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { theme, toggleTheme, isDark } = useTheme();
+  const { toggleTheme, isDark } = useTheme();
 
   // Problem State
   const [problem, setProblem] = useState(null);
@@ -46,7 +45,6 @@ export default function WorkspacePage() {
   // Editor State
   const [language, setLanguage] = useState('python');
   const [code, setCode] = useState(() => getStarterCode(slug, 'python'));
-
 
   // Modals state
   const [isAiTutorOpen, setIsAiTutorOpen] = useState(false);
@@ -67,10 +65,12 @@ export default function WorkspacePage() {
   const [submissionState, setSubmissionState] = useState({
     isRunning: false,
     isSubmitting: false,
-    progress: null, // { currentTest, totalTests, message }
-    result: null,   // SubmissionResponse
+    progress: null,
+    result: null,
     error: null,
   });
+
+  const [authPromptMessage, setAuthPromptMessage] = useState('');
 
   // Fetch full list of problems for dropdown selector and prev/next navigation
   useEffect(() => {
@@ -86,7 +86,7 @@ export default function WorkspacePage() {
       });
   }, []);
 
-  // Navigation: Prev & Next problems from live database
+  // Navigation: Prev & Next problems
   const currentIndex = allProblems.findIndex((p) => p.slug === slug);
   const prevProblem = currentIndex > 0 ? allProblems[currentIndex - 1] : null;
   const nextProblem = currentIndex >= 0 && currentIndex < allProblems.length - 1 ? allProblems[currentIndex + 1] : null;
@@ -103,7 +103,7 @@ export default function WorkspacePage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Load problem details directly from Spring Boot Backend
+  // Load problem details from Spring Boot Backend
   useEffect(() => {
     setIsLoadingProblem(true);
     setFetchError(null);
@@ -136,8 +136,7 @@ export default function WorkspacePage() {
       });
   }, [slug]);
 
-
-  // Handle language switch and starter code
+  // Handle language switch
   const handleLanguageChange = (newLang) => {
     setLanguage(newLang);
     const newCode = problem?.starterCode?.[newLang] || getStarterCode(slug, newLang);
@@ -149,10 +148,6 @@ export default function WorkspacePage() {
     setCode(resetCode);
   };
 
-
-  const [authPromptMessage, setAuthPromptMessage] = useState('');
-
-  // Authentication check helper (Phương án 2: Yêu cầu đăng nhập trước khi nộp bài)
   const checkAuth = (actionName) => {
     const token = localStorage.getItem('dapcode_token');
     if (!token || !user) {
@@ -168,7 +163,7 @@ export default function WorkspacePage() {
     setIsAiTutorOpen(true);
   };
 
-  // Run Code (Sample tests via Judge0 Sandbox)
+  // Run Code
   const handleRunCode = useCallback(async () => {
     if (!problem) return;
     if (!checkAuth('chạy thử code')) return;
@@ -222,7 +217,6 @@ export default function WorkspacePage() {
               error: null,
             });
           },
-
           onError: () => {
             setSubmissionState((prev) => ({
               ...prev,
@@ -246,9 +240,9 @@ export default function WorkspacePage() {
         error: errMsg,
       });
     }
-  }, [problem, language, code]);
+  }, [problem, language, code, user]);
 
-  // Submit Code (Chấm bộ test ẩn toàn diện qua Spring Boot + Sandbox)
+  // Submit Code
   const handleSubmitCode = useCallback(async () => {
     if (!problem) return;
     if (!checkAuth('nộp bài chấm điểm')) return;
@@ -312,7 +306,6 @@ export default function WorkspacePage() {
               error: null,
             });
           },
-
           onError: () => {
             setSubmissionState((prev) => ({
               ...prev,
@@ -336,13 +329,13 @@ export default function WorkspacePage() {
         error: errMsg,
       });
     }
-  }, [problem, language, code]);
+  }, [problem, language, code, user]);
 
   if (isLoadingProblem) {
     return (
-      <div className="flex h-screen w-screen items-center justify-center bg-slate-50 dark:bg-[#0b0d13] text-slate-500 dark:text-zinc-400 font-sans">
+      <div className="flex h-screen w-screen items-center justify-center bg-[#FDFBF7] dark:bg-[#141312] text-stone-600 dark:text-stone-400 font-sans">
         <div className="flex flex-col items-center space-y-3">
-          <div className="h-8 w-8 animate-spin rounded-full border-2 border-indigo-600 border-t-transparent" />
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-stone-800 dark:border-stone-200 border-t-transparent" />
           <p className="text-xs">Đang tải đề bài từ Database...</p>
         </div>
       </div>
@@ -351,13 +344,13 @@ export default function WorkspacePage() {
 
   if (fetchError || !problem) {
     return (
-      <div className="flex h-screen w-screen flex-col items-center justify-center bg-slate-50 dark:bg-[#0b0d13] text-slate-800 dark:text-zinc-300 font-sans p-4 space-y-4">
-        <AlertCircle className="h-10 w-10 text-rose-500" />
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white">Không thể tải bài tập</h2>
-        <p className="text-xs text-slate-600 dark:text-zinc-400 max-w-md text-center">{fetchError || 'Bài tập không tồn tại trong hệ thống.'}</p>
+      <div className="flex h-screen w-screen flex-col items-center justify-center bg-[#FDFBF7] dark:bg-[#141312] text-stone-800 dark:text-stone-200 font-sans p-4 space-y-4">
+        <AlertCircle className="h-8 w-8 text-[#B91C1C]" />
+        <h2 className="text-base font-semibold text-[#1C1917] dark:text-[#F5F2EB]">Không thể tải bài tập</h2>
+        <p className="text-xs text-stone-600 dark:text-stone-400 max-w-md text-center">{fetchError || 'Bài tập không tồn tại trong hệ thống.'}</p>
         <Link
           to="/roadmap"
-          className="rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-500 transition-colors"
+          className="rounded-lg bg-[#1C1917] dark:bg-[#F5F2EB] px-4 py-2 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors"
         >
           Quay lại Roadmap
         </Link>
@@ -366,29 +359,29 @@ export default function WorkspacePage() {
   }
 
   return (
-    <div className="flex h-screen flex-col bg-slate-100 dark:bg-[#0b0d13] text-slate-900 dark:text-zinc-100 font-sans overflow-hidden">
-      {/* Top Main Workspace Navigation Bar */}
-      <header className="flex h-13 items-center justify-between border-b border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#161722] px-4 flex-shrink-0">
+    <div className="flex h-screen flex-col bg-[#FDFBF7] dark:bg-[#141312] text-[#1C1917] dark:text-[#F5F2EB] font-sans overflow-hidden">
+      {/* Top Workspace Navigation Bar */}
+      <header className="flex h-14 items-center justify-between border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FDFBF7]/90 dark:bg-[#141312]/90 backdrop-blur-md px-4 flex-shrink-0">
         {/* Left: Brand Logo, Back, Problem Navigator */}
         <div className="flex items-center space-x-3 min-w-0">
           <Link
             to="/roadmap"
-            className="flex items-center space-x-2 text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            className="flex items-center space-x-2 text-[#1C1917] dark:text-[#F5F2EB] hover:opacity-80 transition-opacity"
             title="Quay lại Roadmap"
           >
             <DapcodeLogo size="sm" />
-            <span className="font-bold text-sm tracking-tight hidden md:inline">Dapcode</span>
-            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 border border-amber-500/30 dark:bg-amber-400/10 dark:text-amber-400 dark:border-amber-400/20 font-mono hidden sm:inline">
+            <span className="font-semibold text-sm tracking-tight hidden md:inline">Dapcode</span>
+            <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 border border-stone-200 dark:bg-stone-800 dark:text-stone-400 dark:border-stone-700 font-mono hidden sm:inline">
               v1.0
             </span>
           </Link>
 
-          <div className="h-4 w-px bg-slate-200 dark:bg-zinc-800 hidden sm:block" />
+          <div className="h-4 w-px bg-[#E8E4DC] dark:bg-[#332F2B] hidden sm:block" />
 
           {/* Back to List */}
           <Link
             to="/practice"
-            className="flex items-center space-x-1 rounded-md px-2 py-1 text-xs font-medium text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-slate-900 dark:hover:text-white transition-colors"
+            className="flex items-center space-x-1 rounded-lg px-2.5 py-1 text-xs font-medium text-stone-600 dark:text-stone-400 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] hover:text-[#1C1917] dark:hover:text-[#F5F2EB] transition-colors"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">Danh sách</span>
@@ -400,7 +393,7 @@ export default function WorkspacePage() {
               type="button"
               disabled={!prevProblem}
               onClick={() => prevProblem && navigate(`/problems/${prevProblem.slug}`)}
-              className="p-1 rounded text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-slate-900 dark:hover:text-white disabled:opacity-30 disabled:hover:bg-transparent transition-colors cursor-pointer"
+              className="p-1 rounded text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 disabled:opacity-30 transition-colors cursor-pointer"
               title={prevProblem ? `Bài trước: ${prevProblem.title}` : 'Không có bài trước'}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -409,14 +402,14 @@ export default function WorkspacePage() {
               type="button"
               disabled={!nextProblem}
               onClick={() => nextProblem && navigate(`/problems/${nextProblem.slug}`)}
-              className="p-1 rounded text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-slate-900 dark:hover:text-white disabled:opacity-30 disabled:hover:bg-transparent transition-colors cursor-pointer"
+              className="p-1 rounded text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 disabled:opacity-30 transition-colors cursor-pointer"
               title={nextProblem ? `Bài kế tiếp: ${nextProblem.title}` : 'Không có bài kế tiếp'}
             >
               <ChevronRight className="h-4 w-4" />
             </button>
           </div>
 
-          <div className="h-4 w-px bg-slate-200 dark:bg-zinc-800" />
+          <div className="h-4 w-px bg-[#E8E4DC] dark:bg-[#332F2B]" />
 
           {/* Problem Title & Dropdown Selector */}
           <div className="flex items-center space-x-2 truncate">
@@ -424,16 +417,16 @@ export default function WorkspacePage() {
               <select
                 value={problem.slug}
                 onChange={(e) => navigate(`/problems/${e.target.value}`)}
-                className="bg-transparent text-xs sm:text-sm font-bold text-slate-900 dark:text-white focus:outline-none cursor-pointer truncate max-w-[200px] sm:max-w-[300px]"
+                className="bg-transparent text-xs sm:text-sm font-semibold text-[#1C1917] dark:text-[#F5F2EB] focus:outline-none cursor-pointer truncate max-w-[200px] sm:max-w-[300px]"
               >
                 {allProblems.map((p) => (
-                  <option key={p.slug} value={p.slug} className="bg-white dark:bg-zinc-900 text-slate-800 dark:text-zinc-200">
+                  <option key={p.slug} value={p.slug} className="bg-white dark:bg-[#1C1A18] text-stone-800 dark:text-stone-200">
                     {p.title} ({p.difficulty})
                   </option>
                 ))}
               </select>
             ) : (
-              <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate max-w-[200px]">
+              <span className="text-xs sm:text-sm font-semibold text-[#1C1917] dark:text-[#F5F2EB] truncate max-w-[200px]">
                 {problem.title}
               </span>
             )}
@@ -442,36 +435,36 @@ export default function WorkspacePage() {
         </div>
 
         {/* Right Tools: Theme Switcher, Search, AI Tutor, Streak, User */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-2.5">
           {/* Theme Switcher Toggle */}
           <button
             type="button"
             onClick={toggleTheme}
-            className="flex items-center justify-center h-7.5 w-7.5 rounded-lg bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
-            title={isDark ? "Chuyển sang chế độ Sáng" : "Chuyển sang chế độ Tối"}
+            className="flex items-center justify-center h-7.5 w-7.5 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
+            title={isDark ? 'Chuyển sang chế độ Sáng' : 'Chuyển sang chế độ Tối'}
           >
-            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4 text-slate-600" />}
+            {isDark ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
           </button>
 
           {/* Quick Search Trigger */}
           <button
             type="button"
             onClick={() => setIsSearchOpen(true)}
-            className="flex items-center space-x-1.5 rounded-md bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 px-2.5 py-1 text-xs text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:border-slate-300 dark:hover:border-zinc-700 transition-colors cursor-pointer"
+            className="flex items-center space-x-1.5 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2.5 py-1 text-xs text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
             title="Tìm kiếm bài tập (⌘K)"
           >
             <Search className="h-3.5 w-3.5" />
-            <kbd className="hidden md:inline rounded bg-slate-200 dark:bg-zinc-800 px-1 text-[10px] text-slate-500 dark:text-zinc-400 font-mono">⌘K</kbd>
+            <kbd className="hidden md:inline rounded bg-white dark:bg-[#1C1A18] border border-[#E8E4DC] dark:border-[#332F2B] px-1 text-[10px] text-stone-500 dark:text-stone-400 font-mono">⌘K</kbd>
           </button>
 
           {/* Socratic AI Tutor Quick Trigger */}
           <button
             type="button"
             onClick={handleOpenAiTutor}
-            className="flex items-center space-x-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-600/20 dark:hover:bg-indigo-600/30 border border-indigo-200 dark:border-indigo-500/40 px-3 py-1 text-xs font-semibold text-indigo-700 dark:text-indigo-300 shadow-xs transition-all active:scale-95 cursor-pointer"
+            className="flex items-center space-x-1.5 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-3 py-1 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
           >
-            <Sparkles className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
-            <span className="hidden sm:inline">Xin gợi ý (AI Tutor)</span>
+            <Sparkles className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">AI Tutor</span>
             <span className="sm:hidden">AI</span>
           </button>
 
@@ -479,22 +472,22 @@ export default function WorkspacePage() {
           <button
             type="button"
             onClick={() => setIsStreakOpen(true)}
-            className="flex items-center space-x-1 rounded-md bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 px-2 py-1 text-xs font-medium text-amber-600 dark:text-amber-400 hover:border-amber-500/40 transition-colors cursor-pointer"
+            className="flex items-center space-x-1 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2 py-1 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
             title="Xem chuỗi streak"
           >
-            <Flame className="h-3.5 w-3.5 text-amber-500 fill-amber-500/30" />
-            <span>{user?.streakCount ?? user?.streak ?? 1}</span>
+            <Flame className="h-3.5 w-3.5 text-[#B45309] dark:text-[#FBBF24]" />
+            <span className="font-mono text-[11px]">{user?.streakCount ?? user?.streak ?? 1}</span>
           </button>
 
           {/* User Sign In / Profile */}
           {user ? (
-            <div className="flex items-center space-x-1.5 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 py-1 px-2 rounded-lg text-xs">
+            <div className="flex items-center space-x-1.5 bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] py-1 px-2.5 rounded-lg text-xs">
               {user.avatarUrl ? (
                 <img
                   src={user.avatarUrl}
                   alt={user.username || user.name || 'User'}
                   referrerPolicy="no-referrer"
-                  className="h-5 w-5 rounded-full object-cover ring-1 ring-slate-200 dark:ring-zinc-700"
+                  className="h-4.5 w-4.5 rounded-full object-cover border border-[#E8E4DC] dark:border-[#332F2B]"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const fallback = e.currentTarget.nextElementSibling;
@@ -503,11 +496,11 @@ export default function WorkspacePage() {
                 />
               ) : null}
               <div 
-                className={`h-5 w-5 rounded-full bg-indigo-600 items-center justify-center text-[10px] font-bold text-white ${user.avatarUrl ? 'hidden' : 'flex'}`}
+                className={`h-4.5 w-4.5 rounded-full bg-[#1C1917] dark:bg-[#F5F2EB] items-center justify-center text-[9px] font-medium text-white dark:text-[#1C1917] ${user.avatarUrl ? 'hidden' : 'flex'}`}
               >
                 {(user.username || user.name || user.email || 'U').charAt(0).toUpperCase()}
               </div>
-              <span className="font-medium text-slate-800 dark:text-zinc-200 hidden md:inline max-w-[100px] truncate">
+              <span className="font-medium text-[#1C1917] dark:text-[#F5F2EB] hidden md:inline max-w-[90px] truncate text-[11px]">
                 {user.username || user.name || user.email?.split('@')[0]}
               </span>
             </div>
@@ -515,9 +508,9 @@ export default function WorkspacePage() {
             <button
               type="button"
               onClick={() => setIsAuthOpen(true)}
-              className="flex items-center space-x-1 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 border border-slate-300 dark:border-zinc-700 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-white transition-colors cursor-pointer"
+              className="flex items-center space-x-1 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-2.5 py-1 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
             >
-              <User className="h-3.5 w-3.5 text-slate-500 dark:text-zinc-400" />
+              <User className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Sign In</span>
             </button>
           )}
@@ -525,18 +518,18 @@ export default function WorkspacePage() {
       </header>
 
       {/* Main Split-Pane Workspace */}
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 p-2 overflow-hidden">
-        {/* Left Pane: Problem Description & Tabs (5 Cols on LG) */}
-        <div className="lg:col-span-5 flex flex-col rounded-xl border border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#16171d] overflow-hidden shadow-sm h-full">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2.5 p-2.5 overflow-hidden">
+        {/* Left Pane: Problem Description & Editorial Tabs (5 Cols on LG) */}
+        <div className="lg:col-span-5 flex flex-col rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] overflow-hidden h-full">
           {/* Left Panel Tabs Header */}
-          <div className="flex h-11 items-center border-b border-slate-200 dark:border-zinc-800/80 bg-slate-50 dark:bg-[#121319] px-4 space-x-1">
+          <div className="flex h-11 items-center border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] px-4 space-x-1">
             <button
               type="button"
               onClick={() => setActiveLeftTab('description')}
-              className={`flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
+              className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
                 activeLeftTab === 'description'
-                  ? 'bg-white dark:bg-zinc-800 text-slate-900 dark:text-white border border-slate-200 dark:border-transparent shadow-xs'
-                  : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+                  ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                  : 'text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200'
               }`}
             >
               <FileText className="h-3.5 w-3.5" />
@@ -546,10 +539,10 @@ export default function WorkspacePage() {
             <button
               type="button"
               onClick={() => setActiveLeftTab('submissions')}
-              className={`flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
+              className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
                 activeLeftTab === 'submissions'
-                  ? 'bg-white dark:bg-zinc-800 text-slate-900 dark:text-white border border-slate-200 dark:border-transparent shadow-xs'
-                  : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+                  ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                  : 'text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200'
               }`}
             >
               <History className="h-3.5 w-3.5" />
@@ -557,33 +550,33 @@ export default function WorkspacePage() {
             </button>
           </div>
 
-          {/* Left Panel Content */}
+          {/* Left Panel Content: Editorial Readable Style */}
           <div className="flex-1 overflow-y-auto p-5 text-sm">
             {activeLeftTab === 'description' ? (
               <div className="space-y-4">
-                {/* Meta Limits & Category */}
-                <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-zinc-400 border-b border-slate-200 dark:border-zinc-800/60 pb-3">
-                  <span className="rounded bg-slate-100 dark:bg-zinc-800/80 border border-slate-200 dark:border-transparent px-2 py-0.5 font-medium text-slate-700 dark:text-zinc-300">
+                {/* Meta Limits & Category Badge */}
+                <div className="flex flex-wrap items-center gap-2.5 text-xs text-stone-500 dark:text-stone-400 border-b border-[#E8E4DC] dark:border-[#332F2B] pb-3">
+                  <span className="rounded-md bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2 py-0.5 font-medium text-stone-700 dark:text-stone-300">
                     {problem.category}
                   </span>
                   <div className="flex items-center space-x-1">
-                    <Clock className="h-3.5 w-3.5 text-slate-400 dark:text-zinc-400" />
+                    <Clock className="h-3.5 w-3.5 text-stone-400" />
                     <span>{problem.timeLimitMs || 1000} ms</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Cpu className="h-3.5 w-3.5 text-slate-400 dark:text-zinc-400" />
+                    <Cpu className="h-3.5 w-3.5 text-stone-400" />
                     <span>{((problem.memoryLimitKb || 262144) / 1024).toFixed(0)} MB</span>
                   </div>
                 </div>
 
-                {/* Markdown Description from Backend */}
+                {/* Markdown Description */}
                 <MarkdownRenderer content={problem.descriptionMarkdown} />
               </div>
             ) : (
               /* Submissions History */
               <div className="space-y-3">
-                <div className="text-xs font-semibold text-slate-600 dark:text-zinc-400 mb-2">Lịch sử bài nộp:</div>
-                <div className="rounded-lg border border-slate-200 dark:border-zinc-800/80 bg-slate-50 dark:bg-[#121319] p-3 text-xs text-slate-500 dark:text-zinc-400">
+                <div className="text-xs font-medium text-stone-600 dark:text-stone-400 mb-2">Lịch sử bài nộp:</div>
+                <div className="rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-3 text-xs text-stone-500 dark:text-stone-400">
                   Chưa có lượt nộp bài nào được ghi nhận cho bài toán này.
                 </div>
               </div>
@@ -591,9 +584,8 @@ export default function WorkspacePage() {
           </div>
         </div>
 
-
         {/* Right Pane: Monaco Editor + Console Drawer (7 Cols on LG) */}
-        <div className="lg:col-span-7 flex flex-col h-full space-y-2 overflow-hidden">
+        <div className="lg:col-span-7 flex flex-col h-full space-y-2.5 overflow-hidden">
           {/* Top 60%: Monaco Editor */}
           <div className="h-[60%] w-full">
             <CodeEditor

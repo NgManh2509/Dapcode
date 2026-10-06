@@ -33,46 +33,46 @@ export default function ConsoleDrawer({
       case 'ACCEPTED':
         return {
           label: 'Accepted',
-          badgeClass: 'text-emerald-700 bg-emerald-50 border-emerald-300 dark:text-emerald-400 dark:bg-emerald-500/10 dark:border-emerald-500/30',
+          badgeClass: 'text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0] dark:text-[#4ADE80] dark:bg-[#14532D]/20 dark:border-[#166534]/50',
           icon: CheckCircle2,
-          iconClass: 'text-emerald-600 dark:text-emerald-400',
+          iconClass: 'text-[#15803D] dark:text-[#4ADE80]',
         };
       case 'WRONG_ANSWER':
         return {
           label: 'Wrong Answer',
-          badgeClass: 'text-rose-700 bg-rose-50 border-rose-300 dark:text-rose-400 dark:bg-rose-500/10 dark:border-rose-500/30',
+          badgeClass: 'text-[#B91C1C] bg-[#FEF2F2] border-[#FECACA] dark:text-[#F87171] dark:bg-[#7F1D1D]/20 dark:border-[#991B1B]/50',
           icon: XCircle,
-          iconClass: 'text-rose-600 dark:text-rose-400',
+          iconClass: 'text-[#B91C1C] dark:text-[#F87171]',
         };
       case 'TIME_LIMIT_EXCEEDED':
         return {
           label: 'Time Limit Exceeded',
-          badgeClass: 'text-amber-700 bg-amber-50 border-amber-300 dark:text-amber-400 dark:bg-amber-500/10 dark:border-amber-500/30',
+          badgeClass: 'text-[#B45309] bg-[#FFFBEB] border-[#FDE68A] dark:text-[#FBBF24] dark:bg-[#78350F]/20 dark:border-[#92400E]/50',
           icon: Clock,
-          iconClass: 'text-amber-600 dark:text-amber-400',
+          iconClass: 'text-[#B45309] dark:text-[#FBBF24]',
         };
       default:
         return {
           label: status || 'Error',
-          badgeClass: 'text-rose-700 bg-rose-50 border-rose-300 dark:text-rose-400 dark:bg-rose-500/10 dark:border-rose-500/30',
+          badgeClass: 'text-[#B91C1C] bg-[#FEF2F2] border-[#FECACA] dark:text-[#F87171] dark:bg-[#7F1D1D]/20 dark:border-[#991B1B]/50',
           icon: AlertCircle,
-          iconClass: 'text-rose-600 dark:text-rose-400',
+          iconClass: 'text-[#B91C1C] dark:text-[#F87171]',
         };
     }
   };
 
   return (
-    <div className="flex h-full flex-col border border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#16171d] rounded-xl overflow-hidden shadow-sm">
+    <div className="flex h-full flex-col border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] rounded-xl overflow-hidden">
       {/* Drawer Header Tabs */}
-      <div className="flex h-11 items-center justify-between border-b border-slate-200 dark:border-zinc-800/80 bg-slate-50 dark:bg-[#121319] px-4">
+      <div className="flex h-11 items-center justify-between border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] px-4">
         <div className="flex items-center space-x-2">
           <button
             type="button"
             onClick={() => setActiveTab('testcases')}
-            className={`flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
+            className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
               activeTab === 'testcases'
-                ? 'bg-white dark:bg-zinc-800 text-slate-900 dark:text-white border border-slate-200 dark:border-transparent shadow-xs'
-                : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+                ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'
             }`}
           >
             <Terminal className="h-3.5 w-3.5" />
@@ -82,24 +82,21 @@ export default function ConsoleDrawer({
           <button
             type="button"
             onClick={() => setActiveTab('result')}
-            className={`flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors relative ${
+            className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-colors relative ${
               activeTab === 'result'
-                ? 'bg-white dark:bg-zinc-800 text-slate-900 dark:text-white border border-slate-200 dark:border-transparent shadow-xs'
-                : 'text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200'
+                ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'
             }`}
           >
             <span>Kết quả</span>
             {isBusy && (
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-              </span>
+              <span className="flex h-1.5 w-1.5 rounded-full bg-stone-700 dark:bg-stone-300 animate-pulse ml-1" />
             )}
           </button>
         </div>
 
         {/* Action Buttons: Run & Submit */}
-        <div className="flex items-center space-x-2.5">
+        <div className="flex items-center space-x-2">
           <button
             type="button"
             disabled={isBusy}
@@ -107,12 +104,12 @@ export default function ConsoleDrawer({
               setActiveTab('result');
               onRunCode();
             }}
-            className="flex items-center space-x-1.5 rounded-lg bg-white hover:bg-slate-100 dark:bg-zinc-800 dark:hover:bg-zinc-700 disabled:opacity-50 border border-slate-300 dark:border-zinc-700/60 px-3.5 py-1.5 text-xs font-medium text-slate-700 dark:text-zinc-200 shadow-xs transition-all active:scale-95"
+            className="flex items-center space-x-1.5 rounded-lg bg-white hover:bg-stone-100 dark:bg-[#1C1A18] dark:hover:bg-[#24221F] disabled:opacity-50 border border-[#E8E4DC] dark:border-[#332F2B] px-3.5 py-1.5 text-xs font-medium text-stone-700 dark:text-stone-200 transition-colors"
           >
             {isRunning ? (
-              <Loader2 className="h-3.5 w-3.5 animate-spin text-slate-500 dark:text-zinc-400" />
+              <Loader2 className="h-3.5 w-3.5 animate-spin text-stone-500 dark:text-stone-400" />
             ) : (
-              <Play className="h-3.5 w-3.5 text-slate-600 dark:text-zinc-400 fill-slate-600 dark:fill-zinc-400" />
+              <Play className="h-3.5 w-3.5 text-stone-600 dark:text-stone-400 fill-stone-600 dark:fill-stone-400" />
             )}
             <span>Run Code</span>
           </button>
@@ -124,10 +121,10 @@ export default function ConsoleDrawer({
               setActiveTab('result');
               onSubmitCode();
             }}
-            className="flex items-center space-x-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 px-4 py-1.5 text-xs font-semibold text-white shadow-xs transition-all active:scale-95"
+            className="flex items-center space-x-1.5 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] disabled:opacity-50 px-4 py-1.5 text-xs font-medium text-white dark:text-[#1C1917] transition-colors"
           >
             {isSubmitting ? (
-              <Loader2 className="h-3.5 w-3.5 animate-spin text-white" />
+              <Loader2 className="h-3.5 w-3.5 animate-spin text-white dark:text-[#1C1917]" />
             ) : (
               <Send className="h-3.5 w-3.5" />
             )}
@@ -147,10 +144,10 @@ export default function ConsoleDrawer({
                   key={tc.id || idx}
                   type="button"
                   onClick={() => setSelectedTestCaseIndex(idx)}
-                  className={`rounded-md px-3 py-1 font-medium transition-colors ${
+                  className={`rounded-lg px-3 py-1 text-xs transition-colors ${
                     selectedTestCaseIndex === idx
-                      ? 'bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white border border-slate-300 dark:border-zinc-700 font-semibold'
-                      : 'bg-slate-100 dark:bg-zinc-900/60 text-slate-600 dark:text-zinc-400 hover:bg-slate-200 dark:hover:bg-zinc-800/60 border border-transparent'
+                      ? 'bg-[#1C1917] text-white dark:bg-[#F5F2EB] dark:text-[#1C1917] font-medium'
+                      : 'bg-[#FAF8F3] dark:bg-[#24221F] text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 border border-[#E8E4DC] dark:border-[#332F2B]'
                   }`}
                 >
                   Case {idx + 1}
@@ -161,15 +158,15 @@ export default function ConsoleDrawer({
             {/* Selected case details */}
             <div className="space-y-3">
               <div>
-                <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">Input:</div>
-                <div className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-[#111217] p-2.5 text-slate-800 dark:text-zinc-200">
+                <div className="text-[11px] font-sans font-medium text-stone-500 dark:text-stone-400 mb-1">Input:</div>
+                <div className="rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#141312] p-2.5 text-stone-800 dark:text-stone-200">
                   {currentCase.inputData || 'N/A'}
                 </div>
               </div>
 
               <div>
-                <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">Expected Output:</div>
-                <div className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-[#111217] p-2.5 text-slate-800 dark:text-zinc-200">
+                <div className="text-[11px] font-sans font-medium text-stone-500 dark:text-stone-400 mb-1">Expected Output:</div>
+                <div className="rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#141312] p-2.5 text-stone-800 dark:text-stone-200">
                   {currentCase.expectedOutput || 'N/A'}
                 </div>
               </div>
@@ -179,20 +176,20 @@ export default function ConsoleDrawer({
           /* Test Result / Submission SSE Stream View */
           <div>
             {isBusy ? (
-              <div className="flex flex-col items-center justify-center py-8 space-y-3">
-                <Loader2 className="h-7 w-7 animate-spin text-indigo-600 dark:text-indigo-400" />
-                <div className="text-sm font-sans font-medium text-slate-800 dark:text-zinc-200">
+              <div className="flex flex-col items-center justify-center py-8 space-y-3 font-sans">
+                <Loader2 className="h-6 w-6 animate-spin text-stone-700 dark:text-stone-300" />
+                <div className="text-xs font-medium text-stone-800 dark:text-stone-200">
                   {progress?.message || 'Đang gửi mã nguồn tới Sandbox Judge0...'}
                 </div>
                 {progress?.currentTest !== undefined && progress?.totalTests && (
-                  <div className="w-64 space-y-1">
-                    <div className="flex justify-between text-[11px] text-slate-500 dark:text-zinc-400 font-sans">
-                      <span>Đang kiểm thử test case {progress.currentTest}/{progress.totalTests}</span>
+                  <div className="w-56 space-y-1">
+                    <div className="flex justify-between text-[11px] text-stone-500 dark:text-stone-400">
+                      <span>Kiểm thử test case {progress.currentTest}/{progress.totalTests}</span>
                       <span>{Math.round((progress.currentTest / progress.totalTests) * 100)}%</span>
                     </div>
-                    <div className="h-1.5 w-full bg-slate-200 dark:bg-zinc-800 rounded-full overflow-hidden">
+                    <div className="h-1.5 w-full bg-[#FAF8F3] dark:bg-[#24221F] rounded-full overflow-hidden border border-[#E8E4DC] dark:border-[#332F2B]">
                       <div
-                        className="h-full bg-indigo-500 rounded-full transition-all duration-300"
+                        className="h-full bg-stone-800 dark:bg-stone-200 rounded-full transition-all duration-300"
                         style={{ width: `${(progress.currentTest / progress.totalTests) * 100}%` }}
                       />
                     </div>
@@ -200,12 +197,12 @@ export default function ConsoleDrawer({
                 )}
               </div>
             ) : error ? (
-              <div className="rounded-lg border border-rose-200 dark:border-rose-500/30 bg-rose-50 dark:bg-rose-950/20 p-4 text-rose-800 dark:text-rose-300 font-sans space-y-2">
-                <div className="flex items-center space-x-2 font-semibold">
-                  <AlertCircle className="h-4 w-4 text-rose-600 dark:text-rose-400" />
+              <div className="rounded-lg border border-[#FECACA] dark:border-[#991B1B]/50 bg-[#FEF2F2] dark:bg-[#7F1D1D]/20 p-4 text-[#B91C1C] dark:text-[#F87171] font-sans space-y-2">
+                <div className="flex items-center space-x-2 font-medium">
+                  <AlertCircle className="h-4 w-4 text-[#B91C1C] dark:text-[#F87171]" />
                   <span>Đã xảy ra lỗi</span>
                 </div>
-                <div className="text-xs font-mono text-rose-900 dark:text-rose-200 bg-rose-100 dark:bg-rose-950/40 p-2.5 rounded border border-rose-300 dark:border-rose-800/40 whitespace-pre-wrap">
+                <div className="text-xs font-mono text-[#B91C1C] dark:text-[#F87171] bg-white/60 dark:bg-black/30 p-2.5 rounded border border-[#FECACA] dark:border-[#991B1B]/40 whitespace-pre-wrap">
                   {error}
                 </div>
               </div>
@@ -216,26 +213,26 @@ export default function ConsoleDrawer({
                   const verdict = getVerdictStyle(result.status);
                   const Icon = verdict.icon;
                   return (
-                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-zinc-800/80 pb-3">
+                    <div className="flex items-center justify-between border-b border-[#E8E4DC] dark:border-[#332F2B] pb-3">
                       <div className="flex items-center space-x-2.5">
-                        <span className={`inline-flex items-center space-x-1.5 rounded-lg border px-3 py-1 font-sans text-sm font-bold ${verdict.badgeClass}`}>
+                        <span className={`inline-flex items-center space-x-1.5 rounded-lg border px-3 py-1 font-sans text-xs font-medium ${verdict.badgeClass}`}>
                           <Icon className={`h-4 w-4 ${verdict.iconClass}`} />
                           <span>{verdict.label}</span>
                         </span>
                       </div>
 
                       {/* Runtime & Memory */}
-                      <div className="flex items-center space-x-4 text-xs font-sans text-slate-500 dark:text-zinc-400">
+                      <div className="flex items-center space-x-4 text-xs font-sans text-stone-500 dark:text-stone-400">
                         {result.totalRuntimeMs !== undefined && (
                           <div className="flex items-center space-x-1">
-                            <Clock className="h-3.5 w-3.5 text-slate-400 dark:text-zinc-400" />
-                            <span>Runtime: <strong className="text-slate-800 dark:text-zinc-200 font-mono">{result.totalRuntimeMs} ms</strong></span>
+                            <Clock className="h-3.5 w-3.5 text-stone-400" />
+                            <span>Runtime: <strong className="text-stone-800 dark:text-stone-200 font-mono">{result.totalRuntimeMs} ms</strong></span>
                           </div>
                         )}
                         {result.maxMemoryKb !== undefined && (
                           <div className="flex items-center space-x-1">
-                            <Cpu className="h-3.5 w-3.5 text-slate-400 dark:text-zinc-400" />
-                            <span>Memory: <strong className="text-slate-800 dark:text-zinc-200 font-mono">{(result.maxMemoryKb / 1024).toFixed(1)} MB</strong></span>
+                            <Cpu className="h-3.5 w-3.5 text-stone-400" />
+                            <span>Memory: <strong className="text-stone-800 dark:text-stone-200 font-mono">{(result.maxMemoryKb / 1024).toFixed(1)} MB</strong></span>
                           </div>
                         )}
                       </div>
@@ -259,7 +256,7 @@ export default function ConsoleDrawer({
 
                   if (casesToDisplay.length === 0) {
                     return (
-                      <div className="rounded-xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-[#121319] p-4 text-center font-sans text-xs text-slate-600 dark:text-zinc-400">
+                      <div className="rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#141312] p-4 text-center font-sans text-xs text-stone-600 dark:text-stone-400">
                         Đã kiểm thử hoàn tất với kết quả: <strong className="font-mono">{result.status || 'ACCEPTED'}</strong>
                       </div>
                     );
@@ -268,12 +265,12 @@ export default function ConsoleDrawer({
                   return (
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <div className="text-[11px] font-sans font-semibold text-slate-700 dark:text-zinc-300">
+                        <div className="text-[11px] font-sans font-medium text-stone-700 dark:text-stone-300">
                           Chi tiết từng Test Case ({result.passedTestCases ?? casesToDisplay.filter(c => c.status === 'ACCEPTED' || c.passed).length} / {casesToDisplay.length} Passed):
                         </div>
                       </div>
 
-                      <div className="space-y-2.5">
+                      <div className="space-y-2">
                         {casesToDisplay.map((tc, i) => {
                           const isPassed = tc.status === 'ACCEPTED' || tc.passed === true;
                           const isHidden = tc.isHidden ?? tc.hidden ?? false;
@@ -290,29 +287,29 @@ export default function ConsoleDrawer({
                           return (
                             <div
                               key={i}
-                              className={`rounded-xl border p-3 font-mono text-xs transition-colors ${
+                              className={`rounded-lg border p-3 font-mono text-xs transition-colors ${
                                 isPassed
-                                  ? 'border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-[#121319]'
-                                  : 'border-rose-200 dark:border-rose-900/40 bg-rose-50/30 dark:bg-rose-950/10'
+                                  ? 'border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#1C1A18]'
+                                  : 'border-[#FECACA] dark:border-[#991B1B]/40 bg-[#FEF2F2]/60 dark:bg-[#7F1D1D]/10'
                               }`}
                             >
-                              <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200/80 dark:border-zinc-800/80">
+                              <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#E8E4DC] dark:border-[#332F2B]">
                                 <div className="flex items-center space-x-2">
-                                  <span className="font-semibold text-slate-800 dark:text-zinc-200">
+                                  <span className="font-semibold text-stone-800 dark:text-stone-200">
                                     Case {i + 1} {isHidden ? '(Ẩn)' : ''}
                                   </span>
                                   <span
-                                    className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
+                                    className={`px-2 py-0.5 rounded text-[10px] font-semibold uppercase border ${
                                       isPassed
-                                        ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30'
-                                        : 'bg-rose-100 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400 border border-rose-300 dark:border-rose-500/30'
+                                        ? 'bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0] dark:bg-[#14532D]/20 dark:text-[#4ADE80] dark:border-[#166534]/50'
+                                        : 'bg-[#FEF2F2] text-[#B91C1C] border-[#FECACA] dark:bg-[#7F1D1D]/20 dark:text-[#F87171] dark:border-[#991B1B]/50'
                                     }`}
                                   >
                                     {isPassed ? 'PASS' : (tc.status || 'FAIL')}
                                   </span>
                                 </div>
                                 {tc.runtimeMs !== undefined && (
-                                  <span className="text-[11px] text-slate-400 dark:text-zinc-500 font-sans">
+                                  <span className="text-[11px] text-stone-500 dark:text-stone-400 font-sans">
                                     {Math.round(tc.runtimeMs)} ms
                                   </span>
                                 )}
@@ -320,32 +317,32 @@ export default function ConsoleDrawer({
 
                               <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
                                 <div>
-                                  <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">
-                                    Input :
+                                  <div className="text-[11px] font-sans font-medium text-stone-500 dark:text-stone-400 mb-1">
+                                    Input:
                                   </div>
-                                  <div className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#181920] p-2 text-slate-800 dark:text-zinc-200 break-words whitespace-pre-wrap">
+                                  <div className="rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-white dark:bg-[#141312] p-2 text-stone-800 dark:text-stone-200 break-words whitespace-pre-wrap">
                                     {tc.inputData || (isHidden ? '(Test case ẩn)' : 'N/A')}
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">
-                                    Output :
+                                  <div className="text-[11px] font-sans font-medium text-stone-500 dark:text-stone-400 mb-1">
+                                    Output:
                                   </div>
-                                  <div className="rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#181920] p-2 text-slate-800 dark:text-zinc-200 break-words whitespace-pre-wrap">
+                                  <div className="rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-white dark:bg-[#141312] p-2 text-stone-800 dark:text-stone-200 break-words whitespace-pre-wrap">
                                     {tc.expectedOutput || (isHidden ? '(Test case ẩn)' : 'N/A')}
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div className="text-[11px] font-sans font-medium text-slate-500 dark:text-zinc-400 mb-1">
-                                    Kết quả :
+                                  <div className="text-[11px] font-sans font-medium text-stone-500 dark:text-stone-400 mb-1">
+                                    Kết quả:
                                   </div>
                                   <div
-                                    className={`rounded-lg border p-2 break-words whitespace-pre-wrap ${
+                                    className={`rounded-lg border p-2 break-words whitespace-pre-wrap font-medium ${
                                       isPassed
-                                        ? 'border-emerald-200 dark:border-emerald-500/30 bg-emerald-50/60 dark:bg-emerald-950/20 text-emerald-700 dark:text-emerald-300 font-semibold'
-                                        : 'border-rose-200 dark:border-rose-500/30 bg-rose-50/60 dark:bg-rose-950/20 text-rose-700 dark:text-rose-300 font-semibold'
+                                        ? 'border-[#BBF7D0] dark:border-[#166534]/40 bg-[#F0FDF4] dark:bg-[#14532D]/10 text-[#15803D] dark:text-[#4ADE80]'
+                                        : 'border-[#FECACA] dark:border-[#991B1B]/40 bg-[#FEF2F2] dark:bg-[#7F1D1D]/10 text-[#B91C1C] dark:text-[#F87171]'
                                     }`}
                                   >
                                     {cleanActual}
@@ -354,7 +351,7 @@ export default function ConsoleDrawer({
                               </div>
 
                               {tc.errMes && (
-                                <div className="mt-2 text-[11px] font-mono text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30 p-2 rounded border border-rose-200 dark:border-rose-900/50 whitespace-pre-wrap">
+                                <div className="mt-2 text-[11px] font-mono text-[#B91C1C] dark:text-[#F87171] bg-[#FEF2F2] dark:bg-[#7F1D1D]/20 p-2 rounded border border-[#FECACA] dark:border-[#991B1B]/30 whitespace-pre-wrap">
                                   {tc.errMes}
                                 </div>
                               )}
@@ -365,12 +362,10 @@ export default function ConsoleDrawer({
                     </div>
                   );
                 })()}
-
-
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center py-10 text-slate-400 dark:text-zinc-500 font-sans">
-                <Terminal className="h-8 w-8 mb-2 opacity-50" />
+              <div className="flex flex-col items-center justify-center py-10 text-stone-400 dark:text-stone-500 font-sans">
+                <Terminal className="h-6 w-6 mb-2 opacity-40" />
                 <p className="text-xs">Nhấn &quot;Run Code&quot; hoặc &quot;Submit&quot; để xem kết quả kiểm thử.</p>
               </div>
             )}
@@ -380,4 +375,3 @@ export default function ConsoleDrawer({
     </div>
   );
 }
-

@@ -108,6 +108,19 @@
       "source_location": "L28"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemsummaryresponse_problemsummaryresponse",
+      "label": "ProblemSummaryResponse",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemsummaryresponse",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/problem/ProblemSummaryResponse.java",
+      "source_location": "L9"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_submission_submissiondetailresponse_submissiondetailresponse",
       "label": "SubmissionDetailResponse",
       "_callable": true,
@@ -199,6 +212,162 @@
       "source_location": "L10"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem_problem",
+      "label": "Problem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problem",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java",
+      "source_location": "L20"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_submission_submission",
+      "label": "Submission",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "submission",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java",
+      "source_location": "L23"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase_testcase",
+      "label": "TestCase",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "testcase",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
+      "source_location": "L23"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
+      "label": "Theories",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theories",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L21"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest",
+      "label": "Judge0SubmissionRequest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "judge0submissionrequest",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L8"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository",
+      "label": "ProblemRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemrepository",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L15"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository",
+      "label": "SubmissionRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "submissionrepository",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L10"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository",
+      "label": "TestCaseRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "testcaserepository",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
+      "source_location": "L10"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
+      "label": "TheoryRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theoryrepository",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice_problemservice",
+      "label": "ProblemService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemservice",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
+      "source_location": "L9"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl",
+      "label": "ProblemServiceImpl",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemserviceimpl",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
+      "source_location": "L25"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
+      "label": "TheoryServiceImpl",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theoryserviceimpl",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L17"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0status_judge0status",
       "label": "Judge0Status",
       "_callable": true,
@@ -225,32 +394,6 @@
       "source_location": "L7"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem_problem",
-      "label": "Problem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "problem",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java",
-      "source_location": "L20"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_submission_submission",
-      "label": "Submission",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "submission",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java",
-      "source_location": "L23"
-    },
-    {
       "id": "ai_service_app_core_config_settings",
       "label": "Settings",
       "_callable": true,
@@ -264,56 +407,17 @@
       "source_location": "L3"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
-      "label": "ErrorCode",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider",
+      "label": "JwtTokenProvider",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
-      "norm_label": "errorcode",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L6"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase_testcase",
-      "label": "TestCase",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "testcase",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
-      "source_location": "L23"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository",
-      "label": "ProblemRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "problemrepository",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
-      "source_location": "L15"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository",
-      "label": "TestCaseRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "testcaserepository",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
-      "source_location": "L10"
+      "norm_label": "jwttokenprovider",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
+      "source_location": "L22"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_auth_authserviceimpl_authserviceimpl",
@@ -322,23 +426,10 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
       "norm_label": "authserviceimpl",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthServiceImpl.java",
-      "source_location": "L25"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl",
-      "label": "ProblemServiceImpl",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "problemserviceimpl",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
       "source_location": "L25"
     },
     {
@@ -353,6 +444,19 @@
       "norm_label": "jwtauthenticationfilter",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtAuthenticationFilter.java",
       "source_location": "L25"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler_oauth2authenticationsuccesshandler",
+      "label": "OAuth2AuthenticationSuccessHandler",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "norm_label": "oauth2authenticationsuccesshandler",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java",
+      "source_location": "L20"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_config_securityconfig_securityconfig",
@@ -537,19 +641,6 @@
       "source_location": "L8"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler_oauth2authenticationsuccesshandler",
-      "label": "OAuth2AuthenticationSuccessHandler",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "norm_label": "oauth2authenticationsuccesshandler",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java",
-      "source_location": "L20"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_codeharnessserviceimpl_codeharnessserviceimpl",
       "label": "CodeHarnessServiceImpl",
       "_callable": true,
@@ -595,7 +686,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "file_type": "code",
       "norm_label": "hintrequest",
       "source_file": "AI-service/app/schema/tutor.py",
@@ -608,7 +699,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "file_type": "code",
       "norm_label": "hintresponse",
       "source_file": "AI-service/app/schema/tutor.py",
@@ -628,17 +719,82 @@
       "source_location": "L12"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode",
+      "label": "ErrorCode",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "errorcode",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L6"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception",
       "label": "AppException",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "appexception",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java",
       "source_location": "L7"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client",
+      "label": "Judge0Client",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "judge0client",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java",
+      "source_location": "L5"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_batchresponse",
+      "label": "BatchResponse",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "batchresponse",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
+      "source_location": "L106"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response",
+      "label": "Judge0Response",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "judge0response",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L8"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_status",
+      "label": "Status",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "status",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L19"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_codeharnessservice_codeharnessservice",
@@ -647,7 +803,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "codeharnessservice",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessService.java",
@@ -660,7 +816,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "evaluationsummary",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -673,7 +829,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "submissionserviceimpl",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -686,115 +842,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "submissionstreammanager",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionStreamManager.java",
       "source_location": "L18"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_dto_problem_problemsummaryresponse_problemsummaryresponse",
-      "label": "ProblemSummaryResponse",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": "problemsummaryresponse",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/dto/problem/ProblemSummaryResponse.java",
-      "source_location": "L9"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice_problemservice",
-      "label": "ProblemService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": "problemservice",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
-      "source_location": "L9"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client",
-      "label": "Judge0Client",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": "judge0client",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java",
-      "source_location": "L5"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_batchresponse",
-      "label": "BatchResponse",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": "batchresponse",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
-      "source_location": "L106"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response",
-      "label": "Judge0Response",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": "judge0response",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L8"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest",
-      "label": "Judge0SubmissionRequest",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": "judge0submissionrequest",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L8"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider",
-      "label": "JwtTokenProvider",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "file_type": "code",
-      "norm_label": "jwttokenprovider",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
-      "source_location": "L22"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_status",
-      "label": "Status",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "UserRepository",
-      "file_type": "code",
-      "norm_label": "status",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L19"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository_userrepository",
@@ -927,58 +979,6 @@
       "source_location": "L11"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories_theories",
-      "label": "Theories",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "theories",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
-      "source_location": "L21"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository",
-      "label": "SubmissionRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "submissionrepository",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L10"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository",
-      "label": "TheoryRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "theoryrepository",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
-      "source_location": "L13"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl",
-      "label": "TheoryServiceImpl",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "theoryserviceimpl",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
-      "source_location": "L17"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_ai_aiserviceclientimpl_aiserviceclientimpl_gethint",
       "label": ".getHint()",
       "_callable": true,
@@ -999,6 +999,314 @@
       "norm_label": ".gethint()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/ai/AiServiceClientImpl.java",
       "source_location": "L16"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getcputimelimit",
+      "label": ".getCpuTimeLimit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getcputimelimit()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L32"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getexpectedoutput",
+      "label": ".getExpectedOutput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getexpectedoutput()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L28"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getmemorylimit",
+      "label": ".getMemoryLimit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getmemorylimit()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L36"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getsourcecode",
+      "label": ".getSourceCode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getsourcecode()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L20"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_existsbyslug",
+      "label": ".existsBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".existsbyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L18"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findbydifficulty",
+      "label": ".findByDifficulty()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findbydifficulty()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L20"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findproblemswithfilters",
+      "label": ".findProblemsWithFilters()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findproblemswithfilters()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L22"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridandproblemidorderbycreatedatdesc",
+      "label": ".findByUserIdAndProblemIdOrderByCreatedAtDesc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findbyuseridandproblemidorderbycreatedatdesc()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridorderbycreatedatdesc",
+      "label": ".findByUserIdOrderByCreatedAtDesc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findbyuseridorderbycreatedatdesc()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L11"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemidandishiddenfalse",
+      "label": ".findByProblemIdAndIsHiddenFalse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findbyproblemidandishiddenfalse()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_existsbyslug",
+      "label": ".existsBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".existsbyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L16"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findbyslugandispublishedtrue",
+      "label": ".findBySlugAndIsPublishedTrue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findbyslugandispublishedtrue()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L14"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_finddistinctcategories",
+      "label": ".findDistinctCategories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".finddistinctcategories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L26"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
+      "label": ".findPublishedTheories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".findpublishedtheories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L18"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice_problemservice_getproblembyslug",
+      "label": ".getProblemBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getproblembyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
+      "source_location": "L17"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice_problemservice_getproblems",
+      "label": ".getProblems()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getproblems()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
+      "source_location": "L11"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl_getproblembyslug",
+      "label": ".getProblemBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "readValue",
+            "receiver_type": "ObjectMapper",
+            "lang": "java",
+            "line": "L87"
+          }
+        ]
+      },
+      "norm_label": ".getproblembyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
+      "source_location": "L69"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl_getproblems",
+      "label": ".getProblems()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getContent",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L48"
+          },
+          {
+            "callee": "getNumber",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L60"
+          },
+          {
+            "callee": "getSize",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L61"
+          },
+          {
+            "callee": "getTotalElements",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L62"
+          },
+          {
+            "callee": "getTotalPages",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L63"
+          },
+          {
+            "callee": "isFirst",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L64"
+          },
+          {
+            "callee": "isLast",
+            "receiver_type": "Page",
+            "lang": "java",
+            "line": "L65"
+          }
+        ]
+      },
+      "norm_label": ".getproblems()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
+      "source_location": "L34"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_getcategories",
+      "label": ".getCategories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".getcategories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L57"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
+      "label": ".getTheories()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".gettheories()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L24"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
+      "label": ".getTheoryBySlug()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": ".gettheorybyslug()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L42"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getjudge0status",
@@ -1123,64 +1431,104 @@
       "source_location": "L10"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_errorcode",
-      "label": ".ErrorCode()",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_generatetoken",
+      "label": ".generateToken()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
-      "norm_label": ".errorcode()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L21"
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "builder",
+            "receiver_type": "Jwts",
+            "lang": "java",
+            "line": "L41"
+          }
+        ]
+      },
+      "norm_label": ".generatetoken()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
+      "source_location": "L37"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_existsbyslug",
-      "label": ".existsBySlug()",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_getsigningkey",
+      "label": ".getSigningKey()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
-      "norm_label": ".existsbyslug()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
-      "source_location": "L18"
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "hmacShaKeyFor",
+            "receiver_type": "Keys",
+            "lang": "java",
+            "line": "L34"
+          }
+        ]
+      },
+      "norm_label": ".getsigningkey()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
+      "source_location": "L32"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findbydifficulty",
-      "label": ".findByDifficulty()",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_getuseridfromtoken",
+      "label": ".getUserIdFromToken()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
-      "norm_label": ".findbydifficulty()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
-      "source_location": "L20"
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "parser",
+            "receiver_type": "Jwts",
+            "lang": "java",
+            "line": "L53"
+          },
+          {
+            "callee": "fromString",
+            "receiver_type": "UUID",
+            "lang": "java",
+            "line": "L54"
+          },
+          {
+            "callee": "getSubject",
+            "receiver_type": "Claims",
+            "lang": "java",
+            "line": "L54"
+          }
+        ]
+      },
+      "norm_label": ".getuseridfromtoken()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
+      "source_location": "L52"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemid",
-      "label": ".findByProblemId()",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_validatetoken",
+      "label": ".validateToken()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
-      "norm_label": ".findbyproblemid()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
-      "source_location": "L11"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemidandishiddenfalse",
-      "label": ".findByProblemIdAndIsHiddenFalse()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": ".findbyproblemidandishiddenfalse()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
-      "source_location": "L13"
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "parser",
+            "receiver_type": "Jwts",
+            "lang": "java",
+            "line": "L59"
+          }
+        ]
+      },
+      "norm_label": ".validatetoken()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
+      "source_location": "L57"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_auth_authserviceimpl_authserviceimpl_authenticatewithgoogle",
@@ -1188,7 +1536,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1228,7 +1576,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -1404,7 +1752,7 @@
       "file_type": "code",
       "norm_label": "aitutordrawer()",
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L16"
+      "source_location": "L15"
     },
     {
       "id": "dapcodefrontend_src_components_authmodal_authmodal",
@@ -1428,7 +1776,7 @@
       "file_type": "code",
       "norm_label": "categoryaccordion()",
       "source_file": "DapcodeFrontend/src/components/CategoryAccordion.jsx",
-      "source_location": "L13"
+      "source_location": "L12"
     },
     {
       "id": "dapcodefrontend_src_components_codeeditor_codeeditor",
@@ -1500,7 +1848,7 @@
       "file_type": "code",
       "norm_label": "navbar()",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L22"
+      "source_location": "L21"
     },
     {
       "id": "dapcodefrontend_src_components_progresssidebar_progresssidebar",
@@ -1632,7 +1980,7 @@
       "file_type": "code",
       "norm_label": "theoriespage()",
       "source_file": "DapcodeFrontend/src/pages/TheoriesPage.jsx",
-      "source_location": "L16"
+      "source_location": "L12"
     },
     {
       "id": "dapcodefrontend_src_pages_theorydetailpage_theorydetailpage",
@@ -1644,7 +1992,7 @@
       "file_type": "code",
       "norm_label": "theorydetailpage()",
       "source_file": "DapcodeFrontend/src/pages/TheoryDetailPage.jsx",
-      "source_location": "L18"
+      "source_location": "L17"
     },
     {
       "id": "dapcodefrontend_src_pages_workspacepage_workspacepage",
@@ -1656,7 +2004,7 @@
       "file_type": "code",
       "norm_label": "workspacepage()",
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L34"
+      "source_location": "L33"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwtauthenticationfilter_jwtauthenticationfilter_dofilterinternal",
@@ -1737,6 +2085,40 @@
       "norm_label": ".getjwtfromrequest()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtAuthenticationFilter.java",
       "source_location": "L32"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler_oauth2authenticationsuccesshandler_onauthenticationsuccess",
+      "label": ".onAuthenticationSuccess()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getPrincipal",
+            "receiver_type": "Authentication",
+            "lang": "java",
+            "line": "L31"
+          },
+          {
+            "callee": "getAttribute",
+            "receiver_type": "OAuth2User",
+            "lang": "java",
+            "line": "L33"
+          },
+          {
+            "callee": "fromUriString",
+            "receiver_type": "UriComponentsBuilder",
+            "lang": "java",
+            "line": "L63"
+          }
+        ]
+      },
+      "norm_label": ".onauthenticationsuccess()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java",
+      "source_location": "L28"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_config_securityconfig_securityconfig_securityfilterchain",
@@ -2085,40 +2467,6 @@
       "source_location": "L11"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler_oauth2authenticationsuccesshandler_onauthenticationsuccess",
-      "label": ".onAuthenticationSuccess()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "getPrincipal",
-            "receiver_type": "Authentication",
-            "lang": "java",
-            "line": "L31"
-          },
-          {
-            "callee": "getAttribute",
-            "receiver_type": "OAuth2User",
-            "lang": "java",
-            "line": "L33"
-          },
-          {
-            "callee": "fromUriString",
-            "receiver_type": "UriComponentsBuilder",
-            "lang": "java",
-            "line": "L63"
-          }
-        ]
-      },
-      "norm_label": ".onauthenticationsuccess()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java",
-      "source_location": "L28"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_codeharnessserviceimpl_codeharnessserviceimpl_buildcppdriver",
       "label": ".buildCppDriver()",
       "_callable": true,
@@ -2324,35 +2672,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "file_type": "code",
       "norm_label": "get_hint()",
       "source_file": "AI-service/app/api/v1/endpoints/hint.py",
       "source_location": "L8"
-    },
-    {
-      "id": "ai_service_app_core_prompt_build_user_prompt",
-      "label": "build_user_prompt()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "file_type": "code",
-      "norm_label": "build_user_prompt()",
-      "source_file": "AI-service/app/core/prompt.py",
-      "source_location": "L31"
-    },
-    {
-      "id": "ai_service_app_service_llm_service_generate_hint",
-      "label": "generate_hint()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "file_type": "code",
-      "norm_label": "generate_hint()",
-      "source_file": "AI-service/app/service/LLM_service.py",
-      "source_location": "L10"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_config_openapiconfig_openapiconfig_customopenapi",
@@ -2367,16 +2691,208 @@
       "source_location": "L14"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_errorcode",
+      "label": ".ErrorCode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".errorcode()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L21"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception_appexception_appexception",
       "label": ".AppException()",
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".appexception()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java",
       "source_location": "L11"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client_executebatch",
+      "label": ".executeBatch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".executebatch()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java",
+      "source_location": "L8"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executebatch",
+      "label": ".executeBatch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "emptyList",
+            "receiver_type": "Collections",
+            "lang": "java",
+            "line": "L38"
+          },
+          {
+            "callee": "of",
+            "receiver_type": "Map",
+            "lang": "java",
+            "line": "L43"
+          },
+          {
+            "callee": "post",
+            "receiver_type": "RestClient",
+            "lang": "java",
+            "line": "L45"
+          },
+          {
+            "callee": "joining",
+            "receiver_type": "Collectors",
+            "lang": "java",
+            "line": "L59"
+          },
+          {
+            "callee": "sleep",
+            "receiver_type": "Thread",
+            "lang": "java",
+            "line": "L65"
+          },
+          {
+            "callee": "currentThread",
+            "receiver_type": "Thread",
+            "lang": "java",
+            "line": "L67"
+          },
+          {
+            "callee": "get",
+            "receiver_type": "RestClient",
+            "lang": "java",
+            "line": "L72"
+          }
+        ]
+      },
+      "norm_label": ".executebatch()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
+      "source_location": "L35"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executesingle",
+      "label": ".executeSingle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "post",
+            "receiver_type": "RestClient",
+            "lang": "java",
+            "line": "L27"
+          }
+        ]
+      },
+      "norm_label": ".executesingle()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
+      "source_location": "L23"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_decodebase64safe",
+      "label": ".decodeBase64Safe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "getDecoder",
+            "receiver_type": "Base64",
+            "lang": "java",
+            "line": "L31"
+          },
+          {
+            "callee": "getMimeDecoder",
+            "receiver_type": "Base64",
+            "lang": "java",
+            "line": "L35"
+          }
+        ]
+      },
+      "norm_label": ".decodebase64safe()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L25"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getcompile_output",
+      "label": ".getCompile_output()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".getcompile_output()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L51"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getcompileoutput",
+      "label": ".getCompileOutput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".getcompileoutput()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L55"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getstderr",
+      "label": ".getStderr()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".getstderr()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L47"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getstdout",
+      "label": ".getStdout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".getstdout()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L43"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getlanguageid",
+      "label": ".getLanguageId()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": ".getlanguageid()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L24"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findbyslug",
@@ -2384,33 +2900,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".findbyslug()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
       "source_location": "L16"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl_getproblembyslug",
-      "label": ".getProblemBySlug()",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository_testcaserepository_findbyproblemid",
+      "label": ".findByProblemId()",
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "readValue",
-            "receiver_type": "ObjectMapper",
-            "lang": "java",
-            "line": "L87"
-          }
-        ]
-      },
-      "norm_label": ".getproblembyslug()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
-      "source_location": "L69"
+      "norm_label": ".findbyproblemid()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
+      "source_location": "L11"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_codeharnessservice_codeharnessservice_preparesourcecode",
@@ -2418,11 +2924,33 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".preparesourcecode()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessService.java",
       "source_location": "L4"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_evalutateresults",
+      "label": ".evalutateResults()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "max",
+            "receiver_type": "Math",
+            "lang": "java",
+            "line": "L110"
+          }
+        ]
+      },
+      "norm_label": ".evalutateresults()",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
+      "source_location": "L92"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_findproblembyslug",
@@ -2430,7 +2958,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".findproblembyslug()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -2442,7 +2970,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".finduserbyid()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -2454,7 +2982,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".getsubmissionbyid()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -2466,7 +2994,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".isoutputmatched()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -2478,7 +3006,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".submitandevaluate()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -2490,7 +3018,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".subscribestream()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
@@ -2502,7 +3030,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -2548,7 +3076,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": ".removeemitter()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionStreamManager.java",
@@ -2560,7 +3088,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -2582,7 +3110,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -2604,7 +3132,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "metadata": {
         "unresolved_calls": [
@@ -2619,100 +3147,6 @@
       "norm_label": ".sendprogress()",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionStreamManager.java",
       "source_location": "L56"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository_problemrepository_findproblemswithfilters",
-      "label": ".findProblemsWithFilters()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": ".findproblemswithfilters()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
-      "source_location": "L22"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice_problemservice_getproblembyslug",
-      "label": ".getProblemBySlug()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": ".getproblembyslug()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
-      "source_location": "L17"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice_problemservice_getproblems",
-      "label": ".getProblems()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": ".getproblems()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
-      "source_location": "L11"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_problemserviceimpl_getproblems",
-      "label": ".getProblems()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "getContent",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L48"
-          },
-          {
-            "callee": "getNumber",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L60"
-          },
-          {
-            "callee": "getSize",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L61"
-          },
-          {
-            "callee": "getTotalElements",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L62"
-          },
-          {
-            "callee": "getTotalPages",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L63"
-          },
-          {
-            "callee": "isFirst",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L64"
-          },
-          {
-            "callee": "isLast",
-            "receiver_type": "Page",
-            "lang": "java",
-            "line": "L65"
-          }
-        ]
-      },
-      "norm_label": ".getproblems()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
-      "source_location": "L34"
     },
     {
       "id": "ai_service_app_rag_ingest_ingest_data",
@@ -2797,256 +3231,6 @@
       "norm_label": "lifespan()",
       "source_file": "AI-service/app/main.py",
       "source_location": "L8"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client_executebatch",
-      "label": ".executeBatch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".executebatch()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java",
-      "source_location": "L8"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executebatch",
-      "label": ".executeBatch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "emptyList",
-            "receiver_type": "Collections",
-            "lang": "java",
-            "line": "L38"
-          },
-          {
-            "callee": "of",
-            "receiver_type": "Map",
-            "lang": "java",
-            "line": "L43"
-          },
-          {
-            "callee": "post",
-            "receiver_type": "RestClient",
-            "lang": "java",
-            "line": "L45"
-          },
-          {
-            "callee": "joining",
-            "receiver_type": "Collectors",
-            "lang": "java",
-            "line": "L59"
-          },
-          {
-            "callee": "sleep",
-            "receiver_type": "Thread",
-            "lang": "java",
-            "line": "L65"
-          },
-          {
-            "callee": "currentThread",
-            "receiver_type": "Thread",
-            "lang": "java",
-            "line": "L67"
-          },
-          {
-            "callee": "get",
-            "receiver_type": "RestClient",
-            "lang": "java",
-            "line": "L72"
-          }
-        ]
-      },
-      "norm_label": ".executebatch()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
-      "source_location": "L35"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_judge0clientimpl_executesingle",
-      "label": ".executeSingle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "post",
-            "receiver_type": "RestClient",
-            "lang": "java",
-            "line": "L27"
-          }
-        ]
-      },
-      "norm_label": ".executesingle()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java",
-      "source_location": "L23"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_decodebase64safe",
-      "label": ".decodeBase64Safe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "getDecoder",
-            "receiver_type": "Base64",
-            "lang": "java",
-            "line": "L31"
-          },
-          {
-            "callee": "getMimeDecoder",
-            "receiver_type": "Base64",
-            "lang": "java",
-            "line": "L35"
-          }
-        ]
-      },
-      "norm_label": ".decodebase64safe()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L25"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getcompile_output",
-      "label": ".getCompile_output()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getcompile_output()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L51"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getcompileoutput",
-      "label": ".getCompileOutput()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getcompileoutput()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L55"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getstderr",
-      "label": ".getStderr()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getstderr()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L47"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response_judge0response_getstdout",
-      "label": ".getStdout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getstdout()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
-      "source_location": "L43"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getcputimelimit",
-      "label": ".getCpuTimeLimit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getcputimelimit()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L32"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getexpectedoutput",
-      "label": ".getExpectedOutput()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getexpectedoutput()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L28"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getlanguageid",
-      "label": ".getLanguageId()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getlanguageid()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L24"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getmemorylimit",
-      "label": ".getMemoryLimit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getmemorylimit()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L36"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest_judge0submissionrequest_getsourcecode",
-      "label": ".getSourceCode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": ".getsourcecode()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
-      "source_location": "L20"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl_submissionserviceimpl_evalutateresults",
-      "label": ".evalutateResults()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "max",
-            "receiver_type": "Math",
-            "lang": "java",
-            "line": "L110"
-          }
-        ]
-      },
-      "norm_label": ".evalutateresults()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
-      "source_location": "L92"
     },
     {
       "id": "seedingdata_fetch_and_seed_starter_codes_fetch_snippets_for_slug",
@@ -3169,12 +3353,24 @@
       "source_location": "L62"
     },
     {
+      "id": "ai_service_app_core_prompt_build_user_prompt",
+      "label": "build_user_prompt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "file_type": "code",
+      "norm_label": "build_user_prompt()",
+      "source_file": "AI-service/app/core/prompt.py",
+      "source_location": "L31"
+    },
+    {
       "id": "ai_service_app_rag_retriever_get_problem_by_slug",
       "label": "get_problem_by_slug()",
       "_callable": true,
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "get_problem_by_slug()",
       "source_file": "AI-service/app/rag/retriever.py",
@@ -3186,7 +3382,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "search_related_concepts()",
       "source_file": "AI-service/app/rag/retriever.py",
@@ -3198,7 +3394,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "get_chroma_client()",
       "source_file": "AI-service/app/rag/vector_store.py",
@@ -3210,7 +3406,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "get_embedding_func()",
       "source_file": "AI-service/app/rag/vector_store.py",
@@ -3222,11 +3418,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "get_neetcode_collection()",
       "source_file": "AI-service/app/rag/vector_store.py",
       "source_location": "L20"
+    },
+    {
+      "id": "ai_service_app_service_llm_service_generate_hint",
+      "label": "generate_hint()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "file_type": "code",
+      "norm_label": "generate_hint()",
+      "source_file": "AI-service/app/service/LLM_service.py",
+      "source_location": "L10"
     },
     {
       "id": "seedingdata_seed_theory_call_gemini_flash",
@@ -3311,106 +3519,6 @@
       "norm_label": "parse_json_safely()",
       "source_file": "seedingData/seed_theory.py",
       "source_location": "L88"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_generatetoken",
-      "label": ".generateToken()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "builder",
-            "receiver_type": "Jwts",
-            "lang": "java",
-            "line": "L41"
-          }
-        ]
-      },
-      "norm_label": ".generatetoken()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
-      "source_location": "L37"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_getsigningkey",
-      "label": ".getSigningKey()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "hmacShaKeyFor",
-            "receiver_type": "Keys",
-            "lang": "java",
-            "line": "L34"
-          }
-        ]
-      },
-      "norm_label": ".getsigningkey()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
-      "source_location": "L32"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_getuseridfromtoken",
-      "label": ".getUserIdFromToken()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "parser",
-            "receiver_type": "Jwts",
-            "lang": "java",
-            "line": "L53"
-          },
-          {
-            "callee": "fromString",
-            "receiver_type": "UUID",
-            "lang": "java",
-            "line": "L54"
-          },
-          {
-            "callee": "getSubject",
-            "receiver_type": "Claims",
-            "lang": "java",
-            "line": "L54"
-          }
-        ]
-      },
-      "norm_label": ".getuseridfromtoken()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
-      "source_location": "L52"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_jwttokenprovider_jwttokenprovider_validatetoken",
-      "label": ".validateToken()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "file_type": "code",
-      "metadata": {
-        "unresolved_calls": [
-          {
-            "callee": "parser",
-            "receiver_type": "Jwts",
-            "lang": "java",
-            "line": "L59"
-          }
-        ]
-      },
-      "norm_label": ".validatetoken()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
-      "source_location": "L57"
     },
     {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client_judge0client_executesingle",
@@ -3951,114 +4059,6 @@
       "source_location": "L23"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridandproblemidorderbycreatedatdesc",
-      "label": ".findByUserIdAndProblemIdOrderByCreatedAtDesc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".findbyuseridandproblemidorderbycreatedatdesc()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L13"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository_submissionrepository_findbyuseridorderbycreatedatdesc",
-      "label": ".findByUserIdOrderByCreatedAtDesc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".findbyuseridorderbycreatedatdesc()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L11"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_existsbyslug",
-      "label": ".existsBySlug()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".existsbyslug()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
-      "source_location": "L16"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findbyslugandispublishedtrue",
-      "label": ".findBySlugAndIsPublishedTrue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".findbyslugandispublishedtrue()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
-      "source_location": "L14"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_finddistinctcategories",
-      "label": ".findDistinctCategories()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".finddistinctcategories()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
-      "source_location": "L26"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository_theoryrepository_findpublishedtheories",
-      "label": ".findPublishedTheories()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".findpublishedtheories()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
-      "source_location": "L18"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_getcategories",
-      "label": ".getCategories()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".getcategories()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
-      "source_location": "L57"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheories",
-      "label": ".getTheories()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".gettheories()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
-      "source_location": "L24"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_theoryserviceimpl_gettheorybyslug",
-      "label": ".getTheoryBySlug()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": ".gettheorybyslug()",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
-      "source_location": "L42"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_ai_aihintrequest",
       "label": "AiHintRequest.java",
       "_origin": "ast",
@@ -4100,6 +4100,17 @@
       "file_type": "code",
       "norm_label": "apiresponse.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ApiResponse.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode",
+      "label": "ErrorCode.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "errorcode.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
       "source_location": "L1"
     },
     {
@@ -4246,6 +4257,61 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem",
+      "label": "Problem.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problem.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_submission",
+      "label": "Submission.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "submission.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase",
+      "label": "TestCase.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "testcase.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
+      "label": "Theories.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theories.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_users",
+      "label": "Users.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "users.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Users.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0submissionrequest",
       "label": "Judge0SubmissionRequest.java",
       "_origin": "ast",
@@ -4254,6 +4320,61 @@
       "file_type": "code",
       "norm_label": "judge0submissionrequest.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository",
+      "label": "ProblemRepository.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository",
+      "label": "SubmissionRepository.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "submissionrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository",
+      "label": "TestCaseRepository.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "testcaserepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
+      "label": "TheoryRepository.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theoryrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
+      "label": "UserRepository.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "userrepository.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/UserRepository.java",
       "source_location": "L1"
     },
     {
@@ -4268,6 +4389,39 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice",
+      "label": "ProblemService.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemservice.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl",
+      "label": "ProblemServiceImpl.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "problemserviceimpl.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionservice",
       "label": "SubmissionService.java",
       "_origin": "ast",
@@ -4276,6 +4430,17 @@
       "file_type": "code",
       "norm_label": "submissionservice.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionService.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl",
+      "label": "SubmissionServiceImpl.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "submissionserviceimpl.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
       "source_location": "L1"
     },
     {
@@ -4288,6 +4453,61 @@
       "norm_label": "theoryservice.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java",
       "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
+      "label": "TheoryServiceImpl.java",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "theoryserviceimpl.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "com_fasterxml_jackson_databind_objectmapper",
+      "label": "com.fasterxml.jackson.databind.ObjectMapper",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "com.fasterxml.jackson.databind.objectmapper",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "jakarta_persistence_entity",
+      "label": "jakarta.persistence.Entity",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "jakarta.persistence.entity",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "jakarta_persistence_table",
+      "label": "jakarta.persistence.Table",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "jakarta.persistence.table",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "lombok_allargsconstructor",
@@ -4323,6 +4543,17 @@
       "source_location": ""
     },
     {
+      "id": "lombok_getter",
+      "label": "lombok.Getter",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "lombok.getter",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "lombok_noargsconstructor",
       "label": "lombok.NoArgsConstructor",
       "_origin": "ast",
@@ -4330,6 +4561,83 @@
       "community_name": "lombok.AllArgsConstructor",
       "file_type": "code",
       "norm_label": "lombok.noargsconstructor",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "lombok_setter",
+      "label": "lombok.Setter",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "lombok.setter",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_domain_page",
+      "label": "org.springframework.data.domain.Page",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.domain.page",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_domain_pageable",
+      "label": "org.springframework.data.domain.Pageable",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.domain.pageable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_jpa_repository_jparepository",
+      "label": "org.springframework.data.jpa.repository.JpaRepository",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.jpa.repository.jparepository",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_data_jpa_repository_query",
+      "label": "org.springframework.data.jpa.repository.Query",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "org.springframework.data.jpa.repository.query",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_stereotype_service",
+      "label": "org.springframework.stereotype.Service",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "org.springframework.stereotype.service",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_transaction_annotation_transactional",
+      "label": "org.springframework.transaction.annotation.Transactional",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "file_type": "code",
+      "norm_label": "org.springframework.transaction.annotation.transactional",
       "source_file": "",
       "source_location": ""
     },
@@ -6515,105 +6823,6 @@
       "source_location": "L53"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_problem",
-      "label": "Problem.java",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "problem.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_submission",
-      "label": "Submission.java",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "submission.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_testcase",
-      "label": "TestCase.java",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "testcase.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_theories",
-      "label": "Theories.java",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "theories.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_entity_users",
-      "label": "Users.java",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "users.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/entity/Users.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "jakarta_persistence_entity",
-      "label": "jakarta.persistence.Entity",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "jakarta.persistence.entity",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "jakarta_persistence_table",
-      "label": "jakarta.persistence.Table",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "jakarta.persistence.table",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "lombok_getter",
-      "label": "lombok.Getter",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "lombok.getter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "lombok_setter",
-      "label": "lombok.Setter",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "file_type": "code",
-      "norm_label": "lombok.setter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "ai_service_app_core_config",
       "label": "config.py",
       "_origin": "ast",
@@ -7964,121 +8173,11 @@
       "source_location": "L1"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode",
-      "label": "ErrorCode.java",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "errorcode.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_invalid_request",
-      "label": "INVALID_REQUEST",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "invalid_request",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L9"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_problem_not_found",
-      "label": "PROBLEM_NOT_FOUND",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "problem_not_found",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L13"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_submission_not_found",
-      "label": "SUBMISSION_NOT_FOUND",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "submission_not_found",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L15"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_theory_not_found",
-      "label": "THEORY_NOT_FOUND",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "theory_not_found",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L14"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthenticated",
-      "label": "UNAUTHENTICATED",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "unauthenticated",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L10"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthorized",
-      "label": "UNAUTHORIZED",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "unauthorized",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L11"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_uncategorized_exception",
-      "label": "UNCATEGORIZED_EXCEPTION",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "uncategorized_exception",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L8"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_user_not_found",
-      "label": "USER_NOT_FOUND",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "user_not_found",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
-      "source_location": "L12"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_testcaserepository",
-      "label": "TestCaseRepository.java",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "testcaserepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java",
-      "source_location": "L1"
-    },
-    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_auth_authserviceimpl",
       "label": "AuthServiceImpl.java",
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
       "norm_label": "authserviceimpl.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthServiceImpl.java",
@@ -8089,42 +8188,9 @@
       "label": "Override",
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
       "norm_label": "override",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl",
-      "label": "ProblemServiceImpl.java",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "problemserviceimpl.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_submissionserviceimpl",
-      "label": "SubmissionServiceImpl.java",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "submissionserviceimpl.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "com_fasterxml_jackson_databind_objectmapper",
-      "label": "com.fasterxml.jackson.databind.ObjectMapper",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "com.fasterxml.jackson.databind.objectmapper",
       "source_file": "",
       "source_location": ""
     },
@@ -8133,42 +8199,9 @@
       "label": "com.google.api.client.googleapis.auth.oauth2.GoogleIdToken",
       "_origin": "ast",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "file_type": "code",
       "norm_label": "com.google.api.client.googleapis.auth.oauth2.googleidtoken",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_http_httpstatus",
-      "label": "org.springframework.http.HttpStatus",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "org.springframework.http.httpstatus",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_stereotype_service",
-      "label": "org.springframework.stereotype.Service",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "org.springframework.stereotype.service",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_transaction_annotation_transactional",
-      "label": "org.springframework.transaction.annotation.Transactional",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "file_type": "code",
-      "norm_label": "org.springframework.transaction.annotation.transactional",
       "source_file": "",
       "source_location": ""
     },
@@ -11300,6 +11333,28 @@
       "source_location": ""
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler",
+      "label": "OAuth2AuthenticationSuccessHandler.java",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "norm_label": "oauth2authenticationsuccesshandler.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler_java_override",
+      "label": "Override",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "jakarta_servlet_filterchain",
       "label": "jakarta.servlet.FilterChain",
       "_origin": "ast",
@@ -11318,6 +11373,39 @@
       "community_name": "JwtAuthenticationFilter.java",
       "file_type": "code",
       "norm_label": "jakarta.servlet.http.httpservletrequest",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "jakarta_servlet_http_httpservletresponse",
+      "label": "jakarta.servlet.http.HttpServletResponse",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "norm_label": "jakarta.servlet.http.httpservletresponse",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_security_core_authentication",
+      "label": "org.springframework.security.core.Authentication",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.security.core.authentication",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_security_web_authentication_simpleurlauthenticationsuccesshandler",
+      "label": "org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler",
+      "_origin": "ast",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "file_type": "code",
+      "norm_label": "org.springframework.security.web.authentication.simpleurlauthenticationsuccesshandler",
       "source_file": "",
       "source_location": ""
     },
@@ -12926,61 +13014,6 @@
       "source_location": "L50"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler",
-      "label": "OAuth2AuthenticationSuccessHandler.java",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "norm_label": "oauth2authenticationsuccesshandler.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_config_oauth2authenticationsuccesshandler_java_override",
-      "label": "Override",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "norm_label": "override",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "jakarta_servlet_http_httpservletresponse",
-      "label": "jakarta.servlet.http.HttpServletResponse",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "norm_label": "jakarta.servlet.http.httpservletresponse",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_security_core_authentication",
-      "label": "org.springframework.security.core.Authentication",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "norm_label": "org.springframework.security.core.authentication",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_security_web_authentication_simpleurlauthenticationsuccesshandler",
-      "label": "org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "file_type": "code",
-      "norm_label": "org.springframework.security.web.authentication.simpleurlauthenticationsuccesshandler",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "agents_skills_imagegen_frontend_web_skill",
       "label": "imagegen-frontend-web/SKILL.md",
       "_origin": "ast",
@@ -13981,21 +14014,10 @@
       "label": "hint.py",
       "_origin": "ast",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "file_type": "code",
       "norm_label": "hint.py",
       "source_file": "AI-service/app/api/v1/endpoints/hint.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ai_service_app_core_prompt",
-      "label": "prompt.py",
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "file_type": "code",
-      "norm_label": "prompt.py",
-      "source_file": "AI-service/app/core/prompt.py",
       "source_location": "L1"
     },
     {
@@ -14003,21 +14025,10 @@
       "label": "tutor.py",
       "_origin": "ast",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "file_type": "code",
       "norm_label": "tutor.py",
       "source_file": "AI-service/app/schema/tutor.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ai_service_app_service_llm_service",
-      "label": "LLM_service.py",
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "file_type": "code",
-      "norm_label": "llm_service.py",
-      "source_file": "AI-service/app/service/LLM_service.py",
       "source_location": "L1"
     },
     {
@@ -14025,9 +14036,20 @@
       "label": "BaseModel",
       "_origin": "ast",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "file_type": "code",
       "norm_label": "basemodel",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "post",
+      "label": "post",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "hint.py",
+      "file_type": "code",
+      "norm_label": "post",
       "source_file": "",
       "source_location": ""
     },
@@ -14662,33 +14684,143 @@
       "source_location": ""
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_invalid_request",
+      "label": "INVALID_REQUEST",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "invalid_request",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L9"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_problem_not_found",
+      "label": "PROBLEM_NOT_FOUND",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "problem_not_found",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L13"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_submission_not_found",
+      "label": "SUBMISSION_NOT_FOUND",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "submission_not_found",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L15"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_theory_not_found",
+      "label": "THEORY_NOT_FOUND",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "theory_not_found",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L14"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthenticated",
+      "label": "UNAUTHENTICATED",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "unauthenticated",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L10"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_unauthorized",
+      "label": "UNAUTHORIZED",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "unauthorized",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L11"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_uncategorized_exception",
+      "label": "UNCATEGORIZED_EXCEPTION",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "uncategorized_exception",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L8"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_common_errorcode_errorcode_user_not_found",
+      "label": "USER_NOT_FOUND",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "user_not_found",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java",
+      "source_location": "L12"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_exception_appexception",
       "label": "AppException.java",
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "appexception.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java",
       "source_location": "L1"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemserviceimpl_java_override",
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client",
+      "label": "Judge0Client.java",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "judge0client.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_java_override",
       "label": "Override",
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "override",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response",
+      "label": "Judge0Response.java",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "judge0response.java",
+      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_core_src_main_java_com_dapcode_backend_core_service_submission_codeharnessservice",
       "label": "CodeHarnessService.java",
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "codeharnessservice.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessService.java",
@@ -14699,9 +14831,20 @@
       "label": "Override",
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "override",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "org_springframework_http_httpstatus",
+      "label": "org.springframework.http.HttpStatus",
+      "_origin": "ast",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "file_type": "code",
+      "norm_label": "org.springframework.http.httpstatus",
       "source_file": "",
       "source_location": ""
     },
@@ -14710,31 +14853,9 @@
       "label": "org.springframework.web.servlet.mvc.method.annotation.SseEmitter",
       "_origin": "ast",
       "community": 217,
-      "community_name": "AppException",
+      "community_name": "ErrorCode",
       "file_type": "code",
       "norm_label": "org.springframework.web.servlet.mvc.method.annotation.sseemitter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_problem_problemservice",
-      "label": "ProblemService.java",
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": "problemservice.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "org_springframework_data_domain_pageable",
-      "label": "org.springframework.data.domain.Pageable",
-      "_origin": "ast",
-      "community": 218,
-      "community_name": "ProblemSummaryResponse",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.domain.pageable",
       "source_file": "",
       "source_location": ""
     },
@@ -15570,28 +15691,6 @@
       "norm_label": "6. performance & accessibility guardrails",
       "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
       "source_location": "L519"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0client",
-      "label": "Judge0Client.java",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": "judge0client.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0clientimpl_java_override",
-      "label": "Override",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "Judge0Response",
-      "file_type": "code",
-      "norm_label": "override",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "agents_skills_full_output_enforcement_skill",
@@ -16736,11 +16835,22 @@
       "source_location": "L797"
     },
     {
+      "id": "ai_service_app_core_prompt",
+      "label": "prompt.py",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "file_type": "code",
+      "norm_label": "prompt.py",
+      "source_file": "AI-service/app/core/prompt.py",
+      "source_location": "L1"
+    },
+    {
       "id": "ai_service_app_rag_retriever",
       "label": "retriever.py",
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "retriever.py",
       "source_file": "AI-service/app/rag/retriever.py",
@@ -16751,7 +16861,7 @@
       "label": "Any",
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
@@ -16762,10 +16872,21 @@
       "label": "vector_store.py",
       "_origin": "ast",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "file_type": "code",
       "norm_label": "vector_store.py",
       "source_file": "AI-service/app/rag/vector_store.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ai_service_app_service_llm_service",
+      "label": "LLM_service.py",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "file_type": "code",
+      "norm_label": "llm_service.py",
+      "source_file": "AI-service/app/service/LLM_service.py",
       "source_location": "L1"
     },
     {
@@ -16965,17 +17086,6 @@
       "file_type": "code",
       "norm_label": "jwttokenprovider.java",
       "source_file": "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_judge0_judge0response",
-      "label": "Judge0Response.java",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "file_type": "code",
-      "norm_label": "judge0response.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java",
       "source_location": "L1"
     },
     {
@@ -17191,17 +17301,6 @@
       "community_name": "UserRepository",
       "file_type": "code",
       "norm_label": "org.springframework.web.context.webapplicationcontext",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "post",
-      "label": "post",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "UserRepository",
-      "file_type": "code",
-      "norm_label": "post",
       "source_file": "",
       "source_location": ""
     },
@@ -21170,103 +21269,26 @@
       "source_location": "L45"
     },
     {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_problemrepository",
-      "label": "ProblemRepository.java",
+      "id": "tailwindcss",
+      "label": "tailwindcss",
       "_origin": "ast",
       "community": 8,
-      "community_name": "list",
+      "community_name": "tailwind.config.js",
+      "confidence": "EXTRACTED",
       "file_type": "code",
-      "norm_label": "problemrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java",
+      "norm_label": "tailwindcss",
+      "source_file": "tailwindcss"
+    },
+    {
+      "id": "dapcodefrontend_tailwind_config",
+      "label": "tailwind.config.js",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "tailwind.config.js",
+      "file_type": "code",
+      "norm_label": "tailwind.config.js",
+      "source_file": "DapcodeFrontend/tailwind.config.js",
       "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_submissionrepository",
-      "label": "SubmissionRepository.java",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "submissionrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_theoryrepository",
-      "label": "TheoryRepository.java",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "theoryrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_repository_userrepository",
-      "label": "UserRepository.java",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "userrepository.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/repository/UserRepository.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl",
-      "label": "TheoryServiceImpl.java",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "theoryserviceimpl.java",
-      "source_file": "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java",
-      "source_location": "L1"
-    },
-    {
-      "id": "backend_core_src_main_java_com_dapcode_backend_core_service_theory_theoryserviceimpl_java_override",
-      "label": "Override",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "override",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_data_domain_page",
-      "label": "org.springframework.data.domain.Page",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.domain.page",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_data_jpa_repository_jparepository",
-      "label": "org.springframework.data.jpa.repository.JpaRepository",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.jpa.repository.jparepository",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "org_springframework_data_jpa_repository_query",
-      "label": "org.springframework.data.jpa.repository.Query",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "list",
-      "file_type": "code",
-      "norm_label": "org.springframework.data.jpa.repository.query",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "ai_service_neetcode_150_main_10_backtracking_04_subsetsii",
@@ -22631,6 +22653,114 @@
       "type": "external"
     },
     {
+      "id": "arraylist",
+      "label": "arraylist",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "arraylist",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "column",
+      "label": "column",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "column",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "creationtimestamp",
+      "label": "creationtimestamp",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "creationtimestamp",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fetchtype",
+      "label": "fetchtype",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fetchtype",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "generatedvalue",
+      "label": "generatedvalue",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "generatedvalue",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "generationtype",
+      "label": "generationtype",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "generationtype",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "id",
+      "label": "id",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "id",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "instant",
+      "label": "instant",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "instant",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "joincolumn",
+      "label": "joincolumn",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "joincolumn",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "jsonproperty",
       "label": "jsonproperty",
       "_origin": "semantic",
@@ -22639,6 +22769,30 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "jsonproperty",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "list",
+      "label": "list",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "list",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "manytoone",
+      "label": "manytoone",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "manytoone",
       "source_file": "",
       "type": "external"
     },
@@ -22663,6 +22817,54 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "notnull",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "optional",
+      "label": "optional",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "optional",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "param",
+      "label": "param",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "param",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "typereference",
+      "label": "typereference",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "typereference",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "updatetimestamp",
+      "label": "updatetimestamp",
+      "_origin": "semantic",
+      "community": 0,
+      "community_name": "lombok.AllArgsConstructor",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "updatetimestamp",
       "source_file": "",
       "type": "external"
     },
@@ -22703,126 +22905,6 @@
       "type": "external"
     },
     {
-      "id": "column",
-      "label": "column",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "column",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "creationtimestamp",
-      "label": "creationtimestamp",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "creationtimestamp",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "fetchtype",
-      "label": "fetchtype",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "fetchtype",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "generatedvalue",
-      "label": "generatedvalue",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "generatedvalue",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "generationtype",
-      "label": "generationtype",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "generationtype",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "id",
-      "label": "id",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "id",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "instant",
-      "label": "instant",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "instant",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "joincolumn",
-      "label": "joincolumn",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "joincolumn",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "manytoone",
-      "label": "manytoone",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "manytoone",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "updatetimestamp",
-      "label": "updatetimestamp",
-      "_origin": "semantic",
-      "community": 13,
-      "community_name": "TestCase.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "updatetimestamp",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "pydantic_settings",
       "label": "pydantic_settings",
       "_origin": "semantic",
@@ -22835,14 +22917,14 @@
       "type": "external"
     },
     {
-      "id": "arraylist",
-      "label": "arraylist",
+      "id": "collections",
+      "label": "collections",
       "_origin": "semantic",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "external": true,
       "file_type": "concept",
-      "norm_label": "arraylist",
+      "norm_label": "collections",
       "source_file": "",
       "type": "external"
     },
@@ -22851,7 +22933,7 @@
       "label": "googleidtokenverifier",
       "_origin": "semantic",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "external": true,
       "file_type": "concept",
       "norm_label": "googleidtokenverifier",
@@ -22863,7 +22945,7 @@
       "label": "gsonfactory",
       "_origin": "semantic",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "external": true,
       "file_type": "concept",
       "norm_label": "gsonfactory",
@@ -22875,22 +22957,10 @@
       "label": "nethttptransport",
       "_origin": "semantic",
       "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
+      "community_name": "AuthServiceImpl.java",
       "external": true,
       "file_type": "concept",
       "norm_label": "nethttptransport",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "typereference",
-      "label": "typereference",
-      "_origin": "semantic",
-      "community": 17,
-      "community_name": "SubmissionServiceImpl.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "typereference",
       "source_file": "",
       "type": "external"
     },
@@ -22907,6 +22977,18 @@
       "type": "external"
     },
     {
+      "id": "oauth2user",
+      "label": "oauth2user",
+      "_origin": "semantic",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "oauth2user",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "securitycontextholder",
       "label": "securitycontextholder",
       "_origin": "semantic",
@@ -22915,6 +22997,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "securitycontextholder",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "servletexception",
+      "label": "servletexception",
+      "_origin": "semantic",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "servletexception",
       "source_file": "",
       "type": "external"
     },
@@ -22939,6 +23033,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "stringutils",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "uricomponentsbuilder",
+      "label": "uricomponentsbuilder",
+      "_origin": "semantic",
+      "community": 195,
+      "community_name": "JwtAuthenticationFilter.java",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "uricomponentsbuilder",
       "source_file": "",
       "type": "external"
     },
@@ -23123,42 +23229,6 @@
       "type": "external"
     },
     {
-      "id": "oauth2user",
-      "label": "oauth2user",
-      "_origin": "semantic",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "oauth2user",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "servletexception",
-      "label": "servletexception",
-      "_origin": "semantic",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "servletexception",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "uricomponentsbuilder",
-      "label": "uricomponentsbuilder",
-      "_origin": "semantic",
-      "community": 202,
-      "community_name": "OAuth2AuthenticationSuccessHandler.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "uricomponentsbuilder",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "matcher",
       "label": "matcher",
       "_origin": "semantic",
@@ -23179,18 +23249,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "pattern",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "collections",
-      "label": "collections",
-      "_origin": "semantic",
-      "community": 207,
-      "community_name": "lombok.extern.slf4j.Slf4j",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "collections",
       "source_file": "",
       "type": "external"
     },
@@ -23291,47 +23349,11 @@
       "type": "external"
     },
     {
-      "id": "app_core_config",
-      "label": "app_core_config",
-      "_origin": "semantic",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "app_core_config",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "app_core_prompt",
-      "label": "app_core_prompt",
-      "_origin": "semantic",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "app_core_prompt",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "app_rag_retriever",
-      "label": "app_rag_retriever",
-      "_origin": "semantic",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "app_rag_retriever",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "app_schema_tutor",
       "label": "app_schema_tutor",
       "_origin": "semantic",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "app_schema_tutor",
@@ -23343,22 +23365,10 @@
       "label": "app_service_llm_service",
       "_origin": "semantic",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "app_service_llm_service",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "groq",
-      "label": "groq",
-      "_origin": "semantic",
-      "community": 210,
-      "community_name": "LLM_service.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "groq",
       "source_file": "",
       "type": "external"
     },
@@ -23367,7 +23377,7 @@
       "label": "pydantic",
       "_origin": "semantic",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "pydantic",
@@ -23379,7 +23389,7 @@
       "label": "typing",
       "_origin": "semantic",
       "community": 210,
-      "community_name": "LLM_service.py",
+      "community_name": "hint.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "typing",
@@ -23431,6 +23441,30 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "securityscheme",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "base64",
+      "label": "base64",
+      "_origin": "semantic",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "base64",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "standardcharsets",
+      "label": "standardcharsets",
+      "_origin": "semantic",
+      "community": 217,
+      "community_name": "ErrorCode",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "standardcharsets",
       "source_file": "",
       "type": "external"
     },
@@ -23543,6 +23577,18 @@
       "type": "external"
     },
     {
+      "id": "argparse",
+      "label": "argparse",
+      "_origin": "semantic",
+      "community": 24,
+      "community_name": "seed_problems.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "argparse",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "concurrent_futures",
       "label": "concurrent_futures",
       "_origin": "semantic",
@@ -23603,11 +23649,47 @@
       "type": "external"
     },
     {
+      "id": "app_core_config",
+      "label": "app_core_config",
+      "_origin": "semantic",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "app_core_config",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "app_core_prompt",
+      "label": "app_core_prompt",
+      "_origin": "semantic",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "app_core_prompt",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "app_rag_retriever",
+      "label": "app_rag_retriever",
+      "_origin": "semantic",
+      "community": 25,
+      "community_name": "LLM_service.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "app_rag_retriever",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "chromadb",
       "label": "chromadb",
       "_origin": "semantic",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "chromadb",
@@ -23619,7 +23701,7 @@
       "label": "chromadb_utils",
       "_origin": "semantic",
       "community": 25,
-      "community_name": "get_neetcode_collection",
+      "community_name": "LLM_service.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "chromadb_utils",
@@ -23627,14 +23709,14 @@
       "type": "external"
     },
     {
-      "id": "argparse",
-      "label": "argparse",
+      "id": "groq",
+      "label": "groq",
       "_origin": "semantic",
-      "community": 26,
-      "community_name": "seed_theory.py",
+      "community": 25,
+      "community_name": "LLM_service.py",
       "external": true,
       "file_type": "concept",
-      "norm_label": "argparse",
+      "norm_label": "groq",
       "source_file": "",
       "type": "external"
     },
@@ -23671,18 +23753,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "urllib_parse",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "base64",
-      "label": "base64",
-      "_origin": "semantic",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "base64",
       "source_file": "",
       "type": "external"
     },
@@ -23731,18 +23801,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "keys",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "standardcharsets",
-      "label": "standardcharsets",
-      "_origin": "semantic",
-      "community": 28,
-      "community_name": "JwtTokenProvider.java",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "standardcharsets",
       "source_file": "",
       "type": "external"
     },
@@ -23875,42 +23933,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "value",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "list",
-      "label": "list",
-      "_origin": "semantic",
-      "community": 8,
-      "community_name": "list",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "list",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "optional",
-      "label": "optional",
-      "_origin": "semantic",
-      "community": 8,
-      "community_name": "list",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "optional",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "param",
-      "label": "param",
-      "_origin": "semantic",
-      "community": 8,
-      "community_name": "list",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "param",
       "source_file": "",
       "type": "external"
     }
@@ -27789,7 +27811,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L38",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -27813,7 +27835,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -27849,7 +27871,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/AuthCallbackPage.jsx",
-      "source_location": "L21",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -27861,7 +27883,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/AuthCallbackPage.jsx",
-      "source_location": "L61",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -27885,7 +27907,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/TheoriesPage.jsx",
-      "source_location": "L27",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -27897,7 +27919,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/TheoriesPage.jsx",
-      "source_location": "L27",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -27909,7 +27931,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/TheoryDetailPage.jsx",
-      "source_location": "L32",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -27921,7 +27943,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/TheoryDetailPage.jsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -27945,7 +27967,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L186",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -27957,7 +27979,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L202",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -27969,7 +27991,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L37",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -27981,7 +28003,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L48",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -36261,7 +36283,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -36273,7 +36295,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -36297,7 +36319,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/CategoryAccordion.jsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -36321,7 +36343,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -36333,7 +36355,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -36345,7 +36367,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -36357,7 +36379,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -36369,7 +36391,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L20",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -36718,18 +36740,6 @@
       "context": "import",
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
       "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "dapcodefrontend_src_pages_workspacepage",
-      "target": "dapcodefrontend_src_data_startertemplates_default_starter_code",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -37713,7 +37723,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -37725,7 +37735,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -37797,7 +37807,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/CategoryAccordion.jsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -37965,7 +37975,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -37977,7 +37987,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -37989,12 +37999,24 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
       "source": "dapcodefrontend_src_components_navbar",
       "target": "dapcodefrontend_src_components_dapcodelogo",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "dapcodefrontend_src_components_navbar",
+      "target": "dapcodefrontend_src_context_themecontext",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -38014,18 +38036,6 @@
       "context": "import",
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "dapcodefrontend_src_components_navbar",
-      "target": "dapcodefrontend_src_context_themecontext",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -53016,7 +53026,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DapcodeFrontend/src/components/AiTutorDrawer.jsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -53038,7 +53048,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DapcodeFrontend/src/components/CategoryAccordion.jsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -53115,7 +53125,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DapcodeFrontend/src/components/Navbar.jsx",
-      "source_location": "L22",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -53313,7 +53323,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DapcodeFrontend/src/pages/TheoriesPage.jsx",
-      "source_location": "L16",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -53324,7 +53334,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DapcodeFrontend/src/pages/TheoryDetailPage.jsx",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -53335,7 +53345,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DapcodeFrontend/src/pages/WorkspacePage.jsx",
-      "source_location": "L34",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -54283,6 +54293,15 @@
       "source_file": "backend-core/mvnw",
       "source_location": "L95",
       "weight": 1.0
+    },
+    {
+      "source": "dapcodefrontend_tailwind_config",
+      "target": "tailwindcss",
+      "relation": "dynamic_import",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DapcodeFrontend/tailwind.config.js"
     },
     {
       "source": "backend_core_src_main_java_com_dapcode_backend_core_ai_aiserviceclientimpl_aiserviceclientimpl",
@@ -56660,5 +56679,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5ca336adfcc33c7310ec78f17053be2e8dc0269f"
+  "built_at_commit": "01f4887be28d7a1178d626e82b546f5c53d3609a"
 }

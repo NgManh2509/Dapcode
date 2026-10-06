@@ -22,7 +22,7 @@ export default function ProblemsPage({ initialView = 'graph' }) {
     if (location.pathname === '/practice' || location.pathname === '/problems') return 'accordion';
     if (location.pathname === '/roadmap') return 'graph';
     return initialView;
-  }); // 'graph' | 'accordion' | 'table'
+  });
 
   // Sync viewMode whenever route changes
   useEffect(() => {
@@ -141,7 +141,7 @@ export default function ProblemsPage({ initialView = 'graph' }) {
   }, [allProblems, searchQuery, selectedDifficulty]);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#0b0d13] text-slate-800 dark:text-zinc-100 flex flex-col font-sans transition-colors duration-200">
+    <div className="min-h-screen bg-[#FDFBF7] dark:bg-[#141312] text-[#1C1917] dark:text-[#F5F2EB] flex flex-col font-sans transition-colors duration-150">
       <Navbar />
 
       <main className="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 py-8">
@@ -149,30 +149,30 @@ export default function ProblemsPage({ initialView = 'graph' }) {
         <div className="mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center space-x-2.5">
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#1C1917] dark:text-[#F5F2EB] flex items-center space-x-2.5">
                 <span>{viewMode === 'graph' ? 'Dapcode 150 Roadmap' : 'Luyện tập 150 Bài Toán'}</span>
                 {!isLoading && (
-                  <span className="text-xs font-mono font-medium text-emerald-700 bg-emerald-50 border-emerald-200 dark:text-emerald-400 dark:bg-emerald-500/10 px-2 py-0.5 rounded-full border dark:border-emerald-500/20">
+                  <span className="text-xs font-mono font-medium text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0] dark:text-[#4ADE80] dark:bg-[#14532D]/20 px-2 py-0.5 rounded-md border dark:border-[#166534]/40">
                     Live ({allProblems.length} bài)
                   </span>
                 )}
               </h1>
-              <p className="mt-1 text-sm text-slate-600 dark:text-zinc-400">
+              <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
                 {viewMode === 'graph'
-                  ? 'Sơ đồ cấu trúc dữ liệu & giải thuật tương tác — dữ liệu đồng bộ trực tiếp từ Database hệ thống.'
+                  ? 'Sơ đồ cây cấu trúc dữ liệu & giải thuật tương tác — đồng bộ trực tiếp từ Database hệ thống.'
                   : 'Danh sách bài tập phân loại theo chủ đề và độ khó, tích hợp trình chấm trực tuyến và AI Tutor.'}
               </p>
             </div>
 
             {/* View Mode Switcher: Graph Tree / Accordion / Table */}
-            <div className="flex items-center space-x-1.5 rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#16171d] p-1 self-start sm:self-auto shadow-xs">
+            <div className="flex items-center space-x-1 rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-1 self-start sm:self-auto">
               <button
                 type="button"
                 onClick={() => handleSwitchView('graph')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   viewMode === 'graph'
-                    ? 'bg-indigo-600 text-white shadow-xs'
-                    : 'text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200'
+                    ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                    : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'
                 }`}
               >
                 <GitFork className="h-3.5 w-3.5" />
@@ -182,10 +182,10 @@ export default function ProblemsPage({ initialView = 'graph' }) {
               <button
                 type="button"
                 onClick={() => handleSwitchView('accordion')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   viewMode === 'accordion'
-                    ? 'bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white shadow-xs'
-                    : 'text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200'
+                    ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                    : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'
                 }`}
               >
                 <Layers className="h-3.5 w-3.5" />
@@ -195,10 +195,10 @@ export default function ProblemsPage({ initialView = 'graph' }) {
               <button
                 type="button"
                 onClick={() => handleSwitchView('table')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   viewMode === 'table'
-                    ? 'bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white shadow-xs'
-                    : 'text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200'
+                    ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
+                    : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200'
                 }`}
               >
                 <ListFilter className="h-3.5 w-3.5" />
@@ -212,13 +212,13 @@ export default function ProblemsPage({ initialView = 'graph' }) {
             <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               {/* Search Input */}
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 dark:text-zinc-500" />
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-400" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Tìm kiếm bài tập (vd: Two Sum, Anagram...)"
-                  className="w-full rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#16171d] py-2 pl-10 pr-4 text-xs text-slate-800 dark:text-zinc-200 placeholder-slate-400 dark:placeholder-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 shadow-xs"
+                  className="w-full rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-white dark:bg-[#1C1A18] py-2 pl-10 pr-4 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-500 focus:outline-none focus:border-stone-500"
                 />
               </div>
 
@@ -229,10 +229,10 @@ export default function ProblemsPage({ initialView = 'graph' }) {
                     key={diff}
                     type="button"
                     onClick={() => setSelectedDifficulty(diff)}
-                    className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${
+                    className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
                       selectedDifficulty === diff
-                        ? 'bg-indigo-600 text-white shadow-xs shadow-indigo-600/20'
-                        : 'bg-white dark:bg-[#16171d] text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-slate-900 dark:hover:text-zinc-200 border border-slate-200 dark:border-zinc-800'
+                        ? 'bg-[#1C1917] text-white dark:bg-[#F5F2EB] dark:text-[#1C1917]'
+                        : 'bg-white dark:bg-[#1C1A18] text-stone-600 dark:text-stone-400 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B]'
                     }`}
                   >
                     {diff === 'ALL' ? 'Tất cả độ khó' : diff.charAt(0) + diff.slice(1).toLowerCase()}
@@ -246,8 +246,8 @@ export default function ProblemsPage({ initialView = 'graph' }) {
         {/* Loading Spinner */}
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-24 space-y-3">
-            <Loader2 className="h-8 w-8 animate-spin text-indigo-600 dark:text-indigo-500" />
-            <span className="text-xs text-slate-500 dark:text-zinc-400">Đang đồng bộ bài tập từ Database backend...</span>
+            <Loader2 className="h-6 w-6 animate-spin text-stone-700 dark:text-stone-300" />
+            <span className="text-xs text-stone-500 dark:text-stone-400">Đang đồng bộ bài tập từ Database backend...</span>
           </div>
         ) : viewMode === 'graph' ? (
           /* NeetCode Interactive Tree Graph View */
@@ -275,40 +275,40 @@ export default function ProblemsPage({ initialView = 'graph' }) {
                     />
                   ))
                 ) : (
-                  <div className="rounded-xl border border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#16171d] p-12 text-center text-slate-500 dark:text-zinc-500">
+                  <div className="rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-12 text-center text-stone-500 dark:text-stone-400">
                     <p className="text-sm">Không tìm thấy bài tập phù hợp với bộ lọc hiện tại.</p>
                   </div>
                 )
               ) : (
                 /* Flat Table View */
-                <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#16171d] shadow-xs">
+                <div className="overflow-hidden rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18]">
                   <table className="w-full text-left text-xs">
-                    <thead className="border-b border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-[#121319] text-slate-600 dark:text-zinc-400 uppercase font-semibold">
+                    <thead className="border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] text-stone-600 dark:text-stone-400 uppercase font-semibold">
                       <tr>
-                        <th className="px-5 py-3.5 w-12 text-center">Status</th>
-                        <th className="px-5 py-3.5">Tiêu đề bài toán</th>
-                        <th className="px-5 py-3.5 w-32">Danh mục</th>
-                        <th className="px-5 py-3.5 w-24 text-right">Độ khó</th>
+                        <th className="px-5 py-3 w-12 text-center">Status</th>
+                        <th className="px-5 py-3">Tiêu đề bài toán</th>
+                        <th className="px-5 py-3 w-32">Danh mục</th>
+                        <th className="px-5 py-3 w-24 text-right">Độ khó</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-100 dark:divide-zinc-800/50">
+                    <tbody className="divide-y divide-[#E8E4DC]/60 dark:divide-[#332F2B]/60">
                       {filteredFlatProblems.map((p) => {
                         const isCompleted = completedSlugs.has(p.slug);
                         return (
                           <tr
                             key={p.slug || p.id}
-                            className={`hover:bg-slate-50 dark:hover:bg-zinc-800/30 transition-colors ${
-                              isCompleted ? 'bg-emerald-50/60 dark:bg-emerald-950/10' : ''
+                            className={`hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] transition-colors ${
+                              isCompleted ? 'bg-[#F0FDF4]/40 dark:bg-[#14532D]/10' : ''
                             }`}
                           >
                             <td className="px-5 py-3 text-center">
                               <button
                                 type="button"
                                 onClick={() => toggleComplete(p.slug)}
-                                className={`inline-flex h-4 w-4 items-center justify-center rounded border ${
+                                className={`inline-flex h-4 w-4 items-center justify-center rounded border transition-colors ${
                                   isCompleted
-                                    ? 'border-emerald-500 bg-emerald-500 text-white'
-                                    : 'border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-800/80 text-transparent'
+                                    ? 'border-[#15803D] bg-[#15803D] text-white'
+                                    : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-[#1C1A18] text-transparent'
                                 }`}
                               >
                                 <CheckCircle2 className="h-3 w-3" />
@@ -317,12 +317,12 @@ export default function ProblemsPage({ initialView = 'graph' }) {
                             <td className="px-5 py-3">
                               <Link
                                 to={`/problems/${p.slug}`}
-                                className="font-medium text-slate-800 dark:text-zinc-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                                className="font-medium text-stone-800 dark:text-stone-200 hover:text-stone-950 dark:hover:text-white transition-colors"
                               >
                                 {p.title}
                               </Link>
                             </td>
-                            <td className="px-5 py-3 text-slate-500 dark:text-zinc-400">
+                            <td className="px-5 py-3 text-stone-500 dark:text-stone-400">
                               {p.category}
                             </td>
                             <td className="px-5 py-3 text-right">
@@ -360,4 +360,3 @@ export default function ProblemsPage({ initialView = 'graph' }) {
     </div>
   );
 }
-

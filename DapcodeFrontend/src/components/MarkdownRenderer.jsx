@@ -5,38 +5,38 @@ export default function MarkdownRenderer({ content }) {
   if (!content) return null;
 
   return (
-    <div className="prose dark:prose-invert max-w-none text-slate-700 dark:text-zinc-300 text-sm leading-relaxed space-y-4">
+    <div className="prose dark:prose-invert max-w-none text-stone-700 dark:text-stone-300 text-sm leading-relaxed space-y-4">
       <ReactMarkdown
         components={{
           h1: ({ node, ...props }) => (
-            <h1 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight mt-6 mb-3 border-b border-slate-200 dark:border-zinc-800 pb-2" {...props} />
+            <h1 className="text-lg font-bold text-[#1C1917] dark:text-[#F5F2EB] tracking-tight mt-6 mb-3 border-b border-[#E8E4DC] dark:border-[#332F2B] pb-2" {...props} />
           ),
           h2: ({ node, ...props }) => (
-            <h2 className="text-lg font-semibold text-slate-800 dark:text-zinc-100 tracking-tight mt-5 mb-2" {...props} />
+            <h2 className="text-base font-semibold text-[#1C1917] dark:text-[#F5F2EB] tracking-tight mt-5 mb-2" {...props} />
           ),
           h3: ({ node, ...props }) => (
-            <h3 className="text-base font-semibold text-slate-800 dark:text-zinc-200 mt-4 mb-1.5" {...props} />
+            <h3 className="text-sm font-semibold text-[#1C1917] dark:text-[#F5F2EB] mt-4 mb-1.5" {...props} />
           ),
           p: ({ node, ...props }) => (
-            <p className="my-2 text-slate-700 dark:text-zinc-300 leading-normal" {...props} />
+            <p className="my-2 text-stone-700 dark:text-stone-300 leading-relaxed" {...props} />
           ),
           ul: ({ node, ...props }) => (
-            <ul className="list-disc list-inside space-y-1 my-2 text-slate-700 dark:text-zinc-300" {...props} />
+            <ul className="list-disc list-inside space-y-1 my-2 text-stone-700 dark:text-stone-300" {...props} />
           ),
           ol: ({ node, ...props }) => (
-            <ol className="list-decimal list-inside space-y-1 my-2 text-slate-700 dark:text-zinc-300" {...props} />
+            <ol className="list-decimal list-inside space-y-1 my-2 text-stone-700 dark:text-stone-300" {...props} />
           ),
           li: ({ node, ...props }) => (
-            <li className="text-slate-700 dark:text-zinc-300" {...props} />
+            <li className="text-stone-700 dark:text-stone-300" {...props} />
           ),
           strong: ({ node, ...props }) => (
-            <strong className="font-semibold text-slate-900 dark:text-white" {...props} />
+            <strong className="font-semibold text-[#1C1917] dark:text-[#F5F2EB]" {...props} />
           ),
           code: ({ node, inline, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || '');
             if (!inline && match) {
               return (
-                <div className="my-3 overflow-x-auto rounded-lg border border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-[#121319] p-3 text-xs font-mono text-slate-800 dark:text-zinc-200 shadow-xs">
+                <div className="my-3 overflow-x-auto rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#141312] p-3 text-xs font-mono text-stone-800 dark:text-stone-200">
                   <pre className="m-0" {...props}>
                     <code>{children}</code>
                   </pre>
@@ -45,7 +45,7 @@ export default function MarkdownRenderer({ content }) {
             }
             return (
               <code
-                className="rounded bg-slate-100 dark:bg-zinc-800/80 px-1.5 py-0.5 font-mono text-xs font-medium text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-zinc-700/50"
+                className="rounded bg-stone-100 dark:bg-stone-800 px-1.5 py-0.5 font-mono text-xs font-medium text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700"
                 {...props}
               >
                 {children}
@@ -53,13 +53,13 @@ export default function MarkdownRenderer({ content }) {
             );
           },
           pre: ({ node, children, ...props }) => (
-            <pre className="my-3 overflow-x-auto rounded-lg border border-slate-200 dark:border-zinc-800 bg-slate-100 dark:bg-[#121319] p-3 text-xs font-mono text-slate-800 dark:text-zinc-200" {...props}>
+            <pre className="my-3 overflow-x-auto rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#141312] p-3 text-xs font-mono text-stone-800 dark:text-stone-200" {...props}>
               {children}
             </pre>
           ),
           blockquote: ({ node, ...props }) => (
             <blockquote
-              className="border-l-4 border-indigo-500 bg-indigo-50 dark:bg-indigo-950/20 px-4 py-2 italic text-slate-700 dark:text-zinc-300 rounded-r-md my-3"
+              className="border-l-2 border-[#1C1917] dark:border-[#F5F2EB] bg-[#FAF8F3] dark:bg-[#24221F] px-4 py-2 text-stone-700 dark:text-stone-300 rounded-r-lg my-3"
               {...props}
             />
           ),
@@ -70,4 +70,3 @@ export default function MarkdownRenderer({ content }) {
     </div>
   );
 }
-

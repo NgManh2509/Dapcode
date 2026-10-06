@@ -12,7 +12,6 @@ export default function AuthCallbackPage() {
   useEffect(() => {
     const handleCallback = async () => {
       try {
-        // 0. Check Spring Boot Backend JWT: ?token=...
         const searchParams = new URLSearchParams(location.search);
         const jwtToken = searchParams.get('token');
         if (jwtToken) {
@@ -42,13 +41,11 @@ export default function AuthCallbackPage() {
 
         let idToken = null;
 
-        // 1. Check URL Hash: #id_token=...
         if (location.hash) {
           const hashParams = new URLSearchParams(location.hash.replace(/^#/, ''));
           idToken = hashParams.get('id_token');
         }
 
-        // 2. Check Query Params: ?id_token=...
         if (!idToken && searchParams.has('id_token')) {
           idToken = searchParams.get('id_token');
         }
@@ -57,7 +54,6 @@ export default function AuthCallbackPage() {
           throw new Error('Không tìm thấy Google ID Token trong URL phản hồi.');
         }
 
-        // Send idToken to Spring Boot Backend
         const res = await loginWithGoogle(idToken);
         const data = (res && res.data && res.data.token) ? res.data : (res?.data || res);
 
@@ -92,13 +88,13 @@ export default function AuthCallbackPage() {
   }, [location, navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#0d0e15] p-4 text-slate-800 dark:text-white">
-      <div className="w-full max-w-md rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#161722] p-8 shadow-xl text-center">
+    <div className="min-h-screen flex items-center justify-center bg-[#FDFBF7] dark:bg-[#141312] p-4 text-[#1C1917] dark:text-[#F5F2EB]">
+      <div className="w-full max-w-md rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-8 text-center">
         {status === 'loading' && (
           <div className="flex flex-col items-center space-y-4">
-            <Loader2 className="h-10 w-10 text-indigo-600 animate-spin" />
-            <h2 className="text-base font-semibold">Đang xác thực tài khoản Google...</h2>
-            <p className="text-xs text-slate-500 dark:text-zinc-400">
+            <Loader2 className="h-8 w-8 text-stone-700 dark:text-stone-300 animate-spin" />
+            <h2 className="text-sm font-semibold">Đang xác thực tài khoản Google...</h2>
+            <p className="text-xs text-stone-500 dark:text-stone-400">
               Vui lòng đợi giây lát trong khi Dapcode đồng bộ tài khoản của bạn.
             </p>
           </div>
@@ -106,11 +102,11 @@ export default function AuthCallbackPage() {
 
         {status === 'success' && (
           <div className="flex flex-col items-center space-y-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F0FDF4] dark:bg-[#14532D]/20 text-[#15803D] dark:text-[#4ADE80] border border-[#BBF7D0] dark:border-[#166534]/40">
               <CheckCircle2 className="h-6 w-6" />
             </div>
-            <h2 className="text-base font-semibold">Đăng nhập thành công!</h2>
-            <p className="text-xs text-slate-500 dark:text-zinc-400">
+            <h2 className="text-sm font-semibold">Đăng nhập thành công!</h2>
+            <p className="text-xs text-stone-500 dark:text-stone-400">
               Đang chuyển hướng về trang học tập...
             </p>
           </div>
@@ -118,16 +114,16 @@ export default function AuthCallbackPage() {
 
         {status === 'error' && (
           <div className="flex flex-col items-center space-y-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FEF2F2] dark:bg-[#7F1D1D]/20 text-[#B91C1C] dark:text-[#F87171] border border-[#FECACA] dark:border-[#991B1B]/40">
               <AlertCircle className="h-6 w-6" />
             </div>
-            <h2 className="text-base font-semibold text-rose-600 dark:text-rose-400">
+            <h2 className="text-sm font-semibold text-[#B91C1C] dark:text-[#F87171]">
               Đăng nhập thất bại
             </h2>
-            <p className="text-xs text-slate-500 dark:text-zinc-400">{errorMessage}</p>
+            <p className="text-xs text-stone-500 dark:text-stone-400">{errorMessage}</p>
             <button
               onClick={() => navigate('/roadmap', { replace: true })}
-              className="mt-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 px-4 py-2 text-xs font-semibold text-white shadow-xs transition-colors"
+              className="mt-2 rounded-xl bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-4 py-2 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors"
             >
               Quay lại trang chủ
             </button>

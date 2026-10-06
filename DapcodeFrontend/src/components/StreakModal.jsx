@@ -8,36 +8,36 @@ export default function StreakModal({ isOpen, onClose, streakCount = 1 }) {
   const todayIdx = (new Date().getDay() + 6) % 7; // Monday = 0
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 dark:bg-black/75 backdrop-blur-xs animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 dark:bg-black/70 backdrop-blur-xs animate-in fade-in duration-150">
       <div 
-        className="w-full max-w-sm rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#161722] p-6 shadow-2xl relative"
+        className="w-full max-w-sm rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-6 relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 rounded-lg p-1.5 text-slate-400 hover:text-slate-700 dark:text-zinc-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+          className="absolute top-4 right-4 rounded-lg p-1.5 text-stone-400 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] transition-colors cursor-pointer"
         >
-          <X className="h-5 w-5" />
+          <X className="h-4 w-4" />
         </button>
 
         {/* Header Flame */}
         <div className="text-center mb-5">
-          <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 shadow-md shadow-amber-500/10">
-            <Flame className="h-8 w-8 text-amber-500 fill-amber-500/40 animate-pulse" />
+          <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B]">
+            <Flame className="h-6 w-6 text-[#B45309] dark:text-[#FBBF24]" />
           </div>
-          <div className="text-3xl font-extrabold font-mono text-slate-900 dark:text-white tracking-tight">
-            {streakCount} <span className="text-sm font-sans font-medium text-amber-600 dark:text-amber-400">ngày liên tục</span>
+          <div className="text-2xl font-bold font-mono text-[#1C1917] dark:text-[#F5F2EB] tracking-tight">
+            {streakCount} <span className="text-sm font-sans font-medium text-[#B45309] dark:text-[#FBBF24]">ngày liên tục</span>
           </div>
-          <p className="mt-1 text-xs text-slate-500 dark:text-zinc-400">
+          <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
             Giải ít nhất 1 bài mỗi ngày để tích lũy kiến thức và duy trì phong độ phỏng vấn.
           </p>
         </div>
 
         {/* Weekly Calendar */}
-        <div className="rounded-xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-[#111218] p-3 mb-4">
-          <div className="flex items-center space-x-1.5 text-xs text-slate-500 dark:text-zinc-400 mb-2.5">
-            <Calendar className="h-3.5 w-3.5 text-slate-400 dark:text-zinc-500" />
+        <div className="rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-3.5 mb-4">
+          <div className="flex items-center space-x-1.5 text-xs text-stone-500 dark:text-stone-400 mb-2.5">
+            <Calendar className="h-3.5 w-3.5" />
             <span>Tuần này</span>
           </div>
           <div className="grid grid-cols-7 gap-1.5 text-center">
@@ -46,14 +46,14 @@ export default function StreakModal({ isOpen, onClose, streakCount = 1 }) {
               const isPast = idx < todayIdx;
               return (
                 <div key={day} className="flex flex-col items-center space-y-1">
-                  <span className="text-[10px] text-slate-400 dark:text-zinc-500">{day}</span>
+                  <span className="text-[10px] text-stone-400 dark:text-stone-500">{day}</span>
                   <div
-                    className={`h-7 w-7 rounded-lg flex items-center justify-center text-xs font-bold font-mono transition-all ${
+                    className={`h-7 w-7 rounded-lg flex items-center justify-center text-xs font-medium font-mono transition-colors ${
                       isToday
-                        ? 'bg-amber-500 text-black shadow-md shadow-amber-500/30'
+                        ? 'bg-[#1C1917] text-white dark:bg-[#F5F2EB] dark:text-[#1C1917]'
                         : isPast
-                        ? 'bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-400'
-                        : 'border border-dashed border-slate-200 dark:border-zinc-800 text-slate-300 dark:text-zinc-600'
+                        ? 'bg-white dark:bg-[#1C1A18] border border-[#E8E4DC] dark:border-[#332F2B] text-stone-700 dark:text-stone-300'
+                        : 'border border-dashed border-[#E8E4DC] dark:border-[#332F2B] text-stone-300 dark:text-stone-600'
                     }`}
                   >
                     {isToday ? '🔥' : isPast ? '✓' : '•'}
@@ -65,15 +65,14 @@ export default function StreakModal({ isOpen, onClose, streakCount = 1 }) {
         </div>
 
         {/* Milestone badge */}
-        <div className="flex items-center space-x-3 rounded-xl border border-slate-200 dark:border-zinc-800/80 bg-slate-50 dark:bg-zinc-900/60 p-3 text-xs text-slate-700 dark:text-zinc-300">
-          <Award className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+        <div className="flex items-center space-x-3 rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-3 text-xs text-stone-700 dark:text-stone-300">
+          <Award className="h-5 w-5 text-stone-700 dark:text-stone-300 flex-shrink-0" />
           <div>
-            <div className="font-semibold text-slate-900 dark:text-white">Mục tiêu tiếp theo: 7 ngày</div>
-            <div className="text-[11px] text-slate-500 dark:text-zinc-500">Mở khóa huy hiệu &quot;Algorithm Apprentice&quot;</div>
+            <div className="font-semibold text-[#1C1917] dark:text-[#F5F2EB]">Mục tiêu tiếp theo: 7 ngày</div>
+            <div className="text-[11px] text-stone-500 dark:text-stone-400">Mở khóa huy hiệu &quot;Algorithm Apprentice&quot;</div>
           </div>
         </div>
       </div>
     </div>
   );
 }
-

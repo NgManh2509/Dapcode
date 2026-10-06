@@ -11,11 +11,7 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
   const handleGoogleLogin = () => {
     setIsLoading(true);
     setErrorMsg(null);
-
-    // Save return URL for after login
     sessionStorage.setItem('dapcode_auth_return', window.location.pathname);
-
-    // Redirect to Spring Boot OAuth2 authorization endpoint (configured with Google Cloud Console)
     window.location.href = 'http://localhost:8080/oauth2/authorization/google';
   };
 
@@ -58,44 +54,44 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 dark:bg-black/75 backdrop-blur-xs animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 dark:bg-black/70 backdrop-blur-xs animate-in fade-in duration-150">
       <div 
-        className="w-full max-w-sm rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#161722] p-6 shadow-2xl relative"
+        className="w-full max-w-sm rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-6 relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 rounded-lg p-1.5 text-slate-400 hover:text-slate-700 dark:text-zinc-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+          className="absolute top-4 right-4 rounded-lg p-1.5 text-stone-400 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] transition-colors cursor-pointer"
         >
-          <X className="h-5 w-5" />
+          <X className="h-4 w-4" />
         </button>
 
         {/* Modal Brand Header */}
         <div className="text-center mb-5">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 shadow-md shadow-indigo-500/30">
-            <Sparkles className="h-6 w-6 text-white" />
+          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#1C1917] dark:bg-[#F5F2EB] text-white dark:text-[#1C1917]">
+            <Sparkles className="h-5 w-5" />
           </div>
-          <h2 className="text-lg font-bold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-base font-semibold text-[#1C1917] dark:text-[#F5F2EB] tracking-tight">
             Đăng nhập vào Dapcode
           </h2>
-          <p className="mt-1 text-xs text-slate-500 dark:text-zinc-400">
+          <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
             Lưu chuỗi streak, lịch sử nộp bài và nhận phản hồi AI Tutor không giới hạn.
           </p>
         </div>
 
         {/* Action Prompt Banner if opened from submit/run/ai */}
         {promptMessage && (
-          <div className="mb-4 rounded-xl border border-amber-200 dark:border-amber-500/30 bg-amber-50 dark:bg-amber-500/10 p-3 text-xs text-amber-800 dark:text-amber-300 flex items-start space-x-2">
-            <AlertCircle className="h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5" />
+          <div className="mb-4 rounded-xl border border-[#FDE68A] dark:border-[#92400E]/40 bg-[#FFFBEB] dark:bg-[#78350F]/20 p-3 text-xs text-[#B45309] dark:text-[#FBBF24] flex items-start space-x-2">
+            <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
             <span>{promptMessage}</span>
           </div>
         )}
 
         {/* Error Banner if login fails */}
         {errorMsg && (
-          <div className="mb-4 rounded-xl border border-rose-200 dark:border-rose-500/30 bg-rose-50 dark:bg-rose-500/10 p-3 text-xs text-rose-700 dark:text-rose-400 flex items-start space-x-2">
-            <AlertCircle className="h-4 w-4 text-rose-500 flex-shrink-0 mt-0.5" />
+          <div className="mb-4 rounded-xl border border-[#FECACA] dark:border-[#991B1B]/40 bg-[#FEF2F2] dark:bg-[#7F1D1D]/20 p-3 text-xs text-[#B91C1C] dark:text-[#F87171] flex items-start space-x-2">
+            <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
             <span>{errorMsg}</span>
           </div>
         )}
@@ -107,10 +103,10 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
             type="button"
             disabled={isLoading}
             onClick={handleGoogleLogin}
-            className="flex w-full items-center justify-center space-x-3 rounded-xl border border-slate-300 dark:border-zinc-700 bg-white hover:bg-slate-50 dark:bg-zinc-800/90 dark:hover:bg-zinc-700/90 py-2.5 px-4 text-xs font-semibold text-slate-700 dark:text-white shadow-xs transition-all active:scale-[0.98] cursor-pointer"
+            className="flex w-full items-center justify-center space-x-3 rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-white hover:bg-[#FAF8F3] dark:bg-[#24221F] dark:hover:bg-stone-800 py-2.5 px-4 text-xs font-medium text-stone-700 dark:text-stone-200 transition-colors cursor-pointer"
           >
             {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin text-slate-600 dark:text-slate-300" />
+              <Loader2 className="h-4 w-4 animate-spin text-stone-500" />
             ) : (
               <svg className="h-4 w-4" viewBox="0 0 24 24">
                 <path
@@ -135,8 +131,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
           </button>
 
           <div className="relative flex items-center justify-center my-1">
-            <div className="border-t border-slate-200 dark:border-zinc-800 w-full" />
-            <span className="bg-white dark:bg-[#161722] px-2 text-[10px] uppercase tracking-wider text-slate-400 dark:text-zinc-500 font-medium">
+            <div className="border-t border-[#E8E4DC] dark:border-[#332F2B] w-full" />
+            <span className="bg-white dark:bg-[#1C1A18] px-2 text-[10px] uppercase tracking-wider text-stone-400 dark:text-stone-500 font-medium">
               hoặc
             </span>
           </div>
@@ -146,10 +142,10 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
             type="button"
             disabled={isLoading}
             onClick={handleQuickDemoLogin}
-            className="flex w-full items-center justify-center space-x-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 disabled:opacity-50 py-2.5 px-4 text-xs font-bold text-white shadow-md shadow-indigo-500/25 transition-all active:scale-[0.98] cursor-pointer"
+            className="flex w-full items-center justify-center space-x-2 rounded-xl bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] disabled:opacity-50 py-2.5 px-4 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
           >
             {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin text-white" />
+              <Loader2 className="h-4 w-4 animate-spin text-white dark:text-[#1C1917]" />
             ) : (
               <User className="h-4 w-4" />
             )}
@@ -157,8 +153,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
           </button>
         </div>
 
-        <div className="mt-5 flex items-center justify-center space-x-1.5 text-[11px] text-slate-400 dark:text-zinc-500">
-          <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
+        <div className="mt-5 flex items-center justify-center space-x-1.5 text-[11px] text-stone-400 dark:text-stone-500">
+          <ShieldCheck className="h-3.5 w-3.5 text-[#15803D] dark:text-[#4ADE80]" />
           <span>Bảo mật an toàn qua JWT & Spring Security</span>
         </div>
       </div>
