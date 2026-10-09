@@ -13,7 +13,8 @@ public enum ErrorCode {
     PROBLEM_NOT_FOUND(1005, "Không tìm thấy bài tập", HttpStatus.NOT_FOUND),
     THEORY_NOT_FOUND(1006, "Không tìm thấy bài học lý thuyết", HttpStatus.NOT_FOUND),
     SUBMISSION_NOT_FOUND(1007, "Không tìm thấy bài nộp", HttpStatus.NOT_FOUND),
-    USER_LOCKED(1008, "Tài khoản của bạn đã bị tạm thời khóa bởi thằng admin", HttpStatus.FORBIDDEN);
+    USER_LOCKED(1008, "Tài khoản của bạn đã bị tạm thời khóa bởi thằng admin", HttpStatus.FORBIDDEN),
+    TEST_CASE_NOT_FOUND(1009, "Không tìm thấy test case", HttpStatus.NOT_FOUND);
 
     private final int code;
     private final String message;
