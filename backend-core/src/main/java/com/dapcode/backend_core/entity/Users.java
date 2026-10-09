@@ -57,6 +57,13 @@ public class Users {
     @Column(name = "streak_count", nullable = false)
     private int streakCount = 0;
 
+    @Builder.Default
+    @Column(name = "is_active", nullable = false)
+    private boolean isActive = true;
+
+    @Column(name = "banned_reason", length = 255)
+    private String bannedReason;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private Instant createdAt;

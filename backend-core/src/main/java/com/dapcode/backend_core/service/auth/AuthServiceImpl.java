@@ -70,6 +70,10 @@ public class AuthServiceImpl implements AuthService {
                     .build();
         });
 
+        if (!user.isActive()) {
+            throw new AppException(ErrorCode.USER_LOCKED);
+        }
+
         if (user.getGoogleId() == null) {
             user.setGoogleId(googleId);
         }

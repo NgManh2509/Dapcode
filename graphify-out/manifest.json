@@ -24,9 +24,9 @@
     "semantic_hash": "a253a57235aba5eda1f5a9fec8f5214f"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java": {
-    "mtime": 1790355013.710804,
-    "seen": 1790355434.5263429,
-    "ast_hash": "913cb6d7e60e84e95ea0f6226afcd67c",
+    "mtime": 1791473464.3542497,
+    "seen": 1791533896.0706272,
+    "ast_hash": "99dba21215c705e1180f98e280bd0403",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/CorsConfig.java": {
@@ -36,9 +36,9 @@
     "semantic_hash": "485ccc1e98c0d00e750a0b77c80f5e28"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/SecurityConfig.java": {
-    "mtime": 1790873854.9017527,
-    "seen": 1790933110.446947,
-    "ast_hash": "28347dab3819e9d0689148b621c358b4",
+    "mtime": 1791473930.2681532,
+    "seen": 1791533896.0709934,
+    "ast_hash": "7740a9148a7a76f4e0c7023f4c0f9a3c",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/dto/common/PageResponse.java": {
@@ -78,9 +78,9 @@
     "semantic_hash": "8480a642522e9ff1cb69e22e778f461b"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java": {
-    "mtime": 1790955286.1113462,
-    "seen": 1790955471.7497451,
-    "ast_hash": "bf5d565d5c9687af8f104d35622185c8",
+    "mtime": 1791473387.3994474,
+    "seen": 1791533896.0723608,
+    "ast_hash": "6d0efe3999ff3084974015f66be80c49",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java": {
@@ -96,9 +96,9 @@
     "semantic_hash": "a49f08ec395160bc5b94eb2a60ad70db"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/entity/Users.java": {
-    "mtime": 1790311469.92977,
-    "seen": 1790353788.9452982,
-    "ast_hash": "1fa46ab454e63aaaf3451ba82fc3c029",
+    "mtime": 1791473345.8701105,
+    "seen": 1791533896.0725698,
+    "ast_hash": "d77944e722fb933aaa0836c52ee3b7d0",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java": {
@@ -240,15 +240,15 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java": {
-    "mtime": 1789991489.5443866,
-    "seen": 1789992223.585146,
-    "ast_hash": "0db29125c4beb61072220b1bf2cc9ed4",
+    "mtime": 1791474898.131268,
+    "seen": 1791533896.0735197,
+    "ast_hash": "21390bde9bbf0f28cf8f9fb7956ec77d",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java": {
-    "mtime": 1790955554.896663,
-    "seen": 1790955600.468402,
-    "ast_hash": "885ded66180dadc7e0967a29c9b1acf8",
+    "mtime": 1791532864.038812,
+    "seen": 1791533896.0735204,
+    "ast_hash": "5312cf437f8a09de27848a6f5fe6126a",
     "semantic_hash": ""
   },
   "backend-core/src/test/java/com/dapcode/backend_core/controller/ProblemApiIntegrationTest.java": {
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/JwtAuthenticationFilter.java": {
-    "mtime": 1790873762.6444676,
-    "seen": 1790933110.4467237,
-    "ast_hash": "bd4cdc6dead95ba122eb4d4474a95f6d",
+    "mtime": 1791473702.7199228,
+    "seen": 1791533896.070782,
+    "ast_hash": "636448168bfe9e4bfb5bb461f9a2a675",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java": {
@@ -420,9 +420,9 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthServiceImpl.java": {
-    "mtime": 1790353412.0218608,
-    "seen": 1790353788.94641,
-    "ast_hash": "d73d373cffcbba65644017949effe247",
+    "mtime": 1791473775.462032,
+    "seen": 1791533896.073518,
+    "ast_hash": "f728137bdf32ad61a8f5d5c8b01465c4",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/SubmissionDetailResponse.java": {
@@ -1929,6 +1929,30 @@
     "mtime": 1791301520.2674525,
     "seen": 1791302414.7570884,
     "ast_hash": "28ab829e09bc74234ecac87bbfffd1c1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminProblemController.java": {
+    "mtime": 1791533515.5559556,
+    "seen": 1791533896.0714097,
+    "ast_hash": "76f371d8e82f3c7fb2af4ae77e8d7f7a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/CreateProblemRequest.java": {
+    "mtime": 1791474455.096665,
+    "seen": 1791533896.0714116,
+    "ast_hash": "45f2f133b282fcde318d3618491e8e5c",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateProblemRequest.java": {
+    "mtime": 1791474482.8806295,
+    "seen": 1791533896.071413,
+    "ast_hash": "20e495a09a71dfd77b400738059cce31",
+    "semantic_hash": ""
+  },
+  "admin_implementation_plan.md": {
+    "mtime": 1791472893.1036038,
+    "seen": 1791533896.0868351,
+    "ast_hash": "754081772a8cd886d429f1ea47eba44f",
     "semantic_hash": ""
   }
 }

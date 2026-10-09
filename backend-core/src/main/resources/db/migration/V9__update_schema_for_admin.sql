@@ -1,0 +1,7 @@
+ALTER TABLE users ADD COLUMN IF NOT EXISTS is_active BOOLEAN NOT NULL DEFAULT TRUE;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS banned_reason VARCHAR(255);
+
+ALTER TABLE problems ADD COLUMN IF NOT EXISTS is_published BOOLEAN NOT NULL DEFAULT TRUE;
+
+CREATE INDEX IF NOT EXISTS idx_problems_is_published ON problems(is_published);
+CREATE INDEX IF NOT EXISTS idx_users_is_active ON users(is_active);

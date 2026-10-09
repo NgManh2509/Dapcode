@@ -56,6 +56,10 @@ public class Problem {
     @Column(name = "starter_code", columnDefinition = "TEXT")
     private String starterCode;
 
+    @Builder.Default
+    @Column(name = "is_published", nullable = false)
+    private boolean isPublished = true;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private Instant createdAt;
