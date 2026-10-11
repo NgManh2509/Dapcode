@@ -318,21 +318,21 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java": {
-    "mtime": 1790147157.8475313,
-    "seen": 1790153132.502916,
-    "ast_hash": "0638dfd751856ecd0116f7690ea55188",
+    "mtime": 1791706120.8801434,
+    "seen": 1791706782.1069033,
+    "ast_hash": "0d04874f4e390c92b657793fb320548e",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java": {
-    "mtime": 1790148151.225979,
-    "seen": 1790153132.5032678,
-    "ast_hash": "dc9c34077e90178da2e71f9912fbf406",
+    "mtime": 1791648762.370581,
+    "seen": 1791706782.107845,
+    "ast_hash": "ea4b15a9304c305088832d56abd29343",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java": {
-    "mtime": 1790148581.8012402,
-    "seen": 1790153132.5032692,
-    "ast_hash": "0b01092e1edb92209149c7eecb0f143b",
+    "mtime": 1791706184.1917584,
+    "seen": 1791706782.107847,
+    "ast_hash": "1ac4a76365b1fedc5de06bd90a194e1e",
     "semantic_hash": ""
   },
   "seedingData/dapcode_theories.json": {
@@ -1989,6 +1989,24 @@
     "mtime": 1791559118.2505193,
     "seen": 1791559721.019942,
     "ast_hash": "a7e8eaa26ef0cc916ed9f56ae71a8d45",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminTheoryController.java": {
+    "mtime": 1791706721.3495088,
+    "seen": 1791706782.1043117,
+    "ast_hash": "7f24488bea7dfadd614e5cd49c00b85f",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/CreateTheoryRequest.java": {
+    "mtime": 1791648595.0756576,
+    "seen": 1791706782.1045356,
+    "ast_hash": "5d860b3e0ccb071f3cc4d638e4a11669",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateTheoryRequest.java": {
+    "mtime": 1791648622.3330772,
+    "seen": 1791706782.1047473,
+    "ast_hash": "81856e69beb0878acffa5f20894230e2",
     "semantic_hash": ""
   }
 }
