@@ -13,22 +13,24 @@ import org.springframework.data.domain.Pageable;
 import com.dapcode.backend_core.entity.Problem;
 
 public interface ProblemRepository extends JpaRepository<Problem, UUID> {
-    Optional<Problem> findBySlug(String slug);
+  Optional<Problem> findBySlug(String slug);
 
-    boolean existsBySlug(String slug);
+  boolean existsBySlug(String slug);
 
-    List<Problem> findByDifficulty(String difficulty);
+  List<Problem> findByDifficulty(String difficulty);
 
-    @Query("""
-        SELECT p FROM Problem p
-        WHERE (cast(:category as String) IS NULL OR LOWER(p.category) = LOWER(cast(:category as String)))
-          AND (cast(:difficulty as String) IS NULL OR LOWER(p.difficulty) = LOWER(cast(:difficulty as String)))
-          AND (cast(:search as String) IS NULL OR LOWER(p.title) LIKE LOWER(CONCAT('%', cast(:search as String), '%'))
-                                                OR LOWER(p.slug) LIKE LOWER(CONCAT('%', cast(:search as String), '%')))
-    """)
-    Page<Problem> findProblemsWithFilters(
-            @Param("category") String category,
-            @Param("difficulty") String difficulty,
-            @Param("search") String search,
-            Pageable pageable);
+  @Query("""
+          SELECT p FROM Problem p
+          WHERE (cast(:category as String) IS NULL OR LOWER(p.category) = LOWER(cast(:category as String)))
+            AND (cast(:difficulty as String) IS NULL OR LOWER(p.difficulty) = LOWER(cast(:difficulty as String)))
+            AND (cast(:search as String) IS NULL OR LOWER(p.title) LIKE LOWER(CONCAT('%', cast(:search as String), '%'))
+                                                  OR LOWER(p.slug) LIKE LOWER(CONCAT('%', cast(:search as String), '%')))
+      """)
+  Page<Problem> findProblemsWithFilters(
+      @Param("category") String category,
+      @Param("difficulty") String difficulty,
+      @Param("search") String search,
+      Pageable pageable);
+
+  long countByDifficultyIgnoreCase(String difficulty);
 }

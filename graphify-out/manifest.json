@@ -150,16 +150,16 @@
     "semantic_hash": "06938ed132b8430278ad9d87b8439ddf"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java": {
-    "mtime": 1789992157.9220624,
-    "seen": 1789992223.5849354,
-    "ast_hash": "2000cfbf516346cb63c3b262fca1b747",
+    "mtime": 1791710076.491233,
+    "seen": 1791710589.2083836,
+    "ast_hash": "d77c627d60ac8d3c72074bd4533b351b",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java": {
-    "mtime": 1789536529.8811202,
-    "seen": 1789991262.6578932,
-    "ast_hash": "9c6d50c5f2233fd49994c23faf877a28",
-    "semantic_hash": "9c6d50c5f2233fd49994c23faf877a28"
+    "mtime": 1791710090.471564,
+    "seen": 1791710589.2083864,
+    "ast_hash": "1aa54fefdd5c806dd5a568573026b496",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java": {
     "mtime": 1789635196.4052846,
@@ -168,9 +168,9 @@
     "semantic_hash": "ff3ef494c751a0560b955fe0f5a8b8bd"
   },
   "backend-core/src/main/java/com/dapcode/backend_core/repository/UserRepository.java": {
-    "mtime": 1791707868.6169455,
-    "seen": 1791709616.0969296,
-    "ast_hash": "494165273763a1aae919eeefe4f399b8",
+    "mtime": 1791710050.1431355,
+    "seen": 1791710589.208736,
+    "ast_hash": "e1a88477526ad339d02c8d8e7606bbf1",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionService.java": {
@@ -2043,6 +2043,42 @@
     "mtime": 1791709059.2835019,
     "seen": 1791709616.0978425,
     "ast_hash": "594507af0bcc9ab6b6291c686522e14a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminDashboardController.java": {
+    "mtime": 1791710559.8185356,
+    "seen": 1791710589.201248,
+    "ast_hash": "27e035bf7deac27ae0532db2c8791be1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/AdminDashboardStatsResponse.java": {
+    "mtime": 1791710024.1343217,
+    "seen": 1791710589.2019918,
+    "ast_hash": "15e96330d0a784d10d6d37d61d49f272",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/DailySubmissionCount.java": {
+    "mtime": 1791709913.643898,
+    "seen": 1791710589.2027106,
+    "ast_hash": "9035843a887ec32a0785047bdf6141cf",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/RecentSubmissionDto.java": {
+    "mtime": 1791709918.8686967,
+    "seen": 1791710589.202713,
+    "ast_hash": "fbd7e690d7253cbfd15e85f07c351441",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/dashboard/AdminDashboardService.java": {
+    "mtime": 1791710328.4207728,
+    "seen": 1791710589.2090814,
+    "ast_hash": "05e095c21119aa4ae58463616e330f4d",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/dashboard/AdminDashboardServiceImpl.java": {
+    "mtime": 1791710485.6547408,
+    "seen": 1791710589.2090838,
+    "ast_hash": "45a1ff8f8c5d3df99527ef5543ad55a4",
     "semantic_hash": ""
   }
 }

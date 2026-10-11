@@ -34,4 +34,6 @@ public interface UserRepository extends JpaRepository<Users, UUID> {
             @Param("role") String role,
             @Param("isActive") Boolean isActive,
             Pageable pageable);
+
+    long countByIsActive(boolean isActive);
 }
