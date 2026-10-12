@@ -53,36 +53,55 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
     }
   };
 
+  const handleAdminDemoLogin = () => {
+    setIsLoading(true);
+    const adminUser = {
+      id: '00000000-0000-0000-0000-000000000001',
+      username: 'dapcode_admin',
+      name: 'Dapcode Admin',
+      email: 'admin@dapcode.io',
+      role: 'ROLE_ADMIN',
+      avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=dapcode_admin',
+      streak: 30,
+      xp: 9999,
+    };
+    localStorage.setItem('dapcode_user', JSON.stringify(adminUser));
+    localStorage.setItem('dapcode_token', 'demo_admin_jwt_token');
+    if (onLoginSuccess) onLoginSuccess(adminUser);
+    setIsLoading(false);
+    onClose();
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 dark:bg-black/70 backdrop-blur-xs animate-in fade-in duration-150">
       <div 
-        className="w-full max-w-sm rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-6 relative"
+        className="w-full max-w-sm rounded-2xl border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828] p-6 relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 rounded-lg p-1.5 text-stone-400 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] transition-colors cursor-pointer"
+          className="absolute top-4 right-4 rounded-lg p-1.5 text-neutral-400 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] transition-colors cursor-pointer"
         >
           <X className="h-4 w-4" />
         </button>
 
         {/* Modal Brand Header */}
         <div className="text-center mb-5">
-          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#1C1917] dark:bg-[#F5F2EB] text-white dark:text-[#1C1917]">
+          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#262626] dark:bg-[#EFF1F6] text-white dark:text-[#262626]">
             <Sparkles className="h-5 w-5" />
           </div>
-          <h2 className="text-base font-semibold text-[#1C1917] dark:text-[#F5F2EB] tracking-tight">
+          <h2 className="text-base font-semibold text-[#262626] dark:text-[#EFF1F6] tracking-tight">
             Đăng nhập vào Dapcode
           </h2>
-          <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
+          <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
             Lưu chuỗi streak, lịch sử nộp bài và nhận phản hồi AI Tutor không giới hạn.
           </p>
         </div>
 
         {/* Action Prompt Banner if opened from submit/run/ai */}
         {promptMessage && (
-          <div className="mb-4 rounded-xl border border-[#FDE68A] dark:border-[#92400E]/40 bg-[#FFFBEB] dark:bg-[#78350F]/20 p-3 text-xs text-[#B45309] dark:text-[#FBBF24] flex items-start space-x-2">
+          <div className="mb-4 rounded-xl border border-[#FFD98A] dark:border-[#B36B00]/40 bg-[#FFF6E5] dark:bg-[#78350F]/20 p-3 text-xs text-[#FFA116] dark:text-[#FFC01E] flex items-start space-x-2">
             <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
             <span>{promptMessage}</span>
           </div>
@@ -90,7 +109,7 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
 
         {/* Error Banner if login fails */}
         {errorMsg && (
-          <div className="mb-4 rounded-xl border border-[#FECACA] dark:border-[#991B1B]/40 bg-[#FEF2F2] dark:bg-[#7F1D1D]/20 p-3 text-xs text-[#B91C1C] dark:text-[#F87171] flex items-start space-x-2">
+          <div className="mb-4 rounded-xl border border-[#FECACA] dark:border-[#991B1B]/40 bg-[#FDEDED] dark:bg-[#7F1D1D]/20 p-3 text-xs text-[#EF4743] dark:text-[#FF6B68] flex items-start space-x-2">
             <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
             <span>{errorMsg}</span>
           </div>
@@ -103,10 +122,10 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
             type="button"
             disabled={isLoading}
             onClick={handleGoogleLogin}
-            className="flex w-full items-center justify-center space-x-3 rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-white hover:bg-[#FAF8F3] dark:bg-[#24221F] dark:hover:bg-stone-800 py-2.5 px-4 text-xs font-medium text-stone-700 dark:text-stone-200 transition-colors cursor-pointer"
+            className="flex w-full items-center justify-center space-x-3 rounded-xl border border-[#E6E6E6] dark:border-[#3E3E3E] bg-white hover:bg-[#F7F8FA] dark:bg-[#333333] dark:hover:bg-neutral-800 py-2.5 px-4 text-xs font-medium text-neutral-700 dark:text-neutral-200 transition-colors cursor-pointer"
           >
             {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin text-stone-500" />
+              <Loader2 className="h-4 w-4 animate-spin text-neutral-500" />
             ) : (
               <svg className="h-4 w-4" viewBox="0 0 24 24">
                 <path
@@ -131,8 +150,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
           </button>
 
           <div className="relative flex items-center justify-center my-1">
-            <div className="border-t border-[#E8E4DC] dark:border-[#332F2B] w-full" />
-            <span className="bg-white dark:bg-[#1C1A18] px-2 text-[10px] uppercase tracking-wider text-stone-400 dark:text-stone-500 font-medium">
+            <div className="border-t border-[#E6E6E6] dark:border-[#3E3E3E] w-full" />
+            <span className="bg-white dark:bg-[#282828] px-2 text-[10px] uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-medium">
               hoặc
             </span>
           </div>
@@ -142,19 +161,30 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
             type="button"
             disabled={isLoading}
             onClick={handleQuickDemoLogin}
-            className="flex w-full items-center justify-center space-x-2 rounded-xl bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] disabled:opacity-50 py-2.5 px-4 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
+            className="flex w-full items-center justify-center space-x-2 rounded-xl bg-[#262626] hover:bg-[#3C3C3C] dark:bg-[#EFF1F6] dark:hover:bg-[#E6E6E6] disabled:opacity-50 py-2.5 px-4 text-xs font-medium text-[#F7F8FA] dark:text-[#262626] transition-colors cursor-pointer"
           >
             {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin text-white dark:text-[#1C1917]" />
+              <Loader2 className="h-4 w-4 animate-spin text-white dark:text-[#262626]" />
             ) : (
               <User className="h-4 w-4" />
             )}
             <span>Đăng nhập nhanh (Guest / Demo)</span>
           </button>
+
+          {/* Quick Admin Login for Dev/Testing */}
+          <button
+            type="button"
+            disabled={isLoading}
+            onClick={handleAdminDemoLogin}
+            className="flex w-full items-center justify-center space-x-2 rounded-xl border border-[#FFA116]/40 bg-[#FFA116]/10 hover:bg-[#FFA116]/20 py-2.5 px-4 text-xs font-semibold text-[#FFA116] transition-colors cursor-pointer"
+          >
+            <ShieldCheck className="h-4 w-4 text-[#FFA116]" />
+            <span>Đăng nhập quyền Admin (Dev / Test)</span>
+          </button>
         </div>
 
-        <div className="mt-5 flex items-center justify-center space-x-1.5 text-[11px] text-stone-400 dark:text-stone-500">
-          <ShieldCheck className="h-3.5 w-3.5 text-[#15803D] dark:text-[#4ADE80]" />
+        <div className="mt-5 flex items-center justify-center space-x-1.5 text-[11px] text-neutral-400 dark:text-neutral-500">
+          <ShieldCheck className="h-3.5 w-3.5 text-[#2CBB5D] dark:text-[#2CBB5D]" />
           <span>Bảo mật an toàn qua JWT & Spring Security</span>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function DapcodeLogo({ size = 'md', className = '' }) {
   return (
     <div className={`relative inline-flex items-center justify-center flex-shrink-0 ${className}`}>
       <div
-        className={`relative flex items-center justify-center overflow-hidden border border-[#E8E4DC] dark:border-[#332F2B] bg-[#1C1917] dark:bg-[#24221F] transition-colors ${currentSize}`}
+        className={`relative flex items-center justify-center overflow-hidden border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#262626] dark:bg-[#333333] transition-colors ${currentSize}`}
       >
         <img
           src="/dapcode_logo.png"

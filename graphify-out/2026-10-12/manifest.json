@@ -1,0 +1,2132 @@
+{
+  "backend-core/mvnw": {
+    "mtime": 1788958767.8480392,
+    "seen": 1789991262.6578684,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": "ab50dd89da7da2346b28003352eeeeeb"
+  },
+  "backend-core/pom.xml": {
+    "mtime": 1791041029.3786404,
+    "seen": 1791041226.5882752,
+    "ast_hash": "24b9dfacf3d1fcd6e2739b6cb4d2597e",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/BackendCoreApplication.java": {
+    "mtime": 1791041179.7472987,
+    "seen": 1791041226.5882778,
+    "ast_hash": "253063614a68412d95bc3b00a48dd4a8",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/common/ApiResponse.java": {
+    "mtime": 1789457116.008495,
+    "seen": 1789991262.6578753,
+    "ast_hash": "a253a57235aba5eda1f5a9fec8f5214f",
+    "semantic_hash": "a253a57235aba5eda1f5a9fec8f5214f"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/common/ErrorCode.java": {
+    "mtime": 1791534023.079447,
+    "seen": 1791559721.0147264,
+    "ast_hash": "6beb2f671357ed9acb20f9f794fa8ca1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/CorsConfig.java": {
+    "mtime": 1789459337.4785182,
+    "seen": 1789991262.657877,
+    "ast_hash": "485ccc1e98c0d00e750a0b77c80f5e28",
+    "semantic_hash": "485ccc1e98c0d00e750a0b77c80f5e28"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/SecurityConfig.java": {
+    "mtime": 1791473930.2681532,
+    "seen": 1791533896.0709934,
+    "ast_hash": "7740a9148a7a76f4e0c7023f4c0f9a3c",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/common/PageResponse.java": {
+    "mtime": 1789989547.4498832,
+    "seen": 1789991262.6578786,
+    "ast_hash": "92e4906d383b10f4e7aefc5ac606050e",
+    "semantic_hash": "92e4906d383b10f4e7aefc5ac606050e"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/problem/ProblemDetailResponse.java": {
+    "mtime": 1790955300.991542,
+    "seen": 1790955471.7489438,
+    "ast_hash": "c33cb4fc86b14c535092dbc2b60927d4",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/problem/ProblemSummaryResponse.java": {
+    "mtime": 1789989386.6160293,
+    "seen": 1789991262.65788,
+    "ast_hash": "3d1fdcccb781c55334d5cd823966b55e",
+    "semantic_hash": "3d1fdcccb781c55334d5cd823966b55e"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/SubmissionResponse.java": {
+    "mtime": 1789715410.8621547,
+    "seen": 1789991262.6578808,
+    "ast_hash": "73f7c5b351b071194b78e63bbabe06eb",
+    "semantic_hash": "73f7c5b351b071194b78e63bbabe06eb"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/SubmitCodeRequest.java": {
+    "mtime": 1789715096.980196,
+    "seen": 1789991262.657882,
+    "ast_hash": "9aabb74d1dd4645d4db91310581ec596",
+    "semantic_hash": "9aabb74d1dd4645d4db91310581ec596"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/TestCaseResult.java": {
+    "mtime": 1789715227.944332,
+    "seen": 1789991262.6578827,
+    "ast_hash": "8480a642522e9ff1cb69e22e778f461b",
+    "semantic_hash": "8480a642522e9ff1cb69e22e778f461b"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/entity/Problem.java": {
+    "mtime": 1791473387.3994474,
+    "seen": 1791533896.0723608,
+    "ast_hash": "6d0efe3999ff3084974015f66be80c49",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/entity/Submission.java": {
+    "mtime": 1789490964.4850864,
+    "seen": 1789991262.6578844,
+    "ast_hash": "ee53094f90259fd61e27c658bac3503b",
+    "semantic_hash": "ee53094f90259fd61e27c658bac3503b"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/entity/TestCase.java": {
+    "mtime": 1789635186.302834,
+    "seen": 1789991262.6578848,
+    "ast_hash": "a49f08ec395160bc5b94eb2a60ad70db",
+    "semantic_hash": "a49f08ec395160bc5b94eb2a60ad70db"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/entity/Users.java": {
+    "mtime": 1791473345.8701105,
+    "seen": 1791533896.0725698,
+    "ast_hash": "d77944e722fb933aaa0836c52ee3b7d0",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java": {
+    "mtime": 1789457605.7527437,
+    "seen": 1789991262.6578863,
+    "ast_hash": "f7a6c9f5880e3e205fed64c1699bbc67",
+    "semantic_hash": "f7a6c9f5880e3e205fed64c1699bbc67"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/exception/GlobalExceptionHandler.java": {
+    "mtime": 1789458004.992357,
+    "seen": 1789991262.657887,
+    "ast_hash": "51851a5fc9fe70dc3b8e337da7632a32",
+    "semantic_hash": "51851a5fc9fe70dc3b8e337da7632a32"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java": {
+    "mtime": 1789547590.821799,
+    "seen": 1789991262.6578877,
+    "ast_hash": "64580dc39f0733c738ce6958f5252f07",
+    "semantic_hash": "64580dc39f0733c738ce6958f5252f07"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0ClientImpl.java": {
+    "mtime": 1790931183.4250906,
+    "seen": 1790933110.4492,
+    "ast_hash": "4d8e0d762e00b7f326a9ddf758b893c2",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Config.java": {
+    "mtime": 1789548831.4707575,
+    "seen": 1789991262.6578894,
+    "ast_hash": "aa583009af392df518d0748d65d125a7",
+    "semantic_hash": "aa583009af392df518d0748d65d125a7"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Response.java": {
+    "mtime": 1790955948.619933,
+    "seen": 1790956132.8337853,
+    "ast_hash": "90634cdc6d97312377097f6cc63cba43",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Status.java": {
+    "mtime": 1789546782.1442626,
+    "seen": 1789991262.657891,
+    "ast_hash": "4164d8f8d6feed303ad85f97a3ac22cc",
+    "semantic_hash": "4164d8f8d6feed303ad85f97a3ac22cc"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0SubmissionRequest.java": {
+    "mtime": 1789548616.8479419,
+    "seen": 1789991262.6578918,
+    "ast_hash": "06938ed132b8430278ad9d87b8439ddf",
+    "semantic_hash": "06938ed132b8430278ad9d87b8439ddf"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/repository/ProblemRepository.java": {
+    "mtime": 1791710076.491233,
+    "seen": 1791710589.2083836,
+    "ast_hash": "d77c627d60ac8d3c72074bd4533b351b",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/repository/SubmissionRepository.java": {
+    "mtime": 1791710090.471564,
+    "seen": 1791710589.2083864,
+    "ast_hash": "1aa54fefdd5c806dd5a568573026b496",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/repository/TestCaseRepository.java": {
+    "mtime": 1789635196.4052846,
+    "seen": 1789991262.657894,
+    "ast_hash": "ff3ef494c751a0560b955fe0f5a8b8bd",
+    "semantic_hash": "ff3ef494c751a0560b955fe0f5a8b8bd"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/repository/UserRepository.java": {
+    "mtime": 1791710050.1431355,
+    "seen": 1791710589.208736,
+    "ast_hash": "e1a88477526ad339d02c8d8e7606bbf1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionService.java": {
+    "mtime": 1790437279.9177792,
+    "seen": 1790438089.7829843,
+    "ast_hash": "c6e5c2cb6b6ee05f2c0bf24e4fa61959",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionServiceImpl.java": {
+    "mtime": 1790932948.6480143,
+    "seen": 1790933110.4505274,
+    "ast_hash": "815d2c3ea5ba70df8f3b84b755581f3d",
+    "semantic_hash": ""
+  },
+  "backend-core/src/test/java/com/dapcode/backend_core/BackendCoreApplicationTests.java": {
+    "mtime": 1788958767.8880394,
+    "seen": 1789991262.6578968,
+    "ast_hash": "91b31e09f314898b67010030246da20c",
+    "semantic_hash": "91b31e09f314898b67010030246da20c"
+  },
+  "backend-core/src/test/java/com/dapcode/backend_core/judge0/Judge0ClientIntegrationTest.java": {
+    "mtime": 1789548983.67552,
+    "seen": 1789991262.6578975,
+    "ast_hash": "25879000feabb529df1704e2ad35329e",
+    "semantic_hash": "25879000feabb529df1704e2ad35329e"
+  },
+  "backend-core/src/test/java/com/dapcode/backend_core/service/SubmissionEvaluationIntegrationTest.java": {
+    "mtime": 1789721729.1318467,
+    "seen": 1789991262.6578982,
+    "ast_hash": "3bdef41ff049fd86cc94242af2e31fd3",
+    "semantic_hash": "3bdef41ff049fd86cc94242af2e31fd3"
+  },
+  "seedingData/dapcode_problems.json": {
+    "mtime": 1789634249.2453947,
+    "seen": 1789991262.657899,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "seedingData/neetcode_250_complete.json": {
+    "mtime": 1789573794.7523146,
+    "seen": 1789991262.6578996,
+    "ast_hash": "5f4a60c8bcee777a66c0b9414646da5b",
+    "semantic_hash": "5f4a60c8bcee777a66c0b9414646da5b"
+  },
+  "seedingData/premium_fallbacks.json": {
+    "mtime": 1789634261.845203,
+    "seen": 1789991262.6579003,
+    "ast_hash": "f060163b0eddf0b3fced520e67be74a7",
+    "semantic_hash": "f060163b0eddf0b3fced520e67be74a7"
+  },
+  "seedingData/seed_problems.py": {
+    "mtime": 1789633906.6259425,
+    "seen": 1789991262.657901,
+    "ast_hash": "0a3048fd6a8f7ef57ae2221f428a327c",
+    "semantic_hash": "0a3048fd6a8f7ef57ae2221f428a327c"
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/ProblemController.java": {
+    "mtime": 1789991724.621026,
+    "seen": 1789992223.583557,
+    "ast_hash": "27a8f087e69eda5d44a8c9534d7f43ec",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/SubmissionController.java": {
+    "mtime": 1790438022.9003835,
+    "seen": 1790438089.7798355,
+    "ast_hash": "c72d337246e12e35a0c904155ddc26eb",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemService.java": {
+    "mtime": 1791474898.131268,
+    "seen": 1791533896.0735197,
+    "ast_hash": "21390bde9bbf0f28cf8f9fb7956ec77d",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/problem/ProblemServiceImpl.java": {
+    "mtime": 1791532864.038812,
+    "seen": 1791533896.0735204,
+    "ast_hash": "5312cf437f8a09de27848a6f5fe6126a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/test/java/com/dapcode/backend_core/controller/ProblemApiIntegrationTest.java": {
+    "mtime": 1789992114.7296534,
+    "seen": 1789992223.5853832,
+    "ast_hash": "f97a924d9e30f44db4c2f69ed4c41a02",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1789991246.1122217,
+    "seen": 1789992223.5857902,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1789991246.113226,
+    "seen": 1789992223.5857916,
+    "ast_hash": "a831cf3669f1e6ab85d8a80ebe655f99",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/resources/application.yaml": {
+    "mtime": 1791040261.3759313,
+    "seen": 1791040325.1846519,
+    "ast_hash": "30d7f66151b7607e35367a0bc0de3dc2",
+    "semantic_hash": ""
+  },
+  "infra/database/docker-compose.db.yml": {
+    "mtime": 1788963277.7006829,
+    "seen": 1789992223.5857956,
+    "ast_hash": "8e5536292b7793ebc2c79b823baa6644",
+    "semantic_hash": ""
+  },
+  "infra/sandbox/README.md": {
+    "mtime": 1788957733.813353,
+    "seen": 1789992223.5857966,
+    "ast_hash": "e487792505fae6c69699e3f2225ab12e",
+    "semantic_hash": ""
+  },
+  "infra/sandbox/docker-compose.sandbox.yml": {
+    "mtime": 1788955550.0928907,
+    "seen": 1789992223.5857978,
+    "ast_hash": "907c13050c2a302b5fda31885335853b",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/TheoryController.java": {
+    "mtime": 1790150504.729455,
+    "seen": 1790153132.5014412,
+    "ast_hash": "10a5dbda1f4e2e48daeba0e12fd748e0",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheoryDetailResponse.java": {
+    "mtime": 1790147550.5616415,
+    "seen": 1790153132.5018682,
+    "ast_hash": "effac6f30e21839903ebbacd57618ab4",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/theory/TheorySummaryResponse.java": {
+    "mtime": 1790147556.9903667,
+    "seen": 1790153132.5018697,
+    "ast_hash": "5d9b2120dcdd642b25670830d8f689c1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/entity/Theories.java": {
+    "mtime": 1790146975.267116,
+    "seen": 1790153132.5020738,
+    "ast_hash": "fc701e0b6e64a5fa407c7b938d004158",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/repository/TheoryRepository.java": {
+    "mtime": 1791706120.8801434,
+    "seen": 1791706782.1069033,
+    "ast_hash": "0d04874f4e390c92b657793fb320548e",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryService.java": {
+    "mtime": 1791648762.370581,
+    "seen": 1791706782.107845,
+    "ast_hash": "ea4b15a9304c305088832d56abd29343",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/theory/TheoryServiceImpl.java": {
+    "mtime": 1791706184.1917584,
+    "seen": 1791706782.107847,
+    "ast_hash": "1ac4a76365b1fedc5de06bd90a194e1e",
+    "semantic_hash": ""
+  },
+  "seedingData/dapcode_theories.json": {
+    "mtime": 1790151537.3422616,
+    "seen": 1790153132.5036173,
+    "ast_hash": "5852dfabbfb6e725f8be23bad36f9bc5",
+    "semantic_hash": ""
+  },
+  "seedingData/seed_theory.py": {
+    "mtime": 1790151461.5199518,
+    "seen": 1790153132.5038002,
+    "ast_hash": "e75f0e9e13ff54e5d910356483212d05",
+    "semantic_hash": ""
+  },
+  "seedingData/theories_cache.json": {
+    "mtime": 1790151535.8410077,
+    "seen": 1790153132.5038013,
+    "ast_hash": "2b7d8ad22f58d514559c325c9fa89bd4",
+    "semantic_hash": ""
+  },
+  "seedingData/theory.json": {
+    "mtime": 1790064359.8136477,
+    "seen": 1790153132.503802,
+    "ast_hash": "2eaeb95e5475ead748c256836dcf391e",
+    "semantic_hash": ""
+  },
+  "backend-core/README.md": {
+    "mtime": 1790065902.2004018,
+    "seen": 1790153132.504052,
+    "ast_hash": "04819cc0758c0d7bc6954e62ec6f6463",
+    "semantic_hash": ""
+  },
+  "seedingData/README.md": {
+    "mtime": 1790150476.229855,
+    "seen": 1790153132.5043037,
+    "ast_hash": "d70803f0977382d515d5fef8f5494131",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/JwtAuthenticationFilter.java": {
+    "mtime": 1791473702.7199228,
+    "seen": 1791533896.070782,
+    "ast_hash": "636448168bfe9e4bfb5bb461f9a2a675",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/JwtTokenProvider.java": {
+    "mtime": 1790313839.4750836,
+    "seen": 1790353788.9441888,
+    "ast_hash": "160a80ddd819cd099be55339e5aed136",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/AuthController.java": {
+    "mtime": 1790353512.630241,
+    "seen": 1790353788.9441915,
+    "ast_hash": "e35d75514b9115cdc930b9d4da3c790a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/UserController.java": {
+    "mtime": 1790353725.3961039,
+    "seen": 1790353788.944412,
+    "ast_hash": "167ed212823d04a61fca8c8b21164b3f",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/auth/AuthResponse.java": {
+    "mtime": 1790319112.233135,
+    "seen": 1790353788.9444127,
+    "ast_hash": "6458a6c95ae0a611fcc3124c3198f3a1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/auth/LoginGoogleRequest.java": {
+    "mtime": 1790318924.9152415,
+    "seen": 1790353788.944414,
+    "ast_hash": "17cca307e0ebe467c4c9dba59ea9e297",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/auth/UserSummaryDto.java": {
+    "mtime": 1790319058.1885498,
+    "seen": 1790353788.9444156,
+    "ast_hash": "913010b10a692b64ceacc2564e6c61cd",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthService.java": {
+    "mtime": 1790319219.4651964,
+    "seen": 1790353788.9464083,
+    "ast_hash": "30f8abc2acce20e222813f3704958258",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/auth/AuthServiceImpl.java": {
+    "mtime": 1791473775.462032,
+    "seen": 1791533896.073518,
+    "ast_hash": "f728137bdf32ad61a8f5d5c8b01465c4",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/SubmissionDetailResponse.java": {
+    "mtime": 1790355070.1805556,
+    "seen": 1790355434.5273595,
+    "ast_hash": "26d0412642c1c53b97934ca699ddc059",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/submission/SubmissionProgressEvent.java": {
+    "mtime": 1790436390.7390263,
+    "seen": 1790438089.7810214,
+    "ast_hash": "28ac6cf8329d072215fcc86bc93b2fd6",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/submission/SubmissionStreamManager.java": {
+    "mtime": 1790437226.6755562,
+    "seen": 1790438089.7829876,
+    "ast_hash": "a5d61e9338e0de6730fa418811e2ced2",
+    "semantic_hash": ""
+  },
+  "AI-service/app/api/v1/endpoints/hint.py": {
+    "mtime": 1790733250.5868704,
+    "seen": 1790779087.2491195,
+    "ast_hash": "78a294be5a7975892ade90f655067615",
+    "semantic_hash": ""
+  },
+  "AI-service/app/core/config.py": {
+    "mtime": 1790658282.096773,
+    "seen": 1790779087.249126,
+    "ast_hash": "dd96c1c529da019ad5ff9eeacc241ac7",
+    "semantic_hash": ""
+  },
+  "AI-service/app/core/prompt.py": {
+    "mtime": 1790732271.5792787,
+    "seen": 1790779087.249128,
+    "ast_hash": "e9b88a9aec215bfa81abe89899f5ea40",
+    "semantic_hash": ""
+  },
+  "AI-service/app/main.py": {
+    "mtime": 1790953725.418925,
+    "seen": 1790953826.860906,
+    "ast_hash": "5c59896f7592afae5d37ed85a1d18f24",
+    "semantic_hash": ""
+  },
+  "AI-service/app/rag/ingest.py": {
+    "mtime": 1790659240.5244956,
+    "seen": 1790779087.2491307,
+    "ast_hash": "95539185aeec38a7e5e42c954e6ac42f",
+    "semantic_hash": ""
+  },
+  "AI-service/app/rag/parser.py": {
+    "mtime": 1790669038.8961675,
+    "seen": 1790779087.2491317,
+    "ast_hash": "713eff47d20b5694570112b7cb75f48f",
+    "semantic_hash": ""
+  },
+  "AI-service/app/rag/retriever.py": {
+    "mtime": 1790676069.3050835,
+    "seen": 1790779087.2491329,
+    "ast_hash": "f624808e3e02e7697defe65ba30f9559",
+    "semantic_hash": ""
+  },
+  "AI-service/app/rag/vector_store.py": {
+    "mtime": 1790658871.0296133,
+    "seen": 1790779087.249134,
+    "ast_hash": "8b2289479b29b383c52eadfc8c4076bd",
+    "semantic_hash": ""
+  },
+  "AI-service/app/schema/tutor.py": {
+    "mtime": 1790732569.4628384,
+    "seen": 1790779087.249135,
+    "ast_hash": "3f6ef9ed406a3d93b209ad8011a76c92",
+    "semantic_hash": ""
+  },
+  "AI-service/app/service/LLM_service.py": {
+    "mtime": 1790733932.9902644,
+    "seen": 1790779087.249136,
+    "ast_hash": "be0a476b910f9649aae9e615c0234743",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/ai/AiConfig.java": {
+    "mtime": 1790756295.787532,
+    "seen": 1790779087.24954,
+    "ast_hash": "1e4184bd2467c37fae0f5b18b048034d",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/ai/AiHintRequest.java": {
+    "mtime": 1790755262.679937,
+    "seen": 1790779087.249542,
+    "ast_hash": "6171c27daa2ed75f9c0375291c600901",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/ai/AiHintResponse.java": {
+    "mtime": 1790755980.1951306,
+    "seen": 1790779087.2495434,
+    "ast_hash": "871cdb11d9d67c2c59e639c56232c76a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/ai/AiServiceClient.java": {
+    "mtime": 1790756360.2584636,
+    "seen": 1790779087.2495441,
+    "ast_hash": "5866076efc0d3fc72a9eeb61077d5544",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/ai/AiServiceClientImpl.java": {
+    "mtime": 1790757429.414966,
+    "seen": 1790779087.249545,
+    "ast_hash": "79c95bb5cc377c503a60a2aafd4ee026",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/OpenApiConfig.java": {
+    "mtime": 1790439421.135314,
+    "seen": 1790779087.2499466,
+    "ast_hash": "6b1f838b2aa3d7b4886e5335d97cb0ac",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/AiController.java": {
+    "mtime": 1790757752.6010654,
+    "seen": 1790779087.24995,
+    "ast_hash": "66d9f2d664318c1c0c7691a5577dd449",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/.github/FUNDING.yml": {
+    "mtime": 1789574372.4692843,
+    "seen": 1790779087.2549264,
+    "ast_hash": "af73451cba81b486e6db032eeca83e39",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/01. ContainsDuplicate.md": {
+    "mtime": 1789574372.4733043,
+    "seen": 1790779087.2549288,
+    "ast_hash": "fcc4d518bc37590c73464a24f519407f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/02.ValidAnagram.md": {
+    "mtime": 1789574372.4833283,
+    "seen": 1790779087.254931,
+    "ast_hash": "b3c91fddfa5b7c0fa2595913b6e7e4e8",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/03.TwoSum.md": {
+    "mtime": 1789574372.4870834,
+    "seen": 1790779087.2549324,
+    "ast_hash": "6cd30f6457b2967acc286e9b808c69b5",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/04.GroupAnagrams.md": {
+    "mtime": 1789574372.4932716,
+    "seen": 1790779087.2549338,
+    "ast_hash": "b227cb6e80754fc4f5bc10a10ce7eccb",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/05.TopKElements.md": {
+    "mtime": 1789574372.4972968,
+    "seen": 1790779087.2549348,
+    "ast_hash": "bd235f43d3303d94450991d55e755d91",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/06.ProductOfArrayExceptSelf.md": {
+    "mtime": 1789574372.5036328,
+    "seen": 1790779087.2549357,
+    "ast_hash": "0582a38b368cd35f0c6ee9b9ccde3345",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/07.ValidSodoku.md": {
+    "mtime": 1789574372.5059376,
+    "seen": 1790779087.254937,
+    "ast_hash": "63713d50242f940f16b63b27267c4aad",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/08.EncodeAndDecodeStrings.md": {
+    "mtime": 1789574372.51169,
+    "seen": 1790779087.2549386,
+    "ast_hash": "42746f099a182546d68c4ac7c186cd1a",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/09.LongestConsecutiveSequence.md": {
+    "mtime": 1789574372.5157018,
+    "seen": 1790779087.2549396,
+    "ast_hash": "e6956a15eb5396cc50f6bb371c454ba7",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/01. Arrays & Hashing/README.md": {
+    "mtime": 1789574372.5167072,
+    "seen": 1790779087.2549407,
+    "ast_hash": "8e83615f3e9097961880b417a1f905a4",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/02. Two Pointer/01.ValidPalindrome.md": {
+    "mtime": 1789574372.5278504,
+    "seen": 1790779087.254942,
+    "ast_hash": "26f6e8e271c29ae9b30ce89360b3f73e",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/02. Two Pointer/02.TwoSumII.md": {
+    "mtime": 1789574372.5318687,
+    "seen": 1790779087.254943,
+    "ast_hash": "5a423cd5a52b719ed35856d650213c8e",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/02. Two Pointer/03.3Sum.md": {
+    "mtime": 1789574372.5367842,
+    "seen": 1790779087.2549443,
+    "ast_hash": "b171885fe06ff504f0d45f81bb981a3c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/02. Two Pointer/04.ContainerWithMostWater.md": {
+    "mtime": 1789574372.5411458,
+    "seen": 1790779087.2549458,
+    "ast_hash": "ed2639a7af0b57a4c87ce9739a2bfaf9",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/02. Two Pointer/05.TrappingRainWater.md": {
+    "mtime": 1789574372.543152,
+    "seen": 1790779087.2549465,
+    "ast_hash": "fd0afe157577abe94290bdefa2294ba9",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/02. Two Pointer/README.md": {
+    "mtime": 1789574372.5496995,
+    "seen": 1790779087.254948,
+    "ast_hash": "2ab9cc596d6d72db61056b82c38e5103",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/01.BestTimeToBuy&SellStock.md": {
+    "mtime": 1789574372.556223,
+    "seen": 1790779087.2549489,
+    "ast_hash": "79abbeeb5600aada696426c081fe6388",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/02.LongestSubstringWithoutRepeatingCharacters.md": {
+    "mtime": 1789574372.558229,
+    "seen": 1790779087.2549503,
+    "ast_hash": "9ba66a5d98ed42749ae65e93e7935df3",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/03.LongestRepeatingCharacterReplacement.md": {
+    "mtime": 1789574372.564891,
+    "seen": 1790779087.254952,
+    "ast_hash": "e9306deeda80bd58c9fc9b4f49a52271",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/04.PermutationInString.md": {
+    "mtime": 1789574372.5682285,
+    "seen": 1790779087.254954,
+    "ast_hash": "3dccab617b5dba995f60679377c24bda",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/05.MinimumWindowSubstring.md": {
+    "mtime": 1789574372.5735495,
+    "seen": 1790779087.2549555,
+    "ast_hash": "b584f9d8f2ce58490efd9c77e70b86f2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/06.SlidingWindowMaximum.md": {
+    "mtime": 1789574372.5791194,
+    "seen": 1790779087.2549565,
+    "ast_hash": "1678543325ba021dd52463e44e6ce53c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/03. Sliding Window/README.md": {
+    "mtime": 1789574372.5823798,
+    "seen": 1790779087.254958,
+    "ast_hash": "aafa7a75444e80cab69a5a203a67b48f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/01.ValidParentheses.md": {
+    "mtime": 1789574372.5917683,
+    "seen": 1790779087.2549586,
+    "ast_hash": "88aaf9437a0bbd2667b42556e3171c02",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/02.MinStack.md": {
+    "mtime": 1789574372.5947812,
+    "seen": 1790779087.2549598,
+    "ast_hash": "c335f32074504946285dfb5600a98b99",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/03.EvaluateReversePolishNotation.md": {
+    "mtime": 1789574372.597671,
+    "seen": 1790779087.2549613,
+    "ast_hash": "c468add91e43c57c825d456bda930cef",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/04.GenerateParentheses.md": {
+    "mtime": 1789574372.6031628,
+    "seen": 1790779087.254963,
+    "ast_hash": "fbe59dd0f1438cb6ec207a4c296d8eb2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/05.DailyTemperatures.md": {
+    "mtime": 1789574372.6107497,
+    "seen": 1790779087.2549639,
+    "ast_hash": "9b6edaff083c9098c51a05067ff666ff",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/06.CarFleet.md": {
+    "mtime": 1789574372.615141,
+    "seen": 1790779087.2549653,
+    "ast_hash": "99c4490b24b326d85b2a6aaed35f65d8",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/07.LargestRectangleInHistogram.md": {
+    "mtime": 1789574372.6184814,
+    "seen": 1790779087.2549663,
+    "ast_hash": "358783d11f3a7331acd111acad3f29cd",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/04. Stack/README.md": {
+    "mtime": 1789574372.6226075,
+    "seen": 1790779087.2549675,
+    "ast_hash": "04f6cf0e5a7161827766783a73f57ac2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/01.BinarySearch.md": {
+    "mtime": 1789574372.6281729,
+    "seen": 1790779087.254969,
+    "ast_hash": "e5af2207d9fb58acf79333aee0361afa",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/02.SearchIn2DMatrix.md": {
+    "mtime": 1789574372.63522,
+    "seen": 1790779087.25497,
+    "ast_hash": "6a0f85bcda93bbb2788ab95c3a7d1cd7",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/03.KokoEatingBananas.md": {
+    "mtime": 1789574372.6390574,
+    "seen": 1790779087.2549708,
+    "ast_hash": "abbccbd14f12f5c2dbcccce445eadc85",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/04.SearchInRotatedSortedArray.md": {
+    "mtime": 1789574372.6460297,
+    "seen": 1790779087.2549725,
+    "ast_hash": "252f4603bc5192b7f2a4e1c085385cf0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/05.FindMinimumInRotatedSortedArray.md": {
+    "mtime": 1789574372.650963,
+    "seen": 1790779087.2549741,
+    "ast_hash": "9ad4dae7a73a2be5e8b4206f1f15ebe2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/06.TimeBasedKeyValueStore.md": {
+    "mtime": 1789574372.6550694,
+    "seen": 1790779087.2549756,
+    "ast_hash": "371a18d32f33e1097cf1ab7ed392981d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/07.MedianOfTwoSortedArrays.md": {
+    "mtime": 1789574372.6598365,
+    "seen": 1790779087.2549765,
+    "ast_hash": "d8e087746d6996ca0849294079a1c15d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/05. Binary Search/README.md": {
+    "mtime": 1789574372.6643622,
+    "seen": 1790779087.254978,
+    "ast_hash": "983d6cd54de513367dd0ee130575617f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/01.ReverseLinkedList.md": {
+    "mtime": 1789574372.6735525,
+    "seen": 1790779087.2549791,
+    "ast_hash": "8387ffbe8a40052f36941744d626d9d4",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/02.MergeTwoLinkedList.md": {
+    "mtime": 1789574372.6792512,
+    "seen": 1790779087.25498,
+    "ast_hash": "3a19354f05bd4362698bbdb8a25084bf",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/03.ReorderList.md": {
+    "mtime": 1789574372.683936,
+    "seen": 1790779087.254981,
+    "ast_hash": "f4b7b4e3a29560bdbe0482b99e5c9356",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/04.RemoveNthNodeFromEndOfTheList.md": {
+    "mtime": 1789574372.6895828,
+    "seen": 1790779087.2549825,
+    "ast_hash": "d2192c31aa11e6943b755f3d8aa2710a",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/05.CopyListWithRandomPointer.md": {
+    "mtime": 1789574372.6955278,
+    "seen": 1790779087.2549837,
+    "ast_hash": "fcb88ad4949e3b6843e27891c7b6ed2c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/06.AddTwoNumbers.md": {
+    "mtime": 1789574372.697535,
+    "seen": 1790779087.2549849,
+    "ast_hash": "97c17595c6e46cb678c425e0496a8a37",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/07.LinkedListCycle.md": {
+    "mtime": 1789574372.702199,
+    "seen": 1790779087.254986,
+    "ast_hash": "0e75249eb58e787efc83a03ca4973c2f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/08.FindDuplicateNumber.md": {
+    "mtime": 1789574372.7053702,
+    "seen": 1790779087.2549877,
+    "ast_hash": "ce56d8451df3cc769a20cd7f370ca254",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/09.LRUCache.md": {
+    "mtime": 1789574372.714062,
+    "seen": 1790779087.2549899,
+    "ast_hash": "b19b67a1f1f61f5db24d35253c3fbc35",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/10.MergeKSortedLists.md": {
+    "mtime": 1789574372.718892,
+    "seen": 1790779087.2549908,
+    "ast_hash": "cc41ed47d01e6abe97028dd9bc2644fc",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/11.ReverseNodesInK-Group.md": {
+    "mtime": 1789574372.7238278,
+    "seen": 1790779087.2549915,
+    "ast_hash": "d214b6288c6d8a9036db11ceee686e84",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/06. LinkedList/README.md": {
+    "mtime": 1789574372.728644,
+    "seen": 1790779087.2549927,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/01.InvertBinaryTree.md": {
+    "mtime": 1789574372.7370923,
+    "seen": 1790779087.2549934,
+    "ast_hash": "04dba6c4a7e8e788be9ef737083393c0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/02.MaxDepthOfBinaryTree.md": {
+    "mtime": 1789574372.741102,
+    "seen": 1790779087.254995,
+    "ast_hash": "7fd7656ee419d5d893601d7a5f34a3b6",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/03.DiameterOfABinaryTree.md": {
+    "mtime": 1789574372.7446396,
+    "seen": 1790779087.2549965,
+    "ast_hash": "93bd09f7a7253425c4f95272388ed7b2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/04.BalancedBinaryTree.md": {
+    "mtime": 1789574372.7446396,
+    "seen": 1790779087.254998,
+    "ast_hash": "6bcc70151e3d8fc7147f795d3cccaf52",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/05.SameTree.md": {
+    "mtime": 1789574372.7528975,
+    "seen": 1790779087.2549994,
+    "ast_hash": "bb47df159f23bcb1c6d24a39077e0133",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/06.SubtreeOfAnotherTree.md": {
+    "mtime": 1789574372.7611573,
+    "seen": 1790779087.2550013,
+    "ast_hash": "4fb4ba3934fc00ad82d31678a7456953",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/07.LowsetCommonAncestorOfABinarySearchTree.md": {
+    "mtime": 1789574372.7651696,
+    "seen": 1790779087.2550023,
+    "ast_hash": "667f136d4851e76e8743ed8e86f8d82d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/08.BinaryTreeLevelOrderTraversal.md": {
+    "mtime": 1789574372.768726,
+    "seen": 1790779087.2550035,
+    "ast_hash": "d248697ac52955876f99095313409d4b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/09.BinaryTreeRightSideView.md": {
+    "mtime": 1789574372.773954,
+    "seen": 1790779087.2550046,
+    "ast_hash": "74f3192cf4f34040c530bcda21f7d88b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/10.CountGoodNodesInBinaryTree.md": {
+    "mtime": 1789574372.773954,
+    "seen": 1790779087.2550056,
+    "ast_hash": "9f221886f46188dccff63fce959d8ede",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/11.ValidateBinarySearchTree.md": {
+    "mtime": 1789574372.7817986,
+    "seen": 1790779087.255007,
+    "ast_hash": "025275fe9dea6b87290bd8d23f33ec48",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/12.KthSmallestElementInABST.md": {
+    "mtime": 1789574372.7845309,
+    "seen": 1790779087.2550085,
+    "ast_hash": "35ac03ceeb9d74d147787751cbbffa3f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/13.ConstructBinaryTreeFromPreorderAndInorderTraversal.md": {
+    "mtime": 1789574372.7845309,
+    "seen": 1790779087.2550097,
+    "ast_hash": "e3cd1f1c61e5014cdd64367f7f8f3c5f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/14.BinaryTreeMaximumPathSum.md": {
+    "mtime": 1789574372.7845309,
+    "seen": 1790779087.2550108,
+    "ast_hash": "a8fcda5bbf39d3d536e940cc5c5a796b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/15.SerializeAndDeserializeBinaryTree.md": {
+    "mtime": 1789574372.800213,
+    "seen": 1790779087.2550123,
+    "ast_hash": "cc0b5a72624ca55de93d3b5bfb28a7f7",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/07. Tree/README.md": {
+    "mtime": 1789574372.800213,
+    "seen": 1790779087.2550137,
+    "ast_hash": "889da2ea944b4a1dbeb5bb1be7fb40e3",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/08. Trie/01.ImplementTrie.md": {
+    "mtime": 1789574372.8158822,
+    "seen": 1790779087.2550147,
+    "ast_hash": "cd990f0db2d1ec804ef23ced24744f3e",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/08. Trie/02.DesignAddandSearchWordDataStructure.md": {
+    "mtime": 1789574372.8158822,
+    "seen": 1790779087.255016,
+    "ast_hash": "f6e8ab2e218b54c0f71d7ee022c81aa5",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/08. Trie/README.md": {
+    "mtime": 1789574372.8158822,
+    "seen": 1790779087.2550175,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/01.kthLargestElementInAStream.md": {
+    "mtime": 1789574372.831753,
+    "seen": 1790779087.2550185,
+    "ast_hash": "8f3e13da1a03616d7c9408d245c0835c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/02.LastStoneWeight.md": {
+    "mtime": 1789574372.831753,
+    "seen": 1790779087.2550197,
+    "ast_hash": "4e30c04bdd4adfd403702e67c08cf845",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/03.KClosestPointsToOrigin.md": {
+    "mtime": 1789574372.831753,
+    "seen": 1790779087.2550209,
+    "ast_hash": "093a071cfec7fb293c2fcd3cd7664bf6",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/04.KthLargestElementInAnArray.md": {
+    "mtime": 1789574372.831753,
+    "seen": 1790779087.2550218,
+    "ast_hash": "8f71dd07f30ba3484ffdc9a8d074f42a",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/05.TaskScheduler.md": {
+    "mtime": 1789574372.8494627,
+    "seen": 1790779087.2550228,
+    "ast_hash": "42d126c59e05066a867d4a7e04b20f57",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/07.FindMedianFromDataStream.md": {
+    "mtime": 1789574372.8514738,
+    "seen": 1790779087.2550242,
+    "ast_hash": "16fac25cbdaf3485987a65b5b423f63b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/09. Heap or PriorityQueue/README.md": {
+    "mtime": 1789574372.8514738,
+    "seen": 1790779087.255025,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/01.Subsets.md": {
+    "mtime": 1789574372.8634832,
+    "seen": 1790779087.2550316,
+    "ast_hash": "9bf4eb99e180126d692ab93faaf02ba1",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/02.CombinationSum.md": {
+    "mtime": 1789574372.8634832,
+    "seen": 1790779087.2550325,
+    "ast_hash": "fc565e721737ccc9094509abb9451192",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/03.Permutations.md": {
+    "mtime": 1789574372.8634832,
+    "seen": 1790779087.2550335,
+    "ast_hash": "52dbfde64eee0ab0b5c420c542162074",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/04.SubsetsII.md": {
+    "mtime": 1789574372.8794932,
+    "seen": 1790779087.2550347,
+    "ast_hash": "baef8ea71598f74408311676d591b11c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/05.CombinationSumII.md": {
+    "mtime": 1789574372.8794932,
+    "seen": 1790779087.2550354,
+    "ast_hash": "1925998b9c58e0e6eca9bb1435e8549b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/06.WordSearch.md": {
+    "mtime": 1789574372.8794932,
+    "seen": 1790779087.255036,
+    "ast_hash": "0edd0c261fe449fdc9cbe4e2e803d4ca",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/07.PalindromePartitioning.md": {
+    "mtime": 1789574372.8794932,
+    "seen": 1790779087.255037,
+    "ast_hash": "30042a767eabef6f871ff2af7a26c99a",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/08.LetterCombinationsOfAPhone.md": {
+    "mtime": 1789574372.895581,
+    "seen": 1790779087.2550383,
+    "ast_hash": "146516ec7cd7e301e92f192ac3720d78",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/09.N-Queens.md": {
+    "mtime": 1789574372.895581,
+    "seen": 1790779087.2550392,
+    "ast_hash": "018d5f19d67ff90f4ae569aa3de51d1b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/10. Backtracking/README.md": {
+    "mtime": 1789574372.895581,
+    "seen": 1790779087.25504,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/01.NumberOfIslands.md": {
+    "mtime": 1789574372.911318,
+    "seen": 1790779087.2550411,
+    "ast_hash": "56886f6f0ceb30fc67aad7a0f263627a",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/02.CloneGraph.md": {
+    "mtime": 1789574372.911318,
+    "seen": 1790779087.255042,
+    "ast_hash": "5809c901bca2f0a6e7bed745cc4a1f81",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/03.MaxAreaOfIsland.md": {
+    "mtime": 1789574372.911318,
+    "seen": 1790779087.2550428,
+    "ast_hash": "b7be2b72bd7739704bfd152daee528a7",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/04.PacificAtlanticWaterFlow.md": {
+    "mtime": 1789574372.9270182,
+    "seen": 1790779087.2550447,
+    "ast_hash": "0063a515a0c688522f0134e7f94d1fb1",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/05.SurroundedRegions.md": {
+    "mtime": 1789574372.9270182,
+    "seen": 1790779087.255046,
+    "ast_hash": "3bbd8f893a55b0043c802a86ee33b48a",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/06.RottenOranges.md": {
+    "mtime": 1789574372.9336624,
+    "seen": 1790779087.2550468,
+    "ast_hash": "9f5a8f805d496dd3a88b142c0753d420",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/07.WallsAndGates.md": {
+    "mtime": 1789574372.9336624,
+    "seen": 1790779087.2550478,
+    "ast_hash": "90bf4002b7eae09b70de74d744a017ea",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/08.CourseSchedule.md": {
+    "mtime": 1789574372.943362,
+    "seen": 1790779087.255049,
+    "ast_hash": "2029d091ac2d81d574aff0f9eeca936d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/09.CourseScheduleII.md": {
+    "mtime": 1789574372.943362,
+    "seen": 1790779087.2550502,
+    "ast_hash": "414f8e31d99c3694e13fbd327aef6df7",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/10.RedundantConnection.md": {
+    "mtime": 1789574372.943362,
+    "seen": 1790779087.255051,
+    "ast_hash": "76ec63ab7c6fcebb4c638a1977fb659d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/11.NumberOfConnectedComponentsInAnUndirectedGraph.md": {
+    "mtime": 1789574372.9583976,
+    "seen": 1790779087.2550523,
+    "ast_hash": "4204dbcc584f318fe7f7cac60a1b7892",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/12.GraphValidTree.md": {
+    "mtime": 1789574372.9583976,
+    "seen": 1790779087.2550533,
+    "ast_hash": "f21feaa01d0380e9d7a19d7eff0514a3",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/13.WordLadder.md": {
+    "mtime": 1789574372.9583976,
+    "seen": 1790779087.2550542,
+    "ast_hash": "dc2b228cd4a290a635ec49662fcc1a53",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/11. Graphs/README.md": {
+    "mtime": 1789574372.9741392,
+    "seen": 1790779087.2550554,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/12. Advanced Graphs/02.MinCostToConnectAllPoints.md": {
+    "mtime": 1789574372.9741392,
+    "seen": 1790779087.2550564,
+    "ast_hash": "4443d58bdce676565badc340f08e7d12",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/12. Advanced Graphs/03.NetworkDelayTime.md": {
+    "mtime": 1789574372.9741392,
+    "seen": 1790779087.2550573,
+    "ast_hash": "69bdefabec85a5d5977976232615551b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/12. Advanced Graphs/06.CheapestFlightsWithinKStops.md": {
+    "mtime": 1789574372.989822,
+    "seen": 1790779087.2550583,
+    "ast_hash": "a284413f24fbefe0add70227eb597a9b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/12. Advanced Graphs/README.md": {
+    "mtime": 1789574372.989822,
+    "seen": 1790779087.2550592,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/01.ClimbingStairs.md": {
+    "mtime": 1789574372.989822,
+    "seen": 1790779087.2550602,
+    "ast_hash": "69ce95abce35879dcc9c5d391b4f954b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/02.MinCostClimbingStair.md": {
+    "mtime": 1789574372.989822,
+    "seen": 1790779087.255061,
+    "ast_hash": "42307b01b1f489d93b308f5361039159",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/03.HouseRobber.md": {
+    "mtime": 1789574373.0054638,
+    "seen": 1790779087.255062,
+    "ast_hash": "13caacb2c36fa06a07338ad9e0297613",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/04.HouseRobberII.md": {
+    "mtime": 1789574373.0054638,
+    "seen": 1790779087.2550635,
+    "ast_hash": "77d09647744a87a99c5d481e616645e6",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/05.LongestPalindromicSubstring.md": {
+    "mtime": 1789574373.0054638,
+    "seen": 1790779087.2550642,
+    "ast_hash": "726f98eec152b85c826ddecbce534bdf",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/06.PalindromicSubstrings.md": {
+    "mtime": 1789574373.0211303,
+    "seen": 1790779087.255066,
+    "ast_hash": "1889ea84734f3a09b6bf0217de3d3758",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/07.DecodeWays.md": {
+    "mtime": 1789574373.0251505,
+    "seen": 1790779087.2550666,
+    "ast_hash": "ffca24a91502f5f281c17fa0147ca9b9",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/08.CoinChange.md": {
+    "mtime": 1789574373.0251505,
+    "seen": 1790779087.2550676,
+    "ast_hash": "1cbe393b2acc4c3d05713a72d76f4cd5",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/09.MaxProductSubArray.md": {
+    "mtime": 1789574373.0251505,
+    "seen": 1790779087.2550693,
+    "ast_hash": "b01cebe40e2b6435d07f9da2b5fc3b17",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/10.WordBreak.md": {
+    "mtime": 1789574373.0385535,
+    "seen": 1790779087.25507,
+    "ast_hash": "123df1f36b6371343470e8c9b960d18c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/11.LongestIncreasingSubsequence.md": {
+    "mtime": 1789574373.0385535,
+    "seen": 1790779087.2550712,
+    "ast_hash": "918667310cde2e3b2860b1193de91d75",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/12.PartitionEqualSubsetSum.md": {
+    "mtime": 1789574373.0385535,
+    "seen": 1790779087.255072,
+    "ast_hash": "9bbc6b8b0f0ee85b70795912249f382c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/13. 1-D Dynamic Programming/README.md": {
+    "mtime": 1789574373.052575,
+    "seen": 1790779087.2550733,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/01.UniquePaths.md": {
+    "mtime": 1789574373.052575,
+    "seen": 1790779087.2550743,
+    "ast_hash": "1aec38d6d9e444d0d9d3bddaf6bbce0c",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/02.LongestCommonSubsequence.md": {
+    "mtime": 1789574373.052575,
+    "seen": 1790779087.2550752,
+    "ast_hash": "19888508797c74b6da7a50e8c2073843",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/03.BestTimeToBuyAndSellStockWithCooldown.md": {
+    "mtime": 1789574373.0682938,
+    "seen": 1790779087.2550764,
+    "ast_hash": "5b9aa0cec08ca84aacf796403abcbf95",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/04.CoinChange2.md": {
+    "mtime": 1789574373.0682938,
+    "seen": 1790779087.2550774,
+    "ast_hash": "3bea9fb60e9b004a4f8ac2978bff92e0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/07.LongestIncreasingPathInAMatrix.md": {
+    "mtime": 1789574373.0682938,
+    "seen": 1790779087.2550786,
+    "ast_hash": "62fd782630d0a45bb2d905f2409a119b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/09.EditDistance.md": {
+    "mtime": 1789574373.0682938,
+    "seen": 1790779087.2550797,
+    "ast_hash": "3cdbab04432d479fccaf3ed9c5d1fbec",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/14. 2-D Dynamic Programming/README.md": {
+    "mtime": 1789574373.084162,
+    "seen": 1790779087.2550807,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/01.MaximumSubarray.md": {
+    "mtime": 1789574373.084162,
+    "seen": 1790779087.2550814,
+    "ast_hash": "34f94ca2b3ea274ad361f822ebf0346e",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/02.Jump.md": {
+    "mtime": 1789574373.084162,
+    "seen": 1790779087.2550828,
+    "ast_hash": "35ad90d0a9ac5b21176ca9301ddbe519",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/03.JumpII.md": {
+    "mtime": 1789574373.099887,
+    "seen": 1790779087.2550836,
+    "ast_hash": "d65d300b2480ce64be2f045627a13c3d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/04.GasStation.md": {
+    "mtime": 1789574373.099887,
+    "seen": 1790779087.2550845,
+    "ast_hash": "c8aaa5cbfa73d1d3291fd92c8e9085e6",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/05.HandOfStraights.md": {
+    "mtime": 1789574373.099887,
+    "seen": 1790779087.2550857,
+    "ast_hash": "57ddc283f77537eb947bd277899ea1d1",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/08.ValidParenthesisString.md": {
+    "mtime": 1789574373.099887,
+    "seen": 1790779087.2550867,
+    "ast_hash": "8c5604b37a760b718cb9179598dbb9a9",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/15. Greedy/README.md": {
+    "mtime": 1789574373.1156359,
+    "seen": 1790779087.2550874,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/16. Intervals/01.InsertInterval.md": {
+    "mtime": 1789574373.1156359,
+    "seen": 1790779087.2550883,
+    "ast_hash": "818598823ff3abe137f664e9487ab9de",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/16. Intervals/02.MergeInterval.md": {
+    "mtime": 1789574373.1156359,
+    "seen": 1790779087.2550895,
+    "ast_hash": "dbbbcbf6fff8d59216888bc5d8841484",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/16. Intervals/03.Non-OverlappingIntervals.md": {
+    "mtime": 1789574373.1313279,
+    "seen": 1790779087.2550905,
+    "ast_hash": "918b95508517ceea0c8c1d0d2cc44145",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/16. Intervals/04.MeetingRooms.md": {
+    "mtime": 1789574373.1313279,
+    "seen": 1790779087.2550914,
+    "ast_hash": "a93cfd18fbbb5a2471ebef4ed2a00a61",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/16. Intervals/05.MeetingRoomsII.md": {
+    "mtime": 1789574373.1313279,
+    "seen": 1790779087.2550921,
+    "ast_hash": "618db202eb27d50fbcdce6f3d5efcfc2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/16. Intervals/README.md": {
+    "mtime": 1789574373.1470406,
+    "seen": 1790779087.2550933,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/01.RotateImage.md": {
+    "mtime": 1789574373.1470406,
+    "seen": 1790779087.2550943,
+    "ast_hash": "61c6ff1264cde29011916bb9052b6c5e",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/02.SpiralMatrix.md": {
+    "mtime": 1789574373.1470406,
+    "seen": 1790779087.2550952,
+    "ast_hash": "c2eeca92ef53b4fcb040167a12178c00",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/03.SetMatrixZeroes.md": {
+    "mtime": 1789574373.1627913,
+    "seen": 1790779087.2550964,
+    "ast_hash": "fd743f268a30f968feabfaeb7c3c111d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/04.HappyNumber.md": {
+    "mtime": 1789574373.1627913,
+    "seen": 1790779087.2550972,
+    "ast_hash": "fa58d2632cd1393af834fd0b9b97f183",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/05.PlusOne.md": {
+    "mtime": 1789574373.1627913,
+    "seen": 1790779087.255098,
+    "ast_hash": "bb95b28bf6a90cf0fd6c05fe7e5eb89d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/06.Pow(x,n).md": {
+    "mtime": 1789574373.1627913,
+    "seen": 1790779087.2550988,
+    "ast_hash": "d1cba91955a3bece6c8ed515f77142da",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/07.MultiplyStrings.md": {
+    "mtime": 1789574373.1785574,
+    "seen": 1790779087.2551,
+    "ast_hash": "cf93299519ad7ecaa6b0455e75655b4d",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/17. Math & Geometry/README.md": {
+    "mtime": 1789574373.1785574,
+    "seen": 1790779087.255101,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/01.SingleNumber.md": {
+    "mtime": 1789574373.1785574,
+    "seen": 1790779087.2551017,
+    "ast_hash": "65e7d622bf8758b0f7c324e062576972",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/02.NumberOf1Bits.md": {
+    "mtime": 1789574373.1943083,
+    "seen": 1790779087.2551026,
+    "ast_hash": "c63a088a45ef22f7bed52ffc1ac77c7f",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/03.CountingBits.md": {
+    "mtime": 1789574373.1943083,
+    "seen": 1790779087.2551038,
+    "ast_hash": "2898b4b29ce3b81397b81611b946d8f2",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/04.ReverseBits.md": {
+    "mtime": 1789574373.1943083,
+    "seen": 1790779087.2551048,
+    "ast_hash": "bc2aa95b8364fccb4d2222c3e70efdc0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/05.MissingNumber.md": {
+    "mtime": 1789574373.210008,
+    "seen": 1790779087.255106,
+    "ast_hash": "0f8e03295f3afc61d381a686afc2e6c5",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/06.SumOfTwoIntegers.md": {
+    "mtime": 1789574373.210008,
+    "seen": 1790779087.2551084,
+    "ast_hash": "85bad54768a849fa5b53393421419aee",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/18. Bit Manipulation/README.md": {
+    "mtime": 1789574373.210008,
+    "seen": 1790779087.2551093,
+    "ast_hash": "20cb6940ca3dec43958d0d1f10d5e3a0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/01.UnionFind.md": {
+    "mtime": 1789574373.210008,
+    "seen": 1790779087.2551117,
+    "ast_hash": "bb87044574686f32f013c189f4c6011b",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/02.Dijkstra's Algorithm.md": {
+    "mtime": 1789574373.225765,
+    "seen": 1790779087.2551131,
+    "ast_hash": "48d8f3c15c211a4c97cb6cdcd7092b28",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/03.BFS-Graph.md": {
+    "mtime": 1789574373.225765,
+    "seen": 1790779087.255115,
+    "ast_hash": "6bb9cdf8e825ec93e22181d8753950f1",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/04.Bellman-ford.md": {
+    "mtime": 1789574373.225765,
+    "seen": 1790779087.2551174,
+    "ast_hash": "9a001acda1a559e6e09e31e48119dea3",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/05.KMP-Algorithm.md": {
+    "mtime": 1789574373.241499,
+    "seen": 1790779087.255119,
+    "ast_hash": "5e41dfc48fcc66baac187ac33c5e0fea",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/06.SegmentTree.md": {
+    "mtime": 1789574373.241499,
+    "seen": 1790779087.2551231,
+    "ast_hash": "f61bd13b0035309e03ee011e8f2b4675",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/07.FenwickTree.md": {
+    "mtime": 1789574373.241499,
+    "seen": 1790779087.255127,
+    "ast_hash": "4a7ccaaaa26f2f4fd7c9079d94c6c365",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/Misc-DSA/08.FenwickTree2D.md": {
+    "mtime": 1789574373.241499,
+    "seen": 1790779087.2551308,
+    "ast_hash": "2d2500edeae3eeaeebdc0d45fe32dfa0",
+    "semantic_hash": ""
+  },
+  "AI-service/NeetCode-150-main/README.md": {
+    "mtime": 1789574372.4573808,
+    "seen": 1790779087.255136,
+    "ast_hash": "ed4f4d87889fa663e742bd73b2caff6c",
+    "semantic_hash": ""
+  },
+  "AI-service/requirements.txt": {
+    "mtime": 1790648622.8166964,
+    "seen": 1790779087.2551394,
+    "ast_hash": "fdf100a04429db71d1a2bbf6a03bbd3a",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/eslint.config.js": {
+    "mtime": 1790779860.6714635,
+    "seen": 1790846285.220276,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/package.json": {
+    "mtime": 1790841863.0190172,
+    "seen": 1790846285.2202785,
+    "ast_hash": "0d362d191280776f316e8e11b24b4856",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/App.jsx": {
+    "mtime": 1791790399.7884786,
+    "seen": 1791790454.545344,
+    "ast_hash": "6925795694985fbe089dca92041cbe36",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/ai.js": {
+    "mtime": 1790842428.5127494,
+    "seen": 1790846285.2202811,
+    "ast_hash": "bd455d69979bf8880342703bb381cd27",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/client.js": {
+    "mtime": 1790842391.368726,
+    "seen": 1790846285.2202823,
+    "ast_hash": "f0496b70147c669559618398a8ba5ec6",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/problems.js": {
+    "mtime": 1791790111.1529803,
+    "seen": 1791790454.5455532,
+    "ast_hash": "9cb2cc21e9f151072b14c4c7293f8fc3",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/submissions.js": {
+    "mtime": 1790873768.0385208,
+    "seen": 1790933110.4444869,
+    "ast_hash": "b76e8174216d0df2871900914dfda402",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/theories.js": {
+    "mtime": 1790874219.9476826,
+    "seen": 1790933110.4444883,
+    "ast_hash": "baa15f8f03f90024fb840685e18ecb9b",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/AiTutorDrawer.jsx": {
+    "mtime": 1791789389.2798777,
+    "seen": 1791789792.3552377,
+    "ast_hash": "47a44f57d4497107cac5d6fa8128c524",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/AuthModal.jsx": {
+    "mtime": 1791790699.1645782,
+    "seen": 1791790964.2952135,
+    "ast_hash": "b28cfc51faa9a65c57a719c5fe52ca36",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/CodeEditor.jsx": {
+    "mtime": 1791789608.8990083,
+    "seen": 1791789792.3552516,
+    "ast_hash": "fa95c709042b27dfe9587ab4d755e7d2",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/ConsoleDrawer.jsx": {
+    "mtime": 1791789596.2750747,
+    "seen": 1791789792.3552563,
+    "ast_hash": "7c578abb1bba9813c02f5b1fc70b1b1e",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/DifficultyBadge.jsx": {
+    "mtime": 1791789461.0532742,
+    "seen": 1791789792.3552673,
+    "ast_hash": "3b86d02b262ef2dd00d1ff9688baf373",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/MarkdownRenderer.jsx": {
+    "mtime": 1791789389.304899,
+    "seen": 1791789792.355274,
+    "ast_hash": "65fb84124a239c86642d5f324f2c52c8",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/Navbar.jsx": {
+    "mtime": 1791790431.3332279,
+    "seen": 1791790454.546239,
+    "ast_hash": "7ce750fe10b69f1d1ce1a561ff7e83db",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/ProgressSidebar.jsx": {
+    "mtime": 1791789528.1852088,
+    "seen": 1791789792.3552852,
+    "ast_hash": "537b3c8767aa704124526df6b57839c9",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/RoadmapGraph.jsx": {
+    "mtime": 1791789389.3160133,
+    "seen": 1791789792.3552907,
+    "ast_hash": "58a49262501a860df2cd7ca49a16d218",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/RoadmapTopicDrawer.jsx": {
+    "mtime": 1791789389.3193047,
+    "seen": 1791789792.3552995,
+    "ast_hash": "4e908c905a961c7f34622e8b39f931a5",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/SearchModal.jsx": {
+    "mtime": 1791789389.321995,
+    "seen": 1791789792.355309,
+    "ast_hash": "663d17fdd778808862c9ebf3e9eb1533",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/StreakModal.jsx": {
+    "mtime": 1791789389.324718,
+    "seen": 1791789792.3553202,
+    "ast_hash": "0a4f683a6d41200c021e7d477b9e6899",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/context/ThemeContext.jsx": {
+    "mtime": 1790844855.5912063,
+    "seen": 1790846285.2202995,
+    "ast_hash": "4e80211840b10ee19155c553ec8f0947",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/data/mockProblems.js": {
+    "mtime": 1790843760.3509822,
+    "seen": 1790846285.2203002,
+    "ast_hash": "5d4e528381390ff9df32b3bd19713692",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/data/roadmapData.js": {
+    "mtime": 1790846815.8484104,
+    "seen": 1790846867.5007818,
+    "ast_hash": "78e996c4264eb07356169c9bc68d01db",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/data/starterTemplates.js": {
+    "mtime": 1790954564.7865403,
+    "seen": 1790954594.6069267,
+    "ast_hash": "73430b57563fcde460d3f96a96f0f236",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/main.jsx": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2203028,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/ProblemsPage.jsx": {
+    "mtime": 1791789505.971207,
+    "seen": 1791789792.356401,
+    "ast_hash": "b1f48eeffe6e8f790743bba2ead9a5eb",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/TheoriesPage.jsx": {
+    "mtime": 1791789647.9002388,
+    "seen": 1791789792.3564112,
+    "ast_hash": "196a1dafa38d02fd043434e2b173c7c0",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/TheoryDetailPage.jsx": {
+    "mtime": 1791789647.9017677,
+    "seen": 1791789792.356419,
+    "ast_hash": "fc05a7824c9fb6e55067514b2796d276",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/WorkspacePage.jsx": {
+    "mtime": 1791789596.2730772,
+    "seen": 1791789792.3564281,
+    "ast_hash": "f0b58b0e554295730905eca00369c4be",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/vite.config.js": {
+    "mtime": 1790842380.4432642,
+    "seen": 1790846285.2203078,
+    "ast_hash": "c88059ef8bd9197ff3dd3f6227f9cd39",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1790779567.9337988,
+    "seen": 1790846285.2262573,
+    "ast_hash": "d5ab6ed19e5a015de89521b2014fe3d0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/brandkit/SKILL.md": {
+    "mtime": 1790779261.0940638,
+    "seen": 1790846285.226336,
+    "ast_hash": "7491f8fb77b0ebf517b758d096ac4ab4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend-v1/SKILL.md": {
+    "mtime": 1790779261.1015728,
+    "seen": 1790846285.2263381,
+    "ast_hash": "05b271f9985412ac9c081a0511bb6cbe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/design-taste-frontend/SKILL.md": {
+    "mtime": 1790779261.1028848,
+    "seen": 1790846285.2263393,
+    "ast_hash": "648c8bf98f84fbe7f14bf2da035c57fe",
+    "semantic_hash": ""
+  },
+  ".agents/skills/full-output-enforcement/SKILL.md": {
+    "mtime": 1790779261.0995932,
+    "seen": 1790846285.2263405,
+    "ast_hash": "2072dc2c1357dc9cd6384d1f441e05c3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gpt-taste/SKILL.md": {
+    "mtime": 1790779261.095569,
+    "seen": 1790846285.2263422,
+    "ast_hash": "e2a7560cbfce7a853dd8f65eca12c103",
+    "semantic_hash": ""
+  },
+  ".agents/skills/high-end-visual-design/SKILL.md": {
+    "mtime": 1790779261.1005735,
+    "seen": 1790846285.2263436,
+    "ast_hash": "64f7c1069a5a3d18797950d8fac7b63a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/image-to-code/SKILL.md": {
+    "mtime": 1790779261.0965745,
+    "seen": 1790846285.226345,
+    "ast_hash": "b18a810930da9c6b558b15c85bc74007",
+    "semantic_hash": ""
+  },
+  ".agents/skills/imagegen-frontend-mobile/SKILL.md": {
+    "mtime": 1790779261.097575,
+    "seen": 1790846285.2263465,
+    "ast_hash": "6253c18387ca5d561a945ffe14e70d54",
+    "semantic_hash": ""
+  },
+  ".agents/skills/imagegen-frontend-web/SKILL.md": {
+    "mtime": 1790779261.09859,
+    "seen": 1790846285.2263477,
+    "ast_hash": "728f55ab7e44330e78aac4ca8331d83a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/industrial-brutalist-ui/SKILL.md": {
+    "mtime": 1790779261.0940638,
+    "seen": 1790846285.2263496,
+    "ast_hash": "da7f92d7e3b8b526ecbd71009fe973ca",
+    "semantic_hash": ""
+  },
+  ".agents/skills/minimalist-ui/SKILL.md": {
+    "mtime": 1790779261.0995932,
+    "seen": 1790846285.2263508,
+    "ast_hash": "32f8681f79a681d00a4b72ddce4415b1",
+    "semantic_hash": ""
+  },
+  ".agents/skills/redesign-existing-projects/SKILL.md": {
+    "mtime": 1790779261.1005735,
+    "seen": 1790846285.2263522,
+    "ast_hash": "c8d729e3e807df37dcd5e6262c9b8843",
+    "semantic_hash": ""
+  },
+  ".agents/skills/stitch-design-taste/DESIGN.md": {
+    "mtime": 1790779261.1015728,
+    "seen": 1790846285.2263534,
+    "ast_hash": "7f8c91aeecc8983b687965c2fc23438c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/stitch-design-taste/SKILL.md": {
+    "mtime": 1790779261.1015728,
+    "seen": 1790846285.2263546,
+    "ast_hash": "fcbb4f37d67a66a53013b484dcfc9f25",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/index.html": {
+    "mtime": 1790956558.394356,
+    "seen": 1790956587.2695355,
+    "ast_hash": "892f52415772f0f1fa892d3b10e014ee",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/public/favicon.svg": {
+    "mtime": 1790779759.877452,
+    "seen": 1790846285.2384439,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/public/icons.svg": {
+    "mtime": 1790779759.87845,
+    "seen": 1790846285.2384458,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/assets/hero.png": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2384472,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/assets/react.svg": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2384484,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/assets/vite.svg": {
+    "mtime": 1790779759.87945,
+    "seen": 1790846285.2384498,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/auth.js": {
+    "mtime": 1790872131.0364356,
+    "seen": 1790872230.8864436,
+    "ast_hash": "10d5b527c31edc00ac6bb873f7b2ef49",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/AuthCallbackPage.jsx": {
+    "mtime": 1791789647.9027748,
+    "seen": 1791789792.3563917,
+    "ast_hash": "ea24282f9ed4e74788200c0f5deba9d5",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java": {
+    "mtime": 1790872547.6135304,
+    "seen": 1790872788.896102,
+    "ast_hash": "113c9d1cd3405af56f29777a25558176",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessService.java": {
+    "mtime": 1790932445.3726182,
+    "seen": 1790933110.4504385,
+    "ast_hash": "9ca8c129c45c49633ea181b0a6335507",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessServiceImpl.java": {
+    "mtime": 1790955441.502717,
+    "seen": 1790955471.7529445,
+    "ast_hash": "b1e9e44d6b97af1d1bef4f5b69697246",
+    "semantic_hash": ""
+  },
+  "backend-core/src/test/java/com/dapcode/backend_core/service/submission/SubmissionHarnessIntegrationTest.java": {
+    "mtime": 1790932819.7968628,
+    "seen": 1790933110.4510634,
+    "ast_hash": "c9006515ceddd45845b5bcb6a3fdea11",
+    "semantic_hash": ""
+  },
+  "seedingData/fetch_and_seed_starter_codes.py": {
+    "mtime": 1790955255.0219276,
+    "seen": 1790955471.7546768,
+    "ast_hash": "4a0a7a61e2caf4568edb70b47baba694",
+    "semantic_hash": ""
+  },
+  "seedingData/starter_codes_cache.json": {
+    "mtime": 1790955304.614668,
+    "seen": 1790955471.7555194,
+    "ast_hash": "cbf502cd3d30ecffffc31ee5a9ce4ae8",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/config/JacksonConfig.java": {
+    "mtime": 1790955564.9652255,
+    "seen": 1790955600.464717,
+    "ast_hash": "40de7c0c1c7956dd09fa1128702c7442",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/DapcodeLogo.jsx": {
+    "mtime": 1791789389.3001733,
+    "seen": 1791789792.3552635,
+    "ast_hash": "187fe19e98d11ca330aeaf35f9f908ee",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/public/dapcode_logo.png": {
+    "mtime": 1790956437.5801706,
+    "seen": 1790956587.2711616,
+    "ast_hash": "369bb0d7ad5c2c1bd9d176016f9771f6",
+    "semantic_hash": ""
+  },
+  "HOW_TO_RUN.md": {
+    "mtime": 1791790924.00483,
+    "seen": 1791790964.320552,
+    "ast_hash": "fb4089678dbc059144db6e372914c72c",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791040695.3063548,
+    "seen": 1791040774.251356,
+    "ast_hash": "9e39e910bf04191c16a79b4253b75e80",
+    "semantic_hash": ""
+  },
+  "README.vi.md": {
+    "mtime": 1791040711.1902392,
+    "seen": 1791040774.2513576,
+    "ast_hash": "70ae55cabfee7c9b40ce20cb0559b421",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/tailwind.config.js": {
+    "mtime": 1791301520.2674525,
+    "seen": 1791302414.7570884,
+    "ast_hash": "28ab829e09bc74234ecac87bbfffd1c1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminProblemController.java": {
+    "mtime": 1791533515.5559556,
+    "seen": 1791533896.0714097,
+    "ast_hash": "76f371d8e82f3c7fb2af4ae77e8d7f7a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/CreateProblemRequest.java": {
+    "mtime": 1791474455.096665,
+    "seen": 1791533896.0714116,
+    "ast_hash": "45f2f133b282fcde318d3618491e8e5c",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateProblemRequest.java": {
+    "mtime": 1791474482.8806295,
+    "seen": 1791533896.071413,
+    "ast_hash": "20e495a09a71dfd77b400738059cce31",
+    "semantic_hash": ""
+  },
+  "admin_implementation_plan.md": {
+    "mtime": 1791472893.1036038,
+    "seen": 1791533896.0868351,
+    "ast_hash": "754081772a8cd886d429f1ea47eba44f",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminTestCaseController.java": {
+    "mtime": 1791559582.3535106,
+    "seen": 1791559721.0156887,
+    "ast_hash": "10aa81be523820a2ea0edb2a86df3468",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/BatchCreateTestCaseRequest.java": {
+    "mtime": 1791534253.5693016,
+    "seen": 1791559721.0156903,
+    "ast_hash": "e048867c7fba960ec78dd00d7a054016",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/TestCaseRequest.java": {
+    "mtime": 1791534201.7584023,
+    "seen": 1791559721.0157578,
+    "ast_hash": "e911a3e34ab746023202ea42f51a2e9a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/TestCaseResponse.java": {
+    "mtime": 1791534128.2760563,
+    "seen": 1791559721.015759,
+    "ast_hash": "67fb80fe084650ae4312127ec9faa108",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/testcase/TestCaseService.java": {
+    "mtime": 1791534921.8176572,
+    "seen": 1791559721.0199401,
+    "ast_hash": "1137282d09e29910929340e3005ae797",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/testcase/TestCaseServiceImpl.java": {
+    "mtime": 1791559118.2505193,
+    "seen": 1791559721.019942,
+    "ast_hash": "a7e8eaa26ef0cc916ed9f56ae71a8d45",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminTheoryController.java": {
+    "mtime": 1791706721.3495088,
+    "seen": 1791706782.1043117,
+    "ast_hash": "7f24488bea7dfadd614e5cd49c00b85f",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/CreateTheoryRequest.java": {
+    "mtime": 1791648595.0756576,
+    "seen": 1791706782.1045356,
+    "ast_hash": "5d860b3e0ccb071f3cc4d638e4a11669",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateTheoryRequest.java": {
+    "mtime": 1791648622.3330772,
+    "seen": 1791706782.1047473,
+    "ast_hash": "81856e69beb0878acffa5f20894230e2",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminUserController.java": {
+    "mtime": 1791709533.075969,
+    "seen": 1791709616.0923994,
+    "ast_hash": "344db20d56b7006e0df0a15a94879e5e",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/AdminUserResponse.java": {
+    "mtime": 1791708873.816543,
+    "seen": 1791709616.0924022,
+    "ast_hash": "d89933085ae679d4af3a7e9aeca9498b",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateUserRoleRequest.java": {
+    "mtime": 1791707715.163574,
+    "seen": 1791709616.092989,
+    "ast_hash": "51f88d7c7d93545551480a41de0f8296",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateUserStatusRequest.java": {
+    "mtime": 1791709246.134693,
+    "seen": 1791709616.0929904,
+    "ast_hash": "82bb62cdb13c8aac103f630708147a1b",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/user/AdminUserService.java": {
+    "mtime": 1791708089.5509663,
+    "seen": 1791709616.0978403,
+    "ast_hash": "3fc41c93260f4d6b7ffceaf56d4e6e20",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/user/AdminUserServiceImpl.java": {
+    "mtime": 1791709059.2835019,
+    "seen": 1791709616.0978425,
+    "ast_hash": "594507af0bcc9ab6b6291c686522e14a",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminDashboardController.java": {
+    "mtime": 1791710559.8185356,
+    "seen": 1791710589.201248,
+    "ast_hash": "27e035bf7deac27ae0532db2c8791be1",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/AdminDashboardStatsResponse.java": {
+    "mtime": 1791710024.1343217,
+    "seen": 1791710589.2019918,
+    "ast_hash": "15e96330d0a784d10d6d37d61d49f272",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/DailySubmissionCount.java": {
+    "mtime": 1791709913.643898,
+    "seen": 1791710589.2027106,
+    "ast_hash": "9035843a887ec32a0785047bdf6141cf",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/dto/admin/RecentSubmissionDto.java": {
+    "mtime": 1791709918.8686967,
+    "seen": 1791710589.202713,
+    "ast_hash": "fbd7e690d7253cbfd15e85f07c351441",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/dashboard/AdminDashboardService.java": {
+    "mtime": 1791710328.4207728,
+    "seen": 1791710589.2090814,
+    "ast_hash": "05e095c21119aa4ae58463616e330f4d",
+    "semantic_hash": ""
+  },
+  "backend-core/src/main/java/com/dapcode/backend_core/service/dashboard/AdminDashboardServiceImpl.java": {
+    "mtime": 1791710485.6547408,
+    "seen": 1791710589.2090838,
+    "ast_hash": "45a1ff8f8c5d3df99527ef5543ad55a4",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/api/admin.js": {
+    "mtime": 1791789997.9676237,
+    "seen": 1791790454.5453463,
+    "ast_hash": "452579d5c747077d9ce4fc5aeb7259bc",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/AdminRoute.jsx": {
+    "mtime": 1791790647.5623198,
+    "seen": 1791790964.295138,
+    "ast_hash": "49d92ce7299fca1ab495cbbeefb51365",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/admin/AdminUi.jsx": {
+    "mtime": 1791790027.074271,
+    "seen": 1791790454.5465643,
+    "ast_hash": "08d8826bc881a0345f324e1ef621ff08",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/layouts/AdminLayout.jsx": {
+    "mtime": 1791790047.927868,
+    "seen": 1791790454.5468397,
+    "ast_hash": "2407b1c21b4ed3ccb9973b616b3299c4",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/admin/AdminDashboardPage.jsx": {
+    "mtime": 1791790070.627613,
+    "seen": 1791790454.5472238,
+    "ast_hash": "a9edca2061d417f1809a49e3da61139c",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/admin/AdminProblemsPage.jsx": {
+    "mtime": 1791790123.8604164,
+    "seen": 1791790454.5472257,
+    "ast_hash": "a44c49ceca78e8ee7f5d14148785b50a",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/admin/AdminTestCasesPage.jsx": {
+    "mtime": 1791790155.991508,
+    "seen": 1791790454.547227,
+    "ast_hash": "887654120af31a3d17732d5cf121ca32",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/admin/AdminTheoriesPage.jsx": {
+    "mtime": 1791790354.1407502,
+    "seen": 1791790454.5472279,
+    "ast_hash": "64e5ed836d5316a303c890dc4aed4aa6",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/pages/admin/AdminUsersPage.jsx": {
+    "mtime": 1791790380.1009047,
+    "seen": 1791790454.5472288,
+    "ast_hash": "57221e74d70d8dac75c95e05e5eac966",
+    "semantic_hash": ""
+  }
+}

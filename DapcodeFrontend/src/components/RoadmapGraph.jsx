@@ -34,12 +34,12 @@ export default function RoadmapGraph({
   };
 
   const gridDotColor = isDark ? 'rgba(245, 242, 235, 0.05)' : 'rgba(28, 25, 23, 0.06)';
-  const arrowColor = isDark ? '#57534E' : '#A8A29E';
-  const edgeShadowColor = isDark ? '#24221F' : '#FAF8F3';
-  const edgeStrokeColor = isDark ? '#44403C' : '#D6D3CD';
+  const arrowColor = isDark ? '#6B6B6B' : '#9A9A9A';
+  const edgeShadowColor = isDark ? '#333333' : '#F7F8FA';
+  const edgeStrokeColor = isDark ? '#595959' : '#D1D1D1';
 
   return (
-    <div className="relative w-full overflow-x-auto overflow-y-visible rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-6 transition-colors duration-150">
+    <div className="relative w-full overflow-x-auto overflow-y-visible rounded-2xl border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828] p-6 transition-colors duration-150">
       {/* Subtle Dot Grid Background */}
       <div 
         className="relative mx-auto"
@@ -124,27 +124,27 @@ export default function RoadmapGraph({
                 width: `${NODE_WIDTH}px`,
                 height: `${NODE_HEIGHT}px`,
               }}
-              className={`group flex flex-col justify-between rounded-xl border bg-white dark:bg-[#24221F] p-2.5 cursor-pointer transition-colors ${
+              className={`group flex flex-col justify-between rounded-xl border bg-white dark:bg-[#333333] p-2.5 cursor-pointer transition-colors ${
                 isCompletedAll
-                  ? 'border-[#BBF7D0] dark:border-[#166534] bg-[#F0FDF4]/40 dark:bg-[#14532D]/15'
-                  : 'border-[#E8E4DC] dark:border-[#332F2B] hover:border-stone-500 dark:hover:border-stone-400'
+                  ? 'border-[#B7E4C7] dark:border-[#166534] bg-[#E8F7EE]/40 dark:bg-[#14532D]/15'
+                  : 'border-[#E6E6E6] dark:border-[#3E3E3E] hover:border-neutral-500 dark:hover:border-neutral-400'
               }`}
             >
               {/* Node Title & Counter */}
               <div className="flex items-center justify-between space-x-1">
-                <span className="truncate text-xs font-semibold text-stone-800 dark:text-stone-100 group-hover:text-stone-950 dark:group-hover:text-white transition-colors">
+                <span className="truncate text-xs font-semibold text-neutral-800 dark:text-neutral-100 group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
                   {node.name}
                 </span>
-                <span className="text-[11px] font-mono text-stone-500 dark:text-stone-400 flex-shrink-0">
+                <span className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400 flex-shrink-0">
                   {stats.count}/{stats.total}
                 </span>
               </div>
 
               {/* Node Mini Progress Bar */}
-              <div className="w-full h-1.5 rounded-full bg-[#FAF8F3] dark:bg-[#1C1A18] border border-[#E8E4DC] dark:border-[#332F2B] overflow-hidden mt-1">
+              <div className="w-full h-1.5 rounded-full bg-[#F7F8FA] dark:bg-[#282828] border border-[#E6E6E6] dark:border-[#3E3E3E] overflow-hidden mt-1">
                 <div
                   className={`h-full rounded-full transition-all duration-300 ${
-                    isCompletedAll ? 'bg-[#15803D] dark:bg-[#4ADE80]' : 'bg-stone-800 dark:bg-stone-200'
+                    isCompletedAll ? 'bg-[#2CBB5D] dark:bg-[#2CBB5D]' : 'bg-neutral-800 dark:bg-neutral-200'
                   }`}
                   style={{ width: `${stats.percent}%` }}
                 />

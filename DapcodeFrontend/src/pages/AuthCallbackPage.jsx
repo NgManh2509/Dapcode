@@ -88,13 +88,13 @@ export default function AuthCallbackPage() {
   }, [location, navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#FDFBF7] dark:bg-[#141312] p-4 text-[#1C1917] dark:text-[#F5F2EB]">
-      <div className="w-full max-w-md rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-8 text-center">
+    <div className="min-h-screen flex items-center justify-center bg-[#FFFFFF] dark:bg-[#1A1A1A] p-4 text-[#262626] dark:text-[#EFF1F6]">
+      <div className="w-full max-w-md rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828] p-8 text-center">
         {status === 'loading' && (
           <div className="flex flex-col items-center space-y-4">
-            <Loader2 className="h-8 w-8 text-stone-700 dark:text-stone-300 animate-spin" />
+            <Loader2 className="h-8 w-8 text-neutral-700 dark:text-neutral-300 animate-spin" />
             <h2 className="text-sm font-semibold">Đang xác thực tài khoản Google...</h2>
-            <p className="text-xs text-stone-500 dark:text-stone-400">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               Vui lòng đợi giây lát trong khi Dapcode đồng bộ tài khoản của bạn.
             </p>
           </div>
@@ -102,11 +102,11 @@ export default function AuthCallbackPage() {
 
         {status === 'success' && (
           <div className="flex flex-col items-center space-y-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F0FDF4] dark:bg-[#14532D]/20 text-[#15803D] dark:text-[#4ADE80] border border-[#BBF7D0] dark:border-[#166534]/40">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#E8F7EE] dark:bg-[#14532D]/20 text-[#2CBB5D] dark:text-[#2CBB5D] border border-[#B7E4C7] dark:border-[#166534]/40">
               <CheckCircle2 className="h-6 w-6" />
             </div>
             <h2 className="text-sm font-semibold">Đăng nhập thành công!</h2>
-            <p className="text-xs text-stone-500 dark:text-stone-400">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               Đang chuyển hướng về trang học tập...
             </p>
           </div>
@@ -114,16 +114,16 @@ export default function AuthCallbackPage() {
 
         {status === 'error' && (
           <div className="flex flex-col items-center space-y-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FEF2F2] dark:bg-[#7F1D1D]/20 text-[#B91C1C] dark:text-[#F87171] border border-[#FECACA] dark:border-[#991B1B]/40">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FDEDED] dark:bg-[#7F1D1D]/20 text-[#EF4743] dark:text-[#FF6B68] border border-[#FECACA] dark:border-[#991B1B]/40">
               <AlertCircle className="h-6 w-6" />
             </div>
-            <h2 className="text-sm font-semibold text-[#B91C1C] dark:text-[#F87171]">
+            <h2 className="text-sm font-semibold text-[#EF4743] dark:text-[#FF6B68]">
               Đăng nhập thất bại
             </h2>
-            <p className="text-xs text-stone-500 dark:text-stone-400">{errorMessage}</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">{errorMessage}</p>
             <button
               onClick={() => navigate('/roadmap', { replace: true })}
-              className="mt-2 rounded-xl bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-4 py-2 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors"
+              className="mt-2 rounded-lg bg-[#262626] hover:bg-[#3C3C3C] dark:bg-[#EFF1F6] dark:hover:bg-[#E6E6E6] px-4 py-2 text-xs font-medium text-[#F7F8FA] dark:text-[#262626] transition-colors"
             >
               Quay lại trang chủ
             </button>

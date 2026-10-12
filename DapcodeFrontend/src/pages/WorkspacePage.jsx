@@ -24,7 +24,7 @@ import {
   Search,
   Flame,
   User,
-  ArrowLeft,
+  List,
   AlertCircle,
   Sun,
   Moon
@@ -333,9 +333,9 @@ export default function WorkspacePage() {
 
   if (isLoadingProblem) {
     return (
-      <div className="flex h-screen w-screen items-center justify-center bg-[#FDFBF7] dark:bg-[#141312] text-stone-600 dark:text-stone-400 font-sans">
+      <div className="flex h-screen w-screen items-center justify-center bg-[#FFFFFF] dark:bg-[#1A1A1A] text-neutral-600 dark:text-neutral-400 font-sans">
         <div className="flex flex-col items-center space-y-3">
-          <div className="h-6 w-6 animate-spin rounded-full border-2 border-stone-800 dark:border-stone-200 border-t-transparent" />
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-neutral-800 dark:border-neutral-200 border-t-transparent" />
           <p className="text-xs">Đang tải đề bài từ Database...</p>
         </div>
       </div>
@@ -344,13 +344,13 @@ export default function WorkspacePage() {
 
   if (fetchError || !problem) {
     return (
-      <div className="flex h-screen w-screen flex-col items-center justify-center bg-[#FDFBF7] dark:bg-[#141312] text-stone-800 dark:text-stone-200 font-sans p-4 space-y-4">
-        <AlertCircle className="h-8 w-8 text-[#B91C1C]" />
-        <h2 className="text-base font-semibold text-[#1C1917] dark:text-[#F5F2EB]">Không thể tải bài tập</h2>
-        <p className="text-xs text-stone-600 dark:text-stone-400 max-w-md text-center">{fetchError || 'Bài tập không tồn tại trong hệ thống.'}</p>
+      <div className="flex h-screen w-screen flex-col items-center justify-center bg-[#FFFFFF] dark:bg-[#1A1A1A] text-neutral-800 dark:text-neutral-200 font-sans p-4 space-y-4">
+        <AlertCircle className="h-8 w-8 text-[#EF4743]" />
+        <h2 className="text-base font-semibold text-[#262626] dark:text-[#EFF1F6]">Không thể tải bài tập</h2>
+        <p className="text-xs text-neutral-600 dark:text-neutral-400 max-w-md text-center">{fetchError || 'Bài tập không tồn tại trong hệ thống.'}</p>
         <Link
           to="/roadmap"
-          className="rounded-lg bg-[#1C1917] dark:bg-[#F5F2EB] px-4 py-2 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors"
+          className="rounded-lg bg-[#262626] dark:bg-[#EFF1F6] px-4 py-2 text-xs font-medium text-[#F7F8FA] dark:text-[#262626] transition-colors"
         >
           Quay lại Roadmap
         </Link>
@@ -359,42 +359,28 @@ export default function WorkspacePage() {
   }
 
   return (
-    <div className="flex h-screen flex-col bg-[#FDFBF7] dark:bg-[#141312] text-[#1C1917] dark:text-[#F5F2EB] font-sans overflow-hidden">
-      {/* Top Workspace Navigation Bar */}
-      <header className="flex h-14 items-center justify-between border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FDFBF7]/90 dark:bg-[#141312]/90 backdrop-blur-md px-4 flex-shrink-0">
-        {/* Left: Brand Logo, Back, Problem Navigator */}
-        <div className="flex items-center space-x-3 min-w-0">
-          <Link
-            to="/roadmap"
-            className="flex items-center space-x-2 text-[#1C1917] dark:text-[#F5F2EB] hover:opacity-80 transition-opacity"
-            title="Quay lại Roadmap"
-          >
+    <div className="flex h-screen flex-col bg-[#F0F0F0] dark:bg-[#1A1A1A] text-[#262626] dark:text-[#EFF1F6] overflow-hidden">
+      <header className="flex h-[50px] items-center justify-between border-b border-[#E6E6E6] dark:border-[#3E3E3E] bg-white dark:bg-[#282828] px-3 flex-shrink-0">
+        <div className="flex items-center space-x-2 min-w-0">
+          <Link to="/roadmap" className="flex items-center space-x-2 pr-2" title="Roadmap">
             <DapcodeLogo size="sm" />
-            <span className="font-semibold text-sm tracking-tight hidden md:inline">Dapcode</span>
-            <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 border border-stone-200 dark:bg-stone-800 dark:text-stone-400 dark:border-stone-700 font-mono hidden sm:inline">
-              v1.0
-            </span>
           </Link>
 
-          <div className="h-4 w-px bg-[#E8E4DC] dark:bg-[#332F2B] hidden sm:block" />
-
-          {/* Back to List */}
           <Link
             to="/practice"
-            className="flex items-center space-x-1 rounded-lg px-2.5 py-1 text-xs font-medium text-stone-600 dark:text-stone-400 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] hover:text-[#1C1917] dark:hover:text-[#F5F2EB] transition-colors"
+            className="flex items-center space-x-1.5 rounded-md px-2.5 py-1.5 text-sm text-neutral-600 dark:text-neutral-300 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors"
           >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">Danh sách</span>
+            <List className="h-4 w-4" />
+            <span className="hidden sm:inline">Problem List</span>
           </Link>
 
-          {/* Prev / Next Problem Switcher */}
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center">
             <button
               type="button"
               disabled={!prevProblem}
               onClick={() => prevProblem && navigate(`/problems/${prevProblem.slug}`)}
-              className="p-1 rounded text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 disabled:opacity-30 transition-colors cursor-pointer"
-              title={prevProblem ? `Bài trước: ${prevProblem.title}` : 'Không có bài trước'}
+              className="flex h-8 w-8 items-center justify-center rounded-md text-neutral-500 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] disabled:opacity-30 transition-colors cursor-pointer"
+              title={prevProblem ? `Previous: ${prevProblem.title}` : 'No previous problem'}
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -402,134 +388,89 @@ export default function WorkspacePage() {
               type="button"
               disabled={!nextProblem}
               onClick={() => nextProblem && navigate(`/problems/${nextProblem.slug}`)}
-              className="p-1 rounded text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 disabled:opacity-30 transition-colors cursor-pointer"
-              title={nextProblem ? `Bài kế tiếp: ${nextProblem.title}` : 'Không có bài kế tiếp'}
+              className="flex h-8 w-8 items-center justify-center rounded-md text-neutral-500 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] disabled:opacity-30 transition-colors cursor-pointer"
+              title={nextProblem ? `Next: ${nextProblem.title}` : 'No next problem'}
             >
               <ChevronRight className="h-4 w-4" />
             </button>
           </div>
-
-          <div className="h-4 w-px bg-[#E8E4DC] dark:bg-[#332F2B]" />
-
-          {/* Problem Title & Dropdown Selector */}
-          <div className="flex items-center space-x-2 truncate">
-            {allProblems.length > 0 ? (
-              <select
-                value={problem.slug}
-                onChange={(e) => navigate(`/problems/${e.target.value}`)}
-                className="bg-transparent text-xs sm:text-sm font-semibold text-[#1C1917] dark:text-[#F5F2EB] focus:outline-none cursor-pointer truncate max-w-[200px] sm:max-w-[300px]"
-              >
-                {allProblems.map((p) => (
-                  <option key={p.slug} value={p.slug} className="bg-white dark:bg-[#1C1A18] text-stone-800 dark:text-stone-200">
-                    {p.title} ({p.difficulty})
-                  </option>
-                ))}
-              </select>
-            ) : (
-              <span className="text-xs sm:text-sm font-semibold text-[#1C1917] dark:text-[#F5F2EB] truncate max-w-[200px]">
-                {problem.title}
-              </span>
-            )}
-            <DifficultyBadge difficulty={problem.difficulty} size="xs" />
-          </div>
         </div>
 
-        {/* Right Tools: Theme Switcher, Search, AI Tutor, Streak, User */}
-        <div className="flex items-center space-x-2 sm:space-x-2.5">
-          {/* Theme Switcher Toggle */}
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="flex items-center justify-center h-7.5 w-7.5 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
-            title={isDark ? 'Chuyển sang chế độ Sáng' : 'Chuyển sang chế độ Tối'}
-          >
-            {isDark ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
-          </button>
-
-          {/* Quick Search Trigger */}
-          <button
-            type="button"
-            onClick={() => setIsSearchOpen(true)}
-            className="flex items-center space-x-1.5 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2.5 py-1 text-xs text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
-            title="Tìm kiếm bài tập (⌘K)"
-          >
-            <Search className="h-3.5 w-3.5" />
-            <kbd className="hidden md:inline rounded bg-white dark:bg-[#1C1A18] border border-[#E8E4DC] dark:border-[#332F2B] px-1 text-[10px] text-stone-500 dark:text-stone-400 font-mono">⌘K</kbd>
-          </button>
-
-          {/* Socratic AI Tutor Quick Trigger */}
+        <div className="flex items-center space-x-1">
           <button
             type="button"
             onClick={handleOpenAiTutor}
-            className="flex items-center space-x-1.5 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-3 py-1 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
+            className="flex h-8 items-center space-x-1.5 rounded-md bg-[#FFA116]/15 px-3 text-sm font-medium text-[#FFA116] hover:bg-[#FFA116]/25 transition-colors cursor-pointer"
           >
-            <Sparkles className="h-3.5 w-3.5" />
+            <Sparkles className="h-4 w-4" />
             <span className="hidden sm:inline">AI Tutor</span>
-            <span className="sm:hidden">AI</span>
           </button>
 
-          {/* Daily Streak */}
+          <button
+            type="button"
+            onClick={() => setIsSearchOpen(true)}
+            className="flex h-8 w-8 items-center justify-center rounded-md text-neutral-500 dark:text-neutral-400 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors cursor-pointer"
+            title="Tìm kiếm (Ctrl+K)"
+          >
+            <Search className="h-[18px] w-[18px]" />
+          </button>
+
           <button
             type="button"
             onClick={() => setIsStreakOpen(true)}
-            className="flex items-center space-x-1 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2 py-1 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
-            title="Xem chuỗi streak"
+            className="flex h-8 items-center space-x-1 rounded-md px-2 text-sm text-neutral-600 dark:text-neutral-300 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors cursor-pointer"
+            title="Chuỗi streak"
           >
-            <Flame className="h-3.5 w-3.5 text-[#B45309] dark:text-[#FBBF24]" />
-            <span className="font-mono text-[11px]">{user?.streakCount ?? user?.streak ?? 1}</span>
+            <Flame className="h-[18px] w-[18px] text-[#FFA116]" />
+            <span className="font-medium">{user?.streakCount ?? user?.streak ?? 0}</span>
           </button>
 
-          {/* User Sign In / Profile */}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="flex h-8 w-8 items-center justify-center rounded-md text-neutral-500 dark:text-neutral-400 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors cursor-pointer"
+            title={isDark ? 'Chế độ sáng' : 'Chế độ tối'}
+          >
+            {isDark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
+          </button>
+
           {user ? (
-            <div className="flex items-center space-x-1.5 bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] py-1 px-2.5 rounded-lg text-xs">
+            <div className="ml-1 flex h-8 w-8 items-center justify-center rounded-full overflow-hidden bg-[#FFA116] text-white text-sm font-semibold">
               {user.avatarUrl ? (
                 <img
                   src={user.avatarUrl}
-                  alt={user.username || user.name || 'User'}
+                  alt={user.username || 'User'}
                   referrerPolicy="no-referrer"
-                  className="h-4.5 w-4.5 rounded-full object-cover border border-[#E8E4DC] dark:border-[#332F2B]"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const fallback = e.currentTarget.nextElementSibling;
-                    if (fallback) fallback.style.display = 'flex';
-                  }}
+                  className="h-full w-full object-cover"
                 />
-              ) : null}
-              <div 
-                className={`h-4.5 w-4.5 rounded-full bg-[#1C1917] dark:bg-[#F5F2EB] items-center justify-center text-[9px] font-medium text-white dark:text-[#1C1917] ${user.avatarUrl ? 'hidden' : 'flex'}`}
-              >
-                {(user.username || user.name || user.email || 'U').charAt(0).toUpperCase()}
-              </div>
-              <span className="font-medium text-[#1C1917] dark:text-[#F5F2EB] hidden md:inline max-w-[90px] truncate text-[11px]">
-                {user.username || user.name || user.email?.split('@')[0]}
-              </span>
+              ) : (
+                (user.username || user.name || user.email || 'U').charAt(0).toUpperCase()
+              )}
             </div>
           ) : (
             <button
               type="button"
               onClick={() => setIsAuthOpen(true)}
-              className="flex items-center space-x-1 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-2.5 py-1 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
+              className="ml-1 flex h-8 items-center space-x-1.5 rounded-md px-3 text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors cursor-pointer"
             >
-              <User className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">Sign In</span>
+              <User className="h-4 w-4" />
+              <span>Sign In</span>
             </button>
           )}
         </div>
       </header>
 
       {/* Main Split-Pane Workspace */}
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2.5 p-2.5 overflow-hidden">
-        {/* Left Pane: Problem Description & Editorial Tabs (5 Cols on LG) */}
-        <div className="lg:col-span-5 flex flex-col rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] overflow-hidden h-full">
-          {/* Left Panel Tabs Header */}
-          <div className="flex h-11 items-center border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] px-4 space-x-1">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 p-2 overflow-hidden">
+        <div className="lg:col-span-5 flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-[#282828] overflow-hidden h-full">
+          <div className="flex h-10 items-center border-b border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#333333] px-2 space-x-1">
             <button
               type="button"
               onClick={() => setActiveLeftTab('description')}
-              className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-sm transition-colors cursor-pointer ${
                 activeLeftTab === 'description'
-                  ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
-                  : 'text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200'
+                  ? 'text-[#262626] dark:text-[#EFF1F6] font-medium bg-white dark:bg-[#282828]'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200'
               }`}
             >
               <FileText className="h-3.5 w-3.5" />
@@ -539,10 +480,10 @@ export default function WorkspacePage() {
             <button
               type="button"
               onClick={() => setActiveLeftTab('submissions')}
-              className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-md text-sm transition-colors cursor-pointer ${
                 activeLeftTab === 'submissions'
-                  ? 'bg-white dark:bg-[#1C1A18] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]'
-                  : 'text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200'
+                  ? 'text-[#262626] dark:text-[#EFF1F6] font-medium bg-white dark:bg-[#282828]'
+                  : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200'
               }`}
             >
               <History className="h-3.5 w-3.5" />
@@ -554,17 +495,21 @@ export default function WorkspacePage() {
           <div className="flex-1 overflow-y-auto p-5 text-sm">
             {activeLeftTab === 'description' ? (
               <div className="space-y-4">
-                {/* Meta Limits & Category Badge */}
-                <div className="flex flex-wrap items-center gap-2.5 text-xs text-stone-500 dark:text-stone-400 border-b border-[#E8E4DC] dark:border-[#332F2B] pb-3">
-                  <span className="rounded-md bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2 py-0.5 font-medium text-stone-700 dark:text-stone-300">
+                <h1 className="text-xl font-semibold text-[#262626] dark:text-[#EFF1F6]">
+                  {currentIndex >= 0 ? `${currentIndex + 1}. ` : ''}
+                  {problem.title}
+                </h1>
+                <div className="flex flex-wrap items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400">
+                  <DifficultyBadge difficulty={problem.difficulty} />
+                  <span className="rounded-full bg-[#F0F0F0] dark:bg-[#333333] px-3 py-1 font-medium text-neutral-600 dark:text-neutral-300">
                     {problem.category}
                   </span>
                   <div className="flex items-center space-x-1">
-                    <Clock className="h-3.5 w-3.5 text-stone-400" />
+                    <Clock className="h-3.5 w-3.5 text-neutral-400" />
                     <span>{problem.timeLimitMs || 1000} ms</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Cpu className="h-3.5 w-3.5 text-stone-400" />
+                    <Cpu className="h-3.5 w-3.5 text-neutral-400" />
                     <span>{((problem.memoryLimitKb || 262144) / 1024).toFixed(0)} MB</span>
                   </div>
                 </div>
@@ -575,8 +520,8 @@ export default function WorkspacePage() {
             ) : (
               /* Submissions History */
               <div className="space-y-3">
-                <div className="text-xs font-medium text-stone-600 dark:text-stone-400 mb-2">Lịch sử bài nộp:</div>
-                <div className="rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-3 text-xs text-stone-500 dark:text-stone-400">
+                <div className="text-xs font-medium text-neutral-600 dark:text-neutral-400 mb-2">Lịch sử bài nộp:</div>
+                <div className="rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#333333] p-3 text-xs text-neutral-500 dark:text-neutral-400">
                   Chưa có lượt nộp bài nào được ghi nhận cho bài toán này.
                 </div>
               </div>

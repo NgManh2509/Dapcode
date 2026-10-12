@@ -3,61 +3,67 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-cream-canvas: #FDFBF7;
+  --color-cream-canvas: #FFFFFF;
   --color-cream-surface: #FFFFFF;
-  --color-cream-subtle: #FAF8F3;
-  --color-cream-border: #E8E4DC;
-  --color-cream-border-subtle: #EFECE6;
-  --color-cream-text: #1C1917;
-  --color-cream-text-muted: #78716C;
-  --color-cream-accent: #2D2A26;
-  --color-cream-dark-canvas: #141312;
-  --color-cream-dark-surface: #1C1A18;
-  --color-cream-dark-subtle: #24221F;
-  --color-cream-dark-border: #332F2B;
-  --color-cream-dark-text: #F5F2EB;
-  --color-cream-dark-text-muted: #A8A29E;
+  --color-cream-subtle: #F7F8FA;
+  --color-cream-border: #E6E6E6;
+  --color-cream-border-subtle: #EFEFEF;
+  --color-cream-text: #262626;
+  --color-cream-text-muted: #8A8A8A;
+  --color-cream-accent: #3C3C3C;
+  --color-cream-dark-canvas: #1A1A1A;
+  --color-cream-dark-surface: #282828;
+  --color-cream-dark-subtle: #333333;
+  --color-cream-dark-border: #3E3E3E;
+  --color-cream-dark-text: #EFF1F6;
+  --color-cream-dark-text-muted: #9A9A9A;
 
-  --color-earth-green: #15803D;
-  --color-earth-green-bg: #F0FDF4;
-  --color-earth-green-border: #BBF7D0;
-  --color-earth-red: #B91C1C;
-  --color-earth-red-bg: #FEF2F2;
+  --color-earth-green: #2CBB5D;
+  --color-earth-green-bg: #E8F7EE;
+  --color-earth-green-border: #B7E4C7;
+  --color-earth-red: #EF4743;
+  --color-earth-red-bg: #FDEDED;
   --color-earth-red-border: #FECACA;
-  --color-earth-olive: #44403C;
-  --color-earth-charcoal: #1C1917;
+  --color-earth-olive: #595959;
+  --color-earth-charcoal: #262626;
 
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Fira Code', Menlo, Consolas, monospace;
+
+  --color-lc-orange: #FFA116;
+  --color-lc-green: #2CBB5D;
+  --color-lc-easy: #00B8A3;
+  --color-lc-medium: #FFB800;
+  --color-lc-hard: #FF375F;
 }
 
 @layer base {
   :root, html.light {
-    --bg-page: #FDFBF7;
+    --bg-page: #FFFFFF;
     --bg-surface: #FFFFFF;
-    --bg-subtle: #FAF8F3;
-    --border-color: #E8E4DC;
-    --border-subtle: #EFECE6;
-    --text-primary: #1C1917;
-    --text-secondary: #44403C;
-    --text-muted: #78716C;
+    --bg-subtle: #F7F8FA;
+    --border-color: #E6E6E6;
+    --border-subtle: #EFEFEF;
+    --text-primary: #262626;
+    --text-secondary: #595959;
+    --text-muted: #8A8A8A;
   }
 
   html.dark {
-    --bg-page: #141312;
-    --bg-surface: #1C1A18;
-    --bg-subtle: #24221F;
-    --border-color: #332F2B;
-    --border-subtle: #292623;
-    --text-primary: #F5F2EB;
-    --text-secondary: #D6D3CD;
-    --text-muted: #A8A29E;
+    --bg-page: #1A1A1A;
+    --bg-surface: #282828;
+    --bg-subtle: #333333;
+    --border-color: #3E3E3E;
+    --border-subtle: #343434;
+    --text-primary: #EFF1F6;
+    --text-secondary: #D1D1D1;
+    --text-muted: #9A9A9A;
   }
 
   body {
     background-color: var(--bg-page);
     color: var(--text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -74,16 +80,16 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #E8E4DC;
+    background: #E6E6E6;
     border-radius: 3px;
   }
   html.dark ::-webkit-scrollbar-thumb {
-    background: #332F2B;
+    background: #3E3E3E;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #D6D3CD;
+    background: #D1D1D1;
   }
   html.dark ::-webkit-scrollbar-thumb:hover {
-    background: #44403C;
+    background: #595959;
   }
 }

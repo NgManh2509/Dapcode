@@ -53,7 +53,7 @@ export default function TheoriesPage() {
   }, [theories, selectedCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] dark:bg-[#141312] text-[#1C1917] dark:text-[#F5F2EB] flex flex-col font-sans transition-colors duration-150">
+    <div className="min-h-screen bg-[#F0F0F0] dark:bg-[#1A1A1A] text-[#262626] dark:text-[#EFF1F6] flex flex-col font-sans transition-colors duration-150">
       <Navbar />
 
       <main className="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 py-8">
@@ -61,16 +61,16 @@ export default function TheoriesPage() {
         <div className="mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#1C1917] dark:text-[#F5F2EB] flex items-center space-x-2.5">
-                <BookOpen className="h-6 w-6 text-stone-700 dark:text-stone-300" />
-                <span>Thư viện Lý thuyết DSA (Dapcode Theories)</span>
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#262626] dark:text-[#EFF1F6] flex items-center space-x-2.5">
+                <BookOpen className="h-6 w-6 text-neutral-700 dark:text-neutral-300" />
+                <span>Theories</span>
                 {!isLoading && (
-                  <span className="text-xs font-mono font-medium text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0] dark:text-[#4ADE80] dark:bg-[#14532D]/20 px-2.5 py-0.5 rounded-md border dark:border-[#166534]/40">
+                  <span className="text-xs font-mono font-medium text-[#2CBB5D] bg-[#E8F7EE] border-[#B7E4C7] dark:text-[#2CBB5D] dark:bg-[#14532D]/20 px-2.5 py-0.5 rounded-md border dark:border-[#166534]/40">
                     {theories.length} bài học
                   </span>
                 )}
               </h1>
-              <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
+              <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
                 Hệ thống giáo trình lý thuyết cấu trúc dữ liệu & giải thuật tinh gọn, giải thích bản chất kèm độ phức tạp không thời gian.
               </p>
             </div>
@@ -80,13 +80,13 @@ export default function TheoriesPage() {
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             {/* Search Input */}
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-400" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-400" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Tìm bài học lý thuyết (vd: Dynamic Array, Stack, Binary Search...)"
-                className="w-full rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-white dark:bg-[#1C1A18] py-2 pl-10 pr-4 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-500 focus:outline-none focus:border-stone-500"
+                className="w-full rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-white dark:bg-[#282828] py-2 pl-10 pr-4 text-xs text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-neutral-500"
               />
             </div>
 
@@ -97,8 +97,8 @@ export default function TheoriesPage() {
                 onClick={() => setSelectedCategory('ALL')}
                 className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
                   selectedCategory === 'ALL'
-                    ? 'bg-[#1C1917] text-white dark:bg-[#F5F2EB] dark:text-[#1C1917]'
-                    : 'bg-white dark:bg-[#1C1A18] text-stone-600 dark:text-stone-400 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B]'
+                    ? 'bg-[#262626] text-white dark:bg-[#EFF1F6] dark:text-[#262626]'
+                    : 'bg-white dark:bg-[#282828] text-neutral-600 dark:text-neutral-400 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] border border-[#E6E6E6] dark:border-[#3E3E3E]'
                 }`}
               >
                 Tất cả ({theories.length})
@@ -110,8 +110,8 @@ export default function TheoriesPage() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`rounded-lg px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors ${
                     selectedCategory === cat
-                      ? 'bg-[#1C1917] text-white dark:bg-[#F5F2EB] dark:text-[#1C1917]'
-                      : 'bg-white dark:bg-[#1C1A18] text-stone-600 dark:text-stone-400 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B]'
+                      ? 'bg-[#262626] text-white dark:bg-[#EFF1F6] dark:text-[#262626]'
+                      : 'bg-white dark:bg-[#282828] text-neutral-600 dark:text-neutral-400 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] border border-[#E6E6E6] dark:border-[#3E3E3E]'
                   }`}
                 >
                   {cat}
@@ -124,8 +124,8 @@ export default function TheoriesPage() {
         {/* Theories Content Grid */}
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-24 space-y-3">
-            <Loader2 className="h-6 w-6 animate-spin text-stone-700 dark:text-stone-300" />
-            <span className="text-xs text-stone-500 dark:text-stone-400">Đang tải danh sách bài học lý thuyết từ cơ sở dữ liệu...</span>
+            <Loader2 className="h-6 w-6 animate-spin text-neutral-700 dark:text-neutral-300" />
+            <span className="text-xs text-neutral-500 dark:text-neutral-400">Đang tải danh sách bài học lý thuyết từ cơ sở dữ liệu...</span>
           </div>
         ) : filteredTheories.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -133,31 +133,31 @@ export default function TheoriesPage() {
               <Link
                 key={theory.slug || theory.id}
                 to={`/theories/${theory.slug}`}
-                className="group relative flex flex-col justify-between rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-5 transition-colors hover:border-stone-500 dark:hover:border-stone-400"
+                className="group relative flex flex-col justify-between rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828] p-5 transition-colors hover:border-neutral-500 dark:hover:border-neutral-400"
               >
                 <div>
                   {/* Category Pill */}
                   <div className="flex items-center justify-between mb-3">
-                    <span className="rounded-md bg-[#FAF8F3] dark:bg-[#24221F] px-2.5 py-1 text-[11px] font-medium text-stone-700 dark:text-stone-300 border border-[#E8E4DC] dark:border-[#332F2B]">
+                    <span className="rounded-md bg-[#F7F8FA] dark:bg-[#333333] px-2.5 py-1 text-[11px] font-medium text-neutral-700 dark:text-neutral-300 border border-[#E6E6E6] dark:border-[#3E3E3E]">
                       {theory.category}
                     </span>
-                    <span className="text-[11px] font-mono text-stone-400 dark:text-stone-500">
+                    <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500">
                       Bài #{theory.orderIndex || 1}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base font-semibold text-[#1C1917] dark:text-[#F5F2EB] tracking-tight group-hover:text-stone-900 dark:group-hover:text-white transition-colors mb-2">
+                  <h3 className="text-base font-semibold text-[#262626] dark:text-[#EFF1F6] tracking-tight group-hover:text-neutral-900 dark:group-hover:text-white transition-colors mb-2">
                     {theory.title}
                   </h3>
 
                   {/* Summary */}
-                  <p className="text-xs text-stone-600 dark:text-stone-400 line-clamp-3 leading-relaxed mb-4">
+                  <p className="text-xs text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed mb-4">
                     {theory.summary || 'Tìm hiểu cấu trúc, nguyên lý hoạt động và cài đặt chi tiết.'}
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between pt-3 border-t border-[#E8E4DC] dark:border-[#332F2B] text-xs font-medium text-stone-600 dark:text-stone-400 group-hover:text-[#1C1917] dark:group-hover:text-white">
+                <div className="flex items-center justify-between pt-3 border-t border-[#E6E6E6] dark:border-[#3E3E3E] text-xs font-medium text-neutral-600 dark:text-neutral-400 group-hover:text-[#262626] dark:group-hover:text-white">
                   <span>Xem chi tiết</span>
                   <ArrowRight className="h-3.5 w-3.5 transform group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -165,7 +165,7 @@ export default function TheoriesPage() {
             ))}
           </div>
         ) : (
-          <div className="rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] p-12 text-center text-stone-500 dark:text-stone-400">
+          <div className="rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828] p-12 text-center text-neutral-500 dark:text-neutral-400">
             <p className="text-sm">Không tìm thấy bài học lý thuyết phù hợp với từ khóa.</p>
           </div>
         )}

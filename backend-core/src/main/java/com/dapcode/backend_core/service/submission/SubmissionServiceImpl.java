@@ -191,7 +191,9 @@ public class SubmissionServiceImpl implements SubmissionService {
                         .stdin(tc.getInputData())
                         .expected_output(tc.getExpectedOutput())
                         .cpu_time_limit(prob.getTimeLimitMs() / 1000.0)
-                        .memory_limit(prob.getMemoryLimitKb())
+                        .memory_limit(request.getLanguageId() == 62
+                                ? Math.max(prob.getMemoryLimitKb(), 1048576)
+                                : prob.getMemoryLimitKb())
                         .build())
                 .toList();
 

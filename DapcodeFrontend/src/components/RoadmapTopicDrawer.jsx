@@ -24,31 +24,31 @@ export default function RoadmapTopicDrawer({
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-black/30 dark:bg-black/60 backdrop-blur-xs transition-opacity">
-      <div className="relative flex h-full w-full max-w-md flex-col border-l border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18]">
+      <div className="relative flex h-full w-full max-w-md flex-col border-l border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828]">
         {/* Drawer Header */}
-        <div className="flex h-14 items-center justify-between border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] px-5">
+        <div className="flex h-14 items-center justify-between border-b border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#333333] px-5">
           <div>
-            <h2 className="text-sm font-semibold text-[#1C1917] dark:text-[#F5F2EB] tracking-tight flex items-center space-x-2">
+            <h2 className="text-sm font-semibold text-[#262626] dark:text-[#EFF1F6] tracking-tight flex items-center space-x-2">
               <span>{node.name}</span>
             </h2>
-            <div className="text-[11px] text-stone-500 dark:text-stone-400 mt-0.5">
-              Đã giải <strong className="text-[#15803D] dark:text-[#4ADE80] font-mono">{completedCount}</strong> / {total} bài ({percent}%)
+            <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-0.5">
+              Đã giải <strong className="text-[#2CBB5D] dark:text-[#2CBB5D] font-mono">{completedCount}</strong> / {total} bài ({percent}%)
             </div>
           </div>
 
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1.5 text-stone-400 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] transition-colors cursor-pointer"
+            className="rounded-lg p-1.5 text-neutral-400 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] transition-colors cursor-pointer"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
 
         {/* Progress bar */}
-        <div className="w-full h-1 bg-[#FAF8F3] dark:bg-[#24221F] border-b border-[#E8E4DC] dark:border-[#332F2B]">
+        <div className="w-full h-1 bg-[#F7F8FA] dark:bg-[#333333] border-b border-[#E6E6E6] dark:border-[#3E3E3E]">
           <div
-            className="h-full bg-stone-800 dark:bg-stone-200 transition-all duration-300"
+            className="h-full bg-neutral-800 dark:bg-neutral-200 transition-all duration-300"
             style={{ width: `${percent}%` }}
           />
         </div>
@@ -62,8 +62,8 @@ export default function RoadmapTopicDrawer({
               return (
                 <div
                   key={problem.slug || problem.id}
-                  className={`group flex items-center justify-between rounded-xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-3 transition-colors hover:border-stone-400 dark:hover:border-stone-500 ${
-                    isCompleted ? 'bg-[#F0FDF4]/30 border-[#BBF7D0] dark:bg-[#14532D]/10 dark:border-[#166534]' : ''
+                  className={`group flex items-center justify-between rounded-xl border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#333333] p-3 transition-colors hover:border-neutral-400 dark:hover:border-neutral-500 ${
+                    isCompleted ? 'bg-[#E8F7EE]/30 border-[#B7E4C7] dark:bg-[#14532D]/10 dark:border-[#166534]' : ''
                   }`}
                 >
                   <div className="flex items-center space-x-3 min-w-0">
@@ -73,8 +73,8 @@ export default function RoadmapTopicDrawer({
                       onClick={() => onToggleComplete(problem.slug)}
                       className={`flex h-4.5 w-4.5 flex-shrink-0 items-center justify-center rounded border transition-colors cursor-pointer ${
                         isCompleted
-                          ? 'border-[#15803D] bg-[#15803D] text-white'
-                          : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-[#1C1A18] hover:border-stone-400 text-transparent'
+                          ? 'border-[#2CBB5D] bg-[#2CBB5D] text-white'
+                          : 'border-neutral-300 dark:border-neutral-700 bg-white dark:bg-[#282828] hover:border-neutral-400 text-transparent'
                       }`}
                     >
                       <Check className="h-3 w-3" />
@@ -83,7 +83,7 @@ export default function RoadmapTopicDrawer({
                     {/* Title */}
                     <Link
                       to={`/problems/${problem.slug}`}
-                      className="truncate text-xs font-medium text-stone-800 dark:text-stone-200 hover:text-[#1C1917] dark:hover:text-white transition-colors"
+                      className="truncate text-xs font-medium text-neutral-800 dark:text-neutral-200 hover:text-[#262626] dark:hover:text-white transition-colors"
                     >
                       {problem.title}
                     </Link>
@@ -93,7 +93,7 @@ export default function RoadmapTopicDrawer({
                     <DifficultyBadge difficulty={problem.difficulty} size="xs" />
                     <Link
                       to={`/problems/${problem.slug}`}
-                      className="p-1 text-stone-400 hover:text-stone-700 dark:text-stone-500 dark:hover:text-stone-300 transition-colors"
+                      className="p-1 text-neutral-400 hover:text-neutral-700 dark:text-neutral-500 dark:hover:text-neutral-300 transition-colors"
                       title="Mở workspace"
                     >
                       <ExternalLink className="h-3.5 w-3.5" />
@@ -103,19 +103,19 @@ export default function RoadmapTopicDrawer({
               );
             })
           ) : (
-            <div className="p-8 text-center text-xs text-stone-400 dark:text-stone-500">
+            <div className="p-8 text-center text-xs text-neutral-400 dark:text-neutral-500">
               Đang đồng bộ dữ liệu cho nhóm chủ đề này...
             </div>
           )}
         </div>
 
         {/* Footer Summary */}
-        <div className="border-t border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] p-4 flex items-center justify-between text-xs text-stone-500 dark:text-stone-400">
+        <div className="border-t border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#333333] p-4 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
           <div className="flex items-center space-x-1.5">
-            <Trophy className="h-3.5 w-3.5 text-[#B45309] dark:text-[#FBBF24]" />
+            <Trophy className="h-3.5 w-3.5 text-[#FFA116] dark:text-[#FFC01E]" />
             <span>NeetCode 150 Standard</span>
           </div>
-          <span className="font-mono text-stone-500 dark:text-stone-400">{topicProblems.length} bài tập</span>
+          <span className="font-mono text-neutral-500 dark:text-neutral-400">{topicProblems.length} bài tập</span>
         </div>
       </div>
     </div>

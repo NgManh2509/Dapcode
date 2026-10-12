@@ -91,12 +91,12 @@ export default function SearchModal({ isOpen, onClose, problems: initialProblems
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/40 dark:bg-black/70 backdrop-blur-xs animate-in fade-in duration-150">
       <div 
-        className="w-full max-w-xl rounded-2xl border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FFFFFF] dark:bg-[#1C1A18] overflow-hidden flex flex-col"
+        className="w-full max-w-xl rounded-2xl border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#FFFFFF] dark:bg-[#282828] overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="flex items-center px-4 py-3.5 border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F]">
-          <Search className="h-4 w-4 text-stone-400 mr-3 flex-shrink-0" />
+        <div className="flex items-center px-4 py-3.5 border-b border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#333333]">
+          <Search className="h-4 w-4 text-neutral-400 mr-3 flex-shrink-0" />
           <input
             ref={inputRef}
             type="text"
@@ -107,20 +107,20 @@ export default function SearchModal({ isOpen, onClose, problems: initialProblems
             }}
             onKeyDown={handleInputKeyDown}
             placeholder="Tìm kiếm bài tập theo tên, danh mục hoặc slug..."
-            className="flex-1 bg-transparent text-xs sm:text-sm text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-500 focus:outline-none"
+            className="flex-1 bg-transparent text-xs sm:text-sm text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none"
           />
-          {isLoading && <Loader2 className="h-4 w-4 animate-spin text-stone-400 mr-2" />}
+          {isLoading && <Loader2 className="h-4 w-4 animate-spin text-neutral-400 mr-2" />}
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1 text-stone-400 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] cursor-pointer"
+            className="rounded-lg p-1 text-neutral-400 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] cursor-pointer"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
 
         {/* Results List */}
-        <div className="max-h-80 overflow-y-auto p-2 divide-y divide-[#E8E4DC]/60 dark:divide-[#332F2B]/60">
+        <div className="max-h-80 overflow-y-auto p-2 divide-y divide-[#E6E6E6]/60 dark:divide-[#3E3E3E]/60">
           {filteredProblems.length > 0 ? (
             filteredProblems.map((problem, idx) => {
               const isSelected = selectedIndex === idx;
@@ -134,15 +134,15 @@ export default function SearchModal({ isOpen, onClose, problems: initialProblems
                   onMouseEnter={() => setSelectedIndex(idx)}
                   className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl cursor-pointer transition-colors ${
                     isSelected 
-                      ? 'bg-[#FAF8F3] dark:bg-[#24221F] text-[#1C1917] dark:text-[#F5F2EB] border border-[#E8E4DC] dark:border-[#332F2B]' 
-                      : 'text-stone-700 dark:text-stone-300 hover:bg-[#FAF8F3] dark:hover:bg-[#24221F] border border-transparent'
+                      ? 'bg-[#F7F8FA] dark:bg-[#333333] text-[#262626] dark:text-[#EFF1F6] border border-[#E6E6E6] dark:border-[#3E3E3E]' 
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] border border-transparent'
                   }`}
                 >
                   <div className="flex items-center space-x-3 min-w-0">
-                    <span className="text-xs font-medium text-stone-900 dark:text-stone-100 truncate">
+                    <span className="text-xs font-medium text-neutral-900 dark:text-neutral-100 truncate">
                       {problem.title}
                     </span>
-                    <span className="text-[11px] text-stone-400 dark:text-stone-500 hidden sm:inline">
+                    <span className="text-[11px] text-neutral-400 dark:text-neutral-500 hidden sm:inline">
                       {problem.category}
                     </span>
                   </div>
@@ -150,14 +150,14 @@ export default function SearchModal({ isOpen, onClose, problems: initialProblems
                   <div className="flex items-center space-x-2 flex-shrink-0">
                     <DifficultyBadge difficulty={problem.difficulty} size="xs" />
                     {isSelected && (
-                      <CornerDownLeft className="h-3.5 w-3.5 text-stone-500 dark:text-stone-400" />
+                      <CornerDownLeft className="h-3.5 w-3.5 text-neutral-500 dark:text-neutral-400" />
                     )}
                   </div>
                 </div>
               );
             })
           ) : (
-            <div className="py-8 text-center text-xs text-stone-400 dark:text-stone-500">
+            <div className="py-8 text-center text-xs text-neutral-400 dark:text-neutral-500">
               {isLoading ? 'Đang tải dữ liệu bài tập từ database...' : `Không tìm thấy bài tập nào với từ khóa "${query}".`}
             </div>
           )}

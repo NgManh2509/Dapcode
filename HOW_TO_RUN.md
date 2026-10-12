@@ -14,8 +14,11 @@ Tài liệu hướng dẫn chi tiết từng bước thiết lập môi trườn
    - [Bước 2: Khởi động Backend Core (Spring Boot 4)](#bước-2-khởi-động-backend-core-spring-boot-4)
    - [Bước 3: Khởi động AI Socratic Tutor Service (FastAPI)](#bước-3-khởi-động-ai-socratic-tutor-service-fastapi)
    - [Bước 4: Khởi động Frontend Client (React 19 + Vite)](#bước-4-khởi-động-frontend-client-react-19--vite)
-5. [Nạp Dữ Liệu Khởi Tạo (Seeding Data)](#5-nạp-dữ-liệu-khởi-tạo-seeding-data)
-6. [Xử Lý Lỗi Thường Gặp (Troubleshooting)](#6-xử-lý-lỗi-thường-gặp-troubleshooting)
+5. [Hướng Dẫn Truy Cập & Sử Dụng](#5-hướng-dẫn-truy-cập--sử-dụng)
+   - [5.1. Phân hệ Học viên (Giao diện LeetCode Style)](#51-phân-hệ-học-viên-giao-diện-leetcode-style)
+   - [5.2. Phân hệ Quản trị viên (Admin Portal)](#52-phân-hệ-quản-trị-viên-admin-portal)
+6. [Nạp & Cập Nhật Dữ Liệu (Seeding Data)](#6-nạp--cập-nhật-dữ-liệu-seeding-data)
+7. [Xử Lý Lỗi Thường Gặp (Troubleshooting)](#7-xử-lý-lỗi-thường-gặp-troubleshooting)
 
 ---
 
@@ -43,6 +46,7 @@ Khi toàn bộ hệ thống hoạt động, các dịch vụ sẽ lắng nghe tr
 | Dịch vụ | Công nghệ | Cổng mặc định | Địa chỉ truy cập / Health check |
 | :--- | :--- | :--- | :--- |
 | **Frontend Web** | React 19 + Vite | `5173` | `http://localhost:5173` |
+| **Admin Portal** | React 19 (Protected) | `5173` | `http://localhost:5173/admin` |
 | **Backend Core** | Spring Boot 4.1.1 | `8080` | `http://localhost:8080/api/v1/problems` |
 | **AI Socratic Tutor** | FastAPI + ChromaDB | `8000` | `http://localhost:8000/health` |
 | **Judge0 Sandbox** | Judge0 CE + Redis | `2358` | `http://localhost:2358/system_info` |
@@ -65,9 +69,12 @@ Nội dung file `backend-core/.env`:
 # Chuỗi khóa bí mật JWT (Base64 tối thiểu 256-bit)
 JWT_SECRET=K7vQ8zP2mR4wX9yL1tN5bC0fG3jH6kE8sA1dF4gJ7hL=
 
-# Google OAuth2 Credentials (tùy chọn khi cần đăng nhập qua Google)
+# Google OAuth2 Credentials (tùy chọn khi cần đăng nhập qua Google OAuth)
 GOOGLE_CLIENT_ID=dummy-google-client-id
 GOOGLE_CLIENT_SECRET=dummy-google-client-secret
+
+# Địa chỉ AI Service (nếu chạy khác cổng mặc định)
+AI_SERVICE_BASE_URL=http://localhost:8000
 ```
 
 ### 3.2. Cấu hình AI Service (`AI-service/.env`)
@@ -93,11 +100,11 @@ CHROMA_PERSIST_DIR=./data/chroma_db
 
 ## 4. Các Bước Khởi Chạy Từng Dịch Vụ
 
-Khuyến nghị khởi chạy theo đúng thứ tự 4 bước dưới đây:
+Khuyến nghị khởi chạy theo đúng thứ tự 4 bước dưới đây trên các cửa sổ Terminal riêng biệt:
 
 ### Bước 1: Khởi động Hạ tầng Docker (PostgreSQL & Sandbox)
 
-Mở cửa sổ Terminal thứ nhất:
+Mở cửa sổ **Terminal 1**:
 
 ```bash
 # 1. Khởi động cơ sở dữ liệu chính PostgreSQL (dapcode_db)
@@ -128,7 +135,7 @@ curl http://localhost:2358/system_info
 
 ### Bước 2: Khởi động Backend Core (Spring Boot 4)
 
-Mở cửa sổ Terminal thứ hai:
+Mở cửa sổ **Terminal 2**:
 
 ```bash
 cd backend-core
@@ -141,11 +148,12 @@ cd backend-core
 ```
 
 > [!NOTE]
-> Khi khởi động lần đầu tiên, **Flyway Migration** sẽ tự động chạy liên tiếp các script từ `V1` đến `V8` trong thư mục `backend-core/src/main/resources/db/migration/`:
-> - Tự tạo cấu trúc các bảng (`users`, `problems`, `theories`, `submissions`,...).
-> - Tự nạp 250 bài tập thuật toán NeetCode kèm test case.
-> - Tự nạp 29 chuyên đề lý thuyết thuật toán.
-> - Tự cập nhật starter code template (C++, Java, Python 3) cho tất cả bài tập.
+> Khi khởi động lần đầu tiên, **Flyway Migration** sẽ tự động chạy liên tiếp các script từ `V1` đến `V10` trong `backend-core/src/main/resources/db/migration/`:
+> - Tạo cấu trúc các bảng (`users`, `problems`, `test_cases`, `theories`, `submissions`,...).
+> - Tự nạp 250 bài tập thuật toán NeetCode kèm test case (`V3`).
+> - Tự nạp 29 chuyên đề lý thuyết thuật toán (`V6`).
+> - Tự nạp starter code template (C++, Java, Python 3) cho tất cả bài tập (`V8`).
+> - Khởi tạo tài khoản Quản trị viên mặc định `admin@dapcode.io` với quyền `ROLE_ADMIN` (`V10`).
 
 Khi thấy log hiển thị:
 ```text
@@ -157,7 +165,7 @@ Backend đã sẵn sàng phục vụ tại `http://localhost:8080`.
 
 ### Bước 3: Khởi động AI Socratic Tutor Service (FastAPI)
 
-Mở cửa sổ Terminal thứ ba:
+Mở cửa sổ **Terminal 3**:
 
 ```bash
 cd AI-service
@@ -191,7 +199,7 @@ Truy cập `http://localhost:8000/health` trên trình duyệt hoặc chạy `cu
 
 ### Bước 4: Khởi động Frontend Client (React 19 + Vite)
 
-Mở cửa sổ Terminal thứ tư:
+Mở cửa sổ **Terminal 4**:
 
 ```bash
 cd DapcodeFrontend
@@ -206,18 +214,54 @@ npm run dev
 Mở trình duyệt và truy cập:
 👉 **`http://localhost:5173`**
 
-Tại đây bạn có thể:
-- Xem danh sách và lọc 250 bài tập thuật toán.
-- Xem biểu đồ lộ trình **Roadmap DAG**.
-- Đọc 29 bài giảng lý thuyết tại mục **Theories**.
-- Mở **Workspace**, chọn ngôn ngữ (C++, Java, Python 3), viết lời giải và bấm **Run** / **Submit** để nhận kết quả chấm trực tiếp qua SSE.
-- Mở ngăn **AI Tutor** để nhận gợi ý tư duy Socratic thời gian thực.
+---
+
+## 5. Hướng Dẫn Truy Cập & Sử Dụng
+
+### 5.1. Phân hệ Học viên (Giao diện LeetCode Style)
+
+- **Lộ trình học tập (`/roadmap`)**: Biểu đồ đồ thị tri thức tương tác (Roadmap DAG) theo chuẩn độ khó LeetCode.
+- **Danh sách bài tập (`/practice` hoặc `/problems`)**: Bảng bài tập dạng LeetCode Problems (lọc theo danh mục, độ khó Easy/Medium/Hard, trạng thái đã giải, tìm kiếm tức thì `Ctrl + K`).
+- **Workspace luyện code (`/problems/:slug`)**: Giao diện chia 3 khung chuẩn LeetCode:
+  - Khung trái: Tab *Description* (Markdown đề bài, ví dụ, ràng buộc), *Editorial*, *Solutions*, *Submissions*.
+  - Khung phải trên: Monaco Code Editor hỗ trợ đa ngôn ngữ (Python 3, Java, C++), tự động gợi ý phím tắt `Ctrl + Enter` (Run) và `Ctrl + Alt + Enter` (Submit).
+  - Khung phải dưới: Console Drawer cho phép chỉnh sửa Custom Testcases và hiển thị kết quả chấm bài chi tiết qua Server-Sent Events (SSE).
+  - Góc phải dưới: AI Tutor Drawer trò chuyện theo phương pháp Socratic, gợi ý tư duy thuật toán mà không tiết lộ mã nguồn.
+- **Bài giảng lý thuyết (`/theories`)**: 29 chuyên đề thuật toán từ cơ bản đến nâng cao.
 
 ---
 
-## 5. Nạp Dữ Liệu Khởi Tạo (Seeding Data)
+### 5.2. Phân hệ Quản trị viên (Admin Portal)
 
-Thông thường, **Flyway** đã tự động nạp toàn bộ dữ liệu qua các file migration SQL. Nếu bạn muốn bóc tách thêm lý thuyết mới bằng AI hoặc cập nhật lại starter code, hãy sử dụng các công cụ trong thư mục `seedingData/`:
+Trang quản trị được bảo vệ chặt chẽ bởi `AdminRoute`, chỉ cho phép tài khoản có quyền **`ROLE_ADMIN`** truy cập.
+
+#### 🔑 Cách đăng nhập quyền Admin:
+- **Cách 1 (Nhanh nhất khi dev / test):**
+  1. Bấm nút **Sign In** ở góc trên bên phải Navbar.
+  2. Chọn nút màu cam: **"Đăng nhập quyền Admin (Dev / Test)"**.
+  3. Bấm vào Avatar $\rightarrow$ chọn **"Trang Quản trị (Admin)"** hoặc truy cập thẳng `http://localhost:5173/admin`.
+- **Cách 2 (Sử dụng tài khoản Google thật):**
+  1. Đăng nhập Google bình thường vào Dapcode.
+  2. Mở cơ sở dữ liệu PostgreSQL và chạy câu lệnh nâng quyền:
+     ```sql
+     UPDATE users SET role = 'ROLE_ADMIN' WHERE email = 'email_google_cua_ban@gmail.com';
+     ```
+  3. F5 trình duyệt để cập nhật quyền.
+
+#### 📌 Các màn hình chức năng Admin:
+| Màn hình | Đường dẫn | Chức năng chính |
+| :--- | :--- | :--- |
+| **Tổng quan Dashboard** | `/admin` | Theo dõi KPI học viên, bài tập, lượt nộp bài, biểu đồ 7 ngày và danh sách bài nộp gần đây |
+| **Quản lý Bài tập** | `/admin/problems` | Tạo mới, chỉnh sửa, xóa bài tập; cấu hình RAM/CPU, soạn Markdown đề bài, starter code |
+| **Quản lý Test Cases** | `/admin/testcases` | CRUD test case cho từng bài tập, chế độ thêm hàng loạt (batch) và gắn cờ ẩn/hiện |
+| **Quản lý Bài giảng** | `/admin/theories` | Soạn thảo bài giảng Markdown có chế độ Xem trước (Live Preview), bật/tắt công khai |
+| **Quản lý Học viên** | `/admin/users` | Tra cứu danh sách người dùng, nâng/hạ quyền Admin, khóa tài khoản kèm lý do vi phạm |
+
+---
+
+## 6. Nạp & Cập Nhật Dữ Liệu (Seeding Data)
+
+Dữ liệu ban đầu đã được Flyway tự động nạp qua migrations. Nếu cần thu thập thêm dữ liệu hoặc đồng bộ lại starter code từ nguồn bên ngoài, hãy sử dụng các script trong thư mục `seedingData/`:
 
 ```bash
 cd seedingData
@@ -232,33 +276,33 @@ cd seedingData
    # Chạy thử nghiệm 2 bài đầu tiên
    python seed_theory.py --limit 2
 
-   # Chạy toàn bộ và tự copy sang backend:
+   # Chạy toàn bộ và tự sao chép sang migrations của backend:
    python seed_theory.py --copy-to-migrations
    ```
-Xem chi tiết tại [seedingData/README.md](file:///i:/Github/Dapcode/seedingData/README.md).
+Chi tiết cấu hình xem tại [seedingData/README.md](file:///i:/Github/Dapcode/seedingData/README.md).
 
 ---
 
-## 6. Xử Lý Lỗi Thường Gặp (Troubleshooting)
+## 7. Xử Lý Lỗi Thường Gặp (Troubleshooting)
 
 ### ❓ Lỗi 1: Cổng 5432 đã bị chiếm dụng (PostgreSQL Conflict)
-- **Nguyên nhân**: Máy tính đã cài đặt PostgreSQL dạng service cục bộ chạy ngầm.
+- **Nguyên nhân**: Máy tính đã có dịch vụ PostgreSQL cục bộ cài sẵn đang chạy ngầm.
 - **Cách khắc phục**:
-  - Dừng PostgreSQL service cục bộ:
+  - Dừng dịch vụ PostgreSQL cục bộ:
     ```powershell
     # Windows:
     Stop-Service postgresql*
     ```
-  - Hoặc đổi cổng ngoài trong file `infra/database/docker-compose.db.yml` (ví dụ `5433:5432`) và cập nhật `spring.datasource.url` trong `backend-core/src/main/resources/application.yaml`.
+  - Hoặc đổi cổng ánh xạ ngoài trong file `infra/database/docker-compose.db.yml` (ví dụ `5433:5432`) và cập nhật `spring.datasource.url` trong `backend-core/src/main/resources/application.yaml`.
 
 ---
 
-### ❓ Lỗi 2: Judge0 Container báo lỗi quyền hoặc không khởi động
-- **Nguyên nhân**: Docker Desktop trên Windows chưa kích hoạt WSL 2 integration hoặc thiếu quyền `privileged`.
+### ❓ Lỗi 2: Judge0 Sandbox Container báo lỗi hoặc không khởi động
+- **Nguyên nhân**: Docker Desktop trên Windows chưa cấp quyền `privileged` hoặc cgroup v2 chưa hỗ trợ.
 - **Cách khắc phục**:
-  1. Đảm bảo cấu hình `privileged: true` trong `infra/sandbox/docker-compose.sandbox.yml` không bị xóa.
+  1. Đảm bảo cờ `privileged: true` trong `infra/sandbox/docker-compose.sandbox.yml` giữ nguyên.
   2. Khởi động lại Docker Desktop.
-  3. Kiểm tra log của Judge0 server:
+  3. Xem log kiểm tra:
      ```bash
      docker logs dapcode-judge0-server -f
      ```
@@ -268,16 +312,18 @@ Xem chi tiết tại [seedingData/README.md](file:///i:/Github/Dapcode/seedingDa
 ### ❓ Lỗi 3: Backend không kết nối được tới AI Service
 - **Hiện tượng**: Bấm "Hỏi AI Tutor" trên Workspace báo lỗi kết nối hoặc phản hồi chậm.
 - **Cách khắc phục**:
-  1. Kiểm tra Terminal chạy `AI-service` đã mở cổng `8000`.
+  1. Đảm bảo Terminal chạy `AI-service` đang lắng nghe trên cổng `8000`.
   2. Kiểm tra `GROQ_API_KEY` trong file `AI-service/.env` có hợp lệ hay không.
   3. Kiểm tra file `backend-core/src/main/resources/application.yaml` có trỏ đúng `ai-service.base-url: http://localhost:8000`.
 
 ---
 
-### ❓ Lỗi 4: Lỗi Base64 kết quả chạy Judge0
-- **Hiện tượng**: Output test case chứa chuỗi Base64 nhiều dòng hoặc ký tự xuống dòng.
-- **Đã được giải quyết**: Hệ thống đã tích hợp `Base64.getMimeDecoder()` tại lớp `Judge0Response.java` và fallback tự động giải mã Base64 ở phía React (`ConsoleDrawer.jsx`).
+### ❓ Lỗi 4: Không vào được trang Admin (`/admin` bị chuyển hướng về `/roadmap`)
+- **Nguyên nhân**: Người dùng chưa đăng nhập hoặc tài khoản chưa có vai trò `ROLE_ADMIN`.
+- **Cách khắc phục**:
+  - Bấm **Sign In** trên Navbar $\rightarrow$ chọn **"Đăng nhập quyền Admin (Dev / Test)"**.
+  - Hoặc kiểm tra trong database: `SELECT id, username, email, role FROM users;` để chắc chắn tài khoản có `role = 'ROLE_ADMIN'`.
 
 ---
 
-🎉 **Chúc bạn có những giờ phút luyện tập thuật toán thật hiệu quả với Dapcode!**
+🎉 **Chúc bạn có những giờ phút luyện tập thuật toán và phát triển hệ thống thật hiệu quả cùng Dapcode!**

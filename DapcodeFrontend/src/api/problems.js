@@ -2,6 +2,10 @@ import api from './client';
 
 let problemsCache = null;
 
+export const clearProblemsCache = () => {
+  problemsCache = null;
+};
+
 export const getProblems = async (params = {}) => {
   const isDefault =
     !params.page &&

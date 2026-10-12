@@ -1,33 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Sparkles, 
-  BookOpen, 
-  Map, 
-  CheckCircle2, 
-  Search, 
-  User, 
-  LogOut,
-  Sun,
-  Moon,
-  Flame
-} from 'lucide-react';
+import { Search, Flame, Sun, Moon, LogOut, User, Shield } from 'lucide-react';
 import SearchModal from './SearchModal';
 import AuthModal from './AuthModal';
 import StreakModal from './StreakModal';
 import DapcodeLogo from './DapcodeLogo';
 import { useTheme } from '../context/ThemeContext';
 
+const NAV_LINKS = [
+  { label: 'Roadmap', path: '/roadmap' },
+  { label: 'Problems', path: '/practice', alt: '/problems' },
+  { label: 'Theories', path: '/theories' },
+];
+
 export default function Navbar() {
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
 
-  // Modals state
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isStreakOpen, setIsStreakOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  // User state from localStorage
   const [user, setUser] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem('dapcode_user') || 'null');
@@ -36,7 +31,6 @@ export default function Navbar() {
     }
   });
 
-  // Global Ctrl+K / Cmd+K listener
   useEffect(() => {
     const handleKeyDown = (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -48,153 +42,136 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) setIsMenuOpen(false);
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
   const handleLogout = () => {
     localStorage.removeItem('dapcode_user');
     localStorage.removeItem('dapcode_token');
     setUser(null);
+    setIsMenuOpen(false);
   };
 
-  const navLinks = [
-    { label: 'Roadmap', path: '/roadmap', icon: Map },
-    { label: 'Practice', path: '/practice', icon: CheckCircle2 },
-    { label: 'Theories', path: '/theories', icon: BookOpen },
-  ];
-
   const displayName = user?.username || user?.name || user?.email?.split('@')[0] || 'User';
-  const displayStreak = user?.streakCount ?? user?.streak ?? 1;
+  const displayStreak = user?.streakCount ?? user?.streak ?? 0;
   const initialLetter = displayName.charAt(0).toUpperCase();
+
+  const iconBtn =
+    'flex h-8 w-8 items-center justify-center rounded-md text-neutral-500 dark:text-neutral-400 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] hover:text-[#262626] dark:hover:text-[#EFF1F6] transition-colors cursor-pointer';
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-[#E8E4DC] dark:border-[#332F2B] bg-[#FDFBF7]/90 dark:bg-[#141312]/90 backdrop-blur-md transition-colors">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
-          {/* Brand & Left Navigation */}
-          <div className="flex items-center space-x-8">
-            <Link 
-              to="/roadmap" 
-              className="group flex items-center space-x-2.5 transition-transform active:scale-95"
-            >
+      <header className="sticky top-0 z-40 w-full border-b border-[#E6E6E6] dark:border-[#3E3E3E] bg-white dark:bg-[#282828]">
+        <div className="mx-auto flex h-[50px] max-w-[1300px] items-center justify-between px-4">
+          <div className="flex items-center space-x-6">
+            <Link to="/roadmap" className="flex items-center space-x-2">
               <DapcodeLogo size="sm" />
-              <div className="flex items-baseline space-x-1.5">
-                <span className="text-base font-semibold tracking-tight text-[#1C1917] dark:text-[#F5F2EB]">
-                  Dapcode
-                </span>
-                <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 border border-stone-200 dark:bg-stone-800 dark:text-stone-400 dark:border-stone-700 font-mono">
-                  v1.0
-                </span>
-              </div>
+              <span className="text-base font-semibold tracking-tight text-[#262626] dark:text-[#EFF1F6] hidden sm:inline">
+                Dapcode
+              </span>
             </Link>
 
             <nav className="hidden md:flex items-center space-x-1">
-              {navLinks.map((item) => {
-                const Icon = item.icon;
-                const isActive = location.pathname === item.path;
+              {NAV_LINKS.map((item) => {
+                const isActive = location.pathname === item.path || location.pathname === item.alt;
                 return (
                   <Link
                     key={item.label}
                     to={item.path}
-                    className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                    className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
                       isActive
-                        ? 'text-[#1C1917] bg-[#FAF8F3] dark:text-[#F5F2EB] dark:bg-[#24221F] font-semibold border border-[#E8E4DC] dark:border-[#332F2B]'
-                        : 'text-stone-600 hover:text-stone-900 hover:bg-[#FAF8F3] dark:text-stone-400 dark:hover:text-stone-200 dark:hover:bg-[#24221F]'
+                        ? 'text-[#262626] dark:text-[#EFF1F6] font-medium'
+                        : 'text-neutral-500 dark:text-neutral-400 hover:text-[#262626] dark:hover:text-[#EFF1F6]'
                     }`}
                   >
-                    <Icon className="h-3.5 w-3.5" />
-                    <span>{item.label}</span>
+                    {item.label}
                   </Link>
                 );
               })}
             </nav>
           </div>
 
-          {/* Right Actions */}
-          <div className="flex items-center space-x-2 sm:space-x-2.5">
-            {/* Theme Toggle Button (Light / Dark) */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="p-1.5 rounded-lg border border-[#E8E4DC] dark:border-[#332F2B] bg-[#FAF8F3] dark:bg-[#24221F] text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
-              title={isDark ? 'Chuyển sang nền sáng' : 'Chuyển sang nền tối'}
-            >
-              {isDark ? (
-                <Sun className="h-4 w-4 text-stone-300" />
-              ) : (
-                <Moon className="h-4 w-4 text-stone-700" />
-              )}
+          <div className="flex items-center space-x-1">
+            <button type="button" onClick={() => setIsSearchOpen(true)} className={iconBtn} title="Tìm kiếm (Ctrl+K)">
+              <Search className="h-[18px] w-[18px]" />
             </button>
 
-            {/* AI Tutor Feature Badge */}
-            <div className="hidden sm:flex items-center space-x-1.5 rounded-lg bg-[#FAF8F3] border border-[#E8E4DC] dark:bg-[#24221F] dark:border-[#332F2B] px-2.5 py-1 text-xs text-stone-700 dark:text-stone-300">
-              <Sparkles className="h-3.5 w-3.5 text-stone-500 dark:text-stone-400" />
-              <span className="font-medium text-[11px]">Socratic AI</span>
-            </div>
-
-            {/* Daily Streak Trigger */}
             <button
               type="button"
               onClick={() => setIsStreakOpen(true)}
-              className="flex items-center space-x-1.5 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-2.5 py-1 text-xs font-medium text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
-              title="Xem chuỗi streak luyện tập"
+              className="flex h-8 items-center space-x-1 rounded-md px-2 text-sm text-neutral-600 dark:text-neutral-300 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors cursor-pointer"
+              title="Chuỗi streak"
             >
-              <Flame className="h-3.5 w-3.5 text-[#B45309] dark:text-[#FBBF24]" />
-              <span className="font-mono text-[11px]">{displayStreak}</span>
+              <Flame className="h-[18px] w-[18px] text-[#FFA116]" />
+              <span className="font-medium">{displayStreak}</span>
             </button>
 
-            {/* Quick Search Button (⌘K) */}
-            <button
-              type="button"
-              onClick={() => setIsSearchOpen(true)}
-              className="hidden lg:flex items-center space-x-2 rounded-lg bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] px-3 py-1.5 text-xs text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
-            >
-              <Search className="h-3.5 w-3.5" />
-              <span className="text-[11px]">Tìm kiếm...</span>
-              <kbd className="rounded bg-white dark:bg-[#1C1A18] border border-[#E8E4DC] dark:border-[#332F2B] px-1 py-0.2 text-[10px] text-stone-500 dark:text-stone-400 font-mono">⌘K</kbd>
+            <button type="button" onClick={toggleTheme} className={iconBtn} title={isDark ? 'Chế độ sáng' : 'Chế độ tối'}>
+              {isDark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
             </button>
 
-            {/* User Profile / Sign In */}
             {user ? (
-              <div className="flex items-center space-x-1.5 pl-1">
-                <div className="flex items-center space-x-2 bg-[#FAF8F3] dark:bg-[#24221F] border border-[#E8E4DC] dark:border-[#332F2B] py-1 px-2.5 rounded-lg text-xs">
+              <div className="relative ml-2" ref={menuRef}>
+                <button
+                  type="button"
+                  onClick={() => setIsMenuOpen((v) => !v)}
+                  className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden bg-[#FFA116] text-white text-sm font-semibold cursor-pointer"
+                >
                   {user.avatarUrl ? (
                     <img
                       src={user.avatarUrl}
                       alt={displayName}
                       referrerPolicy="no-referrer"
-                      className="h-5 w-5 rounded-full object-cover border border-[#E8E4DC] dark:border-[#332F2B]"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const fallback = e.currentTarget.nextElementSibling;
-                        if (fallback) fallback.style.display = 'flex';
-                      }}
+                      className="h-full w-full object-cover"
                     />
-                  ) : null}
-                  <div
-                    className={`h-5 w-5 rounded-full bg-[#1C1917] dark:bg-[#F5F2EB] items-center justify-center text-[10px] font-medium text-white dark:text-[#1C1917] ${
-                      user.avatarUrl ? 'hidden' : 'flex'
-                    }`}
-                  >
-                    {initialLetter}
-                  </div>
-                  <span className="font-medium text-[#1C1917] dark:text-[#F5F2EB] hidden sm:inline max-w-[120px] truncate text-[11px]">
-                    {displayName}
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleLogout}
-                  title="Đăng xuất"
-                  className="p-1.5 text-stone-500 hover:text-[#B91C1C] hover:bg-[#FAF8F3] dark:text-stone-400 dark:hover:text-[#F87171] dark:hover:bg-[#24221F] rounded-lg transition-colors cursor-pointer"
-                >
-                  <LogOut className="h-3.5 w-3.5" />
+                  ) : (
+                    initialLetter
+                  )}
                 </button>
+
+                {isMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-56 rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-white dark:bg-[#282828] shadow-lg py-1">
+                    <div className="px-4 py-3 border-b border-[#E6E6E6] dark:border-[#3E3E3E]">
+                      <div className="text-sm font-medium text-[#262626] dark:text-[#EFF1F6] truncate">{displayName}</div>
+                      <div className="text-xs text-neutral-500 dark:text-neutral-400 truncate">{user.email}</div>
+                    </div>
+                    <div className="flex items-center justify-between px-4 py-2 text-xs text-neutral-500 dark:text-neutral-400">
+                      <span>XP</span>
+                      <span className="font-medium text-[#262626] dark:text-[#EFF1F6]">{user.xp ?? 0}</span>
+                    </div>
+                    {user.role === 'ROLE_ADMIN' && (
+                      <Link
+                        to="/admin"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex w-full items-center space-x-2 px-4 py-2 text-sm text-[#FFA116] hover:bg-[#FFA116]/10 cursor-pointer font-medium"
+                      >
+                        <Shield className="h-4 w-4" />
+                        <span>Trang Quản trị (Admin)</span>
+                      </Link>
+                    )}
+                    <button
+                      type="button"
+                      onClick={handleLogout}
+                      className="flex w-full items-center space-x-2 px-4 py-2 text-sm text-neutral-600 dark:text-neutral-300 hover:bg-[#F7F8FA] dark:hover:bg-[#333333] cursor-pointer"
+                    >
+                      <LogOut className="h-4 w-4" />
+                      <span>Đăng xuất</span>
+                    </button>
+                  </div>
+                )}
               </div>
             ) : (
               <button
                 type="button"
                 onClick={() => setIsAuthOpen(true)}
-                className="flex items-center space-x-1.5 rounded-lg bg-[#1C1917] hover:bg-[#2D2A26] dark:bg-[#F5F2EB] dark:hover:bg-[#E8E4DC] px-3.5 py-1.5 text-xs font-medium text-[#FAF8F3] dark:text-[#1C1917] transition-colors cursor-pointer"
+                className="ml-1 flex h-8 items-center space-x-1.5 rounded-md px-3 text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:bg-[#F0F0F0] dark:hover:bg-[#333333] transition-colors cursor-pointer"
               >
-                <User className="h-3.5 w-3.5" />
+                <User className="h-4 w-4" />
                 <span>Sign In</span>
               </button>
             )}
@@ -202,21 +179,9 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Global Modals */}
-      <SearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-      />
-      <AuthModal
-        isOpen={isAuthOpen}
-        onClose={() => setIsAuthOpen(false)}
-        onLoginSuccess={(u) => setUser(u)}
-      />
-      <StreakModal
-        isOpen={isStreakOpen}
-        onClose={() => setIsStreakOpen(false)}
-        streakCount={displayStreak}
-      />
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} onLoginSuccess={(u) => setUser(u)} />
+      <StreakModal isOpen={isStreakOpen} onClose={() => setIsStreakOpen(false)} streakCount={displayStreak} />
     </>
   );
 }
