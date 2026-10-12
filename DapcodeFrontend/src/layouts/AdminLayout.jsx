@@ -38,7 +38,8 @@ export default function AdminLayout() {
   const logout = () => {
     localStorage.removeItem('dapcode_user');
     localStorage.removeItem('dapcode_token');
-    navigate('/roadmap');
+    navigate('/admin');
+    window.location.reload();
   };
 
   const linkCls = ({ isActive }) =>

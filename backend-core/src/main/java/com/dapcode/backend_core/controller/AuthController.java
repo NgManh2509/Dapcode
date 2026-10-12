@@ -24,4 +24,10 @@ public class AuthController {
         AuthResponse response = authService.authenticateWithGoogle(request);
         return ApiResponse.success(response);
     }
+
+    @PostMapping("/admin-login")
+    public ApiResponse<AuthResponse> loginAdmin(@Valid @RequestBody com.dapcode.backend_core.dto.auth.AdminLoginRequest request) {
+        AuthResponse response = authService.authenticateAdmin(request);
+        return ApiResponse.success(response);
+    }
 }

@@ -45,6 +45,7 @@ function App() {
             <Route path="theories" element={<AdminTheoriesPage />} />
             <Route path="users" element={<AdminUsersPage />} />
           </Route>
+          <Route path="/admin/login" element={<Navigate to="/admin" replace />} />
 
           <Route path="*" element={<Navigate to="/roadmap" replace />} />
         </Routes>

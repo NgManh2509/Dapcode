@@ -1,7 +1,7 @@
 # Graph Report - Dapcode  (2026-10-12)
 
 ## Corpus Check
-- 354 files · ~589,710 words
+- 354 files · ~589,718 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: (none) 6, .example 2, .css 2)
 
