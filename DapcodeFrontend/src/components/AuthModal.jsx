@@ -24,8 +24,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
       if (data && data.token) {
         localStorage.setItem('dapcode_token', data.token);
         const userData = data.user || {
-          name: 'Dapcode Master',
-          email: 'demo@dapcode.io',
+          name: 'LiệtCode Master',
+          email: 'demo@lietcode.io',
           avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
           streak: 3,
           xp: 120,
@@ -38,8 +38,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
     } catch {
       // Fallback local test session
       const demoUser = {
-        name: 'Dapcode Master',
-        email: 'demo@dapcode.io',
+        name: 'LiệtCode Master',
+        email: 'demo@lietcode.io',
         avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
         streak: 3,
         xp: 120,
@@ -57,9 +57,9 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
     setIsLoading(true);
     const adminUser = {
       id: '00000000-0000-0000-0000-000000000001',
-      username: 'dapcode_admin',
-      name: 'Dapcode Admin',
-      email: 'admin@dapcode.io',
+      username: 'lietcode_admin',
+      name: 'LiệtCode Admin',
+      email: 'admin@lietcode.io',
       role: 'ROLE_ADMIN',
       avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=dapcode_admin',
       streak: 30,
@@ -92,7 +92,7 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess, promptMessa
             <Sparkles className="h-5 w-5" />
           </div>
           <h2 className="text-base font-semibold text-[#262626] dark:text-[#EFF1F6] tracking-tight">
-            Đăng nhập vào Dapcode
+            Đăng nhập vào LiệtCode
           </h2>
           <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
             Lưu chuỗi streak, lịch sử nộp bài và nhận phản hồi AI Tutor không giới hạn.

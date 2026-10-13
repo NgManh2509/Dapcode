@@ -116,7 +116,7 @@ export default function ProblemsPage() {
           <div className="space-y-4">
             <div className="flex items-end justify-between">
               <div>
-                <h1 className="text-xl font-semibold">Dapcode 150 Roadmap</h1>
+                <h1 className="text-xl font-bold">LiệtCode 150 Roadmap</h1>
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">
                   Lộ trình học theo chủ đề — bấm vào một nút để xem danh sách bài tập.
                 </p>

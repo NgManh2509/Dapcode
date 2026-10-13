@@ -56,7 +56,7 @@ export default function AdminLayout() {
           <Link to="/admin" className="flex h-[50px] items-center gap-2 border-b border-[#E6E6E6] px-3 dark:border-[#3E3E3E]">
             <DapcodeLogo size="sm" />
             <div className="hidden items-baseline gap-1.5 md:flex">
-              <span className="text-base font-semibold tracking-tight">Dapcode</span>
+              <span className="text-base font-bold tracking-tight">LiệtCode</span>
               <span className="rounded bg-[#FFA116]/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-[#FFA116]">
                 Admin
               </span>

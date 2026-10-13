@@ -362,7 +362,7 @@ export default function WorkspacePage() {
     <div className="flex h-screen flex-col bg-[#F0F0F0] dark:bg-[#1A1A1A] text-[#262626] dark:text-[#EFF1F6] overflow-hidden">
       <header className="flex h-[50px] items-center justify-between border-b border-[#E6E6E6] dark:border-[#3E3E3E] bg-white dark:bg-[#282828] px-3 flex-shrink-0">
         <div className="flex items-center space-x-2 min-w-0">
-          <Link to="/roadmap" className="flex items-center space-x-2 pr-2" title="Roadmap">
+          <Link to="/roadmap" className="flex items-center space-x-2 pr-2" title="LiệtCode Roadmap">
             <DapcodeLogo size="sm" />
           </Link>
 

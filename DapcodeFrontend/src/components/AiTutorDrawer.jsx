@@ -73,8 +73,8 @@ export default function AiTutorDrawer({
             <div>
               <h2 className="text-sm font-semibold text-[#262626] dark:text-[#EFF1F6] tracking-tight flex items-center space-x-1.5">
                 <span>Socratic AI Tutor</span>
-                <span className="rounded bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.2 text-[10px] font-medium text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700">
-                  Dapcode
+                <span className="rounded bg-[#FFA116]/20 px-1.5 py-0.2 text-[10px] font-semibold text-[#FFA116] border border-[#FFA116]/30">
+                  LiệtCode
                 </span>
               </h2>
               <div className="text-[11px] text-neutral-500 dark:text-neutral-400 truncate max-w-[260px]">

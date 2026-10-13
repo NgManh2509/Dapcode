@@ -1578,15 +1578,15 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/AiTutorDrawer.jsx": {
-    "mtime": 1791796077.7678735,
-    "seen": 1791796115.0907724,
-    "ast_hash": "1c8b23f1974107cefd063163330312d4",
+    "mtime": 1791907226.9618363,
+    "seen": 1791907634.1371326,
+    "ast_hash": "57b29cf681888243dd1734afc8469f79",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/AuthModal.jsx": {
-    "mtime": 1791790699.1645782,
-    "seen": 1791790964.2952135,
-    "ast_hash": "b28cfc51faa9a65c57a719c5fe52ca36",
+    "mtime": 1791907253.2672594,
+    "seen": 1791907634.137134,
+    "ast_hash": "5fb3672c3f20081102b0a4ec7ed389a5",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/CodeEditor.jsx": {
@@ -1614,9 +1614,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/Navbar.jsx": {
-    "mtime": 1791790431.3332279,
-    "seen": 1791790454.546239,
-    "ast_hash": "7ce750fe10b69f1d1ce1a561ff7e83db",
+    "mtime": 1791907084.2065265,
+    "seen": 1791907634.1374092,
+    "ast_hash": "61c1d01135d1831e72881d1005c238a0",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/ProgressSidebar.jsx": {
@@ -1680,9 +1680,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/ProblemsPage.jsx": {
-    "mtime": 1791789505.971207,
-    "seen": 1791789792.356401,
-    "ast_hash": "b1f48eeffe6e8f790743bba2ead9a5eb",
+    "mtime": 1791907179.2082555,
+    "seen": 1791907634.1381614,
+    "ast_hash": "e4bb84e3b82a8ed05651c44973a578af",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/TheoriesPage.jsx": {
@@ -1698,9 +1698,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/WorkspacePage.jsx": {
-    "mtime": 1791789596.2730772,
-    "seen": 1791789792.3564281,
-    "ast_hash": "f0b58b0e554295730905eca00369c4be",
+    "mtime": 1791907291.7775893,
+    "seen": 1791907634.138299,
+    "ast_hash": "6db5837ce61b497664b86f3794c128dd",
     "semantic_hash": ""
   },
   "DapcodeFrontend/vite.config.js": {
@@ -1800,15 +1800,15 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/index.html": {
-    "mtime": 1790956558.394356,
-    "seen": 1790956587.2695355,
-    "ast_hash": "892f52415772f0f1fa892d3b10e014ee",
+    "mtime": 1791907069.973773,
+    "seen": 1791907634.165483,
+    "ast_hash": "2acaa1add9535a0963d799124b0085cf",
     "semantic_hash": ""
   },
   "DapcodeFrontend/public/favicon.svg": {
-    "mtime": 1790779759.877452,
-    "seen": 1790846285.2384439,
-    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "mtime": 1791907029.6677718,
+    "seen": 1791907634.1659682,
+    "ast_hash": "38ded3da9e44636b17c0084329230802",
     "semantic_hash": ""
   },
   "DapcodeFrontend/public/icons.svg": {
@@ -1842,9 +1842,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/AuthCallbackPage.jsx": {
-    "mtime": 1791789647.9027748,
-    "seen": 1791789792.3563917,
-    "ast_hash": "ea24282f9ed4e74788200c0f5deba9d5",
+    "mtime": 1791907162.9868677,
+    "seen": 1791907634.1381602,
+    "ast_hash": "704e9980bc34498a51bdba524d431782",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java": {
@@ -1890,9 +1890,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/DapcodeLogo.jsx": {
-    "mtime": 1791789389.3001733,
-    "seen": 1791789792.3552635,
-    "ast_hash": "187fe19e98d11ca330aeaf35f9f908ee",
+    "mtime": 1791907049.516829,
+    "seen": 1791907634.137274,
+    "ast_hash": "310a8b7c9b0ecf5d8e3745da79b36c87",
     "semantic_hash": ""
   },
   "DapcodeFrontend/public/dapcode_logo.png": {
@@ -1902,21 +1902,21 @@
     "semantic_hash": ""
   },
   "HOW_TO_RUN.md": {
-    "mtime": 1791790924.00483,
-    "seen": 1791790964.320552,
-    "ast_hash": "fb4089678dbc059144db6e372914c72c",
+    "mtime": 1791907347.3989158,
+    "seen": 1791907634.1654854,
+    "ast_hash": "2f3483100775afd5c3bad85b0b3d1c00",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791040695.3063548,
-    "seen": 1791040774.251356,
-    "ast_hash": "9e39e910bf04191c16a79b4253b75e80",
+    "mtime": 1791907337.9943817,
+    "seen": 1791907634.1654863,
+    "ast_hash": "89cc130ef6664b2e71560869274ff80c",
     "semantic_hash": ""
   },
   "README.vi.md": {
-    "mtime": 1791040711.1902392,
-    "seen": 1791040774.2513576,
-    "ast_hash": "70ae55cabfee7c9b40ce20cb0559b421",
+    "mtime": 1791907321.5206428,
+    "seen": 1791907634.1654875,
+    "ast_hash": "edc07869c6815894d4bde9c248aa1f68",
     "semantic_hash": ""
   },
   "DapcodeFrontend/tailwind.config.js": {
@@ -2082,9 +2082,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/AdminRoute.jsx": {
-    "mtime": 1791797552.547618,
-    "seen": 1791797804.5217137,
-    "ast_hash": "9709934d9b6dc92457be6e73baafcc34",
+    "mtime": 1791907277.3475227,
+    "seen": 1791907634.13713,
+    "ast_hash": "bc48f6d7f8614dc60625f9264f6b9f6d",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/components/admin/AdminUi.jsx": {
@@ -2094,15 +2094,15 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/layouts/AdminLayout.jsx": {
-    "mtime": 1791797566.49264,
-    "seen": 1791797804.5228825,
-    "ast_hash": "0a6cbe9a535b6a64e6e8992c57e67579",
+    "mtime": 1791907101.4736028,
+    "seen": 1791907634.1380928,
+    "ast_hash": "34109c7ff8e1e1c0fd36005a7a5db10e",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/admin/AdminDashboardPage.jsx": {
-    "mtime": 1791790070.627613,
-    "seen": 1791790454.5472238,
-    "ast_hash": "a9edca2061d417f1809a49e3da61139c",
+    "mtime": 1791907194.030977,
+    "seen": 1791907634.1383004,
+    "ast_hash": "05336af56a08eb94fe3fc291a93906c5",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/admin/AdminProblemsPage.jsx": {
@@ -2133,6 +2133,18 @@
     "mtime": 1791797371.5169392,
     "seen": 1791797804.5264788,
     "ast_hash": "c44dab193c8ca859335be83f39266a82",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/LietCodeLogo.jsx": {
+    "mtime": 1791907057.036017,
+    "seen": 1791907634.1373427,
+    "ast_hash": "76942396a24e65a7234611b7d7694df0",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/public/lietcode_logo.svg": {
+    "mtime": 1791907014.6526718,
+    "seen": 1791907634.1660242,
+    "ast_hash": "5cf9987ad826ba6636ca3a27382d6b8d",
     "semantic_hash": ""
   }
 }

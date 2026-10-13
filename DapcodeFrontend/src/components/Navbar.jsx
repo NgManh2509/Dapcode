@@ -71,8 +71,8 @@ export default function Navbar() {
           <div className="flex items-center space-x-6">
             <Link to="/roadmap" className="flex items-center space-x-2">
               <DapcodeLogo size="sm" />
-              <span className="text-base font-semibold tracking-tight text-[#262626] dark:text-[#EFF1F6] hidden sm:inline">
-                Dapcode
+              <span className="text-base font-bold tracking-tight text-[#262626] dark:text-[#EFF1F6] hidden sm:inline">
+                LiệtCode
               </span>
             </Link>
 

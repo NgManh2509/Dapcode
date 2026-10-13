@@ -78,7 +78,7 @@ export default function AdminDashboardPage() {
 
   return (
     <>
-      <PageHeader title="Tổng quan" subtitle="Số liệu hoạt động của hệ thống Dapcode." />
+      <PageHeader title="Tổng quan" subtitle="Số liệu hoạt động của hệ thống LiệtCode." />
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Kpi icon={Users} label="Học viên" value={stats.totalUsers} sub={`${stats.activeUsers} hoạt động · ${stats.bannedUsers} bị khóa`} color="#3B82F6" />

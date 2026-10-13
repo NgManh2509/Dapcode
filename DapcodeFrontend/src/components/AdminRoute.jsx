@@ -106,8 +106,8 @@ export default function AdminRoute({ children }) {
         const adminUser = {
           id: '0529d450-19bc-4762-931b-28c7daf3d6ec',
           username: 'dapcode_admin',
-          name: 'Dapcode Admin',
-          email: 'admin@dapcode.io',
+          name: 'LiệtCode Admin',
+          email: 'admin@lietcode.io',
           role: 'ROLE_ADMIN',
           avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=dapcode_admin',
           streak: 30,
@@ -149,8 +149,8 @@ export default function AdminRoute({ children }) {
     const adminUser = {
       id: '0529d450-19bc-4762-931b-28c7daf3d6ec',
       username: 'dapcode_admin',
-      name: 'Dapcode Admin',
-      email: 'admin@dapcode.io',
+      name: 'LiệtCode Admin',
+      email: 'admin@lietcode.io',
       role: 'ROLE_ADMIN',
       avatarUrl: 'https://api.dicebear.com/7.x/bottts/svg?seed=dapcode_admin',
       streak: 30,
@@ -205,7 +205,7 @@ export default function AdminRoute({ children }) {
           </div>
           <div className="flex items-center justify-center gap-2">
             <DapcodeLogo size="sm" />
-            <span className="text-lg font-bold tracking-tight text-white">Dapcode</span>
+            <span className="text-lg font-bold tracking-tight text-white">LiệtCode</span>
             <span className="rounded-md border border-[#FFA116]/30 bg-[#FFA116]/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#FFA116]">
               Admin Portal
             </span>

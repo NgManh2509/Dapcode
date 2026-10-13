@@ -1,6 +1,6 @@
-# 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy Dapcode (How To Run)
+# 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy LiệtCode (How To Run)
 
-Tài liệu hướng dẫn chi tiết từng bước thiết lập môi trường và khởi chạy toàn bộ các thành phần của hệ thống **Dapcode** từ mã nguồn trên máy phát triển (Windows, Linux, macOS).
+Tài liệu hướng dẫn chi tiết từng bước thiết lập môi trường và khởi chạy toàn bộ các thành phần của hệ thống **LiệtCode** từ mã nguồn trên máy phát triển (Windows, Linux, macOS).
 
 ---
 

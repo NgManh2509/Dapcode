@@ -1,7 +1,7 @@
-# 🔨 Dapcode (Đập Code)
+# ♿ LiệtCode (LietCode)
 
 <p align="center">
-  <img src="DapcodeFrontend/public/dapcode_logo.png" alt="Dapcode Logo" width="160" />
+  <img src="DapcodeFrontend/public/lietcode_logo.svg" alt="LiệtCode Logo" width="160" />
 </p>
 
 <p align="center">

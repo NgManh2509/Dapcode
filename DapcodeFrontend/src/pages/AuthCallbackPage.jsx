@@ -95,7 +95,7 @@ export default function AuthCallbackPage() {
             <Loader2 className="h-8 w-8 text-neutral-700 dark:text-neutral-300 animate-spin" />
             <h2 className="text-sm font-semibold">Đang xác thực tài khoản Google...</h2>
             <p className="text-xs text-neutral-500 dark:text-neutral-400">
-              Vui lòng đợi giây lát trong khi Dapcode đồng bộ tài khoản của bạn.
+              Vui lòng đợi giây lát trong khi LiệtCode đồng bộ tài khoản của bạn.
             </p>
           </div>
         )}
