@@ -4,6 +4,7 @@ services:
     container_name: dapcode-judge0-server
     volumes:
       - ./judge0.conf:/judge0.conf:ro
+      - ./active.rb:/api/db/languages/active.rb:ro
     ports:
       - "2358:2358"
     privileged: true
@@ -18,6 +19,7 @@ services:
     command: ["./scripts/workers"]
     volumes:
       - ./judge0.conf:/judge0.conf:ro
+      - ./active.rb:/api/db/languages/active.rb:ro
     privileged: true
     restart: unless-stopped
     depends_on:

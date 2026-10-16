@@ -31,22 +31,32 @@ import com.dapcode.backend_core.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class SubmissionServiceImpl implements SubmissionService {
 
     private final ProblemRepository problemRepository;
-
     private final TestCaseRepository testCaseRepository;
-
     private final SubmissionRepository submissionRepository;
-
     private final UserRepository userRepository;
-
     private final Judge0Client judge0Client;
-
     private final SubmissionStreamManager streamManager;
-
     private final CodeHarnessService codeHarnessService;
+
+    public SubmissionServiceImpl(
+            ProblemRepository problemRepository,
+            TestCaseRepository testCaseRepository,
+            SubmissionRepository submissionRepository,
+            UserRepository userRepository,
+            Judge0Client judge0Client,
+            SubmissionStreamManager streamManager,
+            CodeHarnessService codeHarnessService) {
+        this.problemRepository = problemRepository;
+        this.testCaseRepository = testCaseRepository;
+        this.submissionRepository = submissionRepository;
+        this.userRepository = userRepository;
+        this.judge0Client = judge0Client;
+        this.streamManager = streamManager;
+        this.codeHarnessService = codeHarnessService;
+    }
 
     private record EvaluationSummary(
             String finalStatus,
@@ -68,11 +78,8 @@ public class SubmissionServiceImpl implements SubmissionService {
     }
 
     private boolean isOutputMatched(String actual, String expected) {
-        if (actual == null || expected == null) {
-            return false;
-        }
-        String a = actual.trim().replace("\r\n", "\n");
-        String e = expected.trim().replace("\r\n", "\n");
+        String a = actual == null ? "" : actual.trim().replace("\r\n", "\n");
+        String e = expected == null ? "" : expected.trim().replace("\r\n", "\n");
         if (a.equals(e)) {
             return true;
         }
@@ -81,7 +88,13 @@ public class SubmissionServiceImpl implements SubmissionService {
         if (aNorm.equals(eNorm)) {
             return true;
         }
-        if (("[]".equals(aNorm) && "none".equals(eNorm)) || ("none".equals(aNorm) && "[]".equals(eNorm))) {
+        java.util.Set<String> emptyEquivalents = java.util.Set.of("", "[]", "none", "null", "n/a", "\"\"", "''");
+        if (emptyEquivalents.contains(aNorm) && emptyEquivalents.contains(eNorm)) {
+            return true;
+        }
+        String aUnquoted = aNorm.replaceAll("^[\"']|[\"']$", "");
+        String eUnquoted = eNorm.replaceAll("^[\"']|[\"']$", "");
+        if (aUnquoted.equals(eUnquoted)) {
             return true;
         }
         return false;
@@ -137,7 +150,7 @@ public class SubmissionServiceImpl implements SubmissionService {
                     .isHidden(tc.isHidden())
                     .inputData(tc.isHidden() ? null : tc.getInputData())
                     .expectedOutput(tc.isHidden() ? null : tc.getExpectedOutput())
-                    .actualOutput(tc.isHidden() ? null : (res != null ? res.getStdout() : null))
+                    .actualOutput(tc.isHidden() ? null : (res != null ? (res.getStdout() != null ? res.getStdout() : "") : null))
                     .errMes(res != null ? (res.getStderr() != null ? res.getStderr() : res.getCompile_output()) : null)
                     .build();
             testCaseResults.add(tcResult);
@@ -165,7 +178,7 @@ public class SubmissionServiceImpl implements SubmissionService {
 
         List<TestCase> testCases = testCaseRepository.findByProblemId(prob.getId());
         if (testCases.isEmpty()) {
-            throw new AppException(ErrorCode.UNCATEGORIZED_EXCEPTION);
+            throw new AppException(ErrorCode.TEST_CASE_NOT_FOUND);
         }
 
         Users user = findUserById(request.getUserId());

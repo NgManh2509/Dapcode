@@ -16,6 +16,7 @@ public class Judge0SubmissionRequest {
     private String expected_output;
     private Double cpu_time_limit;
     private Integer memory_limit;
+    private Boolean enable_per_process_and_thread_memory_limit;
 
     public String getSourceCode() {
         return source_code;

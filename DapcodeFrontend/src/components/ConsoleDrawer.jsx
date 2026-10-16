@@ -167,7 +167,9 @@ export default function ConsoleDrawer({
               <div>
                 <div className="text-[11px] font-sans font-medium text-neutral-500 dark:text-neutral-400 mb-1">Expected Output:</div>
                 <div className="rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-[#F7F8FA] dark:bg-[#1A1A1A] p-2.5 text-neutral-800 dark:text-neutral-200">
-                  {currentCase.expectedOutput || 'N/A'}
+                  {currentCase.expectedOutput !== undefined && currentCase.expectedOutput !== null
+                    ? (currentCase.expectedOutput === '' ? '"" (chuỗi rỗng)' : currentCase.expectedOutput)
+                    : 'N/A'}
                 </div>
               </div>
             </div>
@@ -274,7 +276,15 @@ export default function ConsoleDrawer({
                         {casesToDisplay.map((tc, i) => {
                           const isPassed = tc.status === 'ACCEPTED' || tc.passed === true;
                           const isHidden = tc.isHidden ?? tc.hidden ?? false;
-                          let cleanActual = tc.actualOutput ? tc.actualOutput.trim() : (isPassed ? (tc.expectedOutput || 'Passed') : 'N/A');
+                          let cleanActual = 'N/A';
+                          if (tc.actualOutput !== undefined && tc.actualOutput !== null) {
+                            const trimmed = tc.actualOutput.trim();
+                            cleanActual = trimmed === '' ? '"" (chuỗi rỗng)' : trimmed;
+                          } else if (isPassed) {
+                            cleanActual = (tc.expectedOutput !== undefined && tc.expectedOutput !== null && tc.expectedOutput.trim() === '')
+                              ? '"" (chuỗi rỗng)'
+                              : (tc.expectedOutput || 'Passed');
+                          }
                           if (cleanActual && cleanActual.length >= 16 && /^[A-Za-z0-9+/=\s]+$/.test(cleanActual) && !cleanActual.startsWith('[') && !cleanActual.startsWith('{')) {
                             try {
                               const decoded = atob(cleanActual.replace(/\s+/g, ''));
@@ -330,7 +340,9 @@ export default function ConsoleDrawer({
                                     Output:
                                   </div>
                                   <div className="rounded-lg border border-[#E6E6E6] dark:border-[#3E3E3E] bg-white dark:bg-[#1A1A1A] p-2 text-neutral-800 dark:text-neutral-200 break-words whitespace-pre-wrap">
-                                    {tc.expectedOutput || (isHidden ? '(Test case ẩn)' : 'N/A')}
+                                    {tc.expectedOutput !== undefined && tc.expectedOutput !== null
+                                      ? (tc.expectedOutput === '' ? '"" (chuỗi rỗng)' : tc.expectedOutput)
+                                      : (isHidden ? '(Test case ẩn)' : 'N/A')}
                                   </div>
                                 </div>
 
