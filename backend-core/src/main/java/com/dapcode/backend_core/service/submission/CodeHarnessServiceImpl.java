@@ -28,11 +28,20 @@ public class CodeHarnessServiceImpl implements CodeHarnessService {
             "lfu-cache",
             "kth-largest-element-in-a-stream");
 
+    private String stripComments(String code) {
+        if (code == null) {
+            return "";
+        }
+        return code.replaceAll("(?s)/\\*.*?\\*/", "")
+                   .replaceAll("(?m)//.*$", "")
+                   .replaceAll("(?m)#.*$", "");
+    }
+
     private boolean isDesignProblem(String slug, String code) {
         if (slug != null && DESIGN_SLUGS.contains(slug.toLowerCase().trim())) {
             return true;
         }
-        return !Pattern.compile("\\bclass\\s+Solution\\b").matcher(code).find();
+        return !Pattern.compile("\\bclass\\s+Solution\\b").matcher(stripComments(code)).find();
     }
 
     @Override
@@ -61,6 +70,73 @@ import collections
 import heapq
 import math
 import json
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def _to_list_node(arr):
+    if not isinstance(arr, list):
+        return arr
+    dummy = ListNode(0)
+    curr = dummy
+    for x in arr:
+        curr.next = ListNode(x)
+        curr = curr.next
+    return dummy.next
+
+def _from_list_node(node):
+    res = []
+    visited = set()
+    while node is not None and id(node) not in visited:
+        visited.add(id(node))
+        res.append(node.val)
+        node = node.next
+    return res
+
+def _to_tree_node(arr):
+    if not isinstance(arr, list) or not arr or arr[0] is None:
+        return None
+    root = TreeNode(arr[0])
+    q = collections.deque([root])
+    i = 1
+    while q and i < len(arr):
+        curr = q.popleft()
+        if i < len(arr):
+            if arr[i] is not None:
+                curr.left = TreeNode(arr[i])
+                q.append(curr.left)
+            i += 1
+        if i < len(arr):
+            if arr[i] is not None:
+                curr.right = TreeNode(arr[i])
+                q.append(curr.right)
+            i += 1
+    return root
+
+def _from_tree_node(root):
+    if root is None:
+        return []
+    res = []
+    q = collections.deque([root])
+    while q:
+        curr = q.popleft()
+        if curr is None:
+            res.append(None)
+        else:
+            res.append(curr.val)
+            q.append(curr.left)
+            q.append(curr.right)
+    while res and res[-1] is None:
+        res.pop()
+    return res
 
 """;
 
@@ -96,28 +172,61 @@ if __name__ == '__main__':
             if '=' in p:
                 k, v = p.split('=', 1)
                 try:
-                    scope[k.strip()] = ast.literal_eval(v.strip())
+                    scope[k.strip()] = eval(v.strip(), {"true": True, "false": False, "null": None})
                 except Exception:
                     try:
-                        scope[k.strip()] = eval(v.strip(), {"true": True, "false": False, "null": None})
+                        scope[k.strip()] = ast.literal_eval(v.strip())
                     except Exception:
                         pass
+        if not scope and lines:
+            for idx, l in enumerate(lines):
+                try:
+                    scope[f'_arg_{idx}'] = eval(l, {"true": True, "false": False, "null": None})
+                except Exception:
+                    pass
         try:
             sol = Solution()
             methods = [name for name, fn in inspect.getmembers(sol, predicate=inspect.ismethod) if not name.startswith('_')]
             if methods:
                 target_method = getattr(sol, methods[0])
                 sig = inspect.signature(target_method)
-                args = []
-                for p in sig.parameters.values():
+                params = list(sig.parameters.values())
+                raw_args = []
+                for p in params:
                     if p.name in scope:
-                        args.append(scope[p.name])
-                if not args and scope:
-                    args = list(scope.values())
+                        raw_args.append((p, scope[p.name]))
+                if not raw_args and scope:
+                    for p, val in zip(params, scope.values()):
+                        raw_args.append((p, val))
+                args = []
+                for p, val in raw_args:
+                    ann = str(p.annotation) if p.annotation is not inspect.Parameter.empty else ''
+                    if 'TreeNode' in ann or p.name in ('root', 'subRoot', 'tree', 't1', 't2'):
+                        val = _to_tree_node(val)
+                    elif 'ListNode' in ann or p.name in ('head', 'headA', 'headB', 'list1', 'list2', 'l1', 'l2'):
+                        if isinstance(val, list) and val and isinstance(val[0], list):
+                            val = [_to_list_node(x) for x in val]
+                        else:
+                            val = _to_list_node(val)
+                    args.append(val)
                 res = target_method(*args)
-                print(res)
-        except Exception:
-            pass
+                ret_ann = str(sig.return_annotation) if sig.return_annotation is not inspect.Signature.empty else ''
+                if isinstance(res, TreeNode):
+                    res = _from_tree_node(res)
+                    print(json.dumps(res))
+                elif isinstance(res, ListNode):
+                    res = _from_list_node(res)
+                    print(json.dumps(res))
+                elif res is None and ('TreeNode' in ret_ann or 'ListNode' in ret_ann):
+                    print('[]')
+                elif isinstance(res, list):
+                    print(json.dumps(res))
+                else:
+                    print(res)
+        except Exception as e:
+            import traceback
+            traceback.print_exc(file=sys.stderr)
+            sys.exit(1)
 """;
         return prefix + code + runner;
     }
@@ -126,6 +235,32 @@ if __name__ == '__main__':
     private String wrapCpp(String slug, String code) {
         if (code.contains("int main")) {
             return code;
+        }
+
+        String uncommented = stripComments(code);
+        StringBuilder nodeDefs = new StringBuilder();
+        if (!uncommented.contains("struct ListNode") && !uncommented.contains("class ListNode")) {
+            nodeDefs.append("""
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+""");
+        }
+        if (!uncommented.contains("struct TreeNode") && !uncommented.contains("class TreeNode")) {
+            nodeDefs.append("""
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+""");
         }
 
         String headers = """
@@ -144,6 +279,7 @@ if __name__ == '__main__':
 
 using namespace std;
 
+""" + nodeDefs + """
 static vector<int> parseVectorInt(const string& s) {
     vector<int> res;
     size_t start = s.find('[');
@@ -158,6 +294,56 @@ static vector<int> parseVectorInt(const string& s) {
         if (!token.empty()) res.push_back(stoi(token));
     }
     return res;
+}
+
+static ListNode* parseListNode(const string& s) {
+    vector<int> vals = parseVectorInt(s);
+    ListNode dummy(0);
+    ListNode* curr = &dummy;
+    for (int v : vals) {
+        curr->next = new ListNode(v);
+        curr = curr->next;
+    }
+    return dummy.next;
+}
+
+static TreeNode* parseTreeNode(const string& s) {
+    size_t start = s.find('[');
+    size_t end = s.find(']', start);
+    if (start == string::npos || end == string::npos) return nullptr;
+    string sub = s.substr(start + 1, end - start - 1);
+    vector<string> tokens;
+    stringstream ss(sub);
+    string token;
+    while (getline(ss, token, ',')) {
+        while (!token.empty() && isspace((unsigned char)token.front())) token.erase(token.begin());
+        while (!token.empty() && isspace((unsigned char)token.back())) token.pop_back();
+        if (!token.empty()) tokens.push_back(token);
+    }
+    if (tokens.empty() || tokens[0] == "null" || tokens[0] == "None") return nullptr;
+    TreeNode* root = new TreeNode(stoi(tokens[0]));
+    queue<TreeNode*> q;
+    q.push(root);
+    size_t idx = 1;
+    while (!q.empty() && idx < tokens.size()) {
+        TreeNode* curr = q.front();
+        q.pop();
+        if (idx < tokens.size()) {
+            string t = tokens[idx++];
+            if (t != "null" && t != "None") {
+                curr->left = new TreeNode(stoi(t));
+                q.push(curr->left);
+            }
+        }
+        if (idx < tokens.size()) {
+            string t = tokens[idx++];
+            if (t != "null" && t != "None") {
+                curr->right = new TreeNode(stoi(t));
+                q.push(curr->right);
+            }
+        }
+    }
+    return root;
 }
 
 static int parseIntAfter(const string& s, const string& key) {
@@ -198,6 +384,81 @@ static void printResult(const vector<string>& res) {
     cout << "]";
 }
 
+static void printResult(const vector<vector<int>>& res) {
+    cout << "[";
+    for (size_t i = 0; i < res.size(); i++) {
+        printResult(res[i]);
+        if (i + 1 < res.size()) cout << ", ";
+    }
+    cout << "]";
+}
+
+static void printResult(const vector<vector<string>>& res) {
+    cout << "[";
+    for (size_t i = 0; i < res.size(); i++) {
+        printResult(res[i]);
+        if (i + 1 < res.size()) cout << ", ";
+    }
+    cout << "]";
+}
+
+static vector<string> parseVectorString(const string& s) {
+    vector<string> res;
+    size_t start = s.find('[');
+    size_t end = s.rfind(']');
+    if (start == string::npos || end == string::npos || start >= end) return res;
+    string sub = s.substr(start + 1, end - start - 1);
+    size_t p = 0;
+    while ((p = sub.find('"', p)) != string::npos) {
+        size_t q = sub.find('"', p + 1);
+        if (q == string::npos) break;
+        res.push_back(sub.substr(p + 1, q - p - 1));
+        p = q + 1;
+    }
+    return res;
+}
+
+static void printResult(ListNode* head) {
+    cout << "[";
+    bool first = true;
+    while (head) {
+        if (!first) cout << ", ";
+        cout << head->val;
+        first = false;
+        head = head->next;
+    }
+    cout << "]";
+}
+
+static void printResult(TreeNode* root) {
+    if (!root) {
+        cout << "[]";
+        return;
+    }
+    vector<string> out;
+    queue<TreeNode*> q;
+    q.push(root);
+    while (!q.empty()) {
+        TreeNode* curr = q.front();
+        q.pop();
+        if (!curr) {
+            out.push_back("null");
+        } else {
+            out.push_back(to_string(curr->val));
+            q.push(curr->left);
+            q.push(curr->right);
+        }
+    }
+    while (!out.empty() && out.back() == "null") {
+        out.pop_back();
+    }
+    cout << "[";
+    for (size_t i = 0; i < out.size(); i++) {
+        cout << out[i] << (i + 1 < out.size() ? ", " : "");
+    }
+    cout << "]";
+}
+
 static void printResult(bool b) {
     cout << (b ? "True" : "False");
 }
@@ -206,8 +467,106 @@ static void printResult(int x) {
     cout << x;
 }
 
+static void printResult(long long x) {
+    cout << x;
+}
+
+static void printResult(double x) {
+    cout << x;
+}
+
 static void printResult(const string& s) {
     cout << s;
+}
+
+static void printResult(const vector<char>& res) {
+    cout << "[";
+    for (size_t i = 0; i < res.size(); i++) {
+        cout << "\"" << res[i] << "\"" << (i + 1 < res.size() ? ", " : "");
+    }
+    cout << "]";
+}
+
+static string extractRhs(const string& part) {
+    size_t eq = part.find('=');
+    string s = (eq == string::npos) ? part : part.substr(eq + 1);
+    while (!s.empty() && isspace((unsigned char)s.front())) s.erase(s.begin());
+    while (!s.empty() && isspace((unsigned char)s.back())) s.pop_back();
+    return s;
+}
+
+static int parseIntVal(const string& part) {
+    string s = extractRhs(part);
+    stringstream ss(s);
+    int v = 0;
+    ss >> v;
+    return v;
+}
+
+static string parseStringVal(const string& part) {
+    string s = extractRhs(part);
+    size_t q1 = s.find('"');
+    if (q1 != string::npos) {
+        size_t q2 = s.find('"', q1 + 1);
+        if (q2 != string::npos) return s.substr(q1 + 1, q2 - q1 - 1);
+    }
+    return s;
+}
+
+static vector<vector<int>> parseVector2DInt(const string& part) {
+    vector<vector<int>> res;
+    string s = extractRhs(part);
+    size_t outerStart = s.find('[');
+    size_t outerEnd = s.rfind(']');
+    if (outerStart == string::npos || outerEnd == string::npos || outerStart >= outerEnd) return res;
+    string inner = s.substr(outerStart + 1, outerEnd - outerStart - 1);
+    size_t pos = 0;
+    while ((pos = inner.find('[', pos)) != string::npos) {
+        size_t close = inner.find(']', pos);
+        if (close == string::npos) break;
+        res.push_back(parseVectorInt(inner.substr(pos, close - pos + 1)));
+        pos = close + 1;
+    }
+    return res;
+}
+
+static vector<char> parseVectorChar(const string& part) {
+    vector<char> res;
+    vector<string> strs = parseVectorString(part);
+    for (const string& st : strs) {
+        if (!st.empty()) res.push_back(st[0]);
+    }
+    return res;
+}
+
+static vector<string> readInputParts() {
+    vector<string> lines;
+    string l;
+    while (getline(cin, l)) {
+        while (!l.empty() && isspace((unsigned char)l.back())) l.pop_back();
+        if (!l.empty()) lines.push_back(l);
+    }
+    if (lines.empty()) return {};
+    if (lines.size() > 1) return lines;
+    const string& line = lines[0];
+    vector<string> parts;
+    int depth = 0;
+    bool inQuotes = false;
+    size_t start = 0;
+    for (size_t i = 0; i < line.size(); i++) {
+        char c = line[i];
+        if (c == '"' && (i == 0 || line[i - 1] != '\\')) inQuotes = !inQuotes;
+        if (!inQuotes) {
+            if (c == '[' || c == '{' || c == '(') depth++;
+            else if (c == ']' || c == '}' || c == ')') depth--;
+            else if (c == ',' && depth == 0) {
+                parts.push_back(line.substr(start, i - start));
+                start = i + 1;
+            }
+        }
+    }
+    if (start < line.size()) parts.push_back(line.substr(start));
+    return parts;
 }
 """;
 
@@ -415,8 +774,9 @@ int main() {
 
         String autoMethod = findFirstMethodName(code);
         String params = extractParams(code);
+        boolean isVoidReturn = stripComments(code).matches("(?s).*\\bvoid\\s+" + Pattern.quote(autoMethod) + "\\s*\\(.*");
 
-        if (params.contains("vector<int>") && (params.contains("target") || params.contains("int k"))) {
+        if (!isVoidReturn && params.contains("vector<int>") && (params.contains("target") || params.contains("int k"))) {
             return String.format("""
 int main() {
     ios_base::sync_with_stdio(false);
@@ -433,7 +793,22 @@ int main() {
 """, autoMethod);
         }
 
-        if (params.contains("vector<int>") && !params.contains(",")) {
+        if (!isVoidReturn && params.contains("vector<string>") && !params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    vector<string> strs = parseVectorString(line);
+    Solution sol;
+    printResult(sol.%s(strs));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (!isVoidReturn && params.contains("vector<int>") && !params.contains(",") && !params.contains("vector<vector")) {
             return String.format("""
 int main() {
     ios_base::sync_with_stdio(false);
@@ -448,7 +823,7 @@ int main() {
 """, autoMethod);
         }
 
-        if (params.contains("string") && params.contains(",")) {
+        if (!isVoidReturn && params.contains("string") && params.contains(",") && !params.contains("vector")) {
             return String.format("""
 int main() {
     ios_base::sync_with_stdio(false);
@@ -464,7 +839,7 @@ int main() {
 """, autoMethod);
         }
 
-        if (params.contains("string") && !params.contains(",")) {
+        if (!isVoidReturn && params.contains("string") && !params.contains(",") && !params.contains("vector")) {
             return String.format("""
 int main() {
     ios_base::sync_with_stdio(false);
@@ -486,7 +861,37 @@ int main() {
 """, autoMethod);
         }
 
-        if (params.contains("int") && !params.contains(",")) {
+        if (!isVoidReturn && params.contains("TreeNode") && !params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    TreeNode* root = parseTreeNode(line);
+    Solution sol;
+    printResult(sol.%s(root));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (!isVoidReturn && params.contains("ListNode") && !params.contains(",")) {
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string line;
+    if (!getline(cin, line)) return 0;
+    ListNode* head = parseListNode(line);
+    Solution sol;
+    printResult(sol.%s(head));
+    return 0;
+}
+""", autoMethod);
+        }
+
+        if (!isVoidReturn && params.contains("int") && !params.contains(",") && !params.contains("vector")) {
             return String.format("""
 int main() {
     ios_base::sync_with_stdio(false);
@@ -499,6 +904,52 @@ int main() {
     return 0;
 }
 """, autoMethod);
+        }
+
+        if (!params.isBlank()) {
+            String[] paramDecls = params.split(",");
+            StringBuilder decls = new StringBuilder();
+            java.util.List<String> argNames = new java.util.ArrayList<>();
+            for (int i = 0; i < paramDecls.length; i++) {
+                String p = paramDecls[i].trim();
+                String arg = "arg" + i;
+                argNames.add(arg);
+                String partExpr = String.format("(parts.size() > %d ? parts[%d] : \"\")", i, i);
+                if (p.contains("vector<vector<int>>")) {
+                    decls.append("    vector<vector<int>> ").append(arg).append(" = parseVector2DInt(").append(partExpr).append(");\n");
+                } else if (p.contains("vector<string>")) {
+                    decls.append("    vector<string> ").append(arg).append(" = parseVectorString(").append(partExpr).append(");\n");
+                } else if (p.contains("vector<char>")) {
+                    decls.append("    vector<char> ").append(arg).append(" = parseVectorChar(").append(partExpr).append(");\n");
+                } else if (p.contains("vector<int>")) {
+                    decls.append("    vector<int> ").append(arg).append(" = parseVectorInt(").append(partExpr).append(");\n");
+                } else if (p.contains("TreeNode")) {
+                    decls.append("    TreeNode* ").append(arg).append(" = parseTreeNode(").append(partExpr).append(");\n");
+                } else if (p.contains("ListNode")) {
+                    decls.append("    ListNode* ").append(arg).append(" = parseListNode(").append(partExpr).append(");\n");
+                } else if (p.contains("string")) {
+                    decls.append("    string ").append(arg).append(" = parseStringVal(").append(partExpr).append(");\n");
+                } else if (p.contains("double")) {
+                    decls.append("    double ").append(arg).append(" = stod(extractRhs(").append(partExpr).append("));\n");
+                } else {
+                    decls.append("    int ").append(arg).append(" = parseIntVal(").append(partExpr).append(");\n");
+                }
+            }
+            String callExpr = "sol." + autoMethod + "(" + String.join(", ", argNames) + ")";
+            String execBlock = isVoidReturn
+                    ? ("    " + callExpr + ";\n    printResult(arg0);")
+                    : ("    printResult(" + callExpr + ");");
+            return String.format("""
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    vector<string> parts = readInputParts();
+    if (parts.empty()) return 0;
+%s    Solution sol;
+%s
+    return 0;
+}
+""", decls.toString(), execBlock);
         }
 
         return String.format("""
@@ -761,8 +1212,9 @@ public class Main {
     }
 
     private String wrapJavaStandard(String code) {
+        String uncommented = stripComments(code);
         StringBuilder helpers = new StringBuilder();
-        if (!code.contains("class ListNode")) {
+        if (!uncommented.contains("class ListNode")) {
             helpers.append("""
 class ListNode {
     int val;
@@ -773,7 +1225,7 @@ class ListNode {
 }
 """);
         }
-        if (!code.contains("class TreeNode")) {
+        if (!uncommented.contains("class TreeNode")) {
             helpers.append("""
 class TreeNode {
     int val;
@@ -1141,8 +1593,8 @@ public class Main {
     }
 
     private String findFirstMethodName(String code) {
-        Pattern pattern = Pattern.compile("(?:vector<[^>]+>|int\\[\\]|int|bool|boolean|string|String|void)\\s+([a-zA-Z0-9_]+)\\s*\\(");
-        Matcher m = pattern.matcher(code);
+        Pattern pattern = Pattern.compile("(?:vector\\s*<\\s*vector\\s*<[^>]+>\\s*>|vector\\s*<[^>]+>|TreeNode\\s*\\*|ListNode\\s*\\*|int\\[\\]|long\\s+long|double|int|bool|boolean|string|String|void)\\s+([a-zA-Z0-9_]+)\\s*\\(");
+        Matcher m = pattern.matcher(stripComments(code));
         if (m.find()) {
             return m.group(1);
         }
@@ -1150,8 +1602,8 @@ public class Main {
     }
 
     private String extractParams(String code) {
-        Pattern pattern = Pattern.compile("(?:vector<[^>]+>|int\\[\\]|int|bool|boolean|string|String|void)\\s+[a-zA-Z0-9_]+\\s*\\(([^)]*)\\)");
-        Matcher m = pattern.matcher(code);
+        Pattern pattern = Pattern.compile("(?:vector\\s*<\\s*vector\\s*<[^>]+>\\s*>|vector\\s*<[^>]+>|TreeNode\\s*\\*|ListNode\\s*\\*|int\\[\\]|long\\s+long|double|int|bool|boolean|string|String|void)\\s+[a-zA-Z0-9_]+\\s*\\(([^)]*)\\)");
+        Matcher m = pattern.matcher(stripComments(code));
         if (m.find()) {
             return m.group(1).trim();
         }

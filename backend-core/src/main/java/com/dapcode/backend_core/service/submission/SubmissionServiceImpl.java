@@ -77,6 +77,26 @@ public class SubmissionServiceImpl implements SubmissionService {
         return userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
     }
 
+    private int resolveLanguageId(Integer requestedId, String code) {
+        if (code == null || code.isBlank()) {
+            return requestedId != null ? requestedId : 71;
+        }
+        String clean = code.replaceAll("(?s)/\\*.*?\\*/", "")
+                           .replaceAll("(?m)//.*$", "")
+                           .replaceAll("(?m)#.*$", "");
+        if (clean.contains("def ") && clean.contains("self") && !clean.contains("public:") && !clean.contains("public ")) {
+            return 71;
+        }
+        if (clean.contains("public:") || clean.contains("vector<") || clean.contains("#include")) {
+            return 54;
+        }
+        if (!clean.contains("public:") && (clean.contains("public class ") || clean.contains("public int")
+                || clean.contains("public boolean") || clean.contains("public String") || clean.contains("public List<"))) {
+            return 62;
+        }
+        return requestedId != null ? requestedId : 71;
+    }
+
     private boolean isOutputMatched(String actual, String expected) {
         String a = actual == null ? "" : actual.trim().replace("\r\n", "\n");
         String e = expected == null ? "" : expected.trim().replace("\r\n", "\n");
@@ -88,16 +108,49 @@ public class SubmissionServiceImpl implements SubmissionService {
         if (aNorm.equals(eNorm)) {
             return true;
         }
-        java.util.Set<String> emptyEquivalents = java.util.Set.of("", "[]", "none", "null", "n/a", "\"\"", "''");
+        java.util.Set<String> emptyEquivalents = java.util.Set.of("", "[]", "[[]]", "none", "null", "n/a", "\"\"", "''");
         if (emptyEquivalents.contains(aNorm) && emptyEquivalents.contains(eNorm)) {
             return true;
         }
-        String aUnquoted = aNorm.replaceAll("^[\"']|[\"']$", "");
-        String eUnquoted = eNorm.replaceAll("^[\"']|[\"']$", "");
+        String aUnquoted = aNorm.replaceAll("[\"'`]", "");
+        String eUnquoted = eNorm.replaceAll("[\"'`]", "");
         if (aUnquoted.equals(eUnquoted)) {
             return true;
         }
+        if (aUnquoted.startsWith("[[") && aUnquoted.endsWith("]]")
+                && eUnquoted.startsWith("[[") && eUnquoted.endsWith("]]")) {
+            if (canonicalizeNestedArray(aUnquoted).equals(canonicalizeNestedArray(eUnquoted))) {
+                return true;
+            }
+        }
         return false;
+    }
+
+    private String canonicalizeNestedArray(String s) {
+        String inner = s.substring(1, s.length() - 1);
+        List<String> groups = new ArrayList<>();
+        int depth = 0;
+        int start = -1;
+        for (int i = 0; i < inner.length(); i++) {
+            char c = inner.charAt(i);
+            if (c == '[') {
+                if (depth == 0) {
+                    start = i;
+                }
+                depth++;
+            } else if (c == ']') {
+                depth--;
+                if (depth == 0 && start != -1) {
+                    String groupContent = inner.substring(start + 1, i);
+                    String[] items = groupContent.isEmpty() ? new String[0] : groupContent.split(",");
+                    java.util.Arrays.sort(items);
+                    groups.add("[" + String.join(",", items) + "]");
+                    start = -1;
+                }
+            }
+        }
+        java.util.Collections.sort(groups);
+        return "[" + String.join(",", groups) + "]";
     }
 
 
@@ -183,10 +236,12 @@ public class SubmissionServiceImpl implements SubmissionService {
 
         Users user = findUserById(request.getUserId());
 
+        int resolvedLanguageId = resolveLanguageId(request.getLanguageId(), request.getSourceCode());
+
         Submission submission = Submission.builder()
                 .problem(prob)
                 .user(user)
-                .languageId(request.getLanguageId())
+                .languageId(resolvedLanguageId)
                 .sourceCode(request.getSourceCode())
                 .status("PENDING")
                 .build();
@@ -194,17 +249,17 @@ public class SubmissionServiceImpl implements SubmissionService {
 
         String preparedCode = codeHarnessService.prepareSourceCode(
                 prob.getSlug(),
-                request.getLanguageId(),
+                resolvedLanguageId,
                 request.getSourceCode());
 
         List<Judge0SubmissionRequest> judge0SubmissionRequests = testCases.stream()
                 .map(tc -> Judge0SubmissionRequest.builder()
-                        .language_id(request.getLanguageId())
+                        .language_id(resolvedLanguageId)
                         .source_code(preparedCode)
                         .stdin(tc.getInputData())
                         .expected_output(tc.getExpectedOutput())
                         .cpu_time_limit(prob.getTimeLimitMs() / 1000.0)
-                        .memory_limit(request.getLanguageId() == 62
+                        .memory_limit(resolvedLanguageId == 62
                                 ? Math.max(prob.getMemoryLimitKb(), 1048576)
                                 : prob.getMemoryLimitKb())
                         .build())
