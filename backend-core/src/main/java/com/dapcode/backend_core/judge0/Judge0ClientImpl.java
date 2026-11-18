@@ -25,7 +25,7 @@ public class Judge0ClientImpl implements Judge0Client {
         log.info("Sending submission to Judge0: languageId={}", request.getLanguageId());
 
         return judge0RestClient.post()
-                .uri("/submissions?wait=true&base64_encoded=true")
+                .uri("/submissions?wait=true&base64_encoded=false")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(request)
                 .retrieve()

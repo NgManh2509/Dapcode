@@ -112,15 +112,51 @@ public class SubmissionServiceImpl implements SubmissionService {
         if (emptyEquivalents.contains(aNorm) && emptyEquivalents.contains(eNorm)) {
             return true;
         }
+        aNorm = aNorm.replace("none", "null").replace("(", "[").replace(")", "]").replace(",]", "]");
+        eNorm = eNorm.replace("none", "null").replace("(", "[").replace(")", "]").replace(",]", "]");
+        if (aNorm.equals(eNorm)) {
+            return true;
+        }
         String aUnquoted = aNorm.replaceAll("[\"'`]", "");
         String eUnquoted = eNorm.replaceAll("[\"'`]", "");
         if (aUnquoted.equals(eUnquoted)) {
             return true;
         }
+        try {
+            double da = Double.parseDouble(aUnquoted);
+            double de = Double.parseDouble(eUnquoted);
+            if (Math.abs(da - de) < 1e-5) {
+                return true;
+            }
+        } catch (NumberFormatException ignored) {
+        }
         if (aUnquoted.startsWith("[[") && aUnquoted.endsWith("]]")
                 && eUnquoted.startsWith("[[") && eUnquoted.endsWith("]]")) {
             if (canonicalizeNestedArray(aUnquoted).equals(canonicalizeNestedArray(eUnquoted))) {
                 return true;
+            }
+        }
+        if (aUnquoted.startsWith("[") && aUnquoted.endsWith("]")
+                && eUnquoted.startsWith("[") && eUnquoted.endsWith("]")
+                && !aUnquoted.startsWith("[[") && !eUnquoted.startsWith("[[")) {
+            String[] aItems = aUnquoted.substring(1, aUnquoted.length() - 1).split(",");
+            String[] eItems = eUnquoted.substring(1, eUnquoted.length() - 1).split(",");
+            if (aItems.length == eItems.length && aItems.length > 0) {
+                boolean allFloatEqual = true;
+                for (int i = 0; i < aItems.length; i++) {
+                    try {
+                        if (Math.abs(Double.parseDouble(aItems[i]) - Double.parseDouble(eItems[i])) >= 1e-5) {
+                            allFloatEqual = false;
+                            break;
+                        }
+                    } catch (NumberFormatException ex) {
+                        allFloatEqual = false;
+                        break;
+                    }
+                }
+                if (allFloatEqual) {
+                    return true;
+                }
             }
         }
         return false;

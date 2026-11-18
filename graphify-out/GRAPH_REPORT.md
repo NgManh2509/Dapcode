@@ -1,25 +1,25 @@
-# Graph Report - Dapcode  (2026-11-02)
+# Graph Report - Dapcode  (2026-11-18)
 
 ## Corpus Check
-- 358 files · ~597,992 words
+- 359 files · ~614,617 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: (none) 6, .example 2, .css 2)
 
 ## Summary
-- 2175 nodes · 3907 edges · 265 communities (201 shown, 64 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 112 edges (avg confidence: 0.84)
+- 2177 nodes · 3915 edges · 258 communities (197 shown, 61 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 113 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ddfcdb38`
+- Built from commit: `4c09dc84`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - lombok.AllArgsConstructor
-- AdminProblemsPage.jsx
+- admin.js
 - ApiResponse
-- AdminTestCasesPage.jsx
+- AdminProblemsPage.jsx
 - org.springframework.context.annotation.Bean
 - NeetCode-150
 - 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy LiệtCode (How To Run)
@@ -38,12 +38,12 @@
 - assertfalse
 - reflectiontestutils
 - springsecurity
-- ErrorCode
+- uuid
 - seed_problems.py
 - LLM_service.py
 - seed_theory.py
 - [139. Word Break](https://leetcode.com/problems/word-break/)
-- org.junit.jupiter.api.Test
+- lombok.Getter
 - [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 - [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 - 739. Daily Temperatures
@@ -211,7 +211,7 @@
 - CORE DIRECTIVE: PREMIUM MOBILE APP IMAGE DIRECTION
 - JwtAuthenticationFilter.java
 - High-Agency Frontend Skill
-- SubmissionServiceImpl.java
+- Problem
 - Appendix B - Canonical Sources (read these before reinventing)
 - Design Audit
 - Analysis & Synthesis Instructions
@@ -221,7 +221,7 @@
 - SKILL: Industrial Brutalism & Tactical Telemetry UI
 - CodeHarnessServiceImpl
 - Design System: Taste Standard
-- AdminLayout.jsx
+- TheoryDetailPage.jsx
 - 2. THE COMBINATORIAL VARIATION ENGINE
 - 4. DESIGN ENGINEERING DIRECTIVES (Bias Correction)
 - hint.py
@@ -230,10 +230,10 @@
 - CORE DIRECTIVE: AWWWARDS-LEVEL DESIGN ENGINEERING
 - 22. STYLE VARIATION ENGINE
 - Protocol: Premium Utilitarian Minimalism UI Architect
-- ProblemServiceImpl
+- AppException
 - AdminDashboardServiceImpl.java
 - Theories
-- Judge0SubmissionRequest
+- OpenApiConfig.java
 - 11. COMPONENT EXECUTION GUIDELINES
 - 18. EXTRA CREATIVITY & IMPLEMENTATION EDGE
 - 9. AI TELLS (Forbidden Patterns)
@@ -264,20 +264,13 @@
 - 37. EXAMPLE INTERPRETATIONS
 - 15. DEFAULT SITE PACKS
 - 20. EXAMPLE INTERPRETATIONS
-- SubmissionEvaluationIntegrationTest.java
 - mockProblems.js
-- Judge0Response
 - SecurityConfig.java
-- ProblemApiIntegrationTest.java
-- ProblemRepository.java
 - App.jsx
-- org.springframework.transaction.annotation.Transactional
 - GlobalExceptionHandler.java
-- AppException
-- org.springframework.stereotype.Component
+- SubmissionServiceImpl
+- lombok.extern.slf4j.Slf4j
 - SubmissionStreamManager.java
-- AdminDashboardPage.jsx
-- .findByEmail
 
 ## God Nodes (most connected - your core abstractions)
 1. `ApiResponse` - 54 edges
@@ -296,37 +289,37 @@
   HOW_TO_RUN.md → DapcodeFrontend/src/components/AdminRoute.jsx
 - `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `JwtAuthenticationFilter`  [INFERRED]
   admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/config/JwtAuthenticationFilter.java
-- `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `CreateProblemRequest`  [INFERRED]
-  admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/dto/admin/CreateProblemRequest.java
-- `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `CreateTheoryRequest`  [INFERRED]
-  admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/dto/admin/CreateTheoryRequest.java
-- `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `UpdateProblemRequest`  [INFERRED]
-  admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/dto/admin/UpdateProblemRequest.java
+- `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `AdminDashboardController`  [INFERRED]
+  admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminDashboardController.java
+- `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `AdminProblemController`  [INFERRED]
+  admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminProblemController.java
+- `🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị` --references--> `AdminTestCaseController`  [INFERRED]
+  admin_implementation_plan.md → backend-core/src/main/java/com/dapcode/backend_core/controller/admin/AdminTestCaseController.java
 
 ## Import Cycles
 - None detected.
 
-## Communities (265 total, 64 thin omitted)
+## Communities (258 total, 61 thin omitted)
 
 ### Community 0 - "lombok.AllArgsConstructor"
 Cohesion: 0.08
-Nodes (56): accesslevel, AiHintRequest, AiHintResponse, Override, AdminDashboardStatsResponse, BatchCreateTestCaseRequest, CreateProblemRequest, CreateTheoryRequest (+48 more)
+Nodes (42): accesslevel, 🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị, AiHintRequest, AiHintResponse, Override, AdminDashboardStatsResponse, BatchCreateTestCaseRequest, CreateProblemRequest (+34 more)
 
-### Community 1 - "AdminProblemsPage.jsx"
-Cohesion: 0.13
-Nodes (38): adminGetProblems(), adminGetTheories(), adminGetUsers(), createProblem(), createTestCase(), createTestCasesBatch(), createTheory(), deleteProblem() (+30 more)
+### Community 1 - "admin.js"
+Cohesion: 0.14
+Nodes (35): adminGetProblems(), adminGetTheories(), adminGetUsers(), createProblem(), createTestCase(), createTestCasesBatch(), createTheory(), deleteProblem() (+27 more)
 
 ### Community 2 - "ApiResponse"
 Cohesion: 0.06
-Nodes (41): 🔹 Giai Đoạn 2: Backend Core - Security & Bộ REST API Quản Trị, authenticationprincipal, AiServiceClient, ApiResponse, AdminDashboardController, AdminProblemController, AdminTestCaseController, AdminTheoryController (+33 more)
+Nodes (39): authenticationprincipal, AiServiceClient, ApiResponse, AdminDashboardController, AdminProblemController, AdminTestCaseController, AdminTheoryController, AdminUserController (+31 more)
 
-### Community 3 - "AdminTestCasesPage.jsx"
-Cohesion: 0.26
-Nodes (17): Badge(), btnDanger, btnGhost, btnPrimary, Card(), ConfirmDialog(), Dialog(), Empty() (+9 more)
+### Community 3 - "AdminProblemsPage.jsx"
+Cohesion: 0.17
+Nodes (24): Badge(), btnDanger, btnGhost, btnPrimary, Card(), ConfirmDialog(), Dialog(), Empty() (+16 more)
 
 ### Community 4 - "org.springframework.context.annotation.Bean"
-Cohesion: 0.12
-Nodes (20): AiConfig, CorsConfig, JacksonConfig, OpenApiConfig, Judge0Config, com.fasterxml.jackson.databind.ObjectMapper, components, corsconfiguration (+12 more)
+Cohesion: 0.16
+Nodes (14): AiConfig, CorsConfig, JacksonConfig, Judge0Config, com.fasterxml.jackson.databind.ObjectMapper, corsconfiguration, duration, org.springframework.context.annotation.Bean (+6 more)
 
 ### Community 5 - "NeetCode-150"
 Cohesion: 0.10
@@ -353,15 +346,15 @@ Cohesion: 0.13
 Nodes (14): 1. 🧠 Gia Sư AI Socratic (RAG + Groq), 2. ⚡ Không Gian Lập Trình Chuẩn LeetCode, 3. 🛡️ Môi Trường Chấm Code Cô Lập (Judge0 Sandbox), 4. 🗺️ Lộ Trình Học Thuật Toán NeetCode 150/250 (DAG Visual Tree), 5. 📚 Thư Viện Lý Thuyết Thuật Toán Toàn Diện, 6. 🔐 Bảo Mật & Thói Quen Học Tập, ✨ Các Tính Năng Nổi Bật, ⚡ Công Nghệ Sử Dụng (+6 more)
 
 ### Community 13 - "Judge0Status"
-Cohesion: 0.11
-Nodes (15): Judge0Status, ACCEPTED, COMPILATION_ERROR, EXEC_FORMAT_ERROR, IN_QUEUE, INTERNAL_ERROR, PROCESSING, RUNTIME_ERROR_NZEC (+7 more)
+Cohesion: 0.06
+Nodes (37): assertequals, assertnotnull, asserttrue, autowired, BatchResponse, Judge0Response, Status, Judge0Status (+29 more)
 
 ### Community 14 - "🐳 Judge0 Code Execution Sandbox"
 Cohesion: 0.40
 Nodes (4): ⏹ Dừng cụm Sandbox, 🐳 Judge0 Code Execution Sandbox, 🚀 Khởi động Sandbox, 🔍 Kiểm tra trạng thái
 
 ### Community 17 - "UserRepository"
-Cohesion: 0.18
+Cohesion: 0.19
 Nodes (7): UserRepository, AuthServiceImpl, Override, com.google.api.client.googleapis.auth.oauth2.GoogleIdToken, googleidtokenverifier, gsonfactory, nethttptransport
 
 ### Community 18 - "Hướng Dẫn Khởi Động & Chạy Spring Boot (backend-core)"
@@ -372,9 +365,9 @@ Nodes (12): 1. Yêu cầu môi trường, 2. Bước 1: Khởi động Cơ sở 
 Cohesion: 0.17
 Nodes (11): 1. Chuẩn bị môi trường, 2. Các lệnh chạy chính, 3. Bảng tham số (CLI Arguments), 4. Các file được tạo ra sau khi chạy, 5. Khắc phục sự cố thường gặp, 6. Nạp dữ liệu vào Java Spring Boot qua Flyway, 🔹 Cách 1: Chạy thử nghiệm 1–2 bài trước (Khuyên dùng), 🔹 Cách 2: Chạy toàn bộ danh sách (+3 more)
 
-### Community 23 - "ErrorCode"
+### Community 23 - "uuid"
 Cohesion: 0.13
-Nodes (13): ErrorCode, INVALID_CREDENTIALS, INVALID_REQUEST, PROBLEM_NOT_FOUND, SUBMISSION_NOT_FOUND, TEST_CASE_NOT_FOUND, THEORY_NOT_FOUND, UNAUTHENTICATED (+5 more)
+Nodes (19): ErrorCode, INVALID_CREDENTIALS, INVALID_REQUEST, PROBLEM_NOT_FOUND, SUBMISSION_NOT_FOUND, TEST_CASE_NOT_FOUND, THEORY_NOT_FOUND, UNAUTHENTICATED (+11 more)
 
 ### Community 24 - "seed_problems.py"
 Cohesion: 0.18
@@ -392,9 +385,9 @@ Nodes (10): html, call_gemini_flash(), clean_html_to_text(), fetch_html_content(
 Cohesion: 0.25
 Nodes (7): [139. Word Break](https://leetcode.com/problems/word-break/), Approach, Bottom up, Cache, Complexity Analysis, Decision tree of Backtracking, Solution
 
-### Community 28 - "org.junit.jupiter.api.Test"
-Cohesion: 0.30
-Nodes (4): ProblemApiIntegrationTest, SubmissionEvaluationIntegrationTest, org.junit.jupiter.api.DisplayName, org.junit.jupiter.api.Test
+### Community 28 - "lombok.Getter"
+Cohesion: 0.35
+Nodes (14): column, creationtimestamp, fetchtype, generatedvalue, generationtype, id, instant, jakarta.persistence.Entity (+6 more)
 
 ### Community 29 - "[42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)"
 Cohesion: 0.29
@@ -838,7 +831,7 @@ Nodes (8): JwtTokenProvider, base64, claims, date, javax.crypto.SecretKey, jwts,
 
 ### Community 191 - "package.json"
 Cohesion: 0.05
-Nodes (42): dependencies, axios, lucide-react, @monaco-editor/react, react, react-dom, react-markdown, react-router-dom (+34 more)
+Nodes (43): dependencies, axios, lucide-react, @monaco-editor/react, react, react-dom, react-markdown, react-router-dom (+35 more)
 
 ### Community 192 - "brandkit/SKILL.md"
 Cohesion: 0.05
@@ -853,16 +846,16 @@ Cohesion: 0.06
 Nodes (34): 10. DEVICE MOCKUP FRAME RULE, 11. ONBOARDING FLOW RULE, 12. FIRST SCREEN CLEANLINESS RULE, 13. SAFE AREA AND SYSTEM REGION RULE, 14. NAVIGATION RULE, 15. CLEAN LAYOUT RULE, 16. CREATIVE IMAGE DIRECTION RULE, 17. BACKGROUND TEXTURE AND SURFACE RULE (+26 more)
 
 ### Community 195 - "JwtAuthenticationFilter.java"
-Cohesion: 0.14
-Nodes (19): Override, JwtAuthenticationFilter, Override, OAuth2AuthenticationSuccessHandler, jakarta.servlet.FilterChain, jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, lombok.extern.slf4j.Slf4j (+11 more)
+Cohesion: 0.13
+Nodes (18): Override, JwtAuthenticationFilter, Override, OAuth2AuthenticationSuccessHandler, jakarta.servlet.FilterChain, jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, oauth2user (+10 more)
 
 ### Community 196 - "High-Agency Frontend Skill"
 Cohesion: 0.06
 Nodes (30): 10. FINAL PRE-FLIGHT CHECK, 1. ACTIVE BASELINE CONFIGURATION, 2. DEFAULT ARCHITECTURE & CONVENTIONS, 3. DESIGN ENGINEERING DIRECTIVES (Bias Correction), 4. CREATIVE PROACTIVITY (Anti-Slop Implementation), 5. PERFORMANCE GUARDRAILS, 6. TECHNICAL REFERENCE (Dial Definitions), 7. AI TELLS (Forbidden Patterns) (+22 more)
 
-### Community 197 - "SubmissionServiceImpl.java"
-Cohesion: 0.23
-Nodes (9): 🔹 Giai Đoạn 5: Tài Liệu Phân Tích & Thiết Kế (UML / BCE Diagrams), Problem, TestCase, ProblemRepository, TestCaseRepository, org.springframework.stereotype.Service, page, requiredargsconstructor (+1 more)
+### Community 197 - "Problem"
+Cohesion: 0.21
+Nodes (9): 🔹 Giai Đoạn 5: Tài Liệu Phân Tích & Thiết Kế (UML / BCE Diagrams), Problem, TestCase, ProblemRepository, TestCaseRepository, optional, org.springframework.data.domain.Page, org.springframework.data.jpa.repository.JpaRepository (+1 more)
 
 ### Community 198 - "Appendix B - Canonical Sources (read these before reinventing)"
 Cohesion: 0.13
@@ -881,8 +874,8 @@ Cohesion: 0.11
 Nodes (17): 1. Meta Information & Core Directive, 2. THE "ABSOLUTE ZERO" DIRECTIVE (STRICT ANTI-PATTERNS), 3. THE CREATIVE VARIANCE ENGINE, 4. HAPTIC MICRO-AESTHETICS (COMPONENT MASTERY), 5. MOTION CHOREOGRAPHY (FLUID DYNAMICS), 6. PERFORMANCE GUARDRAILS, 7. EXECUTION PROTOCOL, 8. PRE-OUTPUT CHECKLIST (+9 more)
 
 ### Community 202 - "WorkspacePage.jsx"
-Cohesion: 0.13
-Nodes (24): getAiHint(), api, getProblemBySlug(), getProblems(), submitCode(), subscribeSubmissionStream(), AiTutorDrawer(), AuthModal() (+16 more)
+Cohesion: 0.11
+Nodes (31): getProblemBySlug(), getProblems(), submitCode(), subscribeSubmissionStream(), ToastProvider(), AuthModal(), CodeEditor(), SUPPORTED_LANGUAGES (+23 more)
 
 ### Community 203 - "CORE DIRECTIVE: AWWWARDS-LEVEL IMAGE ART DIRECTION"
 Cohesion: 0.12
@@ -893,16 +886,16 @@ Cohesion: 0.12
 Nodes (16): 1. Skill Meta, 2.1 Swiss Industrial Print, 2.2 Tactical Telemetry & CRT Terminal, 2. Visual Archetypes, 3.1 Macro-Typography (Structural Headers), 3.2 Micro-Typography (Data & Telemetry), 3.3 Textural Contrast (Artistic Disruption), 3. Typographic Architecture (+8 more)
 
 ### Community 205 - "CodeHarnessServiceImpl"
-Cohesion: 0.22
+Cohesion: 0.23
 Nodes (5): CodeHarnessServiceImpl, Override, matcher, pattern, set
 
 ### Community 206 - "Design System: Taste Standard"
 Cohesion: 0.13
 Nodes (14): 1. Visual Theme & Atmosphere, 2. Color Palette & Roles, 3. Typography Rules, 4. Component Stylings, 5. Hero Section, 6. Layout Principles, 7. Responsive Rules, 8. Motion & Interaction (Code-Phase Intent) (+6 more)
 
-### Community 207 - "AdminLayout.jsx"
-Cohesion: 0.16
-Nodes (12): ToastProvider(), CodeEditor(), SUPPORTED_LANGUAGES, DapcodeLogo(), RoadmapGraph(), ThemeContext, ThemeProvider(), useTheme() (+4 more)
+### Community 207 - "TheoryDetailPage.jsx"
+Cohesion: 0.20
+Nodes (10): getAiHint(), api, getTheories(), getTheoryBySlug(), getTheoryCategories(), AiTutorDrawer(), MarkdownRenderer(), Navbar() (+2 more)
 
 ### Community 208 - "2. THE COMBINATORIAL VARIATION ENGINE"
 Cohesion: 0.14
@@ -936,13 +929,21 @@ Nodes (10): 22. STYLE VARIATION ENGINE, Decorative Asset Set, Image Art Directio
 Cohesion: 0.20
 Nodes (9): 1. Protocol Overview, 2. Absolute Negative Constraints (Banned Elements), 3. Typographic Architecture, 4. Color Palette (Warm Monochrome + Spot Pastels), 5. Component Specifications, 6. Iconography & Imagery Directives, 7. Subtle Motion & Micro-Animations, 8. Execution Protocol (+1 more)
 
+### Community 216 - "AppException"
+Cohesion: 0.22
+Nodes (7): TestCaseResponse, AppException, Override, ProblemServiceImpl, Override, TestCaseServiceImpl, org.springframework.transaction.annotation.Transactional
+
 ### Community 217 - "AdminDashboardServiceImpl.java"
-Cohesion: 0.19
-Nodes (8): arraylist, Submission, SubmissionRepository, AdminDashboardServiceImpl, Override, datetimeformatter, localdate, zoneid
+Cohesion: 0.16
+Nodes (9): arraylist, Submission, SubmissionRepository, AdminDashboardServiceImpl, Override, datetimeformatter, localdate, map (+1 more)
 
 ### Community 218 - "Theories"
-Cohesion: 0.23
-Nodes (4): Theories, TheoryRepository, Override, TheoryServiceImpl
+Cohesion: 0.21
+Nodes (5): Theories, TheoryRepository, Override, TheoryServiceImpl, org.springframework.data.jpa.repository.Query
+
+### Community 219 - "OpenApiConfig.java"
+Cohesion: 0.29
+Nodes (6): OpenApiConfig, components, info, io.swagger.v3.oas.models.OpenAPI, securityrequirement, securityscheme
 
 ### Community 220 - "11. COMPONENT EXECUTION GUIDELINES"
 Cohesion: 0.22
@@ -1064,73 +1065,49 @@ Nodes (4): 12-section pack, 15. DEFAULT SITE PACKS, 4-section pack, 8-section pa
 Cohesion: 0.50
 Nodes (4): 20. EXAMPLE INTERPRETATIONS, Example 1, Example 2, Example 3
 
-### Community 251 - "SubmissionEvaluationIntegrationTest.java"
-Cohesion: 0.28
-Nodes (8): assertequals, assertnotnull, asserttrue, autowired, BackendCoreApplicationTests, Judge0ClientIntegrationTest, SubmissionHarnessIntegrationTest, org.springframework.boot.test.context.SpringBootTest
-
-### Community 253 - "Judge0Response"
-Cohesion: 0.31
-Nodes (3): BatchResponse, Judge0Response, EvaluationSummary
-
 ### Community 254 - "SecurityConfig.java"
 Cohesion: 0.21
 Nodes (11): abstracthttpconfigurer, SecurityConfig, customizer, httpmethod, httpstatusentrypoint, org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity, org.springframework.security.config.annotation.web.builders.HttpSecurity, org.springframework.security.config.annotation.web.configuration.EnableWebSecurity (+3 more)
 
-### Community 255 - "ProblemApiIntegrationTest.java"
-Cohesion: 0.33
-Nodes (5): Status, jsonpath, mockmvcbuilders, org.springframework.test.web.servlet.MockMvc, org.springframework.web.context.WebApplicationContext
-
-### Community 256 - "ProblemRepository.java"
-Cohesion: 0.44
-Nodes (5): optional, org.springframework.data.domain.Page, org.springframework.data.jpa.repository.JpaRepository, org.springframework.data.jpa.repository.Query, param
-
 ### Community 257 - "App.jsx"
-Cohesion: 0.20
-Nodes (15): getCurrentUser(), loginAdmin(), loginWithGoogle(), getTheories(), getTheoryBySlug(), getTheoryCategories(), App(), AdminRoute() (+7 more)
-
-### Community 258 - "org.springframework.transaction.annotation.Transactional"
-Cohesion: 0.50
-Nodes (3): Override, TestCaseServiceImpl, org.springframework.transaction.annotation.Transactional
+Cohesion: 0.27
+Nodes (9): getCurrentUser(), loginAdmin(), loginWithGoogle(), App(), AdminRoute(), dapcodefrontend_src_index, AuthCallbackPage(), ProblemsPage() (+1 more)
 
 ### Community 259 - "GlobalExceptionHandler.java"
 Cohesion: 0.40
 Nodes (5): GlobalExceptionHandler, org.springframework.http.ResponseEntity, org.springframework.web.bind.annotation.ExceptionHandler, org.springframework.web.bind.annotation.RestControllerAdvice, org.springframework.web.bind.MethodArgumentNotValidException
 
-### Community 260 - "AppException"
-Cohesion: 0.21
-Nodes (5): AppException, Judge0Client, CodeHarnessService, Override, SubmissionServiceImpl
+### Community 260 - "SubmissionServiceImpl"
+Cohesion: 0.19
+Nodes (4): Judge0Client, CodeHarnessService, Override, SubmissionServiceImpl
 
-### Community 261 - "org.springframework.stereotype.Component"
-Cohesion: 0.26
-Nodes (8): AiServiceClientImpl, Judge0ClientImpl, collections, collectors, mediatype, org.springframework.stereotype.Component, org.springframework.web.client.RestClient, parameterizedtypereference
+### Community 261 - "lombok.extern.slf4j.Slf4j"
+Cohesion: 0.35
+Nodes (9): AiServiceClientImpl, Judge0ClientImpl, collections, collectors, lombok.extern.slf4j.Slf4j, mediatype, org.springframework.stereotype.Component, org.springframework.web.client.RestClient (+1 more)
 
 ### Community 262 - "SubmissionStreamManager.java"
-Cohesion: 0.27
-Nodes (6): SubmissionStreamManager, concurrenthashmap, copyonwritearraylist, ioexception, map, org.springframework.web.servlet.mvc.method.annotation.SseEmitter
-
-### Community 263 - "AdminDashboardPage.jsx"
-Cohesion: 0.38
-Nodes (4): AdminDashboardPage(), LANGS, statusTone(), timeAgo()
+Cohesion: 0.26
+Nodes (5): SubmissionStreamManager, concurrenthashmap, copyonwritearraylist, ioexception, org.springframework.web.servlet.mvc.method.annotation.SseEmitter
 
 ## Knowledge Gaps
 - **970 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+965 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1242 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **64 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **61 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Users` connect `ApiResponse` to `lombok.AllArgsConstructor`, `ProblemRepository.java`, `JwtAuthenticationFilter.java`, `AppException`, `SubmissionServiceImpl.java`, `.findByEmail`, `UserRepository`, `AdminDashboardServiceImpl.java`, `SubmissionEvaluationIntegrationTest.java`, `org.junit.jupiter.api.Test`, `JwtTokenProvider.java`, `ProblemApiIntegrationTest.java`?**
+- **Why does `Users` connect `ApiResponse` to `lombok.AllArgsConstructor`, `JwtAuthenticationFilter.java`, `SubmissionServiceImpl`, `Problem`, `SubmissionStreamManager.java`, `Judge0Status`, `UserRepository`, `uuid`, `AdminDashboardServiceImpl.java`, `lombok.Getter`, `JwtTokenProvider.java`?**
   _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `CodeHarnessServiceImpl` connect `CodeHarnessServiceImpl` to `AppException`, `SubmissionServiceImpl.java`?**
+- **Why does `CodeHarnessServiceImpl` connect `CodeHarnessServiceImpl` to `SubmissionServiceImpl`, `uuid`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `ApiResponse` connect `ApiResponse` to `lombok.AllArgsConstructor`, `GlobalExceptionHandler.java`?**
+- **Why does `UserRepository` connect `UserRepository` to `ApiResponse`, `JwtAuthenticationFilter.java`, `SubmissionServiceImpl`, `Problem`, `Judge0Status`, `uuid`, `AdminDashboardServiceImpl.java`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
   _970 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `lombok.AllArgsConstructor` be split into smaller, more focused modules?**
-  _Cohesion score 0.0817317025820229 - nodes in this community are weakly interconnected._
-- **Should `AdminProblemsPage.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08202716823406478 - nodes in this community are weakly interconnected._
+- **Should `admin.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.13968253968253969 - nodes in this community are weakly interconnected._
 - **Should `ApiResponse` be split into smaller, more focused modules?**
-  _Cohesion score 0.06209941603760148 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06296851574212893 - nodes in this community are weakly interconnected._

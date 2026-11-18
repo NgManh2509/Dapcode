@@ -107,4 +107,83 @@ class SubmissionHarnessIntegrationTest {
         assertEquals(res.getTestCaseResults().size(), res.getPassedTestCases());
     }
 
+    @Test
+    @DisplayName("Special & In-place Problems: Verify in-place, cyclic list, tree LCA, graph, random list, codec -> ACCEPTED")
+    void testSpecialAndInplaceProblems() {
+        record Case(String slug, int lang, String code) {}
+        java.util.List<Case> cases = java.util.List.of(
+                new Case("sort-colors", 71, """
+                        class Solution:
+                            def sortColors(self, nums: list[int]) -> None:
+                                nums.sort()
+                        """),
+                new Case("linked-list-cycle", 71, """
+                        class Solution:
+                            def hasCycle(self, head: Optional[ListNode]) -> bool:
+                                slow = fast = head
+                                while fast and fast.next:
+                                    slow = slow.next
+                                    fast = fast.next.next
+                                    if slow == fast:
+                                        return True
+                                return False
+                        """),
+                new Case("lowest-common-ancestor-of-a-binary-search-tree", 71, """
+                        class Solution:
+                            def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+                                curr = root
+                                while curr:
+                                    if p.val > curr.val and q.val > curr.val:
+                                        curr = curr.right
+                                    elif p.val < curr.val and q.val < curr.val:
+                                        curr = curr.left
+                                    else:
+                                        return curr
+                                return None
+                        """),
+                new Case("encode-and-decode-strings", 71, """
+                        class Solution:
+                            def encode(self, strs: List[str]) -> str:
+                                return "".join(f"{len(s)}#{s}" for s in strs)
+                            def decode(self, s: str) -> List[str]:
+                                res, i = [], 0
+                                while i < len(s):
+                                    j = s.find("#", i)
+                                    length = int(s[i:j])
+                                    res.append(s[j + 1 : j + 1 + length])
+                                    i = j + 1 + length
+                                return res
+                        """),
+                new Case("clone-graph", 71, """
+                        class Solution:
+                            def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+                                if not node:
+                                    return None
+                                old_to_new = {}
+                                def dfs(n):
+                                    if n in old_to_new:
+                                        return old_to_new[n]
+                                    copy = Node(n.val)
+                                    old_to_new[n] = copy
+                                    for nei in n.neighbors:
+                                        copy.neighbors.append(dfs(nei))
+                                    return copy
+                                return dfs(node)
+                        """)
+        );
+
+        for (Case c : cases) {
+            SubmitCodeRequest req = SubmitCodeRequest.builder()
+                    .problemSlug(c.slug())
+                    .languageId(c.lang())
+                    .sourceCode(c.code())
+                    .userId(testUser.getId())
+                    .build();
+            SubmissionResponse res = submissionService.submitAndEvaluate(req);
+            assertNotNull(res);
+            assertEquals("ACCEPTED", res.getStatus(), "Failed on slug: " + c.slug());
+            assertEquals(res.getTestCaseResults().size(), res.getPassedTestCases(), "Not all test cases passed on: " + c.slug());
+        }
+    }
+
 }

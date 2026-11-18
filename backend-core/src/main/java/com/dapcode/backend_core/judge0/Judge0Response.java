@@ -26,17 +26,19 @@ public class Judge0Response {
         if (val == null || val.isBlank()) {
             return val;
         }
+        String clean = val.replaceAll("[\\r\\n]+", "");
+        if (!clean.matches("^[A-Za-z0-9+/=]+$") || clean.length() % 4 != 0) {
+            return val;
+        }
         try {
-            String clean = val.replaceAll("\\s+", "");
             byte[] decoded = Base64.getDecoder().decode(clean);
-            return new String(decoded, StandardCharsets.UTF_8);
-        } catch (IllegalArgumentException e) {
-            try {
-                byte[] decoded = Base64.getMimeDecoder().decode(val);
-                return new String(decoded, StandardCharsets.UTF_8);
-            } catch (Exception ex) {
+            String str = new String(decoded, StandardCharsets.UTF_8);
+            if (str.indexOf('\uFFFD') != -1) {
                 return val;
             }
+            return str;
+        } catch (Exception e) {
+            return val;
         }
     }
 
