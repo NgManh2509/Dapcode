@@ -3,6 +3,8 @@ package com.dapcode.backend_core.service.submission;
 import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
+import java.time.ZoneId;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -82,16 +84,18 @@ public class SubmissionServiceImpl implements SubmissionService {
             return requestedId != null ? requestedId : 71;
         }
         String clean = code.replaceAll("(?s)/\\*.*?\\*/", "")
-                           .replaceAll("(?m)//.*$", "")
-                           .replaceAll("(?m)#.*$", "");
-        if (clean.contains("def ") && clean.contains("self") && !clean.contains("public:") && !clean.contains("public ")) {
+                .replaceAll("(?m)//.*$", "")
+                .replaceAll("(?m)#.*$", "");
+        if (clean.contains("def ") && clean.contains("self") && !clean.contains("public:")
+                && !clean.contains("public ")) {
             return 71;
         }
         if (clean.contains("public:") || clean.contains("vector<") || clean.contains("#include")) {
             return 54;
         }
         if (!clean.contains("public:") && (clean.contains("public class ") || clean.contains("public int")
-                || clean.contains("public boolean") || clean.contains("public String") || clean.contains("public List<"))) {
+                || clean.contains("public boolean") || clean.contains("public String")
+                || clean.contains("public List<"))) {
             return 62;
         }
         return requestedId != null ? requestedId : 71;
@@ -108,7 +112,8 @@ public class SubmissionServiceImpl implements SubmissionService {
         if (aNorm.equals(eNorm)) {
             return true;
         }
-        java.util.Set<String> emptyEquivalents = java.util.Set.of("", "[]", "[[]]", "none", "null", "n/a", "\"\"", "''");
+        java.util.Set<String> emptyEquivalents = java.util.Set.of("", "[]", "[[]]", "none", "null", "n/a", "\"\"",
+                "''");
         if (emptyEquivalents.contains(aNorm) && emptyEquivalents.contains(eNorm)) {
             return true;
         }
@@ -189,8 +194,6 @@ public class SubmissionServiceImpl implements SubmissionService {
         return "[" + String.join(",", groups) + "]";
     }
 
-
-
     private EvaluationSummary evalutateResults(List<TestCase> testCases, List<Judge0Response> judge0Responses,
             UUID submissionId) {
         List<TestCaseResult> testCaseResults = new ArrayList<>();
@@ -226,7 +229,6 @@ public class SubmissionServiceImpl implements SubmissionService {
                 }
             }
 
-
             if (!"ACCEPTED".equals(caseStatus) && "ACCEPTED".equals(finalStatus)) {
                 finalStatus = caseStatus;
             }
@@ -239,7 +241,8 @@ public class SubmissionServiceImpl implements SubmissionService {
                     .isHidden(tc.isHidden())
                     .inputData(tc.isHidden() ? null : tc.getInputData())
                     .expectedOutput(tc.isHidden() ? null : tc.getExpectedOutput())
-                    .actualOutput(tc.isHidden() ? null : (res != null ? (res.getStdout() != null ? res.getStdout() : "") : null))
+                    .actualOutput(tc.isHidden() ? null
+                            : (res != null ? (res.getStdout() != null ? res.getStdout() : "") : null))
                     .errMes(res != null ? (res.getStderr() != null ? res.getStderr() : res.getCompile_output()) : null)
                     .build();
             testCaseResults.add(tcResult);
@@ -301,10 +304,45 @@ public class SubmissionServiceImpl implements SubmissionService {
                         .build())
                 .toList();
 
-
         List<Judge0Response> judge0Responses = judge0Client.executeBatch(judge0SubmissionRequests);
 
         EvaluationSummary summary = evalutateResults(testCases, judge0Responses, submission.getId());
+
+        int xpEarned = 0;
+        if ("ACCEPTED".equals(summary.finalStatus()) && user != null) {
+
+            boolean daGiai = submissionRepository.existsByUserIdAndProblemIdAndStatus(user.getId(), prob.getId(),
+                    "ACCEPTED");
+            if (!daGiai) {
+                xpEarned = switch (prob.getDifficulty().toLowerCase()) {
+                    case "easy" -> 20;
+                    case "medium" -> 50;
+                    case "hard" -> 100;
+                    default -> 20;
+                };
+                user.setXp(user.getXp() + xpEarned);
+            }
+            ZoneId zone = ZoneId.of("Asia/Ho_Chi_Minh");
+            LocalDate today = LocalDate.now(zone);
+            var lastAcceptedOpt = submissionRepository.findFirstByUserIdAndStatusOrderByCreatedAtDesc(user.getId(),
+                    "ACCEPTED");
+
+            if (lastAcceptedOpt.isEmpty() || lastAcceptedOpt.get().getCreatedAt() == null) {
+                user.setStreakCount(1);
+            } else {
+                LocalDate lastDate = lastAcceptedOpt.get().getCreatedAt().atZone(zone).toLocalDate();
+                if (lastDate.equals(today)) {
+                    if (user.getStreakCount() <= 0) {
+                        user.setStreakCount(1);
+                    }
+                } else if (lastDate.equals(today.minusDays(1))) {
+                    user.setStreakCount(user.getStreakCount() + 1);
+                } else {
+                    user.setStreakCount(1);
+                }
+            }
+            userRepository.save(user);
+        }
 
         submission.setStatus(summary.finalStatus());
 
@@ -313,19 +351,6 @@ public class SubmissionServiceImpl implements SubmissionService {
         submission.setMaxMemoryKb(summary.maxMemoryKb());
 
         submissionRepository.save(submission);
-
-        int xpEarned = 0;
-        if ("ACCEPTED".equals(summary.finalStatus()) && user != null) {
-            xpEarned = switch (prob.getDifficulty().toLowerCase()) {
-                case "easy" -> 20;
-                case "medium" -> 50;
-                case "hard" -> 100;
-                default -> 20;
-            };
-            user.setXp(user.getXp() + xpEarned);
-            user.setStreakCount(user.getStreakCount() + 1);
-            userRepository.save(user);
-        }
 
         SubmissionResponse response = SubmissionResponse.builder()
                 .submissionId(submission.getId())
@@ -394,6 +419,14 @@ public class SubmissionServiceImpl implements SubmissionService {
                 .totalRuntimeMs(submission.getTotalRuntimeMs())
                 .maxMemoryKb(submission.getMaxMemoryKb())
                 .createdAt(submission.getCreatedAt()).build();
+    }
+
+    @Override
+    public List<String> getSolvedProblemSlugs(UUID userId) {
+        if (userId == null) {
+            return List.of();
+        }
+        return submissionRepository.findSolvedProblemSlugsByUserId(userId);
     }
 
 }

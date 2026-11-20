@@ -1,6 +1,7 @@
 package com.dapcode.backend_core.controller;
 
 import java.util.UUID;
+import java.util.List;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,6 +52,14 @@ public class SubmissionController {
     public SseEmitter streamSubmissionProgress(@PathVariable UUID id, @AuthenticationPrincipal Users currUser) {
         return submissionService.subscribeStream(id, currUser);
 
+    }
+
+    @GetMapping("/solved-slugs")
+    public ApiResponse<List<String>> getSolvedSlugs(@AuthenticationPrincipal Users currUser) {
+        if (currUser == null) {
+            return ApiResponse.success(List.of());
+        }
+        return ApiResponse.success(submissionService.getSolvedProblemSlugs(currUser.getId()));
     }
 
 }

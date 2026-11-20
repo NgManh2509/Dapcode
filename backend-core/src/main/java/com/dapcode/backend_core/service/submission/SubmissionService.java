@@ -1,6 +1,7 @@
 package com.dapcode.backend_core.service.submission;
 
 import java.util.UUID;
+import java.util.List;
 
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
@@ -16,4 +17,6 @@ public interface SubmissionService {
     SubmissionDetailResponse getSubmissionById(UUID id, Users currUser);
 
     SseEmitter subscribeStream(UUID submissionId, Users currUser);
+
+    List<String> getSolvedProblemSlugs(UUID userId);
 }

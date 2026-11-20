@@ -7,8 +7,19 @@ import DifficultyBadge from '../components/DifficultyBadge';
 import RoadmapGraph from '../components/RoadmapGraph';
 import RoadmapTopicDrawer from '../components/RoadmapTopicDrawer';
 import { getProblems } from '../api/problems';
+import { getSolvedSlugs } from '../api/submissions';
 
 const PAGE_SIZE = 50;
+
+const getUserCompletedKey = () => {
+  try {
+    const u = JSON.parse(localStorage.getItem('dapcode_user') || 'null');
+    const uid = u?.id || u?.email || u?.username;
+    return uid ? `dapcode_completed_${uid}` : null;
+  } catch {
+    return null;
+  }
+};
 
 const selectCls =
   'appearance-none rounded-lg bg-[#F0F0F0] dark:bg-[#333333] pl-3 pr-8 py-1.5 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-[#E6E6E6] dark:hover:bg-[#3E3E3E] focus:outline-none cursor-pointer transition-colors';
@@ -27,20 +38,56 @@ export default function ProblemsPage() {
   const [page, setPage] = useState(1);
   const [selectedNode, setSelectedNode] = useState(null);
 
-  const [completedSlugs, setCompletedSlugs] = useState(() => {
-    try {
-      return new Set(JSON.parse(localStorage.getItem('dapcode_completed') || '[]'));
-    } catch {
-      return new Set();
+  const [completedSlugs, setCompletedSlugs] = useState(new Set());
+
+  const loadSolvedSlugs = () => {
+    const token = localStorage.getItem('dapcode_token');
+    const userKey = getUserCompletedKey();
+    if (!token) {
+      setCompletedSlugs(new Set());
+      return;
     }
-  });
+
+    getSolvedSlugs()
+      .then((res) => {
+        const slugs = Array.isArray(res?.data) ? res.data : Array.isArray(res) ? res : [];
+        const merged = new Set(slugs);
+        if (userKey) {
+          localStorage.setItem(userKey, JSON.stringify(Array.from(merged)));
+        }
+        setCompletedSlugs(merged);
+      })
+      .catch(() => {
+        if (userKey) {
+          try {
+            setCompletedSlugs(new Set(JSON.parse(localStorage.getItem(userKey) || '[]')));
+            return;
+          } catch {
+            // ignore
+          }
+        }
+        setCompletedSlugs(new Set());
+      });
+  };
+
+  useEffect(() => {
+    // Xóa key dùng chung cũ để không bị dính dữ liệu giữa các tài khoản
+    localStorage.removeItem('dapcode_completed');
+    loadSolvedSlugs();
+
+    const handleAuthChange = () => loadSolvedSlugs();
+    window.addEventListener('dapcode-auth-change', handleAuthChange);
+    return () => window.removeEventListener('dapcode-auth-change', handleAuthChange);
+  }, []);
 
   const toggleComplete = (slug) => {
+    const userKey = getUserCompletedKey();
+    if (!userKey) return;
     setCompletedSlugs((prev) => {
       const next = new Set(prev);
       if (next.has(slug)) next.delete(slug);
       else next.add(slug);
-      localStorage.setItem('dapcode_completed', JSON.stringify(Array.from(next)));
+      localStorage.setItem(userKey, JSON.stringify(Array.from(next)));
       return next;
     });
   };

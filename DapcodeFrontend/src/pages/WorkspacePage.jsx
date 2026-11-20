@@ -272,14 +272,21 @@ export default function WorkspacePage() {
         error: null,
       });
 
-      if (submissionData?.status?.toUpperCase() === 'ACCEPTED') {
+      const markSolvedForCurrentUser = (solvedSlug) => {
         try {
-          const completed = new Set(JSON.parse(localStorage.getItem('dapcode_completed') || '[]'));
-          completed.add(problem.slug);
-          localStorage.setItem('dapcode_completed', JSON.stringify(Array.from(completed)));
+          const uid = user?.id || user?.email || user?.username;
+          if (!uid) return;
+          const userKey = `dapcode_completed_${uid}`;
+          const completed = new Set(JSON.parse(localStorage.getItem(userKey) || '[]'));
+          completed.add(solvedSlug);
+          localStorage.setItem(userKey, JSON.stringify(Array.from(completed)));
         } catch (e) {
           console.error(e);
         }
+      };
+
+      if (submissionData?.status?.toUpperCase() === 'ACCEPTED') {
+        markSolvedForCurrentUser(problem.slug);
       }
 
       if (submissionData?.submissionId) {
@@ -298,6 +305,9 @@ export default function WorkspacePage() {
                 ? submissionData.testCaseResults
                 : (completedRes?.testCaseResults || []),
             };
+            if (mergedResult?.status?.toUpperCase() === 'ACCEPTED') {
+              markSolvedForCurrentUser(problem.slug);
+            }
             setSubmissionState({
               isRunning: false,
               isSubmitting: false,

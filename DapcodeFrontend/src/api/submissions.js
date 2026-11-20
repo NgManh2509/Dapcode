@@ -12,6 +12,10 @@ export const getSubmissionById = async (id) => {
   return await api.get(`/submissions/${id}`);
 };
 
+export const getSolvedSlugs = async () => {
+  return await api.get('/submissions/solved-slugs');
+};
+
 export const subscribeSubmissionStream = (submissionId, { onInit, onProgress, onComplete, onError }) => {
   const token = localStorage.getItem('dapcode_token');
   const url = token

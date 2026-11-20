@@ -6,6 +6,7 @@ import AuthModal from './AuthModal';
 import StreakModal from './StreakModal';
 import DapcodeLogo from './DapcodeLogo';
 import { useTheme } from '../context/ThemeContext';
+import { getCurrentUser } from '../api/auth';
 
 const NAV_LINKS = [
   { label: 'Roadmap', path: '/roadmap' },
@@ -50,11 +51,33 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
+  useEffect(() => {
+    const token = localStorage.getItem('dapcode_token');
+    if (token && !user) {
+      getCurrentUser()
+        .then((res) => {
+          let userData = res?.data || res;
+          if (userData && userData.data && typeof userData.data === 'object') {
+            userData = userData.data;
+          }
+          if (userData && (userData.id || userData.email || userData.username)) {
+            if (!userData.name && userData.username) userData.name = userData.username;
+            localStorage.setItem('dapcode_user', JSON.stringify(userData));
+            setUser(userData);
+            window.dispatchEvent(new Event('dapcode-auth-change'));
+          }
+        })
+        .catch(() => {});
+    }
+  }, [user]);
+
   const handleLogout = () => {
     localStorage.removeItem('dapcode_user');
     localStorage.removeItem('dapcode_token');
+    localStorage.removeItem('dapcode_completed');
     setUser(null);
     setIsMenuOpen(false);
+    window.dispatchEvent(new Event('dapcode-auth-change'));
   };
 
   const displayName = user?.username || user?.name || user?.email?.split('@')[0] || 'User';
@@ -180,7 +203,14 @@ export default function Navbar() {
       </header>
 
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} onLoginSuccess={(u) => setUser(u)} />
+      <AuthModal
+        isOpen={isAuthOpen}
+        onClose={() => setIsAuthOpen(false)}
+        onLoginSuccess={(u) => {
+          setUser(u);
+          window.dispatchEvent(new Event('dapcode-auth-change'));
+        }}
+      />
       <StreakModal isOpen={isStreakOpen} onClose={() => setIsStreakOpen(false)} streakCount={displayStreak} />
     </>
   );
