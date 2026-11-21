@@ -38,7 +38,8 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         log.info("Google OAuth2 login success: email={}, name={}, googleId={}", email, name, googleId);
 
         Users user = userRepository.findByEmail(email).orElseGet(() -> {
-            String username = (name != null && !name.isBlank()) ? name.trim() : (email != null ? email.split("@")[0] : "user");
+            String username = (name != null && !name.isBlank()) ? name.trim()
+                    : (email != null ? email.split("@")[0] : "user");
             return Users.builder()
                     .username(username)
                     .email(email)
@@ -57,6 +58,24 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
             user.setAvatarUrl(picture);
         }
         user = userRepository.save(user);
+
+        if (!user.isActive()) {
+
+            String banReason = (user.getBannedReason() != null && !user.getBannedReason().isBlank())
+                    ? user.getBannedReason()
+                    : "Vi phạm quy định và điều khoản sử dụng";
+
+            String bannedUrl = UriComponentsBuilder.fromUriString("http://localhost:5173/auth/callback")
+                    .queryParam("banned", "true")
+                    .queryParam("reason", banReason)
+                    .queryParam("email", user.getEmail())
+                    .encode()
+                    .build()
+                    .toUriString();
+
+            getRedirectStrategy().sendRedirect(request, response, bannedUrl);
+            return;
+        }
 
         String token = jwtTokenProvider.generateToken(user);
 

@@ -25,6 +25,17 @@ api.interceptors.response.use(
       // Token expired or invalid
       localStorage.removeItem('dapcode_token');
     }
+    if (error.response?.data?.code === 1008) {
+      const reason =
+        error.response.data.message ||
+        'Vi phạm quy định và điều khoản sử dụng của hệ thống.';
+      localStorage.removeItem('dapcode_token');
+      localStorage.removeItem('dapcode_user');
+      window.dispatchEvent(new Event('dapcode-auth-change'));
+      window.dispatchEvent(
+        new CustomEvent('dapcode-user-banned', { detail: { reason } })
+      );
+    }
     return Promise.reject(error);
   }
 );

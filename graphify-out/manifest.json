@@ -102,16 +102,16 @@
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/exception/AppException.java": {
-    "mtime": 1789457605.7527437,
-    "seen": 1789991262.6578863,
-    "ast_hash": "f7a6c9f5880e3e205fed64c1699bbc67",
-    "semantic_hash": "f7a6c9f5880e3e205fed64c1699bbc67"
+    "mtime": 1795241455.665437,
+    "seen": 1795241632.9824636,
+    "ast_hash": "a6c31050c2f19fc722433de6feca87df",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/exception/GlobalExceptionHandler.java": {
-    "mtime": 1789458004.992357,
-    "seen": 1789991262.657887,
-    "ast_hash": "51851a5fc9fe70dc3b8e337da7632a32",
-    "semantic_hash": "51851a5fc9fe70dc3b8e337da7632a32"
+    "mtime": 1795241492.582753,
+    "seen": 1795241632.982466,
+    "ast_hash": "1d32a1e55bb287d0968c971a57348710",
+    "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/judge0/Judge0Client.java": {
     "mtime": 1789547590.821799,
@@ -1542,9 +1542,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/App.jsx": {
-    "mtime": 1791797493.422586,
-    "seen": 1791797804.5213025,
-    "ast_hash": "1f152ea378d55cc3505147c0d992e7d6",
+    "mtime": 1795231931.847653,
+    "seen": 1795231974.9184942,
+    "ast_hash": "0c9cabfe3e8eb13ad3d58ab146b8ddb6",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/api/ai.js": {
@@ -1554,9 +1554,9 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/api/client.js": {
-    "mtime": 1790842391.368726,
-    "seen": 1790846285.2202823,
-    "ast_hash": "f0496b70147c669559618398a8ba5ec6",
+    "mtime": 1795231937.6754134,
+    "seen": 1795231974.9186888,
+    "ast_hash": "ae54c1740f45050ad7f0c68713d5dd8e",
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/api/problems.js": {
@@ -1842,15 +1842,15 @@
     "semantic_hash": ""
   },
   "DapcodeFrontend/src/pages/AuthCallbackPage.jsx": {
-    "mtime": 1791907162.9868677,
-    "seen": 1791907634.1381602,
-    "ast_hash": "704e9980bc34498a51bdba524d431782",
+    "mtime": 1795231935.1869245,
+    "seen": 1795231974.9204662,
+    "ast_hash": "052fa946dc6e3df5d43f4ba78dc26941",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/config/OAuth2AuthenticationSuccessHandler.java": {
-    "mtime": 1790872547.6135304,
-    "seen": 1790872788.896102,
-    "ast_hash": "113c9d1cd3405af56f29777a25558176",
+    "mtime": 1795241226.5332491,
+    "seen": 1795241632.9743915,
+    "ast_hash": "26e4acf50f60523d233d0445ac42122b",
     "semantic_hash": ""
   },
   "backend-core/src/main/java/com/dapcode/backend_core/service/submission/CodeHarnessService.java": {
@@ -2151,6 +2151,12 @@
     "mtime": 1791946075.9338179,
     "seen": 1791946292.3652668,
     "ast_hash": "29d85e5d165424577d3f38343a069f50",
+    "semantic_hash": ""
+  },
+  "DapcodeFrontend/src/components/BannedModal.jsx": {
+    "mtime": 1795231930.1337204,
+    "seen": 1795231974.9192462,
+    "ast_hash": "9b76a46e3edc3ceddbb278337e1b0521",
     "semantic_hash": ""
   }
 }

@@ -13,6 +13,7 @@ import AdminProblemsPage from './pages/admin/AdminProblemsPage';
 import AdminTestCasesPage from './pages/admin/AdminTestCasesPage';
 import AdminTheoriesPage from './pages/admin/AdminTheoriesPage';
 import AdminUsersPage from './pages/admin/AdminUsersPage';
+import BannedModal from './components/BannedModal';
 
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <BannedModal />
         <Routes>
           <Route path="/" element={<Navigate to="/roadmap" replace />} />
           <Route path="/roadmap" element={<ProblemsPage initialView="graph" />} />

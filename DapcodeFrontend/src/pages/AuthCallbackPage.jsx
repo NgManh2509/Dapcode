@@ -13,6 +13,27 @@ export default function AuthCallbackPage() {
     const handleCallback = async () => {
       try {
         const searchParams = new URLSearchParams(location.search);
+        const isBanned = searchParams.get('banned') === 'true';
+        if (isBanned) {
+          const reason =
+            searchParams.get('reason') ||
+            'Vi phạm quy định và điều khoản sử dụng của hệ thống.';
+          const email = searchParams.get('email') || null;
+          localStorage.removeItem('dapcode_token');
+          localStorage.removeItem('dapcode_user');
+          sessionStorage.setItem(
+            'dapcode_ban_info',
+            JSON.stringify({ reason, email })
+          );
+          const returnUrl = sessionStorage.getItem('dapcode_auth_return') || '/roadmap';
+          sessionStorage.removeItem('dapcode_auth_return');
+          navigate(returnUrl, { replace: true });
+          window.dispatchEvent(
+            new CustomEvent('dapcode-user-banned', { detail: { reason, email } })
+          );
+          return;
+        }
+
         const jwtToken = searchParams.get('token');
         if (jwtToken) {
           localStorage.setItem('dapcode_token', jwtToken);
@@ -77,6 +98,24 @@ export default function AuthCallbackPage() {
         }
       } catch (err) {
         console.error('Lỗi xác thực OAuth:', err);
+        if (err.response?.data?.code === 1008) {
+          const reason =
+            err.response?.data?.message ||
+            'Vi phạm quy định và điều khoản sử dụng của hệ thống.';
+          localStorage.removeItem('dapcode_token');
+          localStorage.removeItem('dapcode_user');
+          sessionStorage.setItem(
+            'dapcode_ban_info',
+            JSON.stringify({ reason })
+          );
+          const returnUrl = sessionStorage.getItem('dapcode_auth_return') || '/roadmap';
+          sessionStorage.removeItem('dapcode_auth_return');
+          navigate(returnUrl, { replace: true });
+          window.dispatchEvent(
+            new CustomEvent('dapcode-user-banned', { detail: { reason } })
+          );
+          return;
+        }
         setStatus('error');
         setErrorMessage(
           err.response?.data?.message || err.message || 'Xác thực Google thất bại. Vui lòng thử lại.'
